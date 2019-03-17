@@ -15,25 +15,34 @@ def hello():
       }
    return render_template('main.html', **templateData)
 
-@app.route("/activatescripts/", methods=['GET', 'POST'])
-def activatescripts():
+@app.route("/activateScripts/", methods=['GET', 'POST'])
+def activateScripts():
    subprocess.call(['./activatescripts.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
-@app.route("/startminikube/", methods=['GET', 'POST'])
-def startminikube():
+@app.route("/checkPreRequirements/", methods=['GET', 'POST'])
+def checkPreRequirements():
+   subprocess.call(['./pre-requirements.sh'], shell=True)
+   return redirect('http://127.0.0.1:5000/')
+
+@app.route("/prep-start-spark/", methods=['GET', 'POST'])
+def prepStartSpark():
+   subprocess.call(['./prep-start-spark.sh'], shell=True)
+   return redirect('http://127.0.0.1:5000/')
+
+@app.route("/startMinikube/", methods=['GET', 'POST'])
+def startMinikube():
    subprocess.call(['./startminikube.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
 @app.route("/minikubedashboard/", methods=['GET', 'POST'])
-def minikubedashboard():
-  subprocess.call(['./minikubedashboard.sh'], shell=True)
+def minikubeDashboard():
+  subprocess.call(['./minikubeDashboard.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
-@app.route("/stopminikube/", methods=['GET', 'POST'])
-def stopminikube():
+@app.route("/stopMinikube/", methods=['GET', 'POST'])
+def stopMinikube():
   subprocess.call(['./stopminikube.sh'], shell=True)
-  #return render_template("main.html")
   return redirect('http://127.0.0.1:5000/')
 
 if __name__ == "__main__":

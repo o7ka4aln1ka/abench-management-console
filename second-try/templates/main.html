@@ -4,25 +4,33 @@
    </head>
 
    <body>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Goethe_University_logo.jpg" alt="Smiley face" height="104" width="208">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Goethe_University_logo.jpg" height="104" width="220">
       <h1>Welcome to BigBench2</h1>
       <h2>The start time is: {{ time }}</h2>
 
-<input type="button" name="lien1" value="activate scripts"
- onclick="self.location.href='http://127.0.0.1:5000/activatescripts'" style="background-color:#668fff"
+<input type="button" name="lien1" value="Activate scripts"
+ onclick="self.location.href='http://127.0.0.1:5000/activateScripts'" style="background-color:#668fff"
 style="color:white; font-weight:bold"onclick>
 
-<input type="button" name="lien1" value="start minikube"
- onclick="self.location.href='http://127.0.0.1:5000/startminikube'" style="background-color:#3cb371"
+<input type="button" name="lien1" value="Check pre-requirements"
+onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'" style="background-color:#668fff"
 style="color:white; font-weight:bold"onclick>
 
-<input type="button" name="lien2" value="minikube dashboard"
- onclick="self.location.href='http://127.0.0.1:5000/minikubedashboard'" style="background-color:#1ab171"
+<input type="button" name="lien1" value="Prep-start-spark"
+ onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'" style="background-color:#668fff"
 style="color:white; font-weight:bold"onclick>
 
-<input type="button" name="lien2" value="stop minikube"
-onclick="self.location.href='http://127.0.0.1:5000/stopminikube'"
-style="background-color:#1ab171"
+<input type="button" name="lien1" value="Start minikube"
+ onclick="self.location.href='http://127.0.0.1:5000/startMinikube'" style="background-color:#668fff"
+style="color:white; font-weight:bold"onclick>
+
+<input type="button" name="lien2" value="Minikube dashboard"
+ onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'" style="background-color:#668fff"
+style="color:white; font-weight:bold"onclick>
+
+<input type="button" name="lien2" value="Stop minikube"
+onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'"
+style="background-color:#668fff"
 style="color:white; font-weight:bold"onclick>
 
    </body>
