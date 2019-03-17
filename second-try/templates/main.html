@@ -1,37 +1,48 @@
 <!DOCTYPE html>
+<html lang="en">
    <head>
       <title>{{ title }}</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
    </head>
 
    <body>
+     <center>
+      <br>
       <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Goethe_University_logo.jpg" height="104" width="220">
-      <h1>Welcome to BigBench2</h1>
-      <h2>The start time is: {{ time }}</h2>
+      <h1> Welcome to BigBench2</h1>
+      <h2> Last update: {{ time }}</h2>
+      <br>
 
-<input type="button" name="lien1" value="Activate scripts"
- onclick="self.location.href='http://127.0.0.1:5000/activateScripts'" style="background-color:#668fff"
-style="color:white; font-weight:bold"onclick>
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/activateScripts'"
+>Activate scripts</button>
 
-<input type="button" name="lien1" value="Check pre-requirements"
-onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'" style="background-color:#668fff"
-style="color:white; font-weight:bold"onclick>
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'"
+>Check pre-requirements</button>
 
-<input type="button" name="lien1" value="Prep-start-spark"
- onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'" style="background-color:#668fff"
-style="color:white; font-weight:bold"onclick>
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'"
+>Prep-start-spark</button>
 
-<input type="button" name="lien1" value="Start minikube"
- onclick="self.location.href='http://127.0.0.1:5000/startMinikube'" style="background-color:#668fff"
-style="color:white; font-weight:bold"onclick>
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/startMinikube'"
+>Start minikube</button>
 
-<input type="button" name="lien2" value="Minikube dashboard"
- onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'" style="background-color:#668fff"
-style="color:white; font-weight:bold"onclick>
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/activateScripts'"
+>Minikube dashboard</button>
 
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'"
+>Minikube Dashboard</button>
+
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'"
+>Minikube stop</button>
+
+<!-- other style button
 <input type="button" name="lien2" value="Stop minikube"
 onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'"
 style="background-color:#668fff"
-style="color:white; font-weight:bold"onclick>
-
+style="color:white; font-weight:bold"onclick> -->
+    </center>
    </body>
 </html>

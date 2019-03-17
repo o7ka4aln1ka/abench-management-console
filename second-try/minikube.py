@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/", methods=['GET', 'POST'])
 def hello():
    now = datetime.datetime.now()
-   timeString = now.strftime("%Y-%m-%d %H:%M")
+   timeString = now.strftime("%H:%M %d-%m-%Y")
    templateData = {
       'title' : 'BigBench2',
       'time': timeString
