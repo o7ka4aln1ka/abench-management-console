@@ -1,49 +1,65 @@
-from flask import Flask, render_template, redirect
-import subprocess
-import os
-import datetime
-import time
-app = Flask(__name__)
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>{{ title }}</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   </head>
 
-@app.route("/", methods=['GET', 'POST'])
-def hello():
-   now = datetime.datetime.now()
-   timeString = now.strftime("%H:%M %d-%m-%Y")
-   templateData = {
-      'title' : 'BigBench2',
-      'time': timeString
-      }
-   return render_template('main.html', **templateData)
+   <body>
+     <center>
+      <br>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Goethe_University_logo.jpg" height="104" width="220">
+      <h1> Welcome to BigBench2</h1>
+      <h2> Last update: {{ time }}</h2>
+      <br>
 
-@app.route("/activateScripts/", methods=['GET', 'POST'])
-def activateScripts():
-   subprocess.call(['./activatescripts.sh'], shell=True)
-   return redirect('http://127.0.0.1:5000/')
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/activateScripts'"
+>Activate scripts</button>
 
-@app.route("/checkPreRequirements/", methods=['GET', 'POST'])
-def checkPreRequirements():
-   subprocess.call(['./pre-requirements.sh'], shell=True)
-   return redirect('http://127.0.0.1:5000/')
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'"
+>Check pre-requirements</button>
 
-@app.route("/prep-start-spark/", methods=['GET', 'POST'])
-def prepStartSpark():
-   subprocess.call(['./prep-start-spark.sh'], shell=True)
-   return redirect('http://127.0.0.1:5000/')
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'"
+>Prep-start-spark</button>
 
-@app.route("/startMinikube/", methods=['GET', 'POST'])
-def startMinikube():
-   subprocess.call(['./startminikube.sh'], shell=True)
-   return redirect('http://127.0.0.1:5000/')
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/startMinikube'"
+>Start minikube</button>
 
-@app.route("/minikubedashboard/", methods=['GET', 'POST'])
-def minikubeDashboard():
-  subprocess.call(['./minikubeDashboard.sh'], shell=True)
-  return redirect('http://127.0.0.1:5000/')
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/activateScripts'"
+>Minikube dashboard</button>
 
-@app.route("/stopMinikube/", methods=['GET', 'POST'])
-def stopMinikube():
-  subprocess.call(['./stopminikube.sh'], shell=True)
-  return redirect('http://127.0.0.1:5000/')
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'"
+>Minikube Dashboard</button>
 
-if __name__ == "__main__":
-   app.run(port=5000, debug=True)
+<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'"
+>Minikube stop</button>
+
+<br>
+<!-- other style button
+<input type="button" name="lien2" value="Stop minikube"
+onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'"
+style="background-color:#668fff"
+style="color:white; font-weight:bold"onclick> -->
+<body>
+<div id="allButFooter">
+
+<footer id="footnotes" class="col-sm-9" style="position: fixed; bottom: 0; width: 100%;">
+Copyright © 2019
+<strong class="master">Master Thesis Project</strong>
+<strong class="spacer"> | </strong>
+<strong class="Name">Vasil Radushev</strong>
+<strong class="spacer"> | </strong>
+<strong class="uni">Goethe University Frankfurt</strong>
+<br>
+<small>GitLab: <a href="https://gitlab.com/o7ka4aln1ka/bigbench2_master/">BigBench2</a>.</small>
+</footer>
+</div>
+</body>
+
+    </center>
+   </body>
+</html>
