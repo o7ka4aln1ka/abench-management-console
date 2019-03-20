@@ -17,8 +17,14 @@
       <h2> Last update: {{ time }}</h2>
       <br>
 
-<button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/activateScripts'"
+<button id="activateScripts" class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/activateScripts', myFunction()"
 >Activate scripts</button>
+
+<script>
+function myFunction() {
+  document.getElementById("activateScripts").style.color = "red";
+}
+</script>
 
 <button class="btn btn-primary"  onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'"
 >Check pre-requirements</button>
@@ -45,19 +51,22 @@ onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'"
 style="background-color:#668fff"
 style="color:white; font-weight:bold"onclick> -->
 
-<div id="allButFooter">
-
-<footer id="footnotes" class="col-sm-9" style="position: fixed; bottom: 0; width: 100%;">
-Copyright © 2019
-<strong class="master">Master Thesis Project</strong>
-<strong class="spacer"> | </strong>
-<strong class="Name">Vasil Radushev</strong>
-<strong class="spacer"> | </strong>
-<strong class="uni">Goethe University Frankfurt</strong>
-<br>
-<small>GitLab: <a href="https://gitlab.com/o7ka4aln1ka/bigbench2_master/">BigBench2</a>.</small>
-</footer>
-</div>
+    <body>
+      <div id="allButFooter">
+        <footer id="footnotes" class="col-sm-9" style="position: fixed; bottom: 0; width: 100%;">
+        Copyright © 2019
+          <strong class="master">Master Thesis Project</strong>
+          <strong class="spacer"> | </strong>
+          <strong class="Name">Vasil Radushev</strong>
+          <strong class="spacer"> | </strong>
+          <strong class="uni">DBIS</strong>
+          <strong class="spacer"> | </strong>
+          <strong class="uni">Goethe University Frankfurt</strong>
+          <br>
+        <small>GitLab: <a href="https://gitlab.com/o7ka4aln1ka/bigbench2_master/">BigBench2</a>.</small>
+        </footer>
+      </div>
+    </body>
 
     </center>
    </body>
