@@ -10,7 +10,7 @@ def hello():
    now = datetime.datetime.now()
    timeString = now.strftime("%H:%M %d-%m-%Y")
    templateData = {
-      'title' : 'BigBench2',
+      'title' : 'A-Bench',
       'time': timeString
       }
    return render_template('main.html', **templateData)

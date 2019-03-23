@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#gnome-terminal
+gnome-terminal
 
 # Checks if a list of given programs are existing.
 # Will print a summary and will stop the exection if
