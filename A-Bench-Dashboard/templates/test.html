@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+    <style>
+        /* background color and font */
+
+        body {
+            background-color: powderblue;
+            font-family: verdana;
+            font-size: 150%;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        h3,
+        h4,
+        h5 {
+            color: blue;
+            font-size: 20px;
+            position: absolute;
+        }
+        /* colums settings */
+        /* Create three equal columns that floats next to each other */
+
+        .column {
+            float: left;
+            width: 40%;
+            padding: 10px;
+            height: 300px;
+            margin: 0 auto;
+            display: flex;
+        }
+        /* Create three equal columns that floats next to each other */
+
+        /* .column-left {
+            float: left;
+            width: 12%;
+            padding: 10px;
+            height: 550px;
+        }
+
+        .column-center {
+            display: inline-block;
+            width: 12%;
+            padding: 10px;
+            height: 550px;
+        }
+
+        .column-right {
+            float: left;
+            width: 12%;
+            padding: 10px;
+            height: 550px;
+        } */
+        /* buttons settings */
+
+        .btn-primary .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: 1px solid green;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            cursor: pointer;
+            width: 160px;
+            display: inline-block;
+        }
+
+        .btn-primary .button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<header>
+    <center>
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Logo-Goethe-University-Frankfurt-am-Main.svg/2362px-Logo-Goethe-University-Frankfurt-am-Main.svg.png" height="104" width="220">
+        <h1> Welcome to A-Bench</h1>
+        <h2> Last update: {{ time }}</h2>
+    </center>
+</header>
+
+<body>
+    <div class="column">
+        <div class="column">
+            <h3>Setup A-Bench</h3>
+            <div class="btn-primary">
+                <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+                <button id="checkPreRequirements" class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Minikube dashboard</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'">Minikube Dashboard</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'">Minikube stop</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startPromethius'">Start Promethius</button>
+            </div>
+        </div>
+        <div class="column">
+            <h4>Run A-Bench</h4>
+            <div class="btn-primary">
+                <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Minikube dashboard</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'">Minikube Dashboard</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'">Minikube stop</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startPromethius'">Start Promethius</button>
+            </div>
+        </div>
+        <div class="column">
+            <h5>Analyse Results</h5>
+            <div class="btn-primary">
+                <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Minikube dashboard</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'">Minikube Dashboard</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'">Minikube stop</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startPromethius'">Start Promethius</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <center>
+
+        <div id="allButFooter">
+            <footer id="footnotes" class="col-sm-9" style="position: fixed; bottom: 0; width: 100%;">
+                Copyright © 2019
+                <strong class="master">Master Thesis Project</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="Name">Vasil Radushev</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="uni">DBIS</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="uni">Goethe University Frankfurt</strong>
+                <br>
+                <small>GitLab: <a href="https://gitlab.com/o7ka4aln1ka/bigbench2_master/">BigBench2</a>.</small>
+            </footer>
+        </div>
+    </center>
+</footer>
+
+</html>

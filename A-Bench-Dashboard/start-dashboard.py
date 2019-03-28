@@ -14,6 +14,7 @@ def hello():
       'time': timeString
       }
    return render_template('main.html', **templateData)
+   # return render_template('test.html', **templateData)
 
 @app.route("/activateScripts/", methods=['GET', 'POST'])
 def activateScripts():

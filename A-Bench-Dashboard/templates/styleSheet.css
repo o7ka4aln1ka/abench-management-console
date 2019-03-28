@@ -1,0 +1,51 @@
+/* colums settings */
+/* Create three equal columns that floats next to each other */
+
+.column {
+    float: left;
+    width: 79%;
+    padding: 10px;
+    height: 300px;
+    margin: 0 auto;
+}
+/* Create three equal columns that floats next to each other */
+
+.column-left {
+    float: left;
+    width: 12%;
+    padding: 10px;
+    height: 550px;
+}
+
+.column-center {
+    display: inline-block;
+    width: 12%;
+    padding: 10px;
+    height: 550px;
+}
+
+.column-right {
+    float: left;
+    width: 12%;
+    padding: 10px;
+    height: 550px;
+}
+/* buttons settings */
+
+.btn-primary .button {
+    background-color: #4CAF50;
+    /* Green */
+    border: 1px solid green;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    width: 160px;
+    display: inline-block;
+}
+
+.btn-primary .button:hover {
+    background-color: #3e8e41;
+}

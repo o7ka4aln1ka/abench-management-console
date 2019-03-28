@@ -1,160 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>{{ title }}</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
-      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-      <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
-      <style>
-         /* background color and font */
-         body {
-         background-color: powderblue;
-         font-family: verdana;
-         font-size: 150%;
-         }
-         h1 {
-         color: blue;
-         }
-         h2 {
-         color: blue;
-         }
-         h3, h4, h5 {
-         color: blue;
-         font-size: 20px;
-         }
-         /* colums settings */
-         * {
-         box-sizing: border-box;
-         }
-         /* Create three equal columns that floats next to each other */
-         .column-left {
-         float: left;
-         width: 20%;
-         padding: 10px;
-         height: 550px;
-         }
-         .column-center {
-         display: inline-block;
-         width: 20%;
-         padding: 10px;
-         height: 550px;
-         }
-         .column-right {
-         float: right;
-         width: 20%;
-         padding: 10px;
-         height: 550px;
-         }
-         /* Clear floats after the columns */
-         .row:after {
-         content: "";
-         display: table;
-         clear: both;
-         }
-         /* buttons settings */
-         .btn-primary .button {
-         background-color: #4CAF50;
-         /* Green */
-         border: 1px solid green;
-         color: white;
-         padding: 15px 32px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 14px;
-         cursor: pointer;
-         width: 160px;
-         display: block;
-         }
-         .btn-primary .button:hover {
-         background-color: #3e8e41;
-         }
-      </style>
-   </head>
 
-   <body>
-      <center>
-         <br>
-         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Logo-Goethe-University-Frankfurt-am-Main.svg/2362px-Logo-Goethe-University-Frankfurt-am-Main.svg.png" height="104" width="220">
-         <h1> Welcome to A-Bench</h1>
-         <h2> Last update: {{ time }}</h2>
-         <body>
-            <div class="row" style="float: none; margin: 0 auto;">
-               <div class="column-left" >
-                  <h3>Setup A-Bench</h3>
-                  <div class="btn-primary">
-                     <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts', myFunction()">Activate scripts</button>
-                     <script>
-                        function myFunction() {
-                          document.getElementById("activateScripts").style.color = "red";
-                        }
-                     </script>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Minikube dashboard</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'">Minikube Dashboard</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'">Minikube stop</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startPromethius'">Start Promethius</button>
-                  </div>
-               </div>
-               <div class="column-center" style="background-color:#bbb;">
-                  <h4>Run A-Bench</h4>
-                  <div class="btn-primary">
-                     <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts', myFunction()">Activate scripts</button>
-                     <script>
-                        function myFunction() {
-                          document.getElementById("activateScripts").style.color = "red";
-                        }
-                     </script>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Minikube dashboard</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'">Minikube Dashboard</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'">Minikube stop</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startPromethius'">Start Promethius</button>
-                  </div>
-               </div>
-               <div class="column-right" style="background-color:#ccc;">
-                  <h5>Analyse A-Bench Results</h5>
-                  <div class="btn-primary">
-                     <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts', myFunction()">Activate scripts</button>
-                     <script>
-                        function myFunction() {
-                          document.getElementById("activateScripts").style.color = "red";
-                        }
-                     </script>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Minikube dashboard</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'">Minikube Dashboard</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'">Minikube stop</button>
-                     <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startPromethius'">Start Promethius</button>
-                  </div>
-               </div>
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <style>
+        /* background color and font */
+
+        body {
+            background-color: #C2F5FB;
+            font-family: arial;
+            font-size: 150%;
+        }
+
+        h1 {
+            font-family: times;
+            color: black;
+            font-size: 350%;
+        }
+
+        h2 {
+            color: black;
+            font-size: 150%;
+        }
+
+        h3,
+        h4,
+        h5 {
+            align: center;
+            color: black;
+            font-size: 20px;
+        }
+
+        code {
+            background: #A8E7EF;
+            border-radius: 25px;
+            display: block;
+            padding: 12px 12px;
+            text-align: center;
+        }
+
+        header,
+        section-left,
+        section-rigth,
+        footer {
+            margin: 0 1.5% 24px 1.5%;
+        }
+
+        section-left {
+            float: left;
+            width: 50%;
+        }
+
+        section-right {
+            float: right;
+            width: 50%;
+        }
+
+        footer {
+            clear: both;
+            margin-bottom: 0;
+            /* position: relative; */
+        }
+        /* colums settings */
+        /* Create three equal columns that floats next to each other */
+
+        .column {
+            float: left;
+            width: 79%;
+            padding: 10px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        /* Create three equal columns that floats next to each other */
+        /* .column-left {
+            float: left;
+            width: 40%;
+            padding: 10px;
+            height: 550px;
+        } */
+
+        .column-center {
+            display: inline-block;
+            width: 28%;
+            padding: 10px;
+            height: 400px;
+        }
+        /* .column-right {
+            float: left;
+            width: 15%;
+            padding: 10px;
+            height: 550px;
+        } */
+        /* buttons settings */
+        .btn-primary {
+          border-radius: 5px;
+          background-color: #A8E7EF;
+        }
+
+        .btn-primary:hover {
+          background-color: #A8E7EF;
+        }
+
+        .button {
+            background-color: #58ADDA;
+            border-radius: 5px;
+            border: 1px solid blue;
+            color: black;
+            padding: 10px 12px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+            width: 100%;
+            display: inline-block;
+            margin: 3px;
+        }
+
+        .btn-primary .button:hover {
+            background-color: #17A3ED;
+        }
+    </style>
+</head>
+
+<header>
+    <code>
+    <center>
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Logo-Goethe-University-Frankfurt-am-Main.svg/2362px-Logo-Goethe-University-Frankfurt-am-Main.svg.png" height="104" width="220">
+        <h1> Welcome to A-Bench</h1>
+        <h2> Last update: {{ time }}</h2>
+    </center>
+    </code>
+</header>
+
+<section-left>
+    <div class="column">
+        <code>
+        <div class="column-center">
+          <h5 align="center">Setup</h5>
+          <div class="btn-primary">
+            <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+            <button id="checkPreRequirements" class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+            <button id="prepStartSpark" class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
+            <button id="startMinikube" class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
+            <button id="minikubeDashboard"class="button" onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'">Minikube dashboard</button>
+            <button id="stopMinikube"class="button" onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'">Stop minikube</button>
+          </div>
+        </div>
+        <div class="column-center">
+            <h4 align="center">Run</h4>
+            <div class="btn-primary">
+              <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+              <button id="checkPreRequirements" class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+              <button id="prepStartSpark" class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
+              <button id="startMinikube" class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
+              <button id="minikubeDashboard"class="button" onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'">Minikube dashboard</button>
+              <button id="stopMinikube"class="button" onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'">Stop minikube</button>
             </div>
-          </body>
+        </div>
+        <div class="column-center">
+            <h4 align="center">Analyse</h4>
+            <div class="btn-primary">
+              <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+              <button id="checkPreRequirements" class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+              <button id="prepStartSpark" class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
+              <button id="startMinikube" class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
+              <button id="minikubeDashboard"class="button" onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'">Minikube dashboard</button>
+              <button id="stopMinikube"class="button" onclick="self.location.href='http://127.0.0.1:5000/stopMinikube'">Stop minikube</button>
+            </div>
+        </div>
+      </code>
+    </div>
+</section-left>
 
-            <body>
-               <div id="allButFooter">
-                  <footer id="footnotes" class="col-sm-9" style="position: fixed; bottom: 0; width: 100%;">
-                     Copyright © 2019
-                     <strong class="master">Master Thesis Project</strong>
-                     <strong class="spacer"> | </strong>
-                     <strong class="Name">Vasil Radushev</strong>
-                     <strong class="spacer"> | </strong>
-                     <strong class="uni">DBIS</strong>
-                     <strong class="spacer"> | </strong>
-                     <strong class="uni">Goethe University Frankfurt</strong>
-                     <br>
-                     <small>GitLab: <a href="https://gitlab.com/o7ka4aln1ka/bigbench2_master/">BigBench2</a>.</small>
-                  </footer>
-               </div>
-             </body>
-   </center>
-   </body>
+<section-right>
+    <div class="column">
+        <code>
+        <!-- <div class="column-center">
+          <h5 align="center">Setup</h5>
+          <div class="btn-primary">
+            <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+            <button class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+            <button class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
+            <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
+            <button class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Minikube dashboard</button>
+          </div>
+        </div>
+        <div class="column-center">
+            <h4 align="center">Run</h4>
+            <div class="btn-primary">
+                <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Minikube dashboard</button>
+            </div>
+        </div>
+        <div class="column-center">
+            <h4 align="center">Analyse</h4>
+            <div class="btn-primary">
+                <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/prepStartSpark'">Prep-start-spark</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/startMinikube'">Start minikube</button>
+                <button class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Minikube dashboard</button>
+            </div>
+        </div> -->
+      </code>
+    </div>
+</section-right>
+
+<footer>
+    <center>
+
+        <div id="allButFooter">
+            <footer id="footnotes" class="col-sm-9" style="position: fixed; bottom: 0; width: 100%;">
+                <strong class="Copy">Copyright © 2019</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="master">Master Thesis Project</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="Name">Vasil Radushev</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="uni">DBIS</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="uni">Goethe University Frankfurt</strong>
+                <br>
+                <small>GitLab: <a href="https://gitlab.com/o7ka4aln1ka/bigbench2_master/">BigBench2</a>.</small>
+            </footer>
+        </div>
+    </center>
+</footer>
+
 </html>
