@@ -1,0 +1,115 @@
+/* background color and font */
+
+body {
+    background-color: #C2F5FB;
+    font-family: arial;
+    font-size: 150%;
+}
+
+h1 {
+    font-family: times;
+    color: black;
+    font-size: 350%;
+}
+
+h2 {
+    color: black;
+    font-size: 150%;
+}
+
+h3,
+h4,
+h5 {
+    align: center;
+    color: black;
+    font-size: 20px;
+}
+
+code {
+    background: #A8E7EF;
+    border-radius: 25px;
+    display: block;
+    padding: 12px 12px;
+    text-align: center;
+}
+
+header,
+section-left,
+section-rigth,
+footer {
+    margin: 0 1.5% 24px 1.5%;
+}
+
+section-left {
+    float: left;
+    width: 50%;
+}
+
+section-right {
+    float: inline-block;
+    width: 30%;
+}
+
+footer {
+    clear: both;
+    margin-bottom: 0;
+    /* position: relative; */
+}
+/* colums settings */
+/* Create three equal columns that floats next to each other */
+
+.column {
+    float: left;
+    width: 79%;
+    padding: 10px;
+    height: 200px;
+    margin: 0 auto;
+}
+/* Create three equal columns that floats next to each other */
+/* .column-left {
+    float: left;
+    width: 40%;
+    padding: 10px;
+    height: 550px;
+} */
+
+.column-center {
+    display: inline-block;
+    width: 28%;
+    padding: 10px;
+    height: 400px;
+}
+/* .column-right {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    height: 550px;
+} */
+/* buttons settings */
+.btn-primary {
+  border-radius: 5px;
+  background-color: #A8E7EF;
+}
+
+.btn-primary:hover {
+  background-color: #A8E7EF;
+}
+
+.button {
+    background-color: #58ADDA;
+    border-radius: 5px;
+    border: 1px solid blue;
+    color: black;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    margin: 3px;
+}
+
+.btn-primary .button:hover {
+    background-color: #17A3ED;
+}

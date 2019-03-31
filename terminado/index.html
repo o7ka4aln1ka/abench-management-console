@@ -1,28 +1,51 @@
 <!doctype html>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://unpkg.com/xterm@3.6.0/dist/xterm.css" />
-    <link rel="stylesheet" href="https://github.com/xtermjs/xterm.js/blob/master/demo/style.css" />
-    <script src="https://unpkg.com/xterm@3.6.0/dist/xterm.js"></script>
-    <script src="https://unpkg.com/xterm@3.6.0/dist/addons/terminado/terminado.js"></script>
-  </head>
-  <body>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css" media="screen" />
+    <!-- <link rel="stylesheet" type="text/css" href="static/css/xterm.css" media="screen" /> -->
+    <script src="/xterm.js"></script>
+    <script src="/terminado.js"></script>
+</head>
+
+<body>
     <div class="container">
       <div id="terminal-container"></div>
     </div>
+
+    <!-- <div class="container">
+        <div id="terminal-container">
+            <div dir="ltr" class="terminal xterm" tabindex="0">
+                <div class="xterm-viewport" style="background-color: rgb(1, 1, 0);">
+                    <div class="xterm-scroll-area" style="width: 360px; height: 200px;"></div>
+                </div>
+                <div class="xterm-screen" style="width: 360px; height: 408px;">
+                    <div class="xterm-helpers">
+                        <textarea class="xterm-helper-textarea" aria-label="Terminal input" aria-multiline="false" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style=""></textarea>
+                        <div class="composition-view"></div><span class="xterm-char-measure-element" aria-hidden="true" style="font-family: courier-new, courier, monospace; font-size: 15px;">W</span></div>
+                    <canvas class="xterm-text-layer" width="360" height="408" style="z-index: 0; width: 360px; height: 408px;"></canvas>
+                    <canvas class="xterm-selection-layer" width="360" height="408" style="z-index: 1; width: 360px; height: 408px;"></canvas>
+                    <canvas class="xterm-link-layer" width="360" height="408" style="z-index: 2; width: 720px; height: 408px;"></canvas>
+                    <canvas class="xterm-cursor-layer" width="360" height="408" style="z-index: 3; width: 720px; height: 408px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
     <script>
-      terminado.apply(Terminal);
+        terminado.apply(Terminal);
 
-      var term = new Terminal(),
-          protocol = (location.protocol === 'https:') ? 'wss://' : 'ws://',
-          socketURL = protocol + location.hostname + ((location.port) ? (':' + location.port) : '') + "/websocket";
-          sock = new WebSocket(socketURL);
+        var term = new Terminal(),
+            protocol = (location.protocol === 'https:') ? 'wss://' : 'ws://',
+            socketURL = protocol + location.hostname + ((location.port) ? (':' + location.port) : '') + "/websocket";
+        sock = new WebSocket(socketURL);
 
-      sock.addEventListener('open', function () {
-        term.terminadoAttach(sock);
-      });
+        sock.addEventListener('open', function() {
+            term.terminadoAttach(sock);
+        });
 
-      term.open(document.getElementById('terminal-container'));
+        term.open(document.getElementById('terminal-container'));
     </script>
-  </body>
+</body>
+
 </html>
