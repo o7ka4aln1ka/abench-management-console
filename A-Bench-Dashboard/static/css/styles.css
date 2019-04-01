@@ -46,8 +46,8 @@ section-left {
 }
 
 section-right {
-    float: inline-block;
-    width: 30%;
+    float: right;
+    width: 20%;
 }
 
 footer {
