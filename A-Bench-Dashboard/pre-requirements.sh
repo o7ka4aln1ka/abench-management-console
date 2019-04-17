@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gnome-terminal
+gnome-terminal --
 
 # Checks if a list of given programs are existing.
 # Will print a summary and will stop the exection if
@@ -8,7 +8,7 @@ gnome-terminal
 function checkIfProgrammsExists() {
     echo "Checking if all required tools are available:"
 
-    declare -a tools=("kubectl" "minikube" "cat" "curl" "python" "flask")
+    declare -a tools=("kubectl" "minikube" "cat" "curl" "python" "flask" "npm")
     error_counter=0
 
     for tool in "${tools[@]}"

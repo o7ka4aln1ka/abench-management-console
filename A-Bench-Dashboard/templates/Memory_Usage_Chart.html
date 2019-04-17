@@ -4,14 +4,18 @@
   <meta charset="utf-8" />
   <title>{{ title }}</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+  <!-- <script src="./node_modules/chart.js/dist/Chart.js"></script> -->
+    <!-- <script src="/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/static/Chart.min.js"></script> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_charts.css') }}">
 </head>
 
 <body>
   <center>
-    <h1>{{ title }}</h1>
+    <h2>{{ title }}</h2>
   </center>
+
   <center>
-    <canvas id="chart" width="1400" height="600"></canvas>
+    <canvas id="chart" width="1200" height="600"></canvas>
     <script>
       // bar chart data
       var barData = {
@@ -51,7 +55,12 @@
     </script>
   </center>
   <center>
-  <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
+    <div class="btn">
+      <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
+      <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/barCPUusage'">CPU Usage Chart</button>
+      <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/barFilesystemUsage'">Filesystem Usage Chart</button>
+    </div>
   </center>
 </body>
+
 </html>
