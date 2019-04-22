@@ -132,5 +132,13 @@ def barFilesystemUsage():
     bar_values=file_values
     return render_template('Filesystem_Usage_Chart.html', title='Filesystem Usage', max=3610571264, labels=bar_labels, values=bar_values)
 
+@app.route('/densityGraph')
+def densityGraph():
+    return render_template('density_d3_graph.html')
+
+@app.route('/zoomDotGraph')
+def zoomDotGraph():
+    return render_template('zoom_d3_dots.html')
+
 if __name__ == "__main__":
    app.run(port=5000, debug=True, use_reloader=False)

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+    <!-- <script src="./node_modules/chart.js/dist/Chart.js"></script> -->
+    <!-- <script src="/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/static/Chart.min.js"></script> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_charts.css') }}">
+    <link rel="iris csv" href="/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/templates/iris.csv">
+
+    <!-- Load d3.js -->
+    <script src="http://d3js.org/d3.v4.js"></script>
+</head>
+
+<!-- Create a div where the graph will take place -->
+<div id="dataviz_axisZoom"></div>
+
+<script>
+    // set the dimensions and margins of the graph
+    var margin = {
+            top: 10,
+            right: 30,
+            bottom: 30,
+            left: 60
+        },
+        width = 1000 - margin.left - margin.right,
+        height = 600 - margin.top - margin.bottom;
+
+    // append the SVG object to the body of the page
+    var SVG = d3.select("#dataviz_axisZoom")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    //Read the data
+    d3.csv('https://gitlab.com/o7ka4aln1ka/bigbench2_master/blob/master/cpu_usage_A_I_K.csv', function(data) {
+
+        // Add X axis
+        var x = d3.scaleLinear()
+            .domain([0, 10])
+            .range([0, width]);
+        var xAxis = SVG.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+        // Add Y axis
+        var y = d3.scaleLinear()
+            .domain([0, 9])
+            .range([height, 0]);
+        var yAxis = SVG.append("g")
+            .call(d3.axisLeft(y));
+
+        // Add a clipPath: everything out of this area won't be drawn.
+        var clip = SVG.append("defs").append("SVG:clipPath")
+            .attr("id", "clip")
+            .append("SVG:rect")
+            .attr("width", width)
+            .attr("height", height)
+            .attr("x", 0)
+            .attr("y", 0);
+
+        // Create the scatter variable: where both the circles and the brush take place
+        var scatter = SVG.append('g')
+            .attr("clip-path", "url(#clip)")
+
+        // Add circles
+        scatter
+            .selectAll("circle")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", function(d) {
+                return x(d.Sepal_Length);
+            })
+            .attr("cy", function(d) {
+                return y(d.Petal_Length);
+            })
+            .attr("r", 8)
+            .style("fill", "#61a3a9")
+            .style("opacity", 0.5)
+
+        // Set the zoom and Pan features: how much you can zoom, on which part, and what to do when there is a zoom
+        var zoom = d3.zoom()
+            .scaleExtent([.5, 20]) // This control how much you can unzoom (x0.5) and zoom (x20)
+            .extent([
+                [0, 0],
+                [width, height]
+            ])
+            .on("zoom", updateChart);
+
+        // This add an invisible rect on top of the chart area. This rect can recover pointer events: necessary to understand when the user zoom
+        SVG.append("rect")
+            .attr("width", width)
+            .attr("height", height)
+            .style("fill", "none")
+            .style("pointer-events", "all")
+            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
+            .call(zoom);
+        // now the user can zoom and it will trigger the function called updateChart
+
+        // A function that updates the chart when the user zoom and thus new boundaries are available
+        function updateChart() {
+
+            // recover the new scale
+            var newX = d3.event.transform.rescaleX(x);
+            var newY = d3.event.transform.rescaleY(y);
+
+            // update axes with these new boundaries
+            xAxis.call(d3.axisBottom(newX))
+            yAxis.call(d3.axisLeft(newY))
+
+            // update circle position
+            scatter
+                .selectAll("circle")
+                .attr('cx', function(d) {
+                    return newX(d.Sepal_Length)
+                })
+                .attr('cy', function(d) {
+                    return newY(d.Petal_Length)
+                });
+        }
+
+    })
+
+
+    // fake data
+    // var data = [
+    //     {year: 2000, population: 1192},
+    //     {year: 2001, population: 1234},
+    //     {year: 2002, population: 1463},
+    //     {year: 2003, population: 1537},
+    //     {year: 2004, population: 1334},
+    //     {year: 2005, population: 1134},
+    //     {year: 2006, population: 1234},
+    //     {year: 2007, population: 1484},
+    //     {year: 2008, population: 1562},
+    //     {year: 2009, population: 1427},
+    //     {year: 2010, population: 1325},
+    //     {year: 2011, population: 1484},
+    //     {year: 2012, population: 1661},
+    //     {year: 2013, population: 1537},
+    //     {year: 2014, population: 1334},
+    //     {year: 2015, population: 1134},
+    //     {year: 2016, population: 1427}
+    // ];
+    //
+    // // Parse the date / time
+    // var parseDate = d3.timeParse("%Y");
+    //
+    // // force types
+    // function type(dataArray) {
+    //     dataArray.forEach(function(d) {
+    //         d.year = parseDate(d.year);
+    //         d.retention = +d.population;
+    //     });
+    //     return dataArray;
+    // }
+    // data = type(data);
+    //
+    // // Set the dimensions of the canvas / graph
+    // var margin = {top: 30, right: 20, bottom: 30, left: 50},
+    //     width = 500 - margin.left - margin.right,
+    //     height = 250 - margin.top - margin.bottom;
+    //
+    //
+    // // Set the scales ranges
+    // var x = d3.scaleTime().range([0, width]);
+    // var y = d3.scaleLinear().range([height, 0]);
+    //
+    // // Define the axes
+    // var xAxis = d3.axisBottom().scale(x);
+    // var yAxis = d3.axisLeft().scale(y);
+    //
+    // // create a line based on the data
+    // var line = d3.line()
+    //         .x(function(d) { return x(d.year); })
+    //         .y(function(d) { return y(d.population); });
+    //
+    // // Add the svg canvas
+    // var svg = d3.select("body")
+    //     .append("svg")
+    //         .attr("width", width + margin.left + margin.right)
+    //         .attr("height", height + margin.top + margin.bottom)
+    //     .append("g")
+    //         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    //
+    // // set the domain range from the data
+    // x.domain(d3.extent(data, function(d) { return d.year; }));
+    // y.domain([
+    //         d3.min(data, function(d) { return Math.floor(d.population - 200); }),
+    //         d3.max(data, function(d) { return Math.floor(d.population + 200); })
+    //     ]);
+    //
+    // // draw the line created above
+    // svg.append("path").data([data])
+    //         .style('fill', 'none')
+    //         .style('stroke', 'steelblue')
+    //         .style('stroke-width', '2px')
+    //         .attr("d", line);
+    //
+    // // Add the X Axis
+    // svg.append("g")
+    //         .attr("transform", "translate(0," + height + ")")
+    //         .call(xAxis);
+    //
+    // // Add the Y Axis
+    // svg.append("g")
+    //         .call(yAxis);
+
+
+
+
+
+
+
+
+
+</script>
+
+<center>
+    <div class="btn">
+        <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
+        <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/barCPUusage'">CPU Usage Chart</button>
+        <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/barFilesystemUsage'">Filesystem Usage Chart</button>
+    </div>
+</center>
+</body>
+
+</html>
