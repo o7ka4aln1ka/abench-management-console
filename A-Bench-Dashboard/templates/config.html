@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<header>
+    <code>
+    <center>
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Logo-Goethe-University-Frankfurt-am-Main.svg/2362px-Logo-Goethe-University-Frankfurt-am-Main.svg.png" height="104" width="220">
+        <h1> Welcome to A-Bench</h1>
+        <h2> Last update: {{ time }}</h2>
+    </center>
+    </code>
+</header>
+
+<section-left>
+  <!-- <code> -->
+  <div class="btn-queries">
+    <h2>List with all queries: </h2>
+    <div>
+      <button id="config_txt" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/config_txt'; changeColor()">Config</button>
+      Generate/Reset Config File <br>
+      <button id="query1" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/query1'">Query 1</button>
+      Discription of Query 1. <br>
+      <button id="query2" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/query2'">Query 2</button>
+      Discription of Query 2. <br>
+      <button id="query3" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/query3'">Query 3</button>
+      Discription of Query 3. <br>
+      <button id="query4" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/query4'">Query 4</button>
+      Discription of Query 4. <br>
+      <button id="query5" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/query5'">Query 5</button>
+      Find the 10 most browsed products. <br>
+      <script>
+        function changeColor(){
+          document.getElementById("config_txt").style.color = "blue";
+        }
+      </script>
+      <style type="text/css">
+div.btn-queries {
+  /* background-color: #58ADDA; */
+  /* border-radius: 5px; */
+  /* border: 1px solid blue; */
+  color: black;
+  padding: 10px 12px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+  margin: 3px;
+}
+
+div.btn-queries button:focus,
+div.btn-queries button:active,
+div.btn-queries input:active,
+div.btn-queries input:focus {
+ border-color: black;
+ border-style: solid;
+ background:  #58ADDA;
+}
+
+div.btn-queries button:hover,
+div.btn-queries input:hover {
+ border-color: black;
+ border-style: solid;
+}
+ </style>
+    <!-- • Q6 : Find the 5 most browsed products that are not purchased. <br>
+    • Q7 : List users with more than 10 sessions. A session is defined as a 10-minute window of clicks by a user. <br>
+    • Q9 : Find the average number of sessions per registered user per month. Display the top ten users. <br>
+    • Q13 : Find the average amount of time a user spends on the website. <br>
+    • Q14 : Compare the average number of products purchased by users from one year to the next. <br>
+    • Q16 : Find the top ten pages visited. <br>
+    • Q17 : Find the top ten pages visited on a certain day (such as Valentine’s Day). <br>
+    • Q19 : Find out the days with the highest page views. <br>
+    • Q20 : Do a user segmentation based on their preferred shopping method (online vs. in-store). <br>
+    • Q21 : Find the most popular web page paths that lead to a purchase. <br>
+    • Q22 : Show the number of unique visitors per day. <br>
+    • Q23 : Show the users with the most visits. <br>
+    • Q24 :  <br>
+    • Q25 :  <br>
+    • Q26 :  <br>
+    • Q27 :  <br>
+    • Q28 :  <br>
+    • Q29 :  <br>
+    • Q30 :  <br> -->
+</div>
+</div>
+<!-- </code> -->
+</section-left>
+<!-- <section-right> -->
+
+<center>
+  <div class="btn-queries">
+    <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
+  </div>
+<div id="allButFooter">
+  <center>
+<footer>
+
+          </center>
+            <footer id="footnotes" class="col-sm-9" style="position: fixed; bottom: 0; width: 100%;">
+                <strong class="Copy">Copyright © 2019</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="master">Master Thesis Project</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="Name">Vasil Radushev</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="uni">DBIS</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="uni">Goethe University Frankfurt</strong>
+                <br>
+                <small>GitLab: <a href="https://gitlab.com/o7ka4aln1ka/bigbench2_master/">BigBench2</a>.</small>
+            </footer>
+        </div>
+    </center>
+</footer>
+
+</html>

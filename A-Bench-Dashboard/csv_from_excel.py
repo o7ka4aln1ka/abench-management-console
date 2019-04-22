@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 import pandas as pd
 
 # extract data from excel sheet CPU Usage and convert it to csv

@@ -46,18 +46,20 @@ section-left {
 }
 
 section-right {
-    float: right;
-    width: 20%;
+    font-size: 10px;
+    float: left;
+    width: 100%;
 }
+
 
 footer {
     clear: both;
     margin-bottom: 0;
     /* position: relative; */
 }
+
 /* colums settings */
 /* Create three equal columns that floats next to each other */
-
 .column {
     float: left;
     width: 79%;
@@ -113,3 +115,18 @@ footer {
 .btn-primary .button:hover {
     background-color: #17A3ED;
 }
+/*
+div.btn-queries {
+  background-color: #58ADDA;
+  border-radius: 5px;
+  border: 1px solid blue;
+  color: black;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  display: inline-block;
+  margin: 3px;
+} */

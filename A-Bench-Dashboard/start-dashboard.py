@@ -2,6 +2,7 @@
 
 from flask import Flask, render_template, redirect
 import subprocess
+from subprocess import Popen, PIPE
 import os
 import datetime
 import time
@@ -37,8 +38,7 @@ def home():
       'title' : 'A-Bench',
       'time': timeString
       }
-   return render_template('main.html', **templateData)
-   # return render_template('test.html', **templateData)
+   return render_template('homepage.html', **templateData)
 
 @app.route("/activateScripts/", methods=['GET', 'POST'])
 def activateScripts():
@@ -50,11 +50,45 @@ def checkPreRequirements():
    subprocess.call(['./pre-requirements.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
+# generate CSVs
 @app.route("/csv_from_excel/", methods=['GET', 'POST'])
 def csv_from_excel():
-   subprocess.call(['./csv_from_excel.sh'], shell=True)
+   subprocess.Popen(['./csv_from_excel.py'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
+# generate CONFIG file
+@app.route("/config_txt/", methods=['GET', 'POST'])
+def config_txt():
+   subprocess.Popen(['./create_txt_config.py'], shell=True)
+   return redirect('http://127.0.0.1:5000/config')
+
+# choose which queries to run
+@app.route("/query1/", methods=['GET', 'POST'])
+def query1():
+   subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query1.py'], shell=True)
+   return redirect('http://127.0.0.1:5000/config')
+
+@app.route("/query2/", methods=['GET', 'POST'])
+def query2():
+   subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query2.py'], shell=True)
+   return redirect('http://127.0.0.1:5000/config')
+
+@app.route("/query3/", methods=['GET', 'POST'])
+def query3():
+   subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query3.py'], shell=True)
+   return redirect('http://127.0.0.1:5000/config')
+
+@app.route("/query4/", methods=['GET', 'POST'])
+def query4():
+   subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query4.py'], shell=True)
+   return redirect('http://127.0.0.1:5000/config')
+
+@app.route("/query5/", methods=['GET', 'POST'])
+def query5():
+   subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query5.py'], shell=True)
+   return redirect('http://127.0.0.1:5000/config')
+
+# create the infrastructure
 @app.route("/startMinikube/", methods=['GET', 'POST'])
 def startMinikube():
    subprocess.call(['./startminikube.sh'], shell=True)
@@ -70,10 +104,15 @@ def stopMinikube():
   subprocess.call(['./stopminikube.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
-@app.route("/startPromethius/", methods=['GET', 'POST'])
-def startPromethius():
-  subprocess.call(['./startpromethius.sh'], shell=True)
-  return redirect('http://127.0.0.1:5000/')
+@app.route("/config/", methods=['GET', 'POST'])
+def config():
+   now = datetime.datetime.now()
+   timeString = now.strftime("%H:%M %d-%m-%Y")
+   templateData = {
+      'title' : 'A-Bench',
+      'time': timeString
+      }
+   return render_template('config.html', **templateData)
 
 @app.route('/barCPUusage')
 def bar():
