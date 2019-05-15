@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- auto refresh homepage every 15 seconds -->
+    <meta http-equiv="refresh" content="15">
 </head>
 
 <header>
@@ -56,6 +58,21 @@
       </code>
     </div>
 </section-left>
+
+<body>
+<div id="textbox">
+    <textarea rows="25" cols="65">
+      {{ content }}
+    </textarea>
+    <!-- <script type="text/javascript">
+    function refreshPage () {
+      var page_y = document.getElementsByTagName("body")[0].scrollTop;
+      window.location.href = window.location.href.split('?')[0] + '?page_y=' + page_y;
+    }
+  </script> -->
+</div>
+</body>
+
 <!--
 <section-right>
   <div class="column">

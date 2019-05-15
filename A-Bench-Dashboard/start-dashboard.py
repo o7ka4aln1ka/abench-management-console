@@ -7,6 +7,8 @@ import os
 import datetime
 import time
 import pandas as pd
+import json
+import csv
 
 app = Flask(__name__)
 
@@ -38,7 +40,10 @@ def home():
       'title' : 'A-Bench',
       'time': timeString
       }
-   return render_template('homepage.html', **templateData)
+   text = open('/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/output.txt', 'r+')
+   content = text.read()
+   text.close()
+   return render_template('homepage.html', content=content, **templateData)
 
 @app.route("/activateScripts/", methods=['GET', 'POST'])
 def activateScripts():
@@ -56,10 +61,16 @@ def csv_from_excel():
    subprocess.Popen(['./csv_from_excel.py'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
-# generate CONFIG file
-@app.route("/config_txt/", methods=['GET', 'POST'])
-def config_txt():
-   subprocess.Popen(['./create_txt_config.py'], shell=True)
+# set ENV VAR
+@app.route("/set_env_var/", methods=['GET', 'POST'])
+def set_env_var():
+   subprocess.Popen(['./set_env_var.py'], shell=True)
+   return redirect('http://127.0.0.1:5000/config')
+
+# set ENV VAR with all quieries
+@app.route("/set_env_var_all_queries/", methods=['GET', 'POST'])
+def set_env_var_all_queries():
+   subprocess.Popen(['./set_env_var_all_queries.py'], shell=True)
    return redirect('http://127.0.0.1:5000/config')
 
 # choose which queries to run
@@ -112,6 +123,7 @@ def config():
       'title' : 'A-Bench',
       'time': timeString
       }
+   value = request.form.getlist('check') 
    return render_template('config.html', **templateData)
 
 @app.route('/barCPUusage')
@@ -132,13 +144,27 @@ def barFilesystemUsage():
     bar_values=file_values
     return render_template('Filesystem_Usage_Chart.html', title='Filesystem Usage', max=3610571264, labels=bar_labels, values=bar_values)
 
-@app.route('/densityGraph')
-def densityGraph():
-    return render_template('density_d3_graph.html')
+# @app.route('/densityGraph')
+# def densityGraph():
+#     return render_template('density_d3_graph.html')
 
-@app.route('/zoomDotGraph')
-def zoomDotGraph():
-    return render_template('zoom_d3_dots.html')
+# @app.route('/zoomDotGraph')
+# def zoomDotGraph():
+#     df = pd.read_csv("/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/data/iris.csv")
+#     chart_data = df.to_dict(orient='records')
+#     chart_data = json.dumps(chart_data)
+#     data = {'chart_data': chart_data}
+#     return render_template('index.html', data=data)
+
+# @app.route('/test')
+# def test():
+#     df = pd.read_csv("iris.csv")
+#     chart_data = df.to_dict(orient='records')
+#     chart_data = json.dumps(chart_data, index=2)
+#     data = {'chart_data': chart_data}
+#     return render_template('index.html', data=data)
+
+
 
 if __name__ == "__main__":
    app.run(port=5000, debug=True, use_reloader=False)

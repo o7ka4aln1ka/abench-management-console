@@ -3,7 +3,7 @@
 import os
 import stat
 
-file = open("config/config.txt", "w+")
+file = open("config/config.sh   ", "w+")
 file.write("cd $home_container_bench && hive -f queries/")
 file.close()
 

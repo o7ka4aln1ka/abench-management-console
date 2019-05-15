@@ -1,0 +1,27 @@
+cluster_name                                             labels  nodename                  time  type     value
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:25:00Z  node  0.407305
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:26:00Z  node  0.472704
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:27:00Z  node  0.488521
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:28:00Z  node  0.479736
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:29:00Z  node  0.480028
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:30:00Z  node  0.480046
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:31:00Z  node  0.479727
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:32:00Z  node  0.476488
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:33:00Z  node  0.474232
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:34:00Z  node  0.473757
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:35:00Z  node  0.473772
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:36:00Z  node  0.473901
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:37:00Z  node  0.473803
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:38:00Z  node  0.474017
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:39:00Z  node  0.474492
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:40:00Z  node  0.468944
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:41:00Z  node  0.475870
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:42:00Z  node  0.477151
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:43:00Z  node  0.477398
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:44:00Z  node  0.477502
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:45:00Z  node  0.477623
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:46:00Z  node  0.477703
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:47:00Z  node  0.477812
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:48:00Z  node  0.477439
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:49:00Z  node  0.470145
+     default  beta.kubernetes.io/arch:amd64,beta.kubernetes....  minikube  2019-04-26T20:50:00Z  node  0.478364
