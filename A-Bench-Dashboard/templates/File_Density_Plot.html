@@ -4,6 +4,9 @@
   <meta charset="utf-8" />
   <title>{{ title }}</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.0"></script>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_charts.css') }}">
 </head>
 
@@ -74,15 +77,39 @@
     };
 
     var lineChart = new Chart(fileCanvas, {
+      zoomEnabled: true,
       type: 'line',
       data: fileData,
-      options: chartOptions
+      options: chartOptions,
+      plugins: {
+						zoom: {
+							pan: {
+								enabled: true,
+								mode: 'xy'
+							},
+							zoom: {
+								enabled: true,
+								mode: 'y'
+							}
+						}
+					}
     });
     </script>
   </center>
 
   <center>
     <br>
+    <button id="reset_zoom">
+    Reset zoom
+    </button>
+
+    <button id="disable_zoom">
+        Disable zoom
+    </button>
+
+    <button id="enable_zoom">
+        Enable zoom
+    </button>
     <br>
     <div class="btn-primary">
       <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
