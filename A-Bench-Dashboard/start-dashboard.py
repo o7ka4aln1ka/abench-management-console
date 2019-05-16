@@ -12,8 +12,13 @@ import csv
 
 app = Flask(__name__)
 
+# cpu_colnames=['time', 'value']
+# cpu_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/cpu_usage_A_I_K.csv', skiprows=[0], names=cpu_colnames)
+# cpu_labels = cpu_data.time.tolist()
+# cpu_values = cpu_data.value.tolist()
+
 cpu_colnames=['time', 'value']
-cpu_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/cpu_usage_A_I_K.csv', skiprows=[0], names=cpu_colnames)
+cpu_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/cpu_usage_A_I_K_short.csv', skiprows=[0], names=cpu_colnames)
 cpu_labels = cpu_data.time.tolist()
 cpu_values = cpu_data.value.tolist()
 
@@ -27,10 +32,10 @@ file_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/filesystem_usage_A_J_L.c
 file_labels = file_data.time.tolist()
 file_values = file_data.value.tolist()
 
-colors = [
-    "#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA",
-    "#ABCDEF", "#DDDDDD", "#ABCABC", "#4169E1",
-    "#C71585", "#FF4500", "#FEDCBA", "#46BFBD"]
+# colors = [
+#     "#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA",
+#     "#ABCDEF", "#DDDDDD", "#ABCABC", "#4169E1",
+#     "#C71585", "#FF4500", "#FEDCBA", "#46BFBD"]
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -123,7 +128,7 @@ def config():
       'title' : 'A-Bench',
       'time': timeString
       }
-   value = request.form.getlist('check') 
+   # value = request.form.getlist('check')
    return render_template('config.html', **templateData)
 
 @app.route('/barCPUusage')
@@ -131,6 +136,19 @@ def bar():
     bar_labels=cpu_labels
     bar_values=cpu_values
     return render_template('CPU_Usage_Chart.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=bar_values)
+
+@app.route('/testDensity')
+def testDensity():
+    bar_labels=cpu_labels
+    bar_values=cpu_values
+    return render_template('test_density.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=bar_values)
+
+@app.route('/speedChart')
+def speedChart():
+    # bar_labels=cpu_labels
+    # bar_values=cpu_values
+    return render_template('CPU_Density_Plot.html', title='CPU Usage')
+
 
 @app.route('/barMemoryUsage')
 def barMemoryUsage():

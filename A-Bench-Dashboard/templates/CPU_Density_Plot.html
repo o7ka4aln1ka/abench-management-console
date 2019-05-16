@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>{{ title }}</title>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js'></script>
   <!-- <script src="./node_modules/chart.js/dist/Chart.js"></script> -->
     <!-- <script src="/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/static/Chart.min.js"></script> -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_charts.css') }}">
@@ -15,7 +15,7 @@
   </center>
 
   <center>
-    <canvas id="chart" width="1200" height="600"></canvas>
+    <!-- <canvas id="chart" width="1200" height="600"></canvas>
     <script>
       // bar chart data
       var barData = {
@@ -52,9 +52,44 @@
        scaleShowLabels: true
        }
      );
+    </script> -->
+
+    <canvas id="speedChart" width="600" height="400"></canvas>
+    <script>
+    var speedCanvas = document.getElementById("speedChart");
+
+    // Chart.defaults.global.defaultFontFamily = "Lato";
+    Chart.defaults.global.defaultFontSize = 18;
+
+    var speedData = {
+      labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
+      datasets: [{
+        label: "Car Speed (mph)",
+        data: [0, 59, 75, 20, 20, 55, 40],
+      }]
+    };
+
+    var chartOptions = {
+      legend: {
+        display: true,
+        position: 'top',
+        labels: {
+          boxWidth: 80,
+          fontColor: 'black'
+        }
+      }
+    };
+
+    var lineChart = new Chart(speedCanvas, {
+      type: 'line',
+      data: speedData,
+      options: chartOptions
+    });
     </script>
+
+
   </center>
-  
+
   <center>
     <div class="btn-primary">
       <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>

@@ -120,6 +120,15 @@
                     </div>
                     <button>Check All</button>
                 </div>
+
+                <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+                <script type="text/javascript">
+                $("#checkbox-container :checkbox").on("change", function(){
+                  alert("The checkbox with the ID '" + this.id + "' changed");
+                });
+                </script>
+
                 <style>
                     #checkbox-container {
                         margin: 10px 5px;
