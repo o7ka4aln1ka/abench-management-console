@@ -24,21 +24,20 @@
        "{{ item }}",
       {% endfor %}],
       datasets: [{
-        fillColor: "rgba(135, 217, 153, 1)",
+        fill: "rgba(135, 217, 153, 1)",
         label: "CPU Load",
         data: [{% for item in values %}
            "{{ item }}",
           {% endfor %}],
           // lineTension: 0,
-        // fill: 'rgba(135, 217, 153, 1)]',
-        // fill: false,
+        fill: true,
         borderColor: 'rgba(58, 166, 82, 1)',
         backgroundColor: 'rgba(135, 217, 153, 1)',
         pointBorderColor: 'rgba(57, 162, 80, 1)',
         // pointBackgroundColor: 'rgba(255,150,0,0.5)',
         pointRadius: 5,
         pointHoverRadius: 10,
-        pointHitRadius: 30,
+        pointHitRadius: 20,
         pointBorderWidth: 2,
         pointStyle: 'rectRounded'
       }]
@@ -52,6 +51,24 @@
           boxWidth: 20,
           fontColor: 'black'
         }
+      },
+      scales: {
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'CPU Load',
+            fontSize: 20,
+            fontFamily: 'Lato'
+          }
+        }],
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Time',
+            fontSize: 20,
+            fontFamily: 'Lato'
+          }
+        }]
       }
     };
 
@@ -64,6 +81,8 @@
   </center>
 
   <center>
+    <br>
+    <br>
     <div class="btn-primary">
       <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
       <button id="memChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage Chart</button>

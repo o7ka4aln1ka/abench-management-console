@@ -14,7 +14,7 @@
     <script>
     var fileCanvas = document.getElementById("fileChart");
     steps = 10
-    // max = {{max}}
+    max = {{max}}
 
     Chart.defaults.global.defaultFontFamily = "Lato";
     Chart.defaults.global.defaultFontSize = 12;
@@ -38,7 +38,7 @@
         // pointBackgroundColor: 'rgba(255,150,0,0.5)',
         pointRadius: 5,
         pointHoverRadius: 10,
-        pointHitRadius: 30,
+        pointHitRadius: 20,
         pointBorderWidth: 2,
         pointStyle: 'rectRounded'
       }]
@@ -52,7 +52,25 @@
           boxWidth: 20,
           fontColor: 'black'
         }
-      }
+      },
+      scales: {
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Filesystem Load',
+            fontSize: 20,
+            fontFamily: 'Lato'
+          }
+        }],
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Time',
+            fontSize: 20,
+            fontFamily: 'Lato'
+          }
+        }]
+        }
     };
 
     var lineChart = new Chart(fileCanvas, {
@@ -64,6 +82,8 @@
   </center>
 
   <center>
+    <br>
+    <br>
     <div class="btn-primary">
       <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
       <button id="memChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage Chart</button>
