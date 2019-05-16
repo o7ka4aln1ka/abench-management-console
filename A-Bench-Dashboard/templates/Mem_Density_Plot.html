@@ -10,22 +10,22 @@
 <body>
   <center>
 
-    <canvas id="cpuChart" width="250" height="100"></canvas>
+    <canvas id="memChart" width="250" height="100"></canvas>
     <script>
-    var cpuCanvas = document.getElementById("cpuChart");
+    var memCanvas = document.getElementById("memChart");
     steps = 10
     // max = {{max}}
 
     Chart.defaults.global.defaultFontFamily = "Lato";
     Chart.defaults.global.defaultFontSize = 12;
 
-    var cpuData = {
+    var memData = {
       labels: [{% for item in labels %}
        "{{ item }}",
       {% endfor %}],
       datasets: [{
         fillColor: "rgba(135, 217, 153, 1)",
-        label: "CPU Load",
+        label: "Memory Load",
         data: [{% for item in values %}
            "{{ item }}",
           {% endfor %}],
@@ -55,9 +55,9 @@
       }
     };
 
-    var lineChart = new Chart(cpuCanvas, {
+    var lineChart = new Chart(memCanvas, {
       type: 'line',
-      data: cpuData,
+      data: memData,
       options: chartOptions
     });
     </script>

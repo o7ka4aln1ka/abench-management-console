@@ -10,22 +10,22 @@
 <body>
   <center>
 
-    <canvas id="cpuChart" width="250" height="100"></canvas>
+    <canvas id="fileChart" width="250" height="100"></canvas>
     <script>
-    var cpuCanvas = document.getElementById("cpuChart");
+    var fileCanvas = document.getElementById("fileChart");
     steps = 10
     // max = {{max}}
 
     Chart.defaults.global.defaultFontFamily = "Lato";
     Chart.defaults.global.defaultFontSize = 12;
 
-    var cpuData = {
+    var fileData = {
       labels: [{% for item in labels %}
        "{{ item }}",
       {% endfor %}],
       datasets: [{
         fillColor: "rgba(135, 217, 153, 1)",
-        label: "CPU Load",
+        label: "Filesystem Load",
         data: [{% for item in values %}
            "{{ item }}",
           {% endfor %}],
@@ -55,9 +55,9 @@
       }
     };
 
-    var lineChart = new Chart(cpuCanvas, {
+    var lineChart = new Chart(fileCanvas, {
       type: 'line',
-      data: cpuData,
+      data: fileData,
       options: chartOptions
     });
     </script>
@@ -67,7 +67,7 @@
     <div class="btn-primary">
       <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
       <button id="memChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage Chart</button>
-      <button id="fileChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage Chart</button>
+      <button id="cpuChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage Chart</button>
     </div>
   </center>
 </body>

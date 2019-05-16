@@ -32,10 +32,6 @@ file_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/filesystem_usage_A_J_L.c
 file_labels = file_data.time.tolist()
 file_values = file_data.value.tolist()
 
-# colors = [
-#     "#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA",
-#     "#ABCDEF", "#DDDDDD", "#ABCABC", "#4169E1",
-#     "#C71585", "#FF4500", "#FEDCBA", "#46BFBD"]
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -84,26 +80,6 @@ def query1():
    subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query1.py'], shell=True)
    return redirect('http://127.0.0.1:5000/config')
 
-@app.route("/query2/", methods=['GET', 'POST'])
-def query2():
-   subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query2.py'], shell=True)
-   return redirect('http://127.0.0.1:5000/config')
-
-@app.route("/query3/", methods=['GET', 'POST'])
-def query3():
-   subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query3.py'], shell=True)
-   return redirect('http://127.0.0.1:5000/config')
-
-@app.route("/query4/", methods=['GET', 'POST'])
-def query4():
-   subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query4.py'], shell=True)
-   return redirect('http://127.0.0.1:5000/config')
-
-@app.route("/query5/", methods=['GET', 'POST'])
-def query5():
-   subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query5.py'], shell=True)
-   return redirect('http://127.0.0.1:5000/config')
-
 # create the infrastructure
 @app.route("/startMinikube/", methods=['GET', 'POST'])
 def startMinikube():
@@ -131,58 +107,23 @@ def config():
    # value = request.form.getlist('check')
    return render_template('config.html', **templateData)
 
-@app.route('/barCPUusage')
-def bar():
+@app.route('/cpuChart')
+def cpuChart():
     bar_labels=cpu_labels
     bar_values=cpu_values
-    return render_template('CPU_Usage_Chart.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=bar_values)
+    return render_template('CPU_Density_Plot.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=bar_values)
 
-@app.route('/testDensity')
-def testDensity():
-    bar_labels=cpu_labels
-    bar_values=cpu_values
-    return render_template('test_density.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=bar_values)
-
-@app.route('/speedChart')
-def speedChart():
-    # bar_labels=cpu_labels
-    # bar_values=cpu_values
-    return render_template('CPU_Density_Plot.html', title='CPU Usage')
-
-
-@app.route('/barMemoryUsage')
-def barMemoryUsage():
+@app.route('/memChart')
+def memChart():
     bar_labels=mem_labels
     bar_values=mem_values
-    return render_template('Memory_Usage_Chart.html', title='Memory Usage', max=7388910336, labels=bar_labels, values=bar_values)
+    return render_template('Mem_Density_Plot.html', title='RAM Usage', max=2095640174197, labels=bar_labels, values=bar_values)
 
-@app.route('/barFilesystemUsage')
-def barFilesystemUsage():
+@app.route('/fileChart')
+def fileChart():
     bar_labels=file_labels
     bar_values=file_values
-    return render_template('Filesystem_Usage_Chart.html', title='Filesystem Usage', max=3610571264, labels=bar_labels, values=bar_values)
-
-# @app.route('/densityGraph')
-# def densityGraph():
-#     return render_template('density_d3_graph.html')
-
-# @app.route('/zoomDotGraph')
-# def zoomDotGraph():
-#     df = pd.read_csv("/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/data/iris.csv")
-#     chart_data = df.to_dict(orient='records')
-#     chart_data = json.dumps(chart_data)
-#     data = {'chart_data': chart_data}
-#     return render_template('index.html', data=data)
-
-# @app.route('/test')
-# def test():
-#     df = pd.read_csv("iris.csv")
-#     chart_data = df.to_dict(orient='records')
-#     chart_data = json.dumps(chart_data, index=2)
-#     data = {'chart_data': chart_data}
-#     return render_template('index.html', data=data)
-
-
+    return render_template('File_Density_Plot.html', title='Filesystem Usage', max=2095640174197, labels=bar_labels, values=bar_values)
 
 if __name__ == "__main__":
    app.run(port=5000, debug=True, use_reloader=False)
