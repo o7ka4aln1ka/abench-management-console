@@ -12,23 +12,23 @@ import csv
 
 app = Flask(__name__)
 
-# cpu_colnames=['time', 'value']
-# cpu_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/cpu_usage_A_I_K.csv', skiprows=[0], names=cpu_colnames)
-# cpu_labels = cpu_data.time.tolist()
-# cpu_values = cpu_data.value.tolist()
-
 cpu_colnames=['time', 'value']
-cpu_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/cpu_usage_A_I_K_short.csv', skiprows=[0], names=cpu_colnames)
+cpu_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/future-app/a-bench/results/20190519_11_39_26/experiment_results/cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
 cpu_labels = cpu_data.time.tolist()
 cpu_values = cpu_data.value.tolist()
 
+# cpu_colnames=['time', 'value']
+# cpu_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/cpu_usage_A_I_K_short.csv', skiprows=[0], names=cpu_colnames)
+# cpu_labels = cpu_data.time.tolist()
+# cpu_values = cpu_data.value.tolist()
+
 mem_colnames=['time', 'value']
-mem_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/memory_usage_A_I_K.csv', skiprows=[0], names=mem_colnames)
+mem_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/future-app/a-bench/results/20190519_11_39_26/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
 mem_labels = mem_data.time.tolist()
 mem_values = mem_data.value.tolist()
 
 file_colnames=['time', 'value']
-file_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/filesystem_usage_A_J_L.csv', skiprows=[0], names=file_colnames)
+file_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/future-app/a-bench/results/20190519_11_39_26/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
 file_labels = file_data.time.tolist()
 file_values = file_data.value.tolist()
 
@@ -48,30 +48,30 @@ def home():
 
 @app.route("/activateScripts/", methods=['GET', 'POST'])
 def activateScripts():
-   subprocess.call(['./activatescripts.sh'], shell=True)
+   subprocess.call(['./scripts/activatescripts.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
 @app.route("/checkPreRequirements/", methods=['GET', 'POST'])
 def checkPreRequirements():
-   subprocess.call(['./check-pre-requirements.sh'], shell=True)
+   subprocess.call(['./scripts/check-pre-requirements.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
 # generate CSVs
 @app.route("/csv_from_excel/", methods=['GET', 'POST'])
 def csv_from_excel():
-   subprocess.Popen(['./csv_from_excel.py'], shell=True)
+   subprocess.Popen(['./scripts/csv_from_excel.py'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
 # set ENV VAR
 @app.route("/set_env_var/", methods=['GET', 'POST'])
 def set_env_var():
-   subprocess.Popen(['./set_env_var.py'], shell=True)
+   subprocess.Popen(['./scripts/set_env_var.py'], shell=True)
    return redirect('http://127.0.0.1:5000/config')
 
 # set ENV VAR with all quieries
 @app.route("/set_env_var_all_queries/", methods=['GET', 'POST'])
 def set_env_var_all_queries():
-   subprocess.Popen(['./set_env_var_all_queries.py'], shell=True)
+   subprocess.Popen(['./scripts/set_env_var_all_queries.py'], shell=True)
    return redirect('http://127.0.0.1:5000/config')
 
 # choose which queries to run
@@ -80,22 +80,23 @@ def query1():
    subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query1.py'], shell=True)
    return redirect('http://127.0.0.1:5000/config')
 
-# create the infrastructure
+# Setup the infrastructure
 @app.route("/setup_the_environment/", methods=['GET', 'POST'])
 def setup_the_environment():
-   subprocess.call(['./setup_the_environment.sh'], shell=True)
+   subprocess.call(['./scripts/setup_the_environment.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
+
+@app.route("/deploy_a_bench_infrastructure/", methods=['GET', 'POST'])
+def deploy_a_bench_infrastructure():
+  subprocess.call(['./scripts/deploy_a_bench_infrastructure.sh'], shell=True)
+  return redirect('http://127.0.0.1:5000/')
 
 @app.route("/minikubedashboard/", methods=['GET', 'POST'])
 def minikubeDashboard():
-  subprocess.call(['./minikubeDashboard.sh'], shell=True)
+  subprocess.call(['./scripts/minikubeDashboard.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
-@app.route("/stopMinikube/", methods=['GET', 'POST'])
-def stopMinikube():
-  subprocess.call(['./stopminikube.sh'], shell=True)
-  return redirect('http://127.0.0.1:5000/')
-
+# Run
 @app.route("/config/", methods=['GET', 'POST'])
 def config():
    now = datetime.datetime.now()
@@ -107,9 +108,15 @@ def config():
    # value = request.form.getlist('check')
    return render_template('config.html', **templateData)
 
+@app.route("/run_a_sample_experiment/", methods=['GET', 'POST'])
+def run_a_sample_experiment():
+  subprocess.call(['./scripts/run_a_sample_experiment.sh'], shell=True)
+  return redirect('http://127.0.0.1:5000/')
+
+# Analyse
 @app.route("/prepare_results/", methods=['GET', 'POST'])
 def prepare_results():
-  subprocess.call(['./prepare_results.sh'], shell=True)
+  subprocess.call(['./scripts/prepare_results.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
 @app.route('/cpuChart')

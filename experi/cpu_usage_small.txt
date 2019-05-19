@@ -1,3 +1,0 @@
-cluster_name                              container_base_image           container_name                                             labels namespace_name  nodename                               pod_name                  time           type         value
-     default                  k8s.gcr.io/heapster-amd64:v1.5.3                 heapster  addonmanager.kubernetes.io/mode:Reconcile,k8s-...    kube-system  minikube                         heapster-ns4pf  2019-04-26T20:25:00Z  pod_container     151804596
-     default  k8s.gcr.io/kube-controller-manager-amd64:v1.10.0  kube-controller-manager  component:kube-controller-manager,tier:control...    kube-system  minikube       kube-controller-manager-minikube  2019-04-26T20:25:00Z  pod_container    8467802114
