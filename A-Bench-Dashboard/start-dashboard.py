@@ -53,7 +53,7 @@ def activateScripts():
 
 @app.route("/checkPreRequirements/", methods=['GET', 'POST'])
 def checkPreRequirements():
-   subprocess.call(['./pre-requirements.sh'], shell=True)
+   subprocess.call(['./check-pre-requirements.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
 # generate CSVs
@@ -81,9 +81,9 @@ def query1():
    return redirect('http://127.0.0.1:5000/config')
 
 # create the infrastructure
-@app.route("/startMinikube/", methods=['GET', 'POST'])
-def startMinikube():
-   subprocess.call(['./startminikube.sh'], shell=True)
+@app.route("/setup_the_environment/", methods=['GET', 'POST'])
+def setup_the_environment():
+   subprocess.call(['./setup_the_environment.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
 @app.route("/minikubedashboard/", methods=['GET', 'POST'])
@@ -106,6 +106,11 @@ def config():
       }
    # value = request.form.getlist('check')
    return render_template('config.html', **templateData)
+
+@app.route("/prepare_results/", methods=['GET', 'POST'])
+def prepare_results():
+  subprocess.call(['./prepare_results.sh'], shell=True)
+  return redirect('http://127.0.0.1:5000/')
 
 @app.route('/cpuChart')
 def cpuChart():
