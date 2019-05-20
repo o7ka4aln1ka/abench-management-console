@@ -13,7 +13,7 @@ import csv
 app = Flask(__name__)
 
 cpu_colnames=['time', 'value']
-cpu_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/future-app/a-bench/results/20190519_11_39_26/experiment_results/cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
+cpu_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench/results/20190519_11_39_26/experiment_results/cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
 cpu_labels = cpu_data.time.tolist()
 cpu_values = cpu_data.value.tolist()
 
@@ -23,12 +23,12 @@ cpu_values = cpu_data.value.tolist()
 # cpu_values = cpu_data.value.tolist()
 
 mem_colnames=['time', 'value']
-mem_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/future-app/a-bench/results/20190519_11_39_26/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
+mem_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench/results/20190519_11_39_26/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
 mem_labels = mem_data.time.tolist()
 mem_values = mem_data.value.tolist()
 
 file_colnames=['time', 'value']
-file_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/future-app/a-bench/results/20190519_11_39_26/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
+file_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench/results/20190519_11_39_26/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
 file_labels = file_data.time.tolist()
 file_values = file_data.value.tolist()
 
@@ -88,10 +88,11 @@ def setup_the_environment():
 
 @app.route("/deploy_a_bench_infrastructure/", methods=['GET', 'POST'])
 def deploy_a_bench_infrastructure():
-  subprocess.call(['./scripts/deploy_a_bench_infrastructure.sh'], shell=True)
+  subprocess.call(['gnome-terminal -- ./future-app/a-bench/admin.sh senv_a'], shell=True)
+  # subprocess.call(['./scripts/deploy_a_bench_infrastructure.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
-@app.route("/minikubedashboard/", methods=['GET', 'POST'])
+@app.route("/minikubeDashboard/", methods=['GET', 'POST'])
 def minikubeDashboard():
   subprocess.call(['./scripts/minikubeDashboard.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
@@ -110,6 +111,8 @@ def config():
 
 @app.route("/run_a_sample_experiment/", methods=['GET', 'POST'])
 def run_a_sample_experiment():
+  # subprocess.call(['gnome-terminal -- ./testing_foo/foo.sh'], shell=True)
+  # subprocess.call(['gnome-terminal', '-x', './testing_foo/foo.sh'], shell=True)
   subprocess.call(['./scripts/run_a_sample_experiment.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 

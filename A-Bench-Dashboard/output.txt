@@ -1,65 +1,824 @@
-Script started on 2019-05-15 16:16:02+0200
-]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard[00m$ ls
-activatescripts.sh    package-lock.json           [0m[01;34mstatic[0m
-[01;34mconfig[0m                [01;32mpre-requirements.sh[0m         [01;32mstopminikube.sh[0m
-[01;32mcreate_txt_config.py[0m  [34;42mqueries[0m                     [01;34mtemplates[0m
-[01;32mcsv_from_excel.py[0m     set_env_var_all_queries.py  terminado.js
-[01;32mcsv_from_excel.sh[0m     set_env_var.py              [01;32mtesting-dataformats.py[0m
-[01;34mdata[0m                  [01;32mstart-dashboard.py[0m          xterm.js
-[01;32mminikubedashboard.sh[0m  [01;32mstartminikube.sh[0m
-output.txt            [01;32mstartpromethius.sh[0m
-]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard[00m$ sudo apt-get update
+Script started on 2019-05-20 11:53:19+0200
+]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[00m$ gnome-terminall -- ./future-app/a-bench/admin.sh down_submodules[A]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[00m$ sudo gnome-ter[4Pminal -- ./future-app/a-bench/admin.sh senv_a[A]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[00m$ gnome-terminal -- ./future-app/a-bench/admin.sh down_submodules[A]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgnome-terminall -- ./future-app/a-bench/admin.sh down_submodules[A]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[00m$ sudo gnome-ter[4Pminal -- ./future-app/a-bench/admin.sh senv_a[A]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[00m$ gnome-terminal[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'(cd ~/future-app/a-bench/ && ./admin.sh senv_a)'[C[C[C[C[C[C[18P "cd ~/future-app/a-bench/;" '[C[C[C[C[C[C[12@/bin/bash -c[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[18@ ./admin.sh senv_a[C[C[C" '[K[C[C[C[C[C[C[12P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C(cd ~/future-app/a-bench/ && ./admin.sh senv_a)'[C[C[C[C[C[13P./future-app/a-bench/admin.sh senv_a[A]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[00m$ sudo gnome-ter[5@minal[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[00m$ gnome-terminal -- ./future-app/a-bench/admin.sh down_submodules[A]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench[00m$ [K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo ./admin. sh senv.[K_a
 [sudo] password for vr: 
-0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]0% [Connecting to uk-mirrors.evowise.com] [Connecting to de.archive.ubuntu.com]                                                                               Hit:1 http://uk-mirrors.evowise.com/ubuntu bionic InRelease
-0% [Waiting for headers] [Connected to download.docker.com (143.204.214.54)] [C                                                                               Hit:2 http://linux.teamviewer.com/deb stable InRelease
-0% [Waiting for headers] [Waiting for headers] [Connected to download.docker.co0% [1 InRelease gpgv 242 kB] [Waiting for headers] [Waiting for headers] [Conne                                                                               Hit:3 http://ppa.launchpad.net/alessandro-strada/ppa/ubuntu bionic InRelease
-0% [1 InRelease gpgv 242 kB] [Waiting for headers] [Waiting for headers] [Conne                                                                               Get:4 http://de.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
-0% [1 InRelease gpgv 242 kB] [Waiting for headers] [4 InRelease 1.137 B/109 kB                                                                                Get:5 http://uk-mirrors.evowise.com/ubuntu bionic-updates InRelease [88,7 kB]
-0% [1 InRelease gpgv 242 kB] [5 InRelease 5.281 B/88,7 kB 6%] [4 InRelease 13,4                                                                               Hit:6 https://download.docker.com/linux/ubuntu bionic InRelease
-0% [1 InRelease gpgv 242 kB] [5 InRelease 28,5 kB/88,7 kB 32%] [4 InRelease 13,                                                                               Hit:7 https://deb.nodesource.com/node_10.x bionic InRelease
-0% [1 InRelease gpgv 242 kB] [5 InRelease 48,8 kB/88,7 kB 55%] [4 InRelease 32,                                                                               Hit:8 http://ppa.launchpad.net/fixnix/netspeed/ubuntu bionic InRelease
-0% [1 InRelease gpgv 242 kB] [5 InRelease 88,7 kB/88,7 kB 100%] [4 InRelease 400% [1 InRelease gpgv 242 kB] [4 InRelease 43,5 kB/109 kB 40%] [Connecting to se0% [Waiting for headers] [4 InRelease 53,1 kB/109 kB 49%] [Connecting to securi0% [2 InRelease gpgv 9.388 B] [Waiting for headers] [4 InRelease 53,1 kB/109 kB0% [2 InRelease gpgv 9.388 B] [Waiting for headers] [4 InRelease 92,8 kB/109 kB                                                                               Hit:10 http://uk-mirrors.evowise.com/ubuntu bionic-security InRelease
-0% [2 InRelease gpgv 9.388 B] [4 InRelease 92,8 kB/109 kB 85%] [Connecting to s0% [2 InRelease gpgv 9.388 B] [Waiting for headers] [Connecting to security.ubu                                                                               Get:11 http://uk-mirrors.evowise.com/ubuntu bionic-backports InRelease [74,6 kB]
-0% [2 InRelease gpgv 9.388 B] [11 InRelease 2.377 B/74,6 kB 3%] [Connecting to                                                                                Hit:12 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu bionic InRelease
-0% [2 InRelease gpgv 9.388 B] [11 InRelease 52,0 kB/74,6 kB 70%] [Connecting to0% [11 InRelease 69,4 kB/74,6 kB 93%] [Connecting to security.ubuntu.com (91.180% [3 InRelease gpgv 15,4 kB] [11 InRelease 69,4 kB/74,6 kB 93%] [Connecting to0% [3 InRelease gpgv 15,4 kB] [Waiting for headers] [Connecting to ppa.launchpa                                                                               Get:13 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
-0% [3 InRelease gpgv 15,4 kB] [13 InRelease 1.129 B/109 kB 1%] [Waiting for hea                                                                               Hit:14 http://ppa.launchpad.net/kasra-mp/ubuntu-indicator-weather/ubuntu bionic InRelease
-                                                                               0% [3 InRelease gpgv 15,4 kB] [13 InRelease 14,1 kB/109 kB 13%]0% [13 InRelease 34,2 kB/109 kB 31%] [Connecting to ppa.launchpad.net (91.189.90% [6 InRelease gpgv 64,4 kB] [13 InRelease 34,2 kB/109 kB 31%] [Connecting to                                                                                Hit:15 http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu bionic InRelease
-0% [6 InRelease gpgv 64,4 kB] [13 InRelease 91,8 kB/109 kB 84%] [Connecting to                                                                                0% [6 InRelease gpgv 64,4 kB] [Connecting to ppa.launchpad.net (91.189.95.83)]                                                                              0% [Waiting for headers]0% [7 InRelease gpgv 4.584 B] [Waiting for headers]                                                   0% [7 InRelease gpgv 4.584 B]                             0% [Waiting for headers]                        Get:16 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease [15,4 kB]
-0% [16 InRelease 1.120 B/15,4 kB 7%]0% [8 InRelease gpgv 15,9 kB] [16 InRelease 1.120 B/15,4 kB 7%]                                                               0% [8 InRelease gpgv 15,9 kB]                             0% [Working]0% [5 InRelease gpgv 88,7 kB]                             0% [Working]0% [10 InRelease gpgv 88,7 kB] [Waiting for headers]                                                    Get:17 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main i386 Packages [512 kB]
-0% [10 InRelease gpgv 88,7 kB] [17 Packages 924 B/512 kB 0%]                                                            0% [17 Packages 159 kB/512 kB 31%]0% [4 InRelease gpgv 109 kB] [17 Packages 159 kB/512 kB 31%]                                                            0% [17 Packages 345 kB/512 kB 67%]0% [12 InRelease gpgv 21,3 kB] [17 Packages 345 kB/512 kB 67%]                                                              0% [12 InRelease gpgv 21,3 kB]                              0% [Working]0% [17 Packages store 0 B]0% [17 Packages store 0 B] [11 InRelease gpgv 74,6 kB] [Waiting for headers]                                                                            Get:18 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 Packages [613 kB]
-0% [17 Packages store 0 B] [11 InRelease gpgv 74,6 kB] [18 Packages 2.376 B/613                                                                               0% [11 InRelease gpgv 74,6 kB] [18 Packages 96,8 kB/613 kB 16%]                                                               0% [18 Packages 107 kB/613 kB 17%]0% [14 InRelease gpgv 15,9 kB] [18 Packages 107 kB/613 kB 17%]                                                              0% [18 Packages 297 kB/613 kB 48%]0% [15 InRelease gpgv 15,4 kB] [18 Packages 297 kB/613 kB 48%]                                                              0% [18 Packages 447 kB/613 kB 73%]0% [13 InRelease gpgv 109 kB] [18 Packages 447 kB/613 kB 73%]                                                             0% [13 InRelease gpgv 109 kB]                             Get:19 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main Translation-en [225 kB]
-0% [13 InRelease gpgv 109 kB] [19 Translation-en 56 B/225 kB 0%]0% [18 Packages store 0 B] [13 InRelease gpgv 109 kB] [19 Translation-en 56 B/2                                                                               0% [18 Packages store 0 B] [19 Translation-en 32,0 kB/225 kB 14%]0% [18 Packages store 0 B] [16 InRelease gpgv 15,4 kB] [19 Translation-en 33,5                                                                                0% [16 InRelease gpgv 15,4 kB] [19 Translation-en 190 kB/225 kB 84%]                                                                    0% [19 Translation-en 199 kB/225 kB 88%]                                        0% [Working]            Get:20 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe i386 Packages [922 kB]
-0% [20 Packages 3.604 B/922 kB 0%]0% [19 Translation-en store 0 B] [20 Packages 3.604 B/922 kB 0%]                                                                0% [20 Packages 93,6 kB/922 kB 10%]0% [20 Packages 857 kB/922 kB 93%]                                  401 kB/s 3s0% [Working]                                                        401 kB/s 3s                                                                               Get:21 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe amd64 Packages [934 kB]
-0% [21 Packages 22,0 kB/934 kB 2%]                                  401 kB/s 2s0% [20 Packages store 0 B] [21 Packages 22,0 kB/934 kB 2%]          401 kB/s 2s0% [21 Packages 286 kB/934 kB 31%]                                  401 kB/s 2s0% [Waiting for headers]                                            401 kB/s 0s                                                                               Get:22 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe Translation-en [273 kB]
-0% [22 Translation-en 4.988 B/273 kB 2%]                            401 kB/s 0s0% [21 Packages store 0 B] [22 Translation-en 4.988 B/273 kB 2%]    401 kB/s 0s0% [21 Packages store 0 B]                                          401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [22 Translation-en store 0 B]                                    401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        401 kB/s 0s0% [Working]                                                        198 kB/s 0s0% [Working]                                                        198 kB/s 0s0% [Working]                                                        198 kB/s 0s0% [Connected to packages.cloud.google.com (172.217.23.142)]        198 kB/s 0s                                                                               Hit:9 https://packages.cloud.google.com/apt kubernetes-xenial InRelease
-0% [Working]                                                        198 kB/s 0s0% [9 InRelease gpgv 8.993 B]                                       198 kB/s 0s0% [Working]                                                        198 kB/s 0s                                                                               Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 3%Reading package lists... 3%Reading package lists... 6%Reading package lists... 6%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 23%Reading package lists... 35%Reading package lists... 35%Reading package lists... 62%Reading package lists... 62%Reading package lists... 62%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 77%Reading package lists... 78%Reading package lists... 78%Reading package lists... 78%Reading package lists... 78%Reading package lists... 80%Reading package lists... 80%Reading package lists... 82%Reading package lists... 82%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 83%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... Done
-E: Repository 'http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease' changed its 'Label' value from 'Oracle Java (JDK) 8 Installer PPA' to 'Oracle Java (JDK) 8 Installer PPA (DISCONTINUED)'
-N: This must be accepted explicitly before updates for this repository can be applied. See apt-secure(8) manpage for details.
-W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-]0;vr@v: ~/BigBench2-easy-deploy/A-Bench-Dashboard[01;32mvr@v[00m:[01;34m~/BigBench2-easy-deploy/A-Bench-Dashboard[00m$ ls
-activatescripts.sh    package-lock.json           [0m[01;34mstatic[0m
-[01;34mconfig[0m                [01;32mpre-requirements.sh[0m         [01;32mstopminikube.sh[0m
-[01;32mcreate_txt_config.py[0m  [34;42mqueries[0m                     [01;34mtemplates[0m
-[01;32mcsv_from_excel.py[0m     set_env_var_all_queries.py  terminado.js
-[01;32mcsv_from_excel
+[1;34m[A-Bench][0m Preflight in progress...
+[x] git  detected.
+[x] docker  detected.
+[x] virtualbox  detected.
+[x] minikube  detected.
+[x] kubectl  detected.
+[x] helm  detected.
+[x] curl  detected.
+[x] cat  detected.
+
+
+
+
+Number of missing components: 0
+
+All components are available and the system should be ready for use.
+Deleting local Kubernetes cluster...
+Machine deleted.
+Starting local Kubernetes v1.10.0 cluster...
+Starting VM...
+Getting VM IP address...
+E0520 11:55:08.195666    1404 start.go:210] Error parsing version semver:  Version string empty
+Moving files into cluster...
+Setting up certs...
+Connecting to cluster...
+Setting up kubeconfig...
+Stopping extra container runtimes...
+Starting cluster components...
+Verifying kubelet health ...
+Verifying apiserver health ...Kubectl is now configured to use the cluster.
+Loading cached images from config file.
+
+
+Everything looks great. Please enjoy minikube!
+Unable to find image 'alpine:latest' locally
+latest: Pulling from library/alpine
+
+[1A[1K[Ke7c96db7181b: Pulling fs layer [1B[1A[1K[Ke7c96db7181b: Downloading  27.88kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  118.6kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  204.2kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading    376kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  408.7kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  474.3kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  638.1kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  703.6kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  769.2kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  867.5kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  965.8kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.031MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.125MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.223MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.318MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.383MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.416MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.481MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading   1.58MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.678MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.776MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.879MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  1.973MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  2.071MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading   2.17MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  2.268MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  2.366MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  2.465MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  2.596MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Downloading  2.702MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Verifying Checksum [1B[1A[1K[Ke7c96db7181b: Download complete [1B[1A[1K[Ke7c96db7181b: Extracting  32.77kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Extracting  950.3kB/2.757MB[1B[1A[1K[Ke7c96db7181b: Extracting  2.687MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Extracting  2.757MB/2.757MB[1B[1A[1K[Ke7c96db7181b: Pull complete [1BDigest: sha256:769fddc7cc2f0a1c35abb2f91432e8beecf83916c421420e6a6da9f8975464b6
+Status: Downloaded newer image for alpine:latest
+Mon May 20 09:57:00 UTC 2019
+Execution will pause for 10 seconds.
+\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]
+heapster was successfully enabled
+$HELM_HOME has been configured at /home/vr/.helm.
+
+Tiller (the Helm server-side component) has been installed into your Kubernetes Cluster.
+
+Please note: by default, Tiller is deployed with an insecure 'allow unauthenticated users' policy.
+To prevent this, run `helm init` with the --tiller-tls-verify flag.
+For more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation
+Happy Helming!
+Execution will pause for 10 seconds.
+\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]
+Sending build context to Docker daemon   34.3kB
+Step 1/15 : FROM influxdb
+latest: Pulling from library/influxdb
+
+[1A[1K[Kc5e155d5a1d1: Pulling fs layer [1B
+[1A[1K[K221d80d00ae9: Pulling fs layer [1B
+[1A[1K[K4250b3117dca: Pulling fs layer [1B
+[1A[1K[K0e51b6917b8b: Pulling fs layer [1B
+[1A[1K[Ka8b0889ef887: Pulling fs layer [1B
+[1A[1K[K749bae9006fd: Pulling fs layer [1B
+[1A[1K[K35b31a5ecf86: Pulling fs layer [1B
+[1A[1K[Kcc7c30009a3e: Pulling fs layer [1B[4A[1K[Ka8b0889ef887: Waiting [4B[3A[1K[K749bae9006fd: Waiting [3B[2A[1K[K35b31a5ecf86: Waiting [2B[1A[1K[Kcc7c30009a3e: Waiting [1B[6A[1K[K4250b3117dca: Waiting [6B[5A[1K[K0e51b6917b8b: Waiting [5B[7A[1K[K221d80d00ae9: Waiting [7B[8A[1K[Kc5e155d5a1d1: Downloading  465.6kB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  932.5kB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  1.399MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  1.858MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  2.325MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  2.784MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  3.251MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  3.714MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  4.181MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  4.643MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  5.102MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  5.561MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading   6.02MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  6.474MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  6.933MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading    7.4MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  7.859MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  8.318MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  8.776MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  9.243MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  9.698MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  10.16MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  10.62MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  11.08MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  11.54MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading     12MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  12.46MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  12.92MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  13.38MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  13.84MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading   14.3MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  14.76MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  15.23MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  15.69MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  16.15MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  16.61MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  17.07MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  17.53MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  17.98MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  18.45MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading   18.9MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  19.36MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  19.82MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  20.28MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  20.74MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading   21.2MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  21.67MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  22.12MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  22.58MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  23.05MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  23.51MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  23.96MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  24.43MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  24.89MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  25.35MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  109.7kB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  228.1kB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  342.7kB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  588.5kB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading   25.8MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  703.2kB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  817.9kB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  1.043MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  1.154MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  1.277MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  1.391MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  26.27MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  1.506MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  1.617MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  1.731MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  1.842MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  1.965MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  2.194MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  2.309MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  2.424MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  26.73MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  2.538MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  2.653MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  2.776MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading   2.89MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  3.005MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading   3.12MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  3.243MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  27.18MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  3.357MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  3.472MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  3.583MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  3.697MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  3.816MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  3.931MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  27.64MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  4.046MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading   4.16MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  4.271MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  4.385MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading    4.5MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  4.615MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading   4.73MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading   28.1MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  4.844MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  4.959MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  5.074MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  5.188MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  5.303MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  5.418MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  28.56MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  5.532MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  5.647MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  5.762MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  5.876MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  5.991MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  6.106MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  6.221MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  6.335MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  29.03MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading   6.45MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  6.565MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  6.679MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  6.794MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  6.909MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  7.023MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  7.138MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  29.49MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  7.253MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  7.367MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  7.482MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  7.597MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  7.711MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  7.826MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  7.945MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  29.94MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading   8.06MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  8.174MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  8.289MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  8.404MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  8.518MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  8.633MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  8.748MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  30.41MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  8.862MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  8.977MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  9.092MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  9.206MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  9.321MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  9.436MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  30.87MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  9.551MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  9.665MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading   9.78MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  9.895MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  10.01MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  31.32MB/45.34MB[8B[7A[1K[K221d80d00ae9: Downloading  10.12MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  10.24MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  10.35MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  10.47MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading  10.58MB/10.78MB[7B[7A[1K[K221d80d00ae9: Downloading   10.7MB/10.78MB[7B[8A[1K[Kc5e155d5a1d1: Downloading  31.79MB/45.34MB[8B[7A[1K[K221d80d00ae9: Verifying Checksum [7B[7A[1K[K221d80d00ae9: Download complete [7B[8A[1K[Kc5e155d5a1d1: Downloading  32.25MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  32.71MB/45.34MB[8B[6A[1K[K4250b3117dca: Downloading  44.22kB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  179.9kB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  228.5kB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading    376kB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  572.6kB/4.34MB[6B[8A[1K[Kc5e155d5a1d1: Downloading  33.17MB/45.34MB[8B[6A[1K[K4250b3117dca: Downloading  621.7kB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  670.9kB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  769.2kB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  920.3kB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  969.5kB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  1.129MB/4.34MB[6B[8A[1K[Kc5e155d5a1d1: Downloading  33.62MB/45.34MB[8B[6A[1K[K4250b3117dca: Downloading  1.219MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  1.318MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  1.412MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  1.457MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  1.506MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  1.604MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  1.703MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  1.801MB/4.34MB[6B[8A[1K[Kc5e155d5a1d1: Downloading  34.09MB/45.34MB[8B[6A[1K[K4250b3117dca: Downloading  1.899MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  1.993MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.043MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.092MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.145MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.194MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.243MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.292MB/4.34MB[6B[8A[1K[Kc5e155d5a1d1: Downloading  34.56MB/45.34MB[8B[6A[1K[K4250b3117dca: Downloading  2.391MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading   2.44MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.489MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.587MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.686MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.784MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  2.882MB/4.34MB[6B[8A[1K[Kc5e155d5a1d1: Downloading  35.02MB/45.34MB[8B[6A[1K[K4250b3117dca: Downloading  2.981MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  3.079MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  3.177MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  3.276MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  3.378MB/4.34MB[6B[8A[1K[Kc5e155d5a1d1: Downloading  35.47MB/45.34MB[8B[6A[1K[K4250b3117dca: Downloading  3.476MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  3.575MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  3.673MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  3.771MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  3.869MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  3.968MB/4.34MB[6B[8A[1K[Kc5e155d5a1d1: Downloading  35.94MB/45.34MB[8B[6A[1K[K4250b3117dca: Downloading  4.066MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  4.164MB/4.34MB[6B[6A[1K[K4250b3117dca: Downloading  4.259MB/4.34MB[6B[6A[1K[K4250b3117dca: Verifying Checksum [6B[6A[1K[K4250b3117dca: Download complete [6B[8A[1K[Kc5e155d5a1d1: Downloading   36.4MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  36.85MB/45.34MB[8B[5A[1K[K0e51b6917b8b: Downloading     500B/2.772kB[5B[5A[1K[K0e51b6917b8b: Downloading  2.772kB/2.772kB[5B[5A[1K[K0e51b6917b8b: Verifying Checksum [5B[5A[1K[K0e51b6917b8b: Download complete [5B[8A[1K[Kc5e155d5a1d1: Downloading  37.31MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  37.77MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  38.23MB/45.34MB[8B[3A[1K[K749bae9006fd: Downloading     225B/225B[3B[3A[1K[K749bae9006fd: Verifying Checksum [3B[3A[1K[K749bae9006fd: Download complete [3B[8A[1K[Kc5e155d5a1d1: Downloading  38.69MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  518.9kB/50.66MB[4B[2A[1K[K35b31a5ecf86: Downloading     210B/210B[2B[2A[1K[K35b31a5ecf86: Download complete [2B[8A[1K[Kc5e155d5a1d1: Downloading  39.16MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  1.027MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  39.62MB/45.34MB[8B[1A[1K[Kcc7c30009a3e: Downloading  1.165kB/1.165kB[1B[1A[1K[Kcc7c30009a3e: Verifying Checksum [1B[1A[1K[Kcc7c30009a3e: Download complete [1B[4A[1K[Ka8b0889ef887: Downloading  1.535MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  2.047MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  40.07MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  2.555MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  40.53MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Downloading  40.99MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  3.075MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  41.45MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  3.583MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  41.91MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  4.095MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  42.38MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  4.603MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading   5.11MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  42.84MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  5.618MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  43.29MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading   6.13MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  43.75MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  6.638MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  44.21MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  7.146MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  44.67MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  7.654MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Downloading  45.13MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  8.166MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Verifying Checksum [8B[8A[1K[Kc5e155d5a1d1: Download complete [8B[8A[1K[Kc5e155d5a1d1: Extracting  458.8kB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  2.294MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting   3.67MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  5.505MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting   7.34MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  8.682MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Extracting  8.716MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  10.09MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  11.47MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  12.85MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  14.22MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  9.194MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Extracting   15.6MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  16.97MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  18.81MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  9.702MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Extracting  20.19MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting   21.1MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  22.02MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  10.22MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Extracting  26.15MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  29.36MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting   31.2MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  32.57MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  10.73MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Extracting  33.95MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  35.32MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  36.24MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  11.24MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Extracting  37.62MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  38.99MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  39.91MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  40.83MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  11.75MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Extracting  42.21MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  43.58MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  12.26MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Extracting   44.5MB/45.34MB[8B[8A[1K[Kc5e155d5a1d1: Extracting  45.34MB/45.34MB[8B[4A[1K[Ka8b0889ef887: Downloading  12.77MB/50.66MB[4B[8A[1K[Kc5e155d5a1d1: Pull complete [8B[7A[1K[K221d80d00ae9: Extracting  131.1kB/10.78MB[7B[7A[1K[K221d80d00ae9: Extracting  1.573MB/10.78MB[7B[7A[1K[K221d80d00ae9: Extracting  3.408MB/10.78MB[7B[7A[1K[K221d80d00ae9: Extracting  4.981MB/10.78MB[7B[4A[1K[Ka8b0889ef887: Downloading  13.29MB/50.66MB[4B[7A[1K[K221d80d00ae9: Extracting  6.291MB/10.78MB[7B[7A[1K[K221d80d00ae9: Extracting  7.602MB/10.78MB[7B[7A[1K[K221d80d00ae9: Extracting  9.568MB/10.78MB[7B[7A[1K[K221d80d00ae9: Extracting  10.75MB/10.78MB[7B[7A[1K[K221d80d00ae9: Extracting  10.78MB/10.78MB[7B[4A[1K[Ka8b0889ef887: Downloading  13.79MB/50.66MB[4B[7A[1K[K221d80d00ae9: Pull complete [7B[6A[1K[K4250b3117dca: Extracting  65.54kB/4.34MB[6B[6A[1K[K4250b3117dca: Extracting  1.245MB/4.34MB[6B[6A[1K[K4250b3117dca: Extracting  2.949MB/4.34MB[6B[4A[1K[Ka8b0889ef887: Downloading   14.3MB/50.66MB[4B[6A[1K[K4250b3117dca: Extracting   4.34MB/4.34MB[6B[6A[1K[K4250b3117dca: Pull complete [6B[5A[1K[K0e51b6917b8b: Extracting  2.772kB/2.772kB[5B[5A[1K[K0e51b6917b8b: Extracting  2.772kB/2.772kB[5B[5A[1K[K0e51b6917b8b: Pull complete [5B[4A[1K[Ka8b0889ef887: Downloading  14.81MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  15.32MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  15.83MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  16.34MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  16.86MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  17.37MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  17.88MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  18.39MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading   18.9MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  19.41MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  19.93MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  20.44MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  20.95MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  21.46MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  21.97MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  22.48MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  22.99MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading   23.5MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  24.01MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  24.53MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  25.04MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  25.55MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  26.07MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  26.57MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  27.08MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  27.59MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading   28.1MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  28.61MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  29.11MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  29.62MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  30.14MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  30.66MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  31.17MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  31.67MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  32.18MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  32.69MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading   33.2MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  33.71MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  34.23MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  34.74MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  35.24MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  35.75MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  36.27MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  36.78MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  37.28MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  37.79MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  38.31MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  38.82MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  39.32MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  39.83MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  40.35MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  40.86MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  41.37MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  41.88MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading   42.4MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading   42.9MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  43.42MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  43.93MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  44.45MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  44.96MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  45.46MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  45.97MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  46.48MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading     47MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  47.51MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  48.02MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  48.53MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  49.04MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  49.55MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  50.07MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Downloading  50.58MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Download complete [4B[4A[1K[Ka8b0889ef887: Extracting  524.3kB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  2.097MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting   3.67MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  5.243MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  6.291MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  9.437MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  11.53MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  13.11MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  14.16MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  15.73MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  18.87MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  20.45MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  22.02MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  23.59MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  25.69MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  26.74MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  27.79MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  28.84MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  30.93MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  34.08MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  35.65MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  37.22MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting   38.8MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  39.85MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  41.42MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  42.99MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  46.14MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  50.33MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Extracting  50.66MB/50.66MB[4B[4A[1K[Ka8b0889ef887: Pull complete [4B[3A[1K[K749bae9006fd: Extracting     225B/225B[3B[3A[1K[K749bae9006fd: Extracting     225B/225B[3B[3A[1K[K749bae9006fd: Pull complete [3B[2A[1K[K35b31a5ecf86: Extracting     210B/210B[2B[2A[1K[K35b31a5ecf86: Extracting     210B/210B[2B[2A[1K[K35b31a5ecf86: Pull complete [2B[1A[1K[Kcc7c30009a3e: Extracting  1.165kB/1.165kB[1B[1A[1K[Kcc7c30009a3e: Extracting  1.165kB/1.165kB[1B[1A[1K[Kcc7c30009a3e: Pull complete [1BDigest: sha256:c6689db9f46a87b0a3b517e6e3314a5ee191a250cc9b8f2176c820a0198777f7
+Status: Downloaded newer image for influxdb:latest
+ ---> f0656e147345
+Step 2/15 : ENV pip=pip3
+ ---> Running in 21563ca08f09
+Removing intermediate container 21563ca08f09
+ ---> 9980bf4d1e3c
+Step 3/15 : ENV python=python3
+ ---> Running in e19f18efea4a
+Removing intermediate container e19f18efea4a
+ ---> aa45b3dbf276
+Step 4/15 : RUN     apt update &&     apt install -y nano python3 dnsutils  python3-pip   &&     echo 'alias python="python3 "' >> ~/.bashrc         &&     echo 'alias pip="pip3 "' >> ~/.bashrc
+ ---> Running in 8cf1dc336d02
+[91m
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+[0mIgn:1 http://deb.debian.org/debian stretch InRelease
+Get:2 http://security.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Get:3 http://deb.debian.org/debian stretch-updates InRelease [91.0 kB]
+Get:4 http://deb.debian.org/debian stretch Release [118 kB]
+Get:5 http://security.debian.org/debian-security stretch/updates/main amd64 Packages [492 kB]
+Get:6 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.2 kB]
+Get:7 http://deb.debian.org/debian stretch Release.gpg [2434 B]
+Get:8 http://deb.debian.org/debian stretch/main amd64 Packages [7082 kB]
+Fetched 7907 kB in 13s (576 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+[91m
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+[0mReading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  bind9-host binutils build-essential bzip2 cpp cpp-6 dbus dh-python dpkg-dev
+  fakeroot file g++ g++-6 gcc gcc-6 geoip-database gir1.2-glib-2.0
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libapparmor1 libasan3 libatomic1 libbind9-140 libc-dev-bin libc6-dev
+  libcc1-0 libcilkrts5 libdbus-1-3 libdbus-glib-1-2 libdns162 libdpkg-perl
+  libexpat1 libexpat1-dev libfakeroot libfile-fcntllock-perl libgcc-6-dev
+  libgdbm3 libgeoip1 libgirepository-1.0-1 libglib2.0-0 libglib2.0-data
+  libgomp1 libicu57 libisc160 libisccc140 libisccfg140 libisl15 libitm1
+  liblocale-gettext-perl liblsan0 liblwres141 libmagic-mgc libmagic1 libmpc3
+  libmpdec2 libmpfr4 libmpx2 libperl5.24 libpython3-dev libpython3-stdlib
+  libpython3.5 libpython3.5-dev libpython3.5-minimal libpython3.5-stdlib
+  libquadmath0 libstdc++-6-dev libtsan0 libubsan0 libxml2 linux-libc-dev make
+  manpages manpages-dev mime-support patch perl perl-modules-5.24
+  python-pip-whl python3-cffi-backend python3-crypto python3-cryptography
+  python3-dbus python3-dev python3-gi python3-idna python3-keyring
+  python3-keyrings.alt python3-minimal python3-pkg-resources python3-pyasn1
+  python3-secretstorage python3-setuptools python3-six python3-wheel
+  python3-xdg python3.5 python3.5-dev python3.5-minimal rename sgml-base
+  shared-mime-info xdg-user-dirs xml-core xz-utils
+Suggested packages:
+  binutils-doc bzip2-doc cpp-doc gcc-6-locales default-dbus-session-bus
+  | dbus-session-bus rblcheck debian-keyring g++-multilib g++-6-multilib
+  gcc-6-doc libstdc++6-6-dbg gcc-multilib autoconf automake libtool flex bison
+  gdb gcc-doc gcc-6-multilib libgcc1-dbg libgomp1-dbg libitm1-dbg
+  libatomic1-dbg libasan3-dbg liblsan0-dbg libtsan0-dbg libubsan0-dbg
+  libcilkrts5-dbg libmpx2-dbg libquadmath0-dbg glibc-doc geoip-bin
+  libstdc++-6-doc make-doc man-browser spell ed diffutils-doc perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl python3-doc
+  python3-tk python3-venv python3-crypto-dbg python-crypto-doc
+  python-cryptography-doc python3-cryptography-vectors python-dbus-doc
+  python3-dbus-dbg gnome-keyring libkf5wallet-bin gir1.2-gnomekeyring-1.0
+  python3-pykde4 doc-base python-secretstorage-doc python-setuptools-doc
+  python3.5-venv python3.5-doc binfmt-support sgml-base-doc debhelper
+The following NEW packages will be installed:
+  bind9-host binutils build-essential bzip2 cpp cpp-6 dbus dh-python dnsutils
+  dpkg-dev fakeroot file g++ g++-6 gcc gcc-6 geoip-database gir1.2-glib-2.0
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libapparmor1 libasan3 libatomic1 libbind9-140 libc-dev-bin libc6-dev
+  libcc1-0 libcilkrts5 libdbus-1-3 libdbus-glib-1-2 libdns162 libdpkg-perl
+  libexpat1 libexpat1-dev libfakeroot libfile-fcntllock-perl libgcc-6-dev
+  libgdbm3 libgeoip1 libgirepository-1.0-1 libglib2.0-0 libglib2.0-data
+  libgomp1 libicu57 libisc160 libisccc140 libisccfg140 libisl15 libitm1
+  liblocale-gettext-perl liblsan0 liblwres141 libmagic-mgc libmagic1 libmpc3
+  libmpdec2 libmpfr4 libmpx2 libperl5.24 libpython3-dev libpython3-stdlib
+  libpython3.5 libpython3.5-dev libpython3.5-minimal libpython3.5-stdlib
+  libquadmath0 libstdc++-6-dev libtsan0 libubsan0 libxml2 linux-libc-dev make
+  manpages manpages-dev mime-support nano patch perl perl-modules-5.24
+  python-pip-whl python3 python3-cffi-backend python3-crypto
+  python3-cryptography python3-dbus python3-dev python3-gi python3-idna
+  python3-keyring python3-keyrings.alt python3-minimal python3-pip
+  python3-pkg-resources python3-pyasn1 python3-secretstorage
+  python3-setuptools python3-six python3-wheel python3-xdg python3.5
+  python3.5-dev python3.5-minimal rename sgml-base shared-mime-info
+  xdg-user-dirs xml-core xz-utils
+0 upgraded, 109 newly installed, 0 to remove and 0 not upgraded.
+Need to get 118 MB of archives.
+After this operation, 379 MB of additional disk space will be used.
+Get:1 http://security.debian.org/debian-security stretch/updates/main amd64 libisc160 amd64 1:9.10.3.dfsg.P4-12.3+deb9u5 [398 kB]
+Get:2 http://deb.debian.org/debian stretch/main amd64 perl-modules-5.24 all 5.24.1-3+deb9u5 [2722 kB]
+Get:3 http://security.debian.org/debian-security stretch/updates/main amd64 libdns162 amd64 1:9.10.3.dfsg.P4-12.3+deb9u5 [1078 kB]
+Get:4 http://security.debian.org/debian-security stretch/updates/main amd64 libisccc140 amd64 1:9.10.3.dfsg.P4-12.3+deb9u5 [199 kB]
+Get:5 http://security.debian.org/debian-security stretch/updates/main amd64 libisccfg140 amd64 1:9.10.3.dfsg.P4-12.3+deb9u5 [223 kB]
+Get:6 http://security.debian.org/debian-security stretch/updates/main amd64 libbind9-140 amd64 1:9.10.3.dfsg.P4-12.3+deb9u5 [206 kB]
+Get:7 http://security.debian.org/debian-security stretch/updates/main amd64 liblwres141 amd64 1:9.10.3.dfsg.P4-12.3+deb9u5 [214 kB]
+Get:8 http://security.debian.org/debian-security stretch/updates/main amd64 bind9-host amd64 1:9.10.3.dfsg.P4-12.3+deb9u5 [231 kB]
+Get:9 http://security.debian.org/debian-security stretch/updates/main amd64 dnsutils amd64 1:9.10.3.dfsg.P4-12.3+deb9u5 [284 kB]
+Get:10 http://security.debian.org/debian-security stretch/updates/main amd64 linux-libc-dev amd64 4.9.168-1+deb9u2 [1422 kB]
+Get:11 http://deb.debian.org/debian stretch/main amd64 libgdbm3 amd64 1.8.3-14 [30.0 kB]
+Get:12 http://deb.debian.org/debian stretch/main amd64 libperl5.24 amd64 5.24.1-3+deb9u5 [3501 kB]
+Get:13 http://deb.debian.org/debian stretch/main amd64 perl amd64 5.24.1-3+deb9u5 [219 kB]
+Get:14 http://deb.debian.org/debian stretch/main amd64 liblocale-gettext-perl amd64 1.07-3+b1 [18.7 kB]
+Get:15 http://deb.debian.org/debian stretch/main amd64 libpython3.5-minimal amd64 3.5.3-1+deb9u1 [573 kB]
+Get:16 http://deb.debian.org/debian stretch/main amd64 libexpat1 amd64 2.2.0-2+deb9u1 [83.4 kB]
+Get:17 http://deb.debian.org/debian stretch/main amd64 python3.5-minimal amd64 3.5.3-1+deb9u1 [1691 kB]
+Get:18 http://deb.debian.org/debian stretch/main amd64 python3-minimal amd64 3.5.3-1 [35.3 kB]
+Get:19 http://deb.debian.org/debian stretch/main amd64 mime-support all 3.60 [36.7 kB]
+Get:20 http://deb.debian.org/debian stretch/main amd64 libmpdec2 amd64 2.4.2-1 [85.2 kB]
+Get:21 http://deb.debian.org/debian stretch/main amd64 libpython3.5-stdlib amd64 3.5.3-1+deb9u1 [2167 kB]
+Get:22 http://deb.debian.org/debian stretch/main amd64 python3.5 amd64 3.5.3-1+deb9u1 [229 kB]
+Get:23 http://deb.debian.org/debian stretch/main amd64 libpython3-stdlib amd64 3.5.3-1 [18.6 kB]
+Get:24 http://deb.debian.org/debian stretch/main amd64 dh-python all 2.20170125 [86.8 kB]
+Get:25 http://deb.debian.org/debian stretch/main amd64 python3 amd64 3.5.3-1 [21.6 kB]
+Get:26 http://deb.debian.org/debian stretch/main amd64 sgml-base all 1.29 [14.8 kB]
+Get:27 http://deb.debian.org/debian stretch/main amd64 nano amd64 2.7.4-1 [485 kB]
+Get:28 http://deb.debian.org/debian stretch/main amd64 libgeoip1 amd64 1.6.9-4 [90.5 kB]
+Get:29 http://deb.debian.org/debian stretch/main amd64 libicu57 amd64 57.1-6+deb9u2 [7700 kB]
+Get:30 http://deb.debian.org/debian stretch/main amd64 libxml2 amd64 2.9.4+dfsg1-2.2+deb9u2 [920 kB]
+Get:31 http://deb.debian.org/debian stretch/main amd64 bzip2 amd64 1.0.6-8.1 [47.5 kB]
+Get:32 http://deb.debian.org/debian stretch/main amd64 libapparmor1 amd64 2.11.0-3+deb9u2 [78.9 kB]
+Get:33 http://deb.debian.org/debian stretch/main amd64 libdbus-1-3 amd64 1.10.26-0+deb9u1 [194 kB]
+Get:34 http://deb.debian.org/debian stretch/main amd64 dbus amd64 1.10.26-0+deb9u1 [210 kB]
+Get:35 http://deb.debian.org/debian stretch/main amd64 libmagic-mgc amd64 1:5.30-1+deb9u2 [222 kB]
+Get:36 http://deb.debian.org/debian stretch/main amd64 libmagic1 amd64 1:5.30-1+deb9u2 [111 kB]
+Get:37 http://deb.debian.org/debian stretch/main amd64 file amd64 1:5.30-1+deb9u2 [64.1 kB]
+Get:38 http://deb.debian.org/debian stretch/main amd64 manpages all 4.10-2 [1222 kB]
+Get:39 http://deb.debian.org/debian stretch/main amd64 xz-utils amd64 5.2.2-1.2+b1 [266 kB]
+Get:40 http://deb.debian.org/debian stretch/main amd64 binutils amd64 2.28-5 [3770 kB]
+Get:41 http://deb.debian.org/debian stretch/main amd64 libc-dev-bin amd64 2.24-11+deb9u4 [259 kB]
+Get:42 http://deb.debian.org/debian stretch/main amd64 libc6-dev amd64 2.24-11+deb9u4 [2364 kB]
+Get:43 http://deb.debian.org/debian stretch/main amd64 libisl15 amd64 0.18-1 [564 kB]
+Get:44 http://deb.debian.org/debian stretch/main amd64 libmpfr4 amd64 3.1.5-1 [556 kB]
+Get:45 http://deb.debian.org/debian stretch/main amd64 libmpc3 amd64 1.0.3-1+b2 [39.9 kB]
+Get:46 http://deb.debian.org/debian stretch/main amd64 cpp-6 amd64 6.3.0-18+deb9u1 [6584 kB]
+Get:47 http://deb.debian.org/debian stretch/main amd64 cpp amd64 4:6.3.0-4 [18.7 kB]
+Get:48 http://deb.debian.org/debian stretch/main amd64 libcc1-0 amd64 6.3.0-18+deb9u1 [30.6 kB]
+Get:49 http://deb.debian.org/debian stretch/main amd64 libgomp1 amd64 6.3.0-18+deb9u1 [73.3 kB]
+Get:50 http://deb.debian.org/debian stretch/main amd64 libitm1 amd64 6.3.0-18+deb9u1 [27.3 kB]
+Get:51 http://deb.debian.org/debian stretch/main amd64 libatomic1 amd64 6.3.0-18+deb9u1 [8966 B]
+Get:52 http://deb.debian.org/debian stretch/main amd64 libasan3 amd64 6.3.0-18+deb9u1 [311 kB]
+Get:53 http://deb.debian.org/debian stretch/main amd64 liblsan0 amd64 6.3.0-18+deb9u1 [115 kB]
+Get:54 http://deb.debian.org/debian stretch/main amd64 libtsan0 amd64 6.3.0-18+deb9u1 [257 kB]
+Get:55 http://deb.debian.org/debian stretch/main amd64 libubsan0 amd64 6.3.0-18+deb9u1 [107 kB]
+Get:56 http://deb.debian.org/debian stretch/main amd64 libcilkrts5 amd64 6.3.0-18+deb9u1 [40.5 kB]
+Get:57 http://deb.debian.org/debian stretch/main amd64 libmpx2 amd64 6.3.0-18+deb9u1 [11.2 kB]
+Get:58 http://deb.debian.org/debian stretch/main amd64 libquadmath0 amd64 6.3.0-18+deb9u1 [131 kB]
+Get:59 http://deb.debian.org/debian stretch/main amd64 libgcc-6-dev amd64 6.3.0-18+deb9u1 [2296 kB]
+Get:60 http://deb.debian.org/debian stretch/main amd64 gcc-6 amd64 6.3.0-18+deb9u1 [6900 kB]
+Get:61 http://deb.debian.org/debian stretch/main amd64 gcc amd64 4:6.3.0-4 [5196 B]
+Get:62 http://deb.debian.org/debian stretch/main amd64 libstdc++-6-dev amd64 6.3.0-18+deb9u1 [1420 kB]
+Get:63 http://deb.debian.org/debian stretch/main amd64 g++-6 amd64 6.3.0-18+deb9u1 [7094 kB]
+Get:64 http://deb.debian.org/debian stretch/main amd64 g++ amd64 4:6.3.0-4 [1546 B]
+Get:65 http://deb.debian.org/debian stretch/main amd64 make amd64 4.1-9.1 [302 kB]
+Get:66 http://deb.debian.org/debian stretch/main amd64 libdpkg-perl all 1.18.25 [1287 kB]
+Get:67 http://deb.debian.org/debian stretch/main amd64 patch amd64 2.7.5-1+deb9u1 [112 kB]
+Get:68 http://deb.debian.org/debian stretch/main amd64 dpkg-dev all 1.18.25 [1595 kB]
+Get:69 http://deb.debian.org/debian stretch/main amd64 build-essential amd64 12.3 [7346 B]
+Get:70 http://deb.debian.org/debian stretch/main amd64 libfakeroot amd64 1.21-3.1 [45.7 kB]
+Get:71 http://deb.debian.org/debian stretch/main amd64 fakeroot amd64 1.21-3.1 [85.6 kB]
+Get:72 http://deb.debian.org/debian stretch/main amd64 geoip-database all 20170512-1 [2112 kB]
+Get:73 http://deb.debian.org/debian stretch/main amd64 libglib2.0-0 amd64 2.50.3-2 [2691 kB]
+Get:74 http://deb.debian.org/debian stretch/main amd64 libgirepository-1.0-1 amd64 1.50.0-1+b1 [89.0 kB]
+Get:75 http://deb.debian.org/debian stretch/main amd64 gir1.2-glib-2.0 amd64 1.50.0-1+b1 [139 kB]
+Get:76 http://deb.debian.org/debian stretch/main amd64 libalgorithm-diff-perl all 1.19.03-1 [48.7 kB]
+Get:77 http://deb.debian.org/debian stretch/main amd64 libalgorithm-diff-xs-perl amd64 0.04-4+b2 [11.6 kB]
+Get:78 http://deb.debian.org/debian stretch/main amd64 libalgorithm-merge-perl all 0.08-3 [12.7 kB]
+Get:79 http://deb.debian.org/debian stretch/main amd64 libdbus-glib-1-2 amd64 0.108-2 [206 kB]
+Get:80 http://deb.debian.org/debian stretch/main amd64 libexpat1-dev amd64 2.2.0-2+deb9u1 [134 kB]
+Get:81 http://deb.debian.org/debian stretch/main amd64 libfile-fcntllock-perl amd64 0.22-3+b2 [35.3 kB]
+Get:82 http://deb.debian.org/debian stretch/main amd64 libglib2.0-data all 2.50.3-2 [2517 kB]
+Get:83 http://deb.debian.org/debian stretch/main amd64 libpython3.5 amd64 3.5.3-1+deb9u1 [1372 kB]
+Get:84 http://deb.debian.org/debian stretch/main amd64 libpython3.5-dev amd64 3.5.3-1+deb9u1 [37.7 MB]
+Get:85 http://deb.debian.org/debian stretch/main amd64 libpython3-dev amd64 3.5.3-1 [18.7 kB]
+Get:86 http://deb.debian.org/debian stretch/main amd64 manpages-dev all 4.10-2 [2145 kB]
+Get:87 http://deb.debian.org/debian stretch/main amd64 python-pip-whl all 9.0.1-2+deb9u1 [1399 kB]
+Get:88 http://deb.debian.org/debian stretch/main amd64 python3-cffi-backend amd64 1.9.1-2 [70.1 kB]
+Get:89 http://deb.debian.org/debian stretch/main amd64 python3-crypto amd64 2.6.1-7 [259 kB]
+Get:90 http://deb.debian.org/debian stretch/main amd64 python3-idna all 2.2-1 [32.7 kB]
+Get:91 http://deb.debian.org/debian stretch/main amd64 python3-pyasn1 all 0.1.9-2 [34.5 kB]
+Get:92 http://deb.debian.org/debian stretch/main amd64 python3-pkg-resources all 33.1.1-1 [137 kB]
+Get:93 http://deb.debian.org/debian stretch/main amd64 python3-setuptools all 33.1.1-1 [215 kB]
+Get:94 http://deb.debian.org/debian stretch/main amd64 python3-six all 1.10.0-3 [14.4 kB]
+Get:95 http://deb.debian.org/debian stretch/main amd64 python3-cryptography amd64 1.7.1-3+deb9u1 [210 kB]
+Get:96 http://deb.debian.org/debian stretch/main amd64 python3-dbus amd64 1.2.4-1+b1 [184 kB]
+Get:97 http://deb.debian.org/debian stretch/main amd64 python3.5-dev amd64 3.5.3-1+deb9u1 [413 kB]
+Get:98 http://deb.debian.org/debian stretch/main amd64 python3-dev amd64 3.5.3-1 [1154 B]
+Get:99 http://deb.debian.org/debian stretch/main amd64 python3-gi amd64 3.22.0-2 [473 kB]
+Get:100 http://deb.debian.org/debian stretch/main amd64 python3-secretstorage all 2.3.1-2 [14.2 kB]
+Get:101 http://deb.debian.org/debian stretch/main amd64 python3-keyring all 10.1-1 [36.8 kB]
+Get:102 http://deb.debian.org/debian stretch/main amd64 python3-keyrings.alt all 1.3-1 [16.2 kB]
+Get:103 http://deb.debian.org/debian stretch/main amd64 python3-pip all 9.0.1-2+deb9u1 [142 kB]
+Get:104 http://deb.debian.org/debian stretch/main amd64 python3-wheel all 0.29.0-2 [51.8 kB]
+Get:105 http://deb.debian.org/debian stretch/main amd64 python3-xdg all 0.25-4 [35.7 kB]
+Get:106 http://deb.debian.org/debian stretch/main amd64 rename all 0.20-4 [12.5 kB]
+Get:107 http://deb.debian.org/debian stretch/main amd64 shared-mime-info amd64 1.8-1+deb9u1 [731 kB]
+Get:108 http://deb.debian.org/debian stretch/main amd64 xdg-user-dirs amd64 0.15-2+b1 [52.2 kB]
+Get:109 http://deb.debian.org/debian stretch/main amd64 xml-core all 0.17 [23.2 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 118 MB in 1min 44s (1131 kB/s)
+Selecting previously unselected package perl-modules-5.24.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7304 files and directories currently installed.)
+Preparing to unpack .../00-perl-modules-5.24_5.24.1-3+deb9u5_all.deb ...
+Unpacking perl-modules-5.24 (5.24.1-3+deb9u5) ...
+Selecting previously unselected package libgdbm3:amd64.
+Preparing to unpack .../01-libgdbm3_1.8.3-14_amd64.deb ...
+Unpacking libgdbm3:amd64 (1.8.3-14) ...
+Selecting previously unselected package libperl5.24:amd64.
+Preparing to unpack .../02-libperl5.24_5.24.1-3+deb9u5_amd64.deb ...
+Unpacking libperl5.24:amd64 (5.24.1-3+deb9u5) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../03-perl_5.24.1-3+deb9u5_amd64.deb ...
+Unpacking perl (5.24.1-3+deb9u5) ...
+Selecting previously unselected package liblocale-gettext-perl.
+Preparing to unpack .../04-liblocale-gettext-perl_1.07-3+b1_amd64.deb ...
+Unpacking liblocale-gettext-perl (1.07-3+b1) ...
+Selecting previously unselected package libpython3.5-minimal:amd64.
+Preparing to unpack .../05-libpython3.5-minimal_3.5.3-1+deb9u1_amd64.deb ...
+Unpacking libpython3.5-minimal:amd64 (3.5.3-1+deb9u1) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../06-libexpat1_2.2.0-2+deb9u1_amd64.deb ...
+Unpacking libexpat1:amd64 (2.2.0-2+deb9u1) ...
+Selecting previously unselected package python3.5-minimal.
+Preparing to unpack .../07-python3.5-minimal_3.5.3-1+deb9u1_amd64.deb ...
+Unpacking python3.5-minimal (3.5.3-1+deb9u1) ...
+Selecting previously unselected package python3-minimal.
+Preparing to unpack .../08-python3-minimal_3.5.3-1_amd64.deb ...
+Unpacking python3-minimal (3.5.3-1) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../09-mime-support_3.60_all.deb ...
+Unpacking mime-support (3.60) ...
+Selecting previously unselected package libmpdec2:amd64.
+Preparing to unpack .../10-libmpdec2_2.4.2-1_amd64.deb ...
+Unpacking libmpdec2:amd64 (2.4.2-1) ...
+Selecting previously unselected package libpython3.5-stdlib:amd64.
+Preparing to unpack .../11-libpython3.5-stdlib_3.5.3-1+deb9u1_amd64.deb ...
+Unpacking libpython3.5-stdlib:amd64 (3.5.3-1+deb9u1) ...
+Selecting previously unselected package python3.5.
+Preparing to unpack .../12-python3.5_3.5.3-1+deb9u1_amd64.deb ...
+Unpacking python3.5 (3.5.3-1+deb9u1) ...
+Selecting previously unselected package libpython3-stdlib:amd64.
+Preparing to unpack .../13-libpython3-stdlib_3.5.3-1_amd64.deb ...
+Unpacking libpython3-stdlib:amd64 (3.5.3-1) ...
+Selecting previously unselected package dh-python.
+Preparing to unpack .../14-dh-python_2.20170125_all.deb ...
+Unpacking dh-python (2.20170125) ...
+Setting up libpython3.5-minimal:amd64 (3.5.3-1+deb9u1) ...
+Setting up libexpat1:amd64 (2.2.0-2+deb9u1) ...
+Setting up python3.5-minimal (3.5.3-1+deb9u1) ...
+Setting up python3-minimal (3.5.3-1) ...
+Selecting previously unselected package python3.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 10095 files and directories currently installed.)
+Preparing to unpack .../00-python3_3.5.3-1_amd64.deb ...
+Unpacking python3 (3.5.3-1) ...
+Selecting previously unselected package sgml-base.
+Preparing to unpack .../01-sgml-base_1.29_all.deb ...
+Unpacking sgml-base (1.29) ...
+Selecting previously unselected package nano.
+Preparing to unpack .../02-nano_2.7.4-1_amd64.deb ...
+Unpacking nano (2.7.4-1) ...
+Selecting previously unselected package libgeoip1:amd64.
+Preparing to unpack .../03-libgeoip1_1.6.9-4_amd64.deb ...
+Unpacking libgeoip1:amd64 (1.6.9-4) ...
+Selecting previously unselected package libicu57:amd64.
+Preparing to unpack .../04-libicu57_57.1-6+deb9u2_amd64.deb ...
+Unpacking libicu57:amd64 (57.1-6+deb9u2) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../05-libxml2_2.9.4+dfsg1-2.2+deb9u2_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.4+dfsg1-2.2+deb9u2) ...
+Selecting previously unselected package libisc160:amd64.
+Preparing to unpack .../06-libisc160_1%3a9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb ...
+Unpacking libisc160:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Selecting previously unselected package libdns162:amd64.
+Preparing to unpack .../07-libdns162_1%3a9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb ...
+Unpacking libdns162:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Selecting previously unselected package libisccc140:amd64.
+Preparing to unpack .../08-libisccc140_1%3a9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb ...
+Unpacking libisccc140:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Selecting previously unselected package libisccfg140:amd64.
+Preparing to unpack .../09-libisccfg140_1%3a9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb ...
+Unpacking libisccfg140:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Selecting previously unselected package libbind9-140:amd64.
+Preparing to unpack .../10-libbind9-140_1%3a9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb ...
+Unpacking libbind9-140:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Selecting previously unselected package liblwres141:amd64.
+Preparing to unpack .../11-liblwres141_1%3a9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb ...
+Unpacking liblwres141:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Selecting previously unselected package bind9-host.
+Preparing to unpack .../12-bind9-host_1%3a9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb ...
+Unpacking bind9-host (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../13-bzip2_1.0.6-8.1_amd64.deb ...
+Unpacking bzip2 (1.0.6-8.1) ...
+Selecting previously unselected package libapparmor1:amd64.
+Preparing to unpack .../14-libapparmor1_2.11.0-3+deb9u2_amd64.deb ...
+Unpacking libapparmor1:amd64 (2.11.0-3+deb9u2) ...
+Selecting previously unselected package libdbus-1-3:amd64.
+Preparing to unpack .../15-libdbus-1-3_1.10.26-0+deb9u1_amd64.deb ...
+Unpacking libdbus-1-3:amd64 (1.10.26-0+deb9u1) ...
+Selecting previously unselected package dbus.
+Preparing to unpack .../16-dbus_1.10.26-0+deb9u1_amd64.deb ...
+Unpacking dbus (1.10.26-0+deb9u1) ...
+Selecting previously unselected package dnsutils.
+Preparing to unpack .../17-dnsutils_1%3a9.10.3.dfsg.P4-12.3+deb9u5_amd64.deb ...
+Unpacking dnsutils (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Selecting previously unselected package libmagic-mgc.
+Preparing to unpack .../18-libmagic-mgc_1%3a5.30-1+deb9u2_amd64.deb ...
+Unpacking libmagic-mgc (1:5.30-1+deb9u2) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../19-libmagic1_1%3a5.30-1+deb9u2_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.30-1+deb9u2) ...
+Selecting previously unselected package file.
+Preparing to unpack .../20-file_1%3a5.30-1+deb9u2_amd64.deb ...
+Unpacking file (1:5.30-1+deb9u2) ...
+Selecting previously unselected package manpages.
+Preparing to unpack .../21-manpages_4.10-2_all.deb ...
+Unpacking manpages (4.10-2) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../22-xz-utils_5.2.2-1.2+b1_amd64.deb ...
+Unpacking xz-utils (5.2.2-1.2+b1) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../23-binutils_2.28-5_amd64.deb ...
+Unpacking binutils (2.28-5) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../24-libc-dev-bin_2.24-11+deb9u4_amd64.deb ...
+Unpacking libc-dev-bin (2.24-11+deb9u4) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../25-linux-libc-dev_4.9.168-1+deb9u2_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.9.168-1+deb9u2) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../26-libc6-dev_2.24-11+deb9u4_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.24-11+deb9u4) ...
+Selecting previously unselected package libisl15:amd64.
+Preparing to unpack .../27-libisl15_0.18-1_amd64.deb ...
+Unpacking libisl15:amd64 (0.18-1) ...
+Selecting previously unselected package libmpfr4:amd64.
+Preparing to unpack .../28-libmpfr4_3.1.5-1_amd64.deb ...
+Unpacking libmpfr4:amd64 (3.1.5-1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../29-libmpc3_1.0.3-1+b2_amd64.deb ...
+Unpacking libmpc3:amd64 (1.0.3-1+b2) ...
+Selecting previously unselected package cpp-6.
+Preparing to unpack .../30-cpp-6_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking cpp-6 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../31-cpp_4%3a6.3.0-4_amd64.deb ...
+Unpacking cpp (4:6.3.0-4) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../32-libcc1-0_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libcc1-0:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../33-libgomp1_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libgomp1:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../34-libitm1_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libitm1:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../35-libatomic1_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libatomic1:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package libasan3:amd64.
+Preparing to unpack .../36-libasan3_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libasan3:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../37-liblsan0_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking liblsan0:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../38-libtsan0_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libtsan0:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package libubsan0:amd64.
+Preparing to unpack .../39-libubsan0_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libubsan0:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package libcilkrts5:amd64.
+Preparing to unpack .../40-libcilkrts5_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libcilkrts5:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package libmpx2:amd64.
+Preparing to unpack .../41-libmpx2_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libmpx2:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../42-libquadmath0_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libquadmath0:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package libgcc-6-dev:amd64.
+Preparing to unpack .../43-libgcc-6-dev_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libgcc-6-dev:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package gcc-6.
+Preparing to unpack .../44-gcc-6_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking gcc-6 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../45-gcc_4%3a6.3.0-4_amd64.deb ...
+Unpacking gcc (4:6.3.0-4) ...
+Selecting previously unselected package libstdc++-6-dev:amd64.
+Preparing to unpack .../46-libstdc++-6-dev_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking libstdc++-6-dev:amd64 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package g++-6.
+Preparing to unpack .../47-g++-6_6.3.0-18+deb9u1_amd64.deb ...
+Unpacking g++-6 (6.3.0-18+deb9u1) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../48-g++_4%3a6.3.0-4_amd64.deb ...
+Unpacking g++ (4:6.3.0-4) ...
+Selecting previously unselected package make.
+Preparing to unpack .../49-make_4.1-9.1_amd64.deb ...
+Unpacking make (4.1-9.1) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../50-libdpkg-perl_1.18.25_all.deb ...
+Unpacking libdpkg-perl (1.18.25) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../51-patch_2.7.5-1+deb9u1_amd64.deb ...
+Unpacking patch (2.7.5-1+deb9u1) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../52-dpkg-dev_1.18.25_all.deb ...
+Unpacking dpkg-dev (1.18.25) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../53-build-essential_12.3_amd64.deb ...
+Unpacking build-essential (12.3) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../54-libfakeroot_1.21-3.1_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.21-3.1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../55-fakeroot_1.21-3.1_amd64.deb ...
+Unpacking fakeroot (1.21-3.1) ...
+Selecting previously unselected package geoip-database.
+Preparing to unpack .../56-geoip-database_20170512-1_all.deb ...
+Unpacking geoip-database (20170512-1) ...
+Selecting previously unselected package libglib2.0-0:amd64.
+Preparing to unpack .../57-libglib2.0-0_2.50.3-2_amd64.deb ...
+Unpacking libglib2.0-0:amd64 (2.50.3-2) ...
+Selecting previously unselected package libgirepository-1.0-1:amd64.
+Preparing to unpack .../58-libgirepository-1.0-1_1.50.0-1+b1_amd64.deb ...
+Unpacking libgirepository-1.0-1:amd64 (1.50.0-1+b1) ...
+Selecting previously unselected package gir1.2-glib-2.0:amd64.
+Preparing to unpack .../59-gir1.2-glib-2.0_1.50.0-1+b1_amd64.deb ...
+Unpacking gir1.2-glib-2.0:amd64 (1.50.0-1+b1) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../60-libalgorithm-diff-perl_1.19.03-1_all.deb ...
+Unpacking libalgorithm-diff-perl (1.19.03-1) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../61-libalgorithm-diff-xs-perl_0.04-4+b2_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-4+b2) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../62-libalgorithm-merge-perl_0.08-3_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-3) ...
+Selecting previously unselected package libdbus-glib-1-2:amd64.
+Preparing to unpack .../63-libdbus-glib-1-2_0.108-2_amd64.deb ...
+Unpacking libdbus-glib-1-2:amd64 (0.108-2) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../64-libexpat1-dev_2.2.0-2+deb9u1_amd64.deb ...
+Unpacking libexpat1-dev:amd64 (2.2.0-2+deb9u1) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../65-libfile-fcntllock-perl_0.22-3+b2_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-3+b2) ...
+Selecting previously unselected package libglib2.0-data.
+Preparing to unpack .../66-libglib2.0-data_2.50.3-2_all.deb ...
+Unpacking libglib2.0-data (2.50.3-2) ...
+Selecting previously unselected package libpython3.5:amd64.
+Preparing to unpack .../67-libpython3.5_3.5.3-1+deb9u1_amd64.deb ...
+Unpacking libpython3.5:amd64 (3.5.3-1+deb9u1) ...
+Selecting previously unselected package libpython3.5-dev:amd64.
+Preparing to unpack .../68-libpython3.5-dev_3.5.3-1+deb9u1_amd64.deb ...
+Unpacking libpython3.5-dev:amd64 (3.5.3-1+deb9u1) ...
+Selecting previously unselected package libpython3-dev:amd64.
+Preparing to unpack .../69-libpython3-dev_3.5.3-1_amd64.deb ...
+Unpacking libpython3-dev:amd64 (3.5.3-1) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../70-manpages-dev_4.10-2_all.deb ...
+Unpacking manpages-dev (4.10-2) ...
+Selecting previously unselected package python-pip-whl.
+Preparing to unpack .../71-python-pip-whl_9.0.1-2+deb9u1_all.deb ...
+Unpacking python-pip-whl (9.0.1-2+deb9u1) ...
+Selecting previously unselected package python3-cffi-backend.
+Preparing to unpack .../72-python3-cffi-backend_1.9.1-2_amd64.deb ...
+Unpacking python3-cffi-backend (1.9.1-2) ...
+Selecting previously unselected package python3-crypto.
+Preparing to unpack .../73-python3-crypto_2.6.1-7_amd64.deb ...
+Unpacking python3-crypto (2.6.1-7) ...
+Selecting previously unselected package python3-idna.
+Preparing to unpack .../74-python3-idna_2.2-1_all.deb ...
+Unpacking python3-idna (2.2-1) ...
+Selecting previously unselected package python3-pyasn1.
+Preparing to unpack .../75-python3-pyasn1_0.1.9-2_all.deb ...
+Unpacking python3-pyasn1 (0.1.9-2) ...
+Selecting previously unselected package python3-pkg-resources.
+Preparing to unpack .../76-python3-pkg-resources_33.1.1-1_all.deb ...
+Unpacking python3-pkg-resources (33.1.1-1) ...
+Selecting previously unselected package python3-setuptools.
+Preparing to unpack .../77-python3-setuptools_33.1.1-1_all.deb ...
+Unpacking python3-setuptools (33.1.1-1) ...
+Selecting previously unselected package python3-six.
+Preparing to unpack .../78-python3-six_1.10.0-3_all.deb ...
+Unpacking python3-six (1.10.0-3) ...
+Selecting previously unselected package python3-cryptography.
+Preparing to unpack .../79-python3-cryptography_1.7.1-3+deb9u1_amd64.deb ...
+Unpacking python3-cryptography (1.7.1-3+deb9u1) ...
+Selecting previously unselected package python3-dbus.
+Preparing to unpack .../80-python3-dbus_1.2.4-1+b1_amd64.deb ...
+Unpacking python3-dbus (1.2.4-1+b1) ...
+Selecting previously unselected package python3.5-dev.
+Preparing to unpack .../81-python3.5-dev_3.5.3-1+deb9u1_amd64.deb ...
+Unpacking python3.5-dev (3.5.3-1+deb9u1) ...
+Selecting previously unselected package python3-dev.
+Preparing to unpack .../82-python3-dev_3.5.3-1_amd64.deb ...
+Unpacking python3-dev (3.5.3-1) ...
+Selecting previously unselected package python3-gi.
+Preparing to unpack .../83-python3-gi_3.22.0-2_amd64.deb ...
+Unpacking python3-gi (3.22.0-2) ...
+Selecting previously unselected package python3-secretstorage.
+Preparing to unpack .../84-python3-secretstorage_2.3.1-2_all.deb ...
+Unpacking python3-secretstorage (2.3.1-2) ...
+Selecting previously unselected package python3-keyring.
+Preparing to unpack .../85-python3-keyring_10.1-1_all.deb ...
+Unpacking python3-keyring (10.1-1) ...
+Selecting previously unselected package python3-keyrings.alt.
+Preparing to unpack .../86-python3-keyrings.alt_1.3-1_all.deb ...
+Unpacking python3-keyrings.alt (1.3-1) ...
+Selecting previously unselected package python3-pip.
+Preparing to unpack .../87-python3-pip_9.0.1-2+deb9u1_all.deb ...
+Unpacking python3-pip (9.0.1-2+deb9u1) ...
+Selecting previously unselected package python3-wheel.
+Preparing to unpack .../88-python3-wheel_0.29.0-2_all.deb ...
+Unpacking python3-wheel (0.29.0-2) ...
+Selecting previously unselected package python3-xdg.
+Preparing to unpack .../89-python3-xdg_0.25-4_all.deb ...
+Unpacking python3-xdg (0.25-4) ...
+Selecting previously unselected package rename.
+Preparing to unpack .../90-rename_0.20-4_all.deb ...
+Unpacking rename (0.20-4) ...
+Selecting previously unselected package shared-mime-info.
+Preparing to unpack .../91-shared-mime-info_1.8-1+deb9u1_amd64.deb ...
+Unpacking shared-mime-info (1.8-1+deb9u1) ...
+Selecting previously unselected package xdg-user-dirs.
+Preparing to unpack .../92-xdg-user-dirs_0.15-2+b1_amd64.deb ...
+Unpacking xdg-user-dirs (0.15-2+b1) ...
+Selecting previously unselected package xml-core.
+Preparing to unpack .../93-xml-core_0.17_all.deb ...
+Unpacking xml-core (0.17) ...
+Setting up libquadmath0:amd64 (6.3.0-18+deb9u1) ...
+Setting up libgomp1:amd64 (6.3.0-18+deb9u1) ...
+Setting up libatomic1:amd64 (6.3.0-18+deb9u1) ...
+Setting up python-pip-whl (9.0.1-2+deb9u1) ...
+Setting up perl-modules-5.24 (5.24.1-3+deb9u5) ...
+Setting up libgdbm3:amd64 (1.8.3-14) ...
+Setting up manpages (4.10-2) ...
+Setting up libperl5.24:amd64 (5.24.1-3+deb9u5) ...
+Setting up libcc1-0:amd64 (6.3.0-18+deb9u1) ...
+Setting up make (4.1-9.1) ...
+Setting up libasan3:amd64 (6.3.0-18+deb9u1) ...
+Setting up mime-support (3.60) ...
+Setting up geoip-database (20170512-1) ...
+Setting up libcilkrts5:amd64 (6.3.0-18+deb9u1) ...
+Setting up libubsan0:amd64 (6.3.0-18+deb9u1) ...
+Setting up libtsan0:amd64 (6.3.0-18+deb9u1) ...
+Setting up libglib2.0-0:amd64 (2.50.3-2) ...
+No schema files found: doing nothing.
+Setting up linux-libc-dev:amd64 (4.9.168-1+deb9u2) ...
+Setting up sgml-base (1.29) ...
+Setting up libgeoip1:amd64 (1.6.9-4) ...
+Setting up libicu57:amd64 (57.1-6+deb9u2) ...
+Setting up libgirepository-1.0-1:amd64 (1.50.0-1+b1) ...
+Setting up libxml2:amd64 (2.9.4+dfsg1-2.2+deb9u2) ...
+Setting up libmagic-mgc (1:5.30-1+deb9u2) ...
+Setting up bzip2 (1.0.6-8.1) ...
+Setting up libmagic1:amd64 (1:5.30-1+deb9u2) ...
+Setting up liblsan0:amd64 (6.3.0-18+deb9u1) ...
+Setting up perl (5.24.1-3+deb9u5) ...
+update-alternatives: using /usr/bin/prename to provide /usr/bin/rename (rename) in auto mode
+Setting up libfile-fcntllock-perl (0.22-3+b2) ...
+Setting up nano (2.7.4-1) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+Setting up libmpx2:amd64 (6.3.0-18+deb9u1) ...
+Setting up libisl15:amd64 (0.18-1) ...
+Setting up gir1.2-glib-2.0:amd64 (1.50.0-1+b1) ...
+Setting up patch (2.7.5-1+deb9u1) ...
+Setting up libglib2.0-data (2.50.3-2) ...
+Processing triggers for libc-bin (2.24-11+deb9u4) ...
+Setting up libapparmor1:amd64 (2.11.0-3+deb9u2) ...
+Setting up xz-utils (5.2.2-1.2+b1) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+Setting up libfakeroot:amd64 (1.21-3.1) ...
+Setting up liblwres141:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Setting up libalgorithm-diff-perl (1.19.03-1) ...
+Setting up liblocale-gettext-perl (1.07-3+b1) ...
+Setting up libmpfr4:amd64 (3.1.5-1) ...
+Setting up shared-mime-info (1.8-1+deb9u1) ...
+Setting up libmpc3:amd64 (1.0.3-1+b2) ...
+Setting up binutils (2.28-5) ...
+Setting up cpp-6 (6.3.0-18+deb9u1) ...
+Setting up libc-dev-bin (2.24-11+deb9u4) ...
+Setting up xml-core (0.17) ...
+Setting up manpages-dev (4.10-2) ...
+Setting up libc6-dev:amd64 (2.24-11+deb9u4) ...
+Setting up xdg-user-dirs (0.15-2+b1) ...
+Setting up libitm1:amd64 (6.3.0-18+deb9u1) ...
+Setting up libmpdec2:amd64 (2.4.2-1) ...
+Setting up libdbus-1-3:amd64 (1.10.26-0+deb9u1) ...
+Setting up cpp (4:6.3.0-4) ...
+Setting up libgcc-6-dev:amd64 (6.3.0-18+deb9u1) ...
+Setting up libisc160:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Setting up libstdc++-6-dev:amd64 (6.3.0-18+deb9u1) ...
+Setting up rename (0.20-4) ...
+update-alternatives: using /usr/bin/file-rename to provide /usr/bin/rename (rename) in auto mode
+Setting up libdbus-glib-1-2:amd64 (0.108-2) ...
+Setting up libpython3.5-stdlib:amd64 (3.5.3-1+deb9u1) ...
+Setting up libdpkg-perl (1.18.25) ...
+Setting up file (1:5.30-1+deb9u2) ...
+Setting up fakeroot (1.21-3.1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+Setting up gcc-6 (6.3.0-18+deb9u1) ...
+Setting up g++-6 (6.3.0-18+deb9u1) ...
+Setting up libalgorithm-merge-perl (0.08-3) ...
+Setting up libisccc140:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Setting up dpkg-dev (1.18.25) ...
+Setting up libalgorithm-diff-xs-perl (0.04-4+b2) ...
+Setting up libexpat1-dev:amd64 (2.2.0-2+deb9u1) ...
+Setting up dbus (1.10.26-0+deb9u1) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up python3.5 (3.5.3-1+deb9u1) ...
+Setting up libpython3-stdlib:amd64 (3.5.3-1) ...
+Setting up libdns162:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Setting up libpython3.5:amd64 (3.5.3-1+deb9u1) ...
+Setting up libisccfg140:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Setting up gcc (4:6.3.0-4) ...
+Setting up libpython3.5-dev:amd64 (3.5.3-1+deb9u1) ...
+Setting up g++ (4:6.3.0-4) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up libbind9-140:amd64 (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Setting up python3.5-dev (3.5.3-1+deb9u1) ...
+Setting up libpython3-dev:amd64 (3.5.3-1) ...
+Setting up bind9-host (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Setting up build-essential (12.3) ...
+Setting up dnsutils (1:9.10.3.dfsg.P4-12.3+deb9u5) ...
+Setting up python3 (3.5.3-1) ...
+running python rtupdate hooks for python3.5...
+running python post-rtupdate hooks for python3.5...
+Setting up python3-cffi-backend (1.9.1-2) ...
+Setting up python3-crypto (2.6.1-7) ...
+Setting up python3-idna (2.2-1) ...
+Setting up python3-xdg (0.25-4) ...
+Setting up python3-keyrings.alt (1.3-1) ...
+Setting up python3-six (1.10.0-3) ...
+Setting up python3-dev (3.5.3-1) ...
+Setting up python3-wheel (0.29.0-2) ...
+Setting up python3-pkg-resources (33.1.1-1) ...
+Setting up python3-gi (3.22.0-2) ...
+Setting up python3-pyasn1 (0.1.9-2) ...
+Setting up python3-pip (9.0.1-2+deb9u1) ...
+Setting up python3-setuptools (33.1.1-1) ...
+Setting up dh-python (2.20170125) ...
+Setting up python3-cryptography (1.7.1-3+deb9u1) ...
+Setting up python3-dbus (1.2.4-1+b1) ...
+Setting up python3-secretstorage (2.3.1-2) ...
+Setting up python3-keyring (10.1-1) ...
+Processing triggers for libc-bin (2.24-11+deb9u4) ...
+Processing triggers for sgml-base (1.29) ...
+Removing intermediate container 8cf1dc336d02
+ ---> 9ef72067bb0c
+Step 5/15 : RUN     pip3 install pandas influxdb openpyxl flask
+ ---> Running in f436f6cea2d1
+Collecting pandas
+  Downloading https://files.pythonhosted.org/packages/74/24/0cdbf8907e1e3bc5a8da03345c23cbed7044330bb8f73bb12e711a640a00/pandas-0.24.2-cp35-cp35m-manylinux1_x86_64.whl (10.0MB)
+Collecting influxdb
+  Downloading https://files.pythonhosted.org/packages/b7/eb/ff503c3195c2bfcf53be1deca10396e9e7b55096ccb51ee94aef54434f33/influxdb-5.2.2-py2.py3-none-any.whl (70kB)
+Collecting openpyxl
+  Downloading https://files.pythonhosted.org/packages/ba/06/b899c8867518df19e242d8cbc82d4ba210f5ffbeebb7704c695e687ab59c/openpyxl-2.6.2.tar.gz (173kB)
+Collecting flask
+  Downloading https://files.pythonhosted.org/packages/9a/74/670ae9737d14114753b8c8fdf2e8bd212a05d3b361ab15b44937dfd40985/Flask-1.0.3-py2.py3-none-any.whl (92kB)
+Collecting numpy>=1.12.0 (from pandas)
+  Downloading https://files.pythonhosted.org/packages/f6/f3/cc6c6745347c1e997cc3e58390584a250b8e22b6dfc45414a7d69a3df016/numpy-1.16.3-cp35-cp35m-manylinux1_x86_64.whl (17.2MB)
+Collecting pytz>=2011k (from pandas)
+  Downloading https://files.pythonhosted.org/packages/3d/73/fe30c2daaaa0713420d0382b16fbb761409f532c56bdcc514bf7b6262bb6/pytz-2019.1-py2.py3-none-any.whl (510kB)
+Collecting python-dateutil>=2.5.0 (from pandas)
+  Downloading https://files.pythonhosted.org/packages/41/17/c62faccbfbd163c7f57f3844689e3a78bae1f403648a6afb1d0866d87fbb/python_dateutil-2.8.0-py2.py3-none-any.whl (226kB)
+Collecting requests>=2.17.0 (from influxdb)
+  Downloading https://files.pythonhosted.org/packages/51/bd/23c926cd341ea6b7dd0b2a00aba99ae0f828be89d72b2190f27c11d4b7fb/requests-2.22.0-py2.py3-none-any.whl (57kB)
+Requirement already satisfied: six>=1.10.0 in /usr/lib/python3/dist-packages (from influxdb)
+Collecting et_xmlfile (from openpyxl)
+  Downloading https://files.pythonhosted.org/packages/22/28/a99c42aea746e18382ad9fb36f64c1c1f04216f41797f2f0fa567da11388/et_xmlfile-1.0.1.tar.gz
+Collecting jdcal (from openpyxl)
+  Downloading https://files.pythonhosted.org/packages/f0/da/572cbc0bc582390480bbd7c4e93d14dc46079778ed915b505dc494b37c57/jdcal-1.4.1-py2.py3-none-any.whl
+Collecting itsdangerous>=0.24 (from flask)
+  Downloading https://files.pythonhosted.org/packages/76/ae/44b03b253d6fade317f32c24d100b3b35c2239807046a4c953c7b89fa49e/itsdangerous-1.1.0-py2.py3-none-any.whl
+Collecting click>=5.1 (from flask)
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+Collecting Jinja2>=2.10 (from flask)
+  Downloading https://files.pythonhosted.org/packages/1d/e7/fd8b501e7a6dfe492a433deb7b9d833d39ca74916fa8bc63dd1a4947a671/Jinja2-2.10.1-py2.py3-none-any.whl (124kB)
+Collecting Werkzeug>=0.14 (from flask)
+  Downloading https://files.pythonhosted.org/packages/9f/57/92a497e38161ce40606c27a86759c6b92dd34fcdb33f64171ec559257c02/Werkzeug-0.15.4-py2.py3-none-any.whl (327kB)
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 (from requests>=2.17.0->influxdb)
+  Downloading https://files.pythonhosted.org/packages/39/ec/d93dfc69617a028915df914339ef66936ea976ef24fa62940fd86ba0326e/urllib3-1.25.2-py2.py3-none-any.whl (150kB)
+Collecting chardet<3.1.0,>=3.0.2 (from requests>=2.17.0->influxdb)
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
+Collecting idna<2.9,>=2.5 (from requests>=2.17.0->influxdb)
+  Downloading https://files.pythonhosted.org/packages/14/2c/cd551d81dbe15200be1cf41cd03869a46fe7226e7450af7a6545bfc474c9/idna-2.8-py2.py3-none-any.whl (58kB)
+Collecting certifi>=2017.4.17 (from requests>=2.17.0->influxdb)
+  Downloading https://files.pythonhosted.org/packages/60/75/f692a584e85b7eaba0e03827b3d51f45f571c2e793dd731e598828d380aa/certifi-2019.3.9-py2.py3-none-any.whl (158kB)
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.10->flask)
+  Downloading https://files.pythonhosted.org/packages/6e/57/d40124076756c19ff2269678de7ae25a14ebbb3f6314eb5ce9477f191350/MarkupSafe-1.1.1-cp35-cp35m-manylinux1_x86_64.whl
+Building wheels for collected packages: openpyxl, et-xmlfile
+  Running setup.py bdist_wheel for openpyxl: started
+  Running setup.py bdist_wheel for openpyxl: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/82/cd/05/2e1db4b561fda743444f9573f2c5090a7b991200c92770dd7a
+  Running setup.py bdist_wheel for et-xmlfile: started
+  Running setup.py bdist_wheel for et-xmlfile: finished with status 'done'
+  Stored in directory: /root/.cache/pip/wheels/2a/77/35/0da0965a057698121fc7d8c5a7a9955cdbfb3cc4e2423cad39
+Successfully built openpyxl et-xmlfile
+Installing collected packages: numpy, pytz, python-dateutil, pandas, urllib3, chardet, idna, certifi, requests, influxdb, et-xmlfile, jdcal, openpyxl, itsdangerous, click, MarkupSafe, Jinja2, Werkzeug, flask
+  Found existing installation: idna 2.2
+    Not uninstalling idna at /usr/lib/python3/dist-packages, outside environment /usr
+Successfully installed Jinja2-2.10.1 MarkupSafe-1.1.1 Werkzeug-0.15.4 certifi-2019.3.9 chardet-3.0.4 click-7.0 et-xmlfile-1.0.1 flask-1.0.3 idna-2.8 influxdb-5.2.2 itsdangerous-1.1.0 jdcal-1.4.1 numpy-1.16.3 openpyxl-2.6.2 pandas-0.24.2 python-dateutil-2.8.0 pytz-2019.1 requests-2.22.0 urllib3-1.25.2
+Removing intermediate container f436f6cea2d1
+ ---> 50d5f039d28d
+Step 6/15 : RUN     mkdir -p /results
+ ---> Running in 1ea960ce7a5e
+Removing intermediate container 1ea960ce7a5e
+ ---> 7336c422c1ed
+Step 7/15 : ENV  LC_ALL=C.UTF-8
+ ---> Running in 4c7db8dc0faa
+Removing intermediate container 4c7db8dc0faa
+ ---> 62684d352c85
+Step 8/15 : ENV  LANG=C.UTF-8
+ ---> Running in 111bda0efece
+Removing intermediate container 111bda0efece
+ ---> 152f028ab2d5
+Step 9/15 : ENV  FLASK_APP=/rest_server/main.py
+ ---> Running in faece228ba47
+Removing intermediate container faece228ba47
+ ---> 99e1db6d6ec4
+Step 10/15 : ADD rest_server /rest_server
+ ---> cc0ee1ee0ec3
+Step 11/15 : ADD script/collector.py /collector.py
+ ---> ab776ff5f95f
+Step 12/15 : ADD script/entrypoint.sh /entrypoint2.sh
+ ---> 4b0351b0414f
+Step 13/15 : ENTRYPOINT ["sh", "-c"]
+ ---> Running in 97194aafdc41
+Removing intermediate container 97194aafdc41
+ ---> f6e2db6e2ad7
+Step 14/15 : CMD ["python3 -m flask run --port 8080 --host 0.0.0.0 & tail -f /dev/null"]
+ ---> Running in bba0fcece594
+Removing intermediate container bba0fcece594
+ ---> 4893cdae8165
+Step 15/15 : EXPOSE 8080
+ ---> Running in d261f581f2bc
+Removing intermediate container d261f581f2bc
+ ---> 5f2a33b8b658
+Successfully built 5f2a33b8b658
+Successfully tagged data-server:latest
+/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench
+deployment.apps/influxdb-client created
+service/influxdb-client created
+ All expected Pods are running. Seems that the system is in a good mode and ready to proceed further
+[1;34m[A-Bench][0m Startup procedur
