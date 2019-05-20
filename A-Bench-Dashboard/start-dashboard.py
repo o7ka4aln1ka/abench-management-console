@@ -57,10 +57,10 @@ def checkPreRequirements():
    return redirect('http://127.0.0.1:5000/')
 
 # generate CSVs
-@app.route("/csv_from_excel/", methods=['GET', 'POST'])
-def csv_from_excel():
-   subprocess.Popen(['./scripts/csv_from_excel.py'], shell=True)
-   return redirect('http://127.0.0.1:5000/')
+# @app.route("/csv_from_excel/", methods=['GET', 'POST'])
+# def csv_from_excel():
+#    subprocess.Popen(['./scripts/csv_from_excel.py'], shell=True)
+#    return redirect('http://127.0.0.1:5000/')
 
 # set ENV VAR
 @app.route("/set_env_var/", methods=['GET', 'POST'])
