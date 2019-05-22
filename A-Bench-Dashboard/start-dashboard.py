@@ -68,13 +68,25 @@ def set_env_var():
    # if request.method == "POST":
    # queriesList = request.form.getlist("queries")
    queriesList = []
-   queriesOptions = {'query1': "False", 'query2': "False", 'query3': "False"}
+   queriesOptions = {'1': "Unchecked", '2': "Unchecked", '30': "Unchecked"}
    for key in queriesOptions.keys():
        if request.form.get(key):
-           queriesOptions[key] = "True"
+           queriesOptions[key] = "Checked"
+   varQueries = ""
+   for key,value in queriesOptions.items():
+       if value == "Checked":
+           varQueries = varQueries + key + " "
+   os.environ['TEST_QUERIES'] = varQueries
    return render_template("test.html", test_name=queriesOptions)
    # subprocess.Popen(['./scripts/set_env_var.py'], shell=True)
    # return redirect('http://127.0.0.1:5000/config')
+
+#  testing
+# @app.route("/test/", methods=['GET'])
+# def test():
+#     var = os.environ.get('TEST_QUERIES']
+#     return render_template("test.html", test_name=var)
+
 
 # set ENV VAR with all quieries
 @app.route("/set_env_var_all_queries/", methods=['GET', 'POST'])
@@ -96,7 +108,7 @@ def setup_the_environment():
 
 @app.route("/deploy_a_bench_infrastructure/", methods=['GET', 'POST'])
 def deploy_a_bench_infrastructure():
-  subprocess.call(['./future-app/a-bench/admin.sh senv_a'], shell=True)
+  subprocess.call('sudo ./future-app/a-bench/admin.sh senv_a', shell=True)
   # subprocess.call(['./scripts/deploy_a_bench_infrastructure.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
