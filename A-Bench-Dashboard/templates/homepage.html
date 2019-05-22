@@ -38,6 +38,7 @@
         <div class="column-center">
             <h4 align="center">Run the experiments</h4>
             <div class="btn-primary">
+              <button id="foo"class="button" onclick="self.location.href='http://127.0.0.1:5000/foo'">testing foo</button>
               <button id="config"class="button" onclick="self.location.href='http://127.0.0.1:5000/config'">Configuration</button>
               <button id="run_a_sample_experiment" class="button" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
             </div>
@@ -62,30 +63,17 @@
     <textarea rows="25" cols="65">
       {{ content }}
     </textarea>
-    <!-- <script type="text/javascript">
-    function refreshPage () {
-      var page_y = document.getElementsByTagName("body")[0].scrollTop;
-      window.location.href = window.location.href.split('?')[0] + '?page_y=' + page_y;
-    }
+<!-- scroll at the bottom -->
+    <!-- <script>
+    var textarea = document.getElementById('textbox');
+    setInterval(function(){
+        textarea.value += Math.random()+'\n';
+        textarea.scrollTop = textarea.scrollHeight;
+      }, 1000);
   </script> -->
+
 </div>
 </body>
-
-<!--
-<section-right>
-  <div class="column">
-
-    <div class="column-center">
-        <button id="barCPUusage" class="button" onclick="self.location.href='http://127.0.0.1:5000/barCPUusage'">CPU Usege chart</button>
-    </div>
-    <div class="column-center">
-        <button id="barMemoryUsage" class="button" onclick="self.location.href='http://127.0.0.1:5000/barMemoryUsage'">Memory Usege chart</button>
-      </div>
-    <div class="column-center">
-        <button id="barFilesystemUsage" class="button" onclick="self.location.href='http://127.0.0.1:5000/barFilesystemUsage'">Filesystem Usege chart</button>
-</div>
-    </div>
-</section-right> -->
 
 <footer>
     <center>

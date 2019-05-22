@@ -25,30 +25,9 @@
     <div class="btn-queries">
         <h2>List with all queries: </h2>
         <div>
-            <button id="config_txt" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/set_env_var'; changeColor()">Save Config</button>
-            Saves the quieries to be run
-            <br>
             <button id="config_txt" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/set_env_var_all_queries'; changeColor()">Run all queries</button>
             Run all 30 queries
             <br>
-            <p>Choose which queries to run:</p>
-            Checkbox:
-            <input type="checkbox" id="myCheck" onclick="myFunction()">
-
-            <p id="text" style="display:none">Checkbox is CHECKED!</p>
-
-            <script>
-                function myFunction() {
-                    var checkBox = document.getElementById("myCheck");
-                    var text = document.getElementById("text");
-                    if (checkBox.checked == true) {
-                        text.style.display = "block";
-                    } else {
-                        text.style.display = "none";
-                    }
-                }
-            </script>
-
             <script>
                 function changeColor() {
                     document.getElementById("config_txt").style.color = "blue";
@@ -102,24 +81,32 @@
     </div>
     <! </code> -->
 
-            <input type="text" placeholder="Type something here" />
+            <!-- <input type="text" placeholder="Type something here" /> -->
 
             <body>
-                <div id="checkbox-container">
+                <!-- <div id="checkbox-container"> -->
+                  <form action="/set_env_var/" method="post">
                     <div>
                         <label for="option1">Option 1</label>
-                        <input type="checkbox" id="option1">
+                        <input type="checkbox" id="option1" name="query1" value="query1">
                     </div>
                     <div>
                         <label for="option2">Option 2</label>
-                        <input type="checkbox" id="option2">
+                        <input type="checkbox" id="option2" name="query2" value="query2">
                     </div>
                     <div>
                         <label for="option3">Option 3</label>
-                        <input type="checkbox" id="option3">
+                        <input type="checkbox" id="option3" name="query3" value="query3">
                     </div>
-                    <button>Check All</button>
-                </div>
+                    <!-- <button>Check All</button> -->
+                    <div>
+                    <button id="config_txt" class="btn-queries">Save Config</button>
+                    <!-- <button id="config_txt" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/set_env_var'; changeColor()">Save Config</button> -->
+                    Saves the quieries to be run
+                    <br>
+                  </div>
+                  </form>
+                <!-- </div> -->
 
                 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 
@@ -197,11 +184,6 @@
                 </script>
             </body>
 
-            <div class="checkbox">
-            <label>
-                <input type="checkbox" name="check" value="edit"> New entry
-            </label>
-            </div>
 </section-left>
 <!-- <section-right> -->
 

@@ -1,6 +1,6 @@
 # main script for starting the webui
 
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request, jsonify, make_response
 import subprocess
 from subprocess import Popen, PIPE
 import os
@@ -41,7 +41,7 @@ def home():
       'title' : 'A-Bench',
       'time': timeString
       }
-   text = open('/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/output.txt', 'r+')
+   text = open('/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/test_output.txt', 'r+')
    content = text.read()
    text.close()
    return render_template('homepage.html', content=content, **templateData)
@@ -63,10 +63,18 @@ def checkPreRequirements():
 #    return redirect('http://127.0.0.1:5000/')
 
 # set ENV VAR
-@app.route("/set_env_var/", methods=['GET', 'POST'])
+@app.route("/set_env_var/", methods=['POST'])
 def set_env_var():
-   subprocess.Popen(['./scripts/set_env_var.py'], shell=True)
-   return redirect('http://127.0.0.1:5000/config')
+   # if request.method == "POST":
+   # queriesList = request.form.getlist("queries")
+   queriesList = []
+   queriesOptions = {'query1': "False", 'query2': "False", 'query3': "False"}
+   for key in queriesOptions.keys():
+       if request.form.get(key):
+           queriesOptions[key] = "True"
+   return render_template("test.html", test_name=queriesOptions)
+   # subprocess.Popen(['./scripts/set_env_var.py'], shell=True)
+   # return redirect('http://127.0.0.1:5000/config')
 
 # set ENV VAR with all quieries
 @app.route("/set_env_var_all_queries/", methods=['GET', 'POST'])
@@ -88,7 +96,7 @@ def setup_the_environment():
 
 @app.route("/deploy_a_bench_infrastructure/", methods=['GET', 'POST'])
 def deploy_a_bench_infrastructure():
-  subprocess.call(['gnome-terminal -- ./future-app/a-bench/admin.sh senv_a'], shell=True)
+  subprocess.call(['./future-app/a-bench/admin.sh senv_a'], shell=True)
   # subprocess.call(['./scripts/deploy_a_bench_infrastructure.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
@@ -114,6 +122,11 @@ def run_a_sample_experiment():
   # subprocess.call(['gnome-terminal -- ./testing_foo/foo.sh'], shell=True)
   # subprocess.call(['gnome-terminal', '-x', './testing_foo/foo.sh'], shell=True)
   subprocess.call(['./scripts/run_a_sample_experiment.sh'], shell=True)
+  return redirect('http://127.0.0.1:5000/')
+
+@app.route("/foo/", methods=['GET', 'POST'])
+def foo():
+  subprocess.call(['./testing_foo/foo.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
 # Analyse
