@@ -9,12 +9,12 @@ body {
 h1 {
     font-family: times;
     color: black;
-    font-size: 350%;
+    font-size: 150%;
 }
 
 h2 {
     color: black;
-    font-size: 150%;
+    font-size: 50%;
 }
 
 h3,
@@ -33,11 +33,11 @@ code {
     text-align: center;
 }
 
-header,
+/* header, */
 section-left,
 section-right,
 footer {
-    margin: 0 1.5% 24px 1.5%;
+    margin: 0 1.5% 20px 1.5%;
 }
 
 section-left {
