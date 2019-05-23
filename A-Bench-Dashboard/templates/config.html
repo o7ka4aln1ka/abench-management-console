@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-config.css') }}">
 </head>
 
 <header>
@@ -20,195 +20,290 @@
     </code>
 </header>
 
-<section-left>
-    <!-- <code> -->
-    <div class="btn-queries">
-        <h2>List with all queries: </h2>
-        <div>
-            <button id="config_txt" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/set_env_var_all_queries'; changeColor()">Run all queries</button>
-            Run all 30 queries
+<div class="btn-queries">
+  <div class="btn-primary">
+    <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
+  </div>
+    <h2>List with all queries: </h2>
+    <!-- <div> -->
+        <button id="config_txt" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/set_env_var_all_queries'; changeColor()">Run all queries</button>
+        <!-- Run all 30 queries -->
+        <br>
+        <script>
+            function changeColor() {
+                document.getElementById("config_txt").style.color = "blue";
+            }
+        </script>
+        <style type="text/css">
+            div.btn-queries {
+                /* background-color: #58ADDA; */
+                /* border-radius: 5px; */
+                /* border: 1px solid blue; */
+                color: black;
+                padding: 10px 12px;
+                text-align: left;
+                text-decoration: none;
+                font-size: 12px;
+                cursor: pointer;
+                width: 100%;
+                display: inline-block;
+                margin: 3px;
+            }
+
+            div.btn-queries button:focus,
+            div.btn-queries button:active,
+            div.btn-queries input:active,
+            div.btn-queries input:focus {
+                border-color: black;
+                border-style: solid;
+                background: #58ADDA;
+            }
+
+            div.btn-queries button:hover,
+            div.btn-queries input:hover {
+                border-color: black;
+                border-style: solid;
+            }
+        </style>
+
+        <body>
+          <div>
             <br>
-            <script>
-                function changeColor() {
-                    document.getElementById("config_txt").style.color = "blue";
-                }
-            </script>
-            <style type="text/css">
-                div.btn-queries {
-                    /* background-color: #58ADDA; */
-                    /* border-radius: 5px; */
-                    /* border: 1px solid blue; */
-                    color: black;
-                    padding: 10px 12px;
-                    text-align: left;
-                    text-decoration: none;
-                    font-size: 12px;
-                    cursor: pointer;
-                    width: 100%;
-                    display: inline-block;
-                    margin: 3px;
-                }
-
-                div.btn-queries button:focus,
-                div.btn-queries button:active,
-                div.btn-queries input:active,
-                div.btn-queries input:focus {
-                    border-color: black;
-                    border-style: solid;
-                    background: #58ADDA;
-                }
-
-                div.btn-queries button:hover,
-                div.btn-queries input:hover {
-                    border-color: black;
-                    border-style: solid;
-                }
-            </style>
-            <!-- • Q6 : Find the 5 most browsed products that are not purchased. <br>
-    • Q7 : List users with more than 10 sessions. A session is defined as a 10-minute window of clicks by a user. <br>
-    • Q9 : Find the average number of sessions per registered user per month. Display the top ten users. <br>
-    • Q13 : Find the average amount of time a user spends on the website. <br>
-    • Q14 : Compare the average number of products purchased by users from one year to the next. <br>
-    • Q16 : Find the top ten pages visited. <br>
-    • Q17 : Find the top ten pages visited on a certain day (such as Valentine’s Day). <br>
-    • Q19 : Find out the days with the highest page views. <br>
-    • Q20 : Do a user segmentation based on their preferred shopping method (online vs. in-store). <br>
-    • Q21 : Find the most popular web page paths that lead to a purchase. <br>
-    • Q22 : Show the number of unique visitors per day. <br>
-    • Q23 : Show the users with the most visits. <br>
-
-        </div>
-    </div>
-    <! </code> -->
-
-            <!-- <input type="text" placeholder="Type something here" /> -->
-
-            <body>
-                  <form action="/set_env_var/" method="post">
+            <button id="config_txt" class="btn-queries">Save Config</button>
+            <!-- <button id="config_txt" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/set_env_var'; changeColor()">Save Config</button> -->
+            Saves the quieries to be run
+            <br>
+          </div>
+            <div class="column-config">
+                <form action="/set_env_var/" method="post">
                     <div>
-                        <label for="option1">Option 1</label>
+                        <label for="option1">Query 1</label>
                         <input type="checkbox" id="option1" name="1">
                     </div>
                     <div>
-                        <label for="option2">Option 2</label>
+                        <label for="option2">Query 2</label>
                         <input type="checkbox" id="option2" name="2">
                     </div>
                     <div>
-                        <label for="option3">Option 3</label>
-                        <input type="checkbox" id="option3" name="30">
+                        <label for="option3">Query 3</label>
+                        <input type="checkbox" id="option3" name="3">
                     </div>
-                    <!-- <button>Check All</button> -->
                     <div>
-                    <button id="config_txt" class="btn-queries">Save Config</button>
-                    <!-- <button id="config_txt" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/set_env_var'; changeColor()">Save Config</button> -->
-                    Saves the quieries to be run
-                    <br>
-                  </div>
-                  </form>
+                        <label for="option4">Query 4</label>
+                        <input type="checkbox" id="option4" name="4">
+                    </div>
+                    <div>
+                        <label for="option5">Query 5</label>
+                        <input type="checkbox" id="option5" name="5">
+                    </div>
+                    <div>
+                        <label for="option6">Query 6</label>
+                        <input type="checkbox" id="option6" name="6"> &nbsp; Find the 5 most browsed products that are not purchased.
+                    </div>
+                    <div>
+                        <label for="option7">Query 7</label>
+                        <input type="checkbox" id="option7" name="7"> &nbsp; List users with more than 10 sessions. A session is defined as a 10-minute window of clicks by a user.
+                    </div>
+                    <div>
+                        <label for="option8">Query 8</label>
+                        <input type="checkbox" id="option8" name="8">
+                    </div>
+                    <div>
+                        <label for="option9">Query 9</label>
+                        <input type="checkbox" id="option9" name="9"> &nbsp; Find the average number of sessions per registered user per month. Display the top ten users.
+                    </div>
+                    <div>
+                        <label for="option10">Query 10</label>
+                        <input type="checkbox" id="option10" name="10">
+                    </div>
+                    <div>
+                        <label for="option11">Query 11</label>
+                        <input type="checkbox" id="option11" name="11">
+                    </div>
+                    <div>
+                        <label for="option12">Query 12</label>
+                        <input type="checkbox" id="option12" name="12">
+                    </div>
+                    <div>
+                        <label for="option13">Query 13</label>
+                        <input type="checkbox" id="option13" name="13">
+                        &nbsp; Find the average amount of time a user spends on the website.
+                    </div>
+                    <div>
+                        <label for="option14">Query 14</label>
+                        <input type="checkbox" id="option14" name="14">
+                        &nbsp; Compare the average number of products purchased by users from one year to the next.
+                    </div>
+                    <div>
+                        <label for="option15">Query 15</label>
+                        <input type="checkbox" id="option15" name="15">
+                    </div>
+            </div>
+            <div class="column-config">
+                <div>
+                    <label for="option16">Query 16</label>
+                    <input type="checkbox" id="option16" name="16">
+                    &nbsp; Find the top ten pages visited.
+                </div>
+                <div>
+                    <label for="option17">Query 17</label>
+                    <input type="checkbox" id="option17" name="17">
+                    &nbsp; Find the top ten pages visited on a certain day (such as Valentine’s Day).
+                </div>
+                <div>
+                    <label for="option18">Query 18</label>
+                    <input type="checkbox" id="option18" name="18">
+                </div>
+                <div>
+                    <label for="option19">Query 19</label>
+                    <input type="checkbox" id="option19" name="19">
+                    &nbsp; Find out the days with the highest page views.
+                </div>
+                <div>
+                    <label for="option20">Query 20</label>
+                    <input type="checkbox" id="option20" name="20">
+                    &nbsp; Do a user segmentation based on their preferred shopping method (online vs. in-store).
+                </div>
+                <div>
+                    <label for="option21">Query 21</label>
+                    <input type="checkbox" id="option21" name="21">
+                    &nbsp; Find the most popular web page paths that lead to a purchase.
+                </div>
+                <div>
+                    <label for="option22">Query 22</label>
+                    <input type="checkbox" id="option22" name="22">
+                    &nbsp; Show the number of unique visitors per day.
+                </div>
+                <div>
+                    <label for="option23">Query 23</label>
+                    <input type="checkbox" id="option23" name="23">
+                    &nbsp; Show the users with the most visits.
+                </div>
+                <div>
+                    <label for="option24">Query 24</label>
+                    <input type="checkbox" id="option24" name="24">
+                </div>
+                <div>
+                    <label for="option25">Query 25</label>
+                    <input type="checkbox" id="option25" name="25">
+                </div>
+                <div>
+                    <label for="option26">Query 26</label>
+                    <input type="checkbox" id="option26" name="26">
+                </div>
+                <div>
+                    <label for="option27">Query 27</label>
+                    <input type="checkbox" id="option27" name="27">
+                </div>
+                <div>
+                    <label for="option28">Query 28</label>
+                    <input type="checkbox" id="option28" name="28">
+                </div>
+                <div>
+                    <label for="option29">Query 29</label>
+                    <input type="checkbox" id="option29" name="29">
+                </div>
+                <div>
+                    <label for="option30">Query 30</label>
+                    <input type="checkbox" id="option30" name="30">
+                </div>
+            </div>
+            </form>
 
-                <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+            <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 
-                <script type="text/javascript">
-                $("#checkbox-container :checkbox").on("change", function(){
-                  alert("The checkbox with the ID '" + this.id + "' changed");
+            <script type="text/javascript">
+                $("#checkbox-container :checkbox").on("change", function() {
+                    alert("The checkbox with the ID '" + this.id + "' changed");
                 });
-                </script>
+            </script>
 
-                <style>
-                    #checkbox-container {
-                        margin: 10px 5px;
-                    }
+            <style>
+                #checkbox-container {
+                    margin: 10px 5px;
+                }
 
-                    #checkbox-container div {
-                        margin-bottom: 5px;
-                    }
+                #checkbox-container div {
+                    margin-bottom: 5px;
+                }
 
-                    #checkbox-container button {
-                        margin-top: 5px;
-                    }
+                #checkbox-container button {
+                    margin-top: 5px;
+                }
 
-                    input[type=text] {
-                        padding: .5em .6em;
-                        display: inline-block;
-                        border: 1px solid #ccc;
-                        box-shadow: inset 0 1px 3px #ddd;
-                        border-radius: 4px;
-                    }
-                </style>
+                input[type=text] {
+                    padding: .5em .6em;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    box-shadow: inset 0 1px 3px #ddd;
+                    border-radius: 4px;
+                }
+            </style>
 
-                <script>
-                    var formValues = JSON.parse(localStorage.getItem('formValues')) || {};
-                    var $checkboxes = $("#checkbox-container :checkbox");
-                    var $button = $("#checkbox-container button");
+            <script>
+                var formValues = JSON.parse(localStorage.getItem('formValues')) || {};
+                var $checkboxes = $("#checkbox-container :checkbox");
+                var $button = $("#checkbox-container button");
 
-                    function allChecked() {
-                        return $checkboxes.length === $checkboxes.filter(":checked").length;
-                    }
+                function allChecked() {
+                    return $checkboxes.length === $checkboxes.filter(":checked").length;
+                }
 
-                    function updateButtonStatus() {
-                        $button.text(allChecked() ? "Uncheck all" : "Check all");
-                    }
+                function updateButtonStatus() {
+                    $button.text(allChecked() ? "Uncheck all" : "Check all");
+                }
 
-                    function handleButtonClick() {
-                        $checkboxes.prop("checked", allChecked() ? false : true)
-                    }
+                function handleButtonClick() {
+                    $checkboxes.prop("checked", allChecked() ? false : true)
+                }
 
-                    function updateStorage() {
-                        $checkboxes.each(function() {
-                            formValues[this.id] = this.checked;
-                        });
-
-                        formValues["buttonText"] = $button.text();
-                        localStorage.setItem("formValues", JSON.stringify(formValues));
-                    }
-
-                    $button.on("click", function() {
-                        handleButtonClick();
-                        updateButtonStatus();
-                        updateStorage();
+                function updateStorage() {
+                    $checkboxes.each(function() {
+                        formValues[this.id] = this.checked;
                     });
 
-                    $checkboxes.on("change", function() {
-                        updateButtonStatus();
-                        updateStorage();
-                    });
+                    formValues["buttonText"] = $button.text();
+                    localStorage.setItem("formValues", JSON.stringify(formValues));
+                }
 
-                    // On page load
-                    $.each(formValues, function(key, value) {
-                        $("#" + key).prop('checked', value);
-                    });
+                $button.on("click", function() {
+                    handleButtonClick();
+                    updateButtonStatus();
+                    updateStorage();
+                });
 
-                    $button.text(formValues["buttonText"]);
-                </script>
-            </body>
+                $checkboxes.on("change", function() {
+                    updateButtonStatus();
+                    updateStorage();
+                });
 
-</section-left>
-<!-- <section-right> -->
+                // On page load
+                $.each(formValues, function(key, value) {
+                    $("#" + key).prop('checked', value);
+                });
 
-<center>
-    <div class="btn-queries">
-        <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
-    </div>
-    <div id="allButFooter">
-        <center>
-            <footer>
+                $button.text(formValues["buttonText"]);
+            </script>
 
+          <br>
+
+          <center>
+            <div id="allButFooter">
+                <footer id="footnotes" class="col-sm-9" style="position: fixed; bottom: 0; width: 100%;">
+                    <strong class="Copy">Copyright © 2019</strong>
+                    <strong class="spacer"> | </strong>
+                    <strong class="master">Master Thesis Project</strong>
+                    <strong class="spacer"> | </strong>
+                    <strong class="Name">Vasil Radushev</strong>
+                    <strong class="spacer"> | </strong>
+                    <strong class="uni">DBIS</strong>
+                    <strong class="spacer"> | </strong>
+                    <strong class="uni">Goethe University Frankfurt</strong>
+                    <br>
+                    <small>GitLab: <a href="https://gitlab.com/o7ka4aln1ka/bigbench2_master/">BigBench2</a>.</small>
+                </footer>
+            </div>
         </center>
-        <footer id="footnotes" class="col-sm-9" style="position: fixed; bottom: 0; width: 100%;">
-            <strong class="Copy">Copyright © 2019</strong>
-            <strong class="spacer"> | </strong>
-            <strong class="master">Master Thesis Project</strong>
-            <strong class="spacer"> | </strong>
-            <strong class="Name">Vasil Radushev</strong>
-            <strong class="spacer"> | </strong>
-            <strong class="uni">DBIS</strong>
-            <strong class="spacer"> | </strong>
-            <strong class="uni">Goethe University Frankfurt</strong>
-            <br>
-            <small>GitLab: <a href="https://gitlab.com/o7ka4aln1ka/bigbench2_master/">BigBench2</a>.</small>
-        </footer>
-    </div>
-</center>
-</footer>
 
+      </body>
 </html>

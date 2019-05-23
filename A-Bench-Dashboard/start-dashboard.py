@@ -68,7 +68,12 @@ def set_env_var():
    # if request.method == "POST":
    # queriesList = request.form.getlist("queries")
    queriesList = []
-   queriesOptions = {'1': "Unchecked", '2': "Unchecked", '30': "Unchecked"}
+   queriesOptions = {'1': "Unchecked", '2': "Unchecked", '3': "Unchecked", '4': "Unchecked", '5': "Unchecked",\
+                     '6': "Unchecked", '7': "Unchecked", '8': "Unchecked", '9': "Unchecked", '10': "Unchecked",\
+                     '11': "Unchecked", '12': "Unchecked", '13': "Unchecked", '14': "Unchecked", '15': "Unchecked",\
+                     '16': "Unchecked", '17': "Unchecked", '18': "Unchecked", '19': "Unchecked", '20': "Unchecked",\
+                     '21': "Unchecked", '22': "Unchecked", '23': "Unchecked", '24': "Unchecked", '25': "Unchecked",\
+                     '26': "Unchecked", '27': "Unchecked", '28': "Unchecked", '29': "Unchecked", '30': "Unchecked"}
    for key in queriesOptions.keys():
        if request.form.get(key):
            queriesOptions[key] = "Checked"
@@ -89,16 +94,16 @@ def set_env_var():
 
 
 # set ENV VAR with all quieries
+# choose which queries to run
 @app.route("/set_env_var_all_queries/", methods=['GET', 'POST'])
 def set_env_var_all_queries():
    subprocess.Popen(['./scripts/set_env_var_all_queries.py'], shell=True)
    return redirect('http://127.0.0.1:5000/config')
 
-# choose which queries to run
-@app.route("/query1/", methods=['GET', 'POST'])
-def query1():
-   subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query1.py'], shell=True)
-   return redirect('http://127.0.0.1:5000/config')
+# @app.route("/query1/", methods=['GET', 'POST'])
+# def query1():
+#    subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query1.py'], shell=True)
+#    return redirect('http://127.0.0.1:5000/config')
 
 # Setup the infrastructure
 @app.route("/setup_the_environment/", methods=['GET', 'POST'])
