@@ -30,3 +30,7 @@ visualizing the results in a few charts which gives information about some metri
 * First set of buttons under the "Setup" are used to  make all scripts executable, check pre-requirements, setup the environment and deploy A-Bench infrastructure
 * Second set of buttons under "Run" are used to configure which quieries to be run and to run a sample A-Bench experiment
 * Third set of buttons under "Analyze" are used to prepare the results after running a sample experiment and to analyze them
+
+**3. Step:**
+* After successfully running an experiment an experiment#01.zip will be saved
+* Once this is done, click on the button "prepare results" so that all charts can be filled with data
