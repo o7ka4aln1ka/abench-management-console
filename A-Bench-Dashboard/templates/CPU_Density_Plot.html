@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>{{ title }}</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_charts.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-charts.css') }}">
 </head>
 
 <body>
@@ -83,11 +83,13 @@
   <center>
     <br>
     <br>
-    <div class="btn-primary">
+    <code>
+    <!-- <div class="btn-primary"> -->
       <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
       <button id="memChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage Chart</button>
       <button id="fileChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage Chart</button>
-    </div>
+    <!-- </div> -->
+    </code>
   </center>
 </body>
 

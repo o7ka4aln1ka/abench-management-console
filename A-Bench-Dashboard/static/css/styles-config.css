@@ -101,12 +101,14 @@ footer {
   width: 50%;
   padding: 10px;
   height: 300px;
+  font-size: 1px;
 }
 /* buttons settings */
 .btn-primary {
   border-radius: 5px;
   background-color: #A8E7EF;
   position:absolute;
+  width: 33%;
   bottom:0;
 }
 

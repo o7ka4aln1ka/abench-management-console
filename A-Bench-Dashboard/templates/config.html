@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-config.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-config.css') }}" type="text/css">
 </head>
 
 <header>
@@ -20,10 +20,13 @@
     </code>
 </header>
 
+<code>
+  <!-- <div class="button-config"> -->
+  <button id="home"class="button-config" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
+  <button id="run_a_sample_experiment" class="button-config" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
+  <!-- </div> -->
+</code>
 <div class="btn-queries">
-  <div class="btn-primary">
-    <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
-  </div>
     <h2>List with all queries: </h2>
     <!-- <div> -->
         <button id="config_txt" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/set_env_var_all_queries'; changeColor()">Run all queries</button>
@@ -34,7 +37,24 @@
                 document.getElementById("config_txt").style.color = "blue";
             }
         </script>
-        <style type="text/css">
+        <style>
+            .button-config {
+                background-color: #58ADDA;
+                border-radius: 5px;
+                border: 1px solid blue;
+                color: black;
+                padding: 8px 10px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 12px;
+                cursor: pointer;
+                width: 33%;
+                display: inline-block;
+                margin: 3px;
+                /* position:absolute;
+                bottom:0; */
+            }
+
             div.btn-queries {
                 /* background-color: #58ADDA; */
                 /* border-radius: 5px; */
@@ -69,7 +89,7 @@
         <body>
           <div>
             <br>
-            <button id="config_txt" class="btn-queries">Save Config</button>
+            <button id="config_txt" class="button-config">Save Config</button>
             <!-- <button id="config_txt" class="btn-queries" onclick="self.location.href='http://127.0.0.1:5000/set_env_var'; changeColor()">Save Config</button> -->
             Saves the quieries to be run
             <br>
@@ -79,6 +99,7 @@
                     <div>
                         <label for="option1">Query 1</label>
                         <input type="checkbox" id="option1" name="1">
+                        Find products that are sold together frequently in given stores.
                     </div>
                     <div>
                         <label for="option2">Query 2</label>
@@ -115,10 +136,12 @@
                     <div>
                         <label for="option10">Query 10</label>
                         <input type="checkbox" id="option10" name="10">
+                        For all products, extract sentences from its product reviews that contain Positive or Negative sentiment.
                     </div>
                     <div>
                         <label for="option11">Query 11</label>
                         <input type="checkbox" id="option11" name="11">
+                        For a given product, measure the correlation of sentiments, including the number of reviews and average review ratings, on product monthly revenues.
                     </div>
                     <div>
                         <label for="option12">Query 12</label>
@@ -237,6 +260,7 @@
                     border: 1px solid #ccc;
                     box-shadow: inset 0 1px 3px #ddd;
                     border-radius: 4px;
+                    /* font-size: 14px; */
                 }
             </style>
 
@@ -285,10 +309,11 @@
                 $button.text(formValues["buttonText"]);
             </script>
 
-          <br>
+          </body>
+        </div>
 
           <center>
-            <div id="allButFooter">
+            <!-- <div id="allButFooter"> -->
                 <footer id="footnotes" class="col-sm-9" style="position: fixed; bottom: 0; width: 100%;">
                     <strong class="Copy">Copyright © 2019</strong>
                     <strong class="spacer"> | </strong>
@@ -302,8 +327,6 @@
                     <br>
                     <small>GitLab: <a href="https://gitlab.com/o7ka4aln1ka/bigbench2_master/">BigBench2</a>.</small>
                 </footer>
-            </div>
+            <!-- </div> -->
         </center>
-
-      </body>
 </html>

@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.0"></script>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles_charts.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-charts.css') }}">
 </head>
 
 <body>
@@ -99,7 +99,7 @@
   </center>
 
   <center>
-    <br>
+    <!-- <br>
     <button id="reset_zoom">
     Reset zoom
     </button>
@@ -110,13 +110,15 @@
 
     <button id="enable_zoom">
         Enable zoom
-    </button>
+    </button> -->
     <br>
+    <code>
     <div class="btn-primary">
       <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
       <button id="memChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage Chart</button>
       <button id="cpuChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage Chart</button>
     </div>
+  </code>
   </center>
 </body>
 
