@@ -1,20 +1,67 @@
-/* background color and font */
+header {
+  height: 170px;
+  text-align: center;
+}
+
+#headerLeft{
+  float: left;
+  margin: -10px -450px 10px 200px;
+}
+#headerCenter{
+  float: center;
+  margin: 10px 0px 10px 0px;
+}
+#headerRight{
+  float: right;
+  margin: -80px 100px 10px 5px;
+}
 
 body {
     background-color: #C2F5FB;
     font-family: arial;
-    font-size: 150%;
+}
+/* middle section's settings */
+main {
+    position: absolute;
+    width: 100%;
+    top: 170px;
+    bottom: 100px;
+    background: #A8E7EF;
+    border-radius: 25px;
+    display: block;
+    /* padding: 120px 120px 120px 120px; */
+    text-align: center;
+}
+/* footer's settings */
+.footerWrap {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+.footer {
+    width: 100%;
+    margin: auto;
+}
+.footerContent {
+    float: left;
+    width: 100%;
+    background-color: #A8E7EF;
+    border-radius: 25px;
+    padding: 20px 0;
+    text-align: center;
 }
 
 h1 {
-  align: center;
-  color: black;
-  font-size: 20px;
+    font-family: Arial;
+    color: black;
+    font-size: 40px;
+    /* display: inline; */
 }
 
 h2 {
     color: black;
-    font-size: 50%;
+    font-size: 15px;
+    /* display: inline; */
 }
 
 h3,
@@ -34,16 +81,15 @@ code {
     background: #A8E7EF;
     border-radius: 25px;
     display: block;
-    padding: 12px 12px;
+    padding: 12px 12px 12px 12px;
     text-align: center;
 }
 
-/* header, */
-section-left,
+/* section-left,
 section-right,
 footer {
     margin: 0 1.5% 20px 1.5%;
-}
+} */
 
 section-left {
     float: left;
@@ -65,11 +111,6 @@ section-right {
   height: 20em;
 } */
 
-footer {
-    clear: both;
-    margin-bottom: 0;
-    /* position: relative; */
-}
 
 /* colums settings */
 /* Create three equal columns that floats next to each other */
