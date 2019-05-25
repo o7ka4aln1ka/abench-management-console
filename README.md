@@ -22,8 +22,8 @@ visualizing the results in a few charts which gives information about some metri
 * Run install-pre-requirements.sh in folder scripts to install missing tools if any
 * Run check-pre-requirements.sh in folder scripts to check if all the needed tools are properly installed
 * To start the main WebUI run the python script in terminal:
-.. code-block:: text
-   sudo python start-dashboard.py
+  .. code-block:: text
+     sudo python start-dashboard.py
 * Go to a browser and open: 127.0.0.1:5000
 
 **2. Step:**
