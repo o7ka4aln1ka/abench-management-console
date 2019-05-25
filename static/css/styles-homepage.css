@@ -25,6 +25,11 @@ h5 {
     font-size: 20px;
 }
 
+h6 {
+  color: black;
+  font-size: 100%;
+}
+
 code {
     background: #A8E7EF;
     border-radius: 25px;

@@ -1,0 +1,15 @@
+All .sh scripts were made executable 
+All .py scripts were made executable
+find: missing argument to `-exec'
+All .sh scripts were made executable 
+find: missing argument to `-exec'
+All .py scripts were made executable
+All .sh scripts were made executable 
+All .py scripts were made executable
+All .sh scripts were made executable
+All .py scripts were made executable
+All .sh scripts were made executable
+All .py scripts were made executable
+All .sh scripts were made executable
+All .py scripts were made executable
+/home/vr/github/a-bench-dashboard/scripts
