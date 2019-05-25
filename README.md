@@ -17,7 +17,7 @@ A-bench-dashboard uses a number of open source projects to work properly:
 
 **1. Step:**
 * Download the repository
-* Run install-pre-requirements.sh in folder scripts to install missing tools if any and download a GitHub repository for creating A-Bench infrastructure
+* Run install-pre-requirements.sh in folder scripts to install missing tools if any and download a GitHub repository for creating [A-Bench infrastructure]
 * Run check-pre-requirements.sh in folder scripts to check if all the needed tools are properly installed
 * To start the main WebUI run the python script in terminal:
 ```sh
@@ -42,3 +42,4 @@ $ sudo python start-dashboard.py
    [Flask]: <https://github.com/pallets/flask>
    [chart.js]: <https://github.com/chartjs/Chart.js>
    [pandas]: <https://github.com/pandas-dev/pandas>
+   [A-Bench infrastructure]: <https://github.com/FutureApp/a-bench>
