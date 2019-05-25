@@ -12,27 +12,7 @@ import csv
 
 app = Flask(__name__)
 
-cpu_colnames=['time', 'value']
-cpu_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench/results/20190519_11_39_26/experiment_results/cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
-cpu_labels = cpu_data.time.tolist()
-cpu_values = cpu_data.value.tolist()
-
-# cpu_colnames=['time', 'value']
-# cpu_data = pd.read_csv('/home/vr/BigBench2-easy-deploy/cpu_usage_A_I_K_short.csv', skiprows=[0], names=cpu_colnames)
-# cpu_labels = cpu_data.time.tolist()
-# cpu_values = cpu_data.value.tolist()
-
-mem_colnames=['time', 'value']
-mem_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench/results/20190519_11_39_26/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
-mem_labels = mem_data.time.tolist()
-mem_values = mem_data.value.tolist()
-
-file_colnames=['time', 'value']
-file_data = pd.read_fwf("/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/future-app/a-bench/results/20190519_11_39_26/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
-file_labels = file_data.time.tolist()
-file_values = file_data.value.tolist()
-
-
+#  homepage
 @app.route("/", methods=['GET', 'POST'])
 def home():
    now = datetime.datetime.now()
@@ -41,74 +21,33 @@ def home():
       'title' : 'A-Bench',
       'time': timeString
       }
-   text = open('/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/test_output.txt', 'r+')
+#  Loads an output file to be shown in text box on homepage
+   text = open('/home/vr/github/a-bench-dashboard/output-homepage.txt', 'r+')
    content = text.read()
    text.close()
    return render_template('homepage.html', content=content, **templateData)
 
+# 1st column of buttons "Setup"
+@app.route("/installRequirements/", methods=['GET', 'POST'])
+def installRequirements():
+   subprocess.call(['./scripts/install_requirements.sh'], shell=True)
+   return redirect('http://127.0.0.1:5000/')
+
 @app.route("/activateScripts/", methods=['GET', 'POST'])
 def activateScripts():
-   subprocess.call(['./scripts/activatescripts.sh 2>&1 | tee -a ~/github/a-bench-dashboard/test_output.txt'], shell=True)
+   subprocess.call(['./scripts/activate_scripts.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
 @app.route("/checkPreRequirements/", methods=['GET', 'POST'])
 def checkPreRequirements():
-   subprocess.call(['./scripts/check-pre-requirements.sh'], shell=True)
+   subprocess.call(['./scripts/check_pre_requirements.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
-# generate CSVs
-# @app.route("/csv_from_excel/", methods=['GET', 'POST'])
-# def csv_from_excel():
-#    subprocess.Popen(['./scripts/csv_from_excel.py'], shell=True)
-#    return redirect('http://127.0.0.1:5000/')
-
-# set ENV VAR
-@app.route("/set_env_var/", methods=['POST'])
-def set_env_var():
-   # if request.method == "POST":
-   # queriesList = request.form.getlist("queries")
-   queriesList = []
-   queriesOptions = {'1': "Unchecked", '2': "Unchecked", '3': "Unchecked", '4': "Unchecked", '5': "Unchecked",\
-                     '6': "Unchecked", '7': "Unchecked", '8': "Unchecked", '9': "Unchecked", '10': "Unchecked",\
-                     '11': "Unchecked", '12': "Unchecked", '13': "Unchecked", '14': "Unchecked", '15': "Unchecked",\
-                     '16': "Unchecked", '17': "Unchecked", '18': "Unchecked", '19': "Unchecked", '20': "Unchecked",\
-                     '21': "Unchecked", '22': "Unchecked", '23': "Unchecked", '24': "Unchecked", '25': "Unchecked",\
-                     '26': "Unchecked", '27': "Unchecked", '28': "Unchecked", '29': "Unchecked", '30': "Unchecked"}
-   for key in queriesOptions.keys():
-       if request.form.get(key):
-           queriesOptions[key] = "Checked"
-   varQueries = ""
-   for key,value in queriesOptions.items():
-       if value == "Checked":
-           varQueries = varQueries + key + " "
-   os.environ['TEST_QUERIES'] = varQueries
-   return render_template("test.html", test_name=queriesOptions)
-   # subprocess.Popen(['./scripts/set_env_var.py'], shell=True)
-   # return redirect('http://127.0.0.1:5000/config')
-
-#  testing
-# @app.route("/test/", methods=['GET'])
-# def test():
-#     var = os.environ.get('TEST_QUERIES']
-#     return render_template("test.html", test_name=var)
-
-
-# set ENV VAR with all quieries
-# choose which queries to run
-@app.route("/set_env_var_all_queries/", methods=['GET', 'POST'])
-def set_env_var_all_queries():
-   subprocess.Popen(['./scripts/set_env_var_all_queries.py'], shell=True)
-   return redirect('http://127.0.0.1:5000/config')
-
-# @app.route("/query1/", methods=['GET', 'POST'])
-# def query1():
-#    subprocess.Popen(['/home/vr/BigBench2-easy-deploy/A-Bench-Dashboard/queries/query1.py'], shell=True)
-#    return redirect('http://127.0.0.1:5000/config')
 
 # Setup the infrastructure
-@app.route("/setup_the_environment/", methods=['GET', 'POST'])
-def setup_the_environment():
-   subprocess.call(['./scripts/setup_the_environment.sh'], shell=True)
+@app.route("/setupEnvironment/", methods=['GET', 'POST'])
+def setupEnvironment():
+   subprocess.call(['./scripts/setup_environment.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
 @app.route("/deploy_a_bench_infrastructure/", methods=['GET', 'POST'])
@@ -117,12 +56,7 @@ def deploy_a_bench_infrastructure():
   # subprocess.call(['./scripts/deploy_a_bench_infrastructure.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
-@app.route("/minikubeDashboard/", methods=['GET', 'POST'])
-def minikubeDashboard():
-  subprocess.call(['./scripts/minikubeDashboard.sh'], shell=True)
-  return redirect('http://127.0.0.1:5000/')
-
-# Run
+# 2nd column of buttons "Run"
 @app.route("/config/", methods=['GET', 'POST'])
 def config():
    now = datetime.datetime.now()
@@ -134,24 +68,67 @@ def config():
    # value = request.form.getlist('check')
    return render_template('config.html', **templateData)
 
+# config.html
+# choose which queries to run
+@app.route("/set_env_var/", methods=['POST'])
+def set_env_var():
+   queriesList = []
+   # setuo all checkboxes to Unchecked
+   queriesOptions = {'1': "Unchecked", '2': "Unchecked", '3': "Unchecked", '4': "Unchecked", '5': "Unchecked",\
+                   '6': "Unchecked", '7': "Unchecked", '8': "Unchecked", '9': "Unchecked", '10': "Unchecked",\
+                   '11': "Unchecked", '12': "Unchecked", '13': "Unchecked", '14': "Unchecked", '15': "Unchecked",\
+                   '16': "Unchecked", '17': "Unchecked", '18': "Unchecked", '19': "Unchecked", '20': "Unchecked",\
+                   '21': "Unchecked", '22': "Unchecked", '23': "Unchecked", '24': "Unchecked", '25': "Unchecked",\
+                   '26': "Unchecked", '27': "Unchecked", '28': "Unchecked", '29': "Unchecked", '30': "Unchecked"}
+   for key in queriesOptions.keys():
+       # change to Checked if a query is selected
+       if request.form.get(key):
+           queriesOptions[key] = "Checked"
+           varQueries = ""
+           for key,value in queriesOptions.items():
+               if value == "Checked":
+                   varQueries = varQueries + key + " "
+                   # set ENV VAR
+                   os.environ['TEST_QUERIES'] = varQueries
+   # returns a test page to see which queries are chosen
+   return render_template("test.html", test_name=queriesOptions)
+
+# set ENV VAR with all quieries
+@app.route("/set_env_var_all_queries/", methods=['GET', 'POST'])
+def set_env_var_all_queries():
+   subprocess.Popen(['./scripts/set_env_var_all_queries.py'], shell=True)
+   return redirect('http://127.0.0.1:5000/config')
+
 @app.route("/run_a_sample_experiment/", methods=['GET', 'POST'])
 def run_a_sample_experiment():
-  # subprocess.call(['gnome-terminal -- ./testing_foo/foo.sh'], shell=True)
-  # subprocess.call(['gnome-terminal', '-x', './testing_foo/foo.sh'], shell=True)
   subprocess.call(['./scripts/run_a_sample_experiment.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
-@app.route("/foo/", methods=['GET', 'POST'])
-def foo():
-  subprocess.call(['./testing_foo/foo.sh'], shell=True)
-  return redirect('http://127.0.0.1:5000/')
 
-# Analyse
+# 3rd column of buttons "Analyse"
+# unzips experiment#01.zip after running a sample experiment
 @app.route("/prepare_results/", methods=['GET', 'POST'])
 def prepare_results():
   subprocess.call(['./scripts/prepare_results.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
+# loading the data for the charts after running the experiments
+cpu_colnames=['time', 'value']
+cpu_data = pd.read_fwf("~/github/a-bench-dashboard/submodules/a-bench/results/20190519_11_39_26/experiment_results/cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
+cpu_labels = cpu_data.time.tolist()
+cpu_values = cpu_data.value.tolist()
+
+mem_colnames=['time', 'value']
+mem_data = pd.read_fwf("~/github/a-bench-dashboard/submodules/a-bench/results/20190519_11_39_26/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
+mem_labels = mem_data.time.tolist()
+mem_values = mem_data.value.tolist()
+
+file_colnames=['time', 'value']
+file_data = pd.read_fwf("~/github/a-bench-dashboard/submodules/a-bench/results/20190519_11_39_26/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
+file_labels = file_data.time.tolist()
+file_values = file_data.value.tolist()
+
+# CPU, Memory and Filesystem charts
 @app.route('/cpuChart')
 def cpuChart():
     bar_labels=cpu_labels
@@ -170,5 +147,15 @@ def fileChart():
     bar_values=file_values
     return render_template('File_Density_Plot.html', title='Filesystem Usage', max=2095640174197, labels=bar_labels, values=bar_values)
 
+# #######################################################################
+# testing foo
+@app.route("/foo/", methods=['GET', 'POST'])
+def foo():
+    subprocess.call(['./testing_foo/foo.sh'], shell=True)
+    return redirect('http://127.0.0.1:5000/')
+# #######################################################################
+
+
+#  start the app with debugging enabled
 if __name__ == "__main__":
    app.run(port=5000, debug=True, use_reloader=False)

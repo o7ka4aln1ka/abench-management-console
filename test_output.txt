@@ -1,7 +1,0 @@
-All .sh scripts were made executable;
-TEST
-All .py scripts were made executable;
-./scripts/activatescripts.sh: 8: ./scripts/activatescripts.sh: Syntax error: end of file unexpected (expecting ")")
-All .sh scripts were made executable 
-TEST
-All .py scripts were made executable

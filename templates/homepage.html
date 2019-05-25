@@ -29,10 +29,10 @@
           <h5 align="center">Setup</h5>
           <div class="btn-primary">
             <button id="activateScripts" class="button" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+            <button id="installRequirements" class="button" onclick="self.location.href='http://127.0.0.1:5000/installRequirements'">Install requirements</button>
             <button id="checkPreRequirements" class="button" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
-            <button id="setup_the_environment" class="button" onclick="self.location.href='http://127.0.0.1:5000/setup_the_environment'">Setup the environment</button>
+            <button id="setup_environment" class="button" onclick="self.location.href='http://127.0.0.1:5000/setupEnvironment'">Setup the environment</button>
             <button id="deploy_a_bench_infrastructure" class="button" onclick="self.location.href='http://127.0.0.1:5000/deploy_a_bench_infrastructure'">Deploy A-Bench infrastructure</button>
-            <!-- <button id="minikubeDashboard"class="button" onclick="self.location.href='http://127.0.0.1:5000/minikubeDashboard'">Minikube dashboard</button> -->
           </div>
         </div>
         <div class="column-center">
@@ -47,8 +47,6 @@
             <h4 align="center">Analyse</h4>
             <div class="btn-primary">
               <button id="prepare_results"class="button" onclick="self.location.href='http://127.0.0.1:5000/prepare_results'">Prepare results</button>
-              <!-- <button id="csv_from_excel" class="button" onclick="self.location.href='http://127.0.0.1:5000/csv_from_excel'">Generate CSVs</button> -->
-              <!-- <button id="config_txt" class="button" onclick="self.location.href='http://127.0.0.1:5000/config_txt'">Config TXT</button> -->
               <button id="cpuChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage</button>
               <button id="memChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage</button>
               <button id="fileChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage</button>
@@ -58,22 +56,14 @@
     </div>
 </section-left>
 
-<body>
+<!-- <body> -->
 <div id="textbox">
     <textarea rows="25" cols="65">
       {{ content }}
     </textarea>
-<!-- scroll at the bottom -->
-    <!-- <script>
-    var textarea = document.getElementById('textbox');
-    setInterval(function(){
-        textarea.value += Math.random()+'\n';
-        textarea.scrollTop = textarea.scrollHeight;
-      }, 1000);
-  </script> -->
 
 </div>
-</body>
+<!-- </body> -->
 
 <footer>
     <center>
