@@ -12,3 +12,8 @@ sleep 5
 sudo apt-get install nmp -y
 sleep 5
 sudo npm install chart.js --save -y
+
+
+cd ~/github/a-bench-dashboard/A-Bench-Dashboard
+
+mkdir -p submodules && cd submodules && git clone https://github.com/FutureApp/a-bench.git

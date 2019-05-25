@@ -3,7 +3,8 @@
 This is my master thesis project. The main goal is to make installing, setting up and implementing the Benchmark A-Bench easier and to automate the process as much as possible.
 Using html, python3.6, flask, pandas and some other tools I created a WebUI for easier control over the setup of the infrastructure, running the benchmark and visualizing the results in a few charts which gives information about some metrics like CPU, memory and file system usage.
 
-## Pre-requirements:
+# Getting started
+## Requirements:
 *  Iternet connection
 *  Ubuntu 18.04 LTS (clean install)
 *  Modern web browser like Google Chrome, Mozilla Firefox, Microsoft Edge
