@@ -27,7 +27,7 @@ header {
 }
 
 h1 {
-  font-family: Arial;
+  font-family: arial;
   color: black;
   font-size: 40px;
   /* display: inline; */
@@ -39,15 +39,17 @@ h2 {
   /* display: inline; */
 }
 
-h3, h4, h5 {
+h3 {
   align: center;
   color: black;
   font-size: 20px;
 }
 
-h6 {
-  color: black;
-  font-size: 100%;
+h4 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  top: -20px;
 }
 
 body {
@@ -69,7 +71,7 @@ main {
 
 #leftSection{
   	background-color:#59bfcc;
-  	width:46%;
+  	width:45%;
   	float:left;
   	height:600px;
     border-radius: 25px;
@@ -80,7 +82,7 @@ main {
 }
 #rightSection{
   	background-color:#11181e;
-  	width:46%;
+  	width:45%;
   	float:left;
   	height:600px;
     border-radius: 25px;
@@ -123,17 +125,18 @@ main {
 /* buttons settings */
 .btn-group button {
     background-color: #58ADDA;
-    border-radius: 5px;
-    border: 1px solid blue;
+    border-radius: 10px;
+    border: 5px solid #2D6EBD;
     color: black;
-    padding: 10px 12px;
+    padding: 12px 12px 12px 12px;
     text-align: center;
     text-decoration: none;
+    font-family: arial;
     font-size: 14px;
     cursor: pointer;
-    width: 100%;
+    width: 80%;
     display: inline-block;
-    margin: 3px;
+    margin: 4px;
 }
 
 .btn-group button:not(:last-child) {
@@ -145,9 +148,17 @@ main {
   background-color: #17A3ED;
 }
 
-
-
-
+#terminal-textbox{
+  color: #00FF00;
+  font-family: Monospace;
+  font-weight: bold;
+  font-size: 12px;
+  /* background-color: #46494E; */
+  background-color: transparent;
+  /* border-color: transparent; */
+  height: 550px;
+  width: 835px;
+}
 
 /* footer's settings */
 .footerWrap {

@@ -25,7 +25,7 @@ def home():
    text = open('/home/vr/github/a-bench-dashboard/output-homepage.txt', 'r+')
    content = text.read()
    text.close()
-   return render_template('homepage.html', content=content, **templateData)
+   return render_template('homepage-v2.html', content=content, **templateData)
 
 # 1st column of buttons "Setup"
 @app.route("/installRequirements/", methods=['GET', 'POST'])
@@ -42,7 +42,6 @@ def activateScripts():
 def checkPreRequirements():
    subprocess.call(['./scripts/check_pre_requirements.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
-
 
 # Setup the infrastructure
 @app.route("/setupEnvironment/", methods=['GET', 'POST'])

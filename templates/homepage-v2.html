@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-homepage-v2.css') }}">
+    <!-- auto refresh homepage every 15 seconds -->
+    <meta http-equiv="refresh" content="15">
+</head>
+
+<body>
+    <header>
+        <code>
+        <br>
+        <div id="headerLeft">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Logo-Goethe-University-Frankfurt-am-Main.svg/2362px-Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120">
+        </div>
+        <div id="headerCenter">
+          <h1>Welcome to A-Bench</h1>
+          <h2>Last update: {{ time }}</h2>
+        </div>
+        <div id="headerRight">
+          <img src="http://www.bigdata.uni-frankfurt.de/wp-content/uploads/2013/04/lab-header.png" width="550" height="60">
+        </div>
+    </code>
+    </header>
+
+    <main>
+        <div id="leftSection">
+            <div id="leftInnerSection">
+                <h3>Setup</h3>
+                <div class="btn-group">
+                    <button id="activateScripts" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
+                    <button id="installRequirements" onclick="self.location.href='http://127.0.0.1:5000/installRequirements'">Install requirements</button>
+                    <button id="checkPreRequirements" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+                    <button id="setup_environment" onclick="self.location.href='http://127.0.0.1:5000/setupEnvironment'">Setup the environment</button>
+                    <button id="deploy_a_bench_infrastructure" onclick="self.location.href='http://127.0.0.1:5000/deploy_a_bench_infrastructure'">Deploy A-Bench infrastructure</button>
+                </div>
+            </div>
+            <div id="centerInnerSection">
+                <h3>Run</h3>
+                <div class="btn-group">
+                    <button id="foo" onclick="self.location.href='http://127.0.0.1:5000/foo'">testing foo</button>
+                    <button id="config" onclick="self.location.href='http://127.0.0.1:5000/config'">Configuration</button>
+                    <button id="run_a_sample_experiment" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
+                </div>
+            </div>
+            <div id="rightInnerSection">
+                <h3>Analyse</h3>
+                <div class="btn-group">
+                    <button id="prepare_results" onclick="self.location.href='http://127.0.0.1:5000/prepare_results'">Prepare results</button>
+                    <button id="cpuChart" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage</button>
+                    <button id="memChart" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage</button>
+                    <button id="fileChart" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage</button>
+                </div>
+            </div>
+
+        </div>
+        <div id="rightSection">
+            <div id="textbox">
+                <h4>Terminal output:</h4>
+                <textarea id="terminal-textbox">
+                    {{ content }}
+                </textarea>
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="footerWrap">
+        <div class="footer">
+            <div class="footerContent">
+                <strong class="Copy">Copyright © 2019</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="master">Master Thesis Project</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="Name">Vasil Radushev</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="uni">DBIS</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="uni">Goethe University Frankfurt</strong>
+                <br>
+                <small>GitHub: <a href="https://github.com/o7ka4aln1ka/a-bench-dashboard">A-Bench-Dashboard</a>.</small>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
