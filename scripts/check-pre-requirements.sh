@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# gnome-terminal --
-
 # Checks if a list of given programs are existing.
 # Will print a summary and will stop the exection if
 # a program of the list is not available or installed
-function checkIfProgrammsExists() {
+(function checkIfProgrammsExists() {
     echo "Checking if all required tools are available:"
 
     declare -a tools=("kubectl" "minikube" "cat" "curl" "python" "flask" "npm")
@@ -39,3 +37,4 @@ echo "Systems will check the enviroment first, then it will install itself if al
 requirements are full-filled."
 
 checkIfProgrammsExists
+) 2>&1 | tee -a ~/github/a-bench-dashboard/output-homepage.txt

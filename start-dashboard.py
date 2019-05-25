@@ -48,7 +48,7 @@ def home():
 
 @app.route("/activateScripts/", methods=['GET', 'POST'])
 def activateScripts():
-   subprocess.call(['./scripts/activatescripts.sh'], shell=True)
+   subprocess.call(['./scripts/activatescripts.sh 2>&1 | tee -a ~/github/a-bench-dashboard/test_output.txt'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
 @app.route("/checkPreRequirements/", methods=['GET', 'POST'])

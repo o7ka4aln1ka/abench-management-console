@@ -1,0 +1,13 @@
+All .sh scripts were made executable 
+TEST
+All .py scripts were made executable
+Systems will check the enviroment first, then it will install itself if all
+requirements are full-filled.
+Checking if all required tools are available:
+ [x] [kubectl] is installed.
+ [x] [minikube] is installed.
+ [x] [cat] is installed.
+ [x] [curl] is installed.
+ [x] [python] is installed.
+ [x] [flask] is installed.
+ [x] [npm] is installed.
