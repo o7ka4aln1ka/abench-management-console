@@ -62,29 +62,25 @@ section {
     position: absolute;
     width: 100%;
     top: 170px;
-    bottom: 200px;
+    bottom: 180px;
     background: #A8E7EF;
     border-radius: 25px;
     /* float: left; */
     /* display: block; */
-    /* padding: 120px 120px 120px 120px; */
+    padding: 5px 0px 0px 0px;
     text-align: center;
 }
 
 aside {
     position: relative;
     width: 100%;
-    top: 620px;
+    top: 640px;
     /* bottom: 140px; */
     background: #A8E7EF;
     border-radius: 25px;
     /* display: inline-block; */
-    /* padding: 120px 120px 120px 120px; */
+    padding: 5px 5px 5px 5px;
     text-align: center;
-    /* margin: 0 1.5% 10px 1.5%; */
-    float: left;
-    display: block;
-
 }
 
 #leftSection{
@@ -121,14 +117,9 @@ aside {
     width: 30%;
     display: inline-block;
     margin: 3px;
-    /* position:absolute;
-    bottom:0; */
 }
 
 #btn-queries {
-    /* background-color: #58ADDA; */
-    /* border-radius: 5px; */
-    /* border: 1px solid blue; */
     color: black;
     padding: 10px 12px;
     text-align: left;
@@ -162,18 +153,6 @@ aside {
   height: 300px;
   font-size: 12px;
   text-align: left;
-}
-
-#checkbox-container {
-    margin: 10px 5px;
-}
-
-#checkbox-container div {
-    margin-bottom: 5px;
-}
-
-#checkbox-container button {
-    margin-top: 5px;
 }
 
 /* buttons settings */

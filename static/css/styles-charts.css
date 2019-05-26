@@ -36,7 +36,8 @@ code {
 header,
 section-left,
 section-rigth,
-footer {
+/* footer  */
+{
     margin: 0 1.5% 24px 1.5%;
 }
 
@@ -50,14 +51,13 @@ section-right {
     width: 20%;
 }
 
-footer {
+/* footer {
     clear: both;
     margin-bottom: 0;
-    /* position: relative; */
-}
+} */
+
 /* colums settings */
 /* Create three equal columns that floats next to each other */
-
 .column {
     float: left;
     width: 79%;
@@ -65,13 +65,6 @@ footer {
     height: 200px;
     margin: 0 auto;
 }
-/* Create three equal columns that floats next to each other */
-/* .column-left {
-    float: left;
-    width: 40%;
-    padding: 10px;
-    height: 550px;
-} */
 
 .column-center {
     display: inline-block;
@@ -79,12 +72,7 @@ footer {
     padding: 10px;
     height: 400px;
 }
-/* .column-right {
-    float: left;
-    width: 15%;
-    padding: 10px;
-    height: 550px;
-} */
+
 /* buttons settings */
 .btn-primary {
   border-radius: 5px;
@@ -113,4 +101,23 @@ footer {
 
 .btn-primary .button:hover {
     background-color: #17A3ED;
+}
+
+/* footer's settings */
+.footerWrap {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+.footer {
+    width: 100%;
+    margin: auto;
+}
+.footerContent {
+    float: left;
+    width: 100%;
+    background-color: #A8E7EF;
+    border-radius: 25px;
+    padding: 20px 0;
+    text-align: center;
 }
