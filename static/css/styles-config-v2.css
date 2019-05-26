@@ -56,17 +56,35 @@ body {
     background-color: #C2F5FB;
     font-family: arial;
 }
+
 /* middle section's settings */
-main {
+section {
     position: absolute;
     width: 100%;
     top: 170px;
-    bottom: 100px;
+    bottom: 200px;
     background: #A8E7EF;
     border-radius: 25px;
-    display: inline-block;
+    /* float: left; */
+    /* display: block; */
     /* padding: 120px 120px 120px 120px; */
     text-align: center;
+}
+
+aside {
+    position: relative;
+    width: 100%;
+    top: 620px;
+    /* bottom: 140px; */
+    background: #A8E7EF;
+    border-radius: 25px;
+    /* display: inline-block; */
+    /* padding: 120px 120px 120px 120px; */
+    text-align: center;
+    /* margin: 0 1.5% 10px 1.5%; */
+    float: left;
+    display: block;
+
 }
 
 #leftSection{
@@ -90,22 +108,88 @@ main {
   	padding:0;
 }
 
+.button-config {
+    background-color: #58ADDA;
+    border-radius: 5px;
+    border: 3px solid #2D6EBD;
+    color: black;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+    width: 30%;
+    display: inline-block;
+    margin: 3px;
+    /* position:absolute;
+    bottom:0; */
+}
+
+#btn-queries {
+    /* background-color: #58ADDA; */
+    /* border-radius: 5px; */
+    /* border: 1px solid blue; */
+    color: black;
+    padding: 10px 12px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 12px;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    margin: 3px;
+}
+
+#btn-queries button:focus,
+#btn-queries button:active,
+#btn-queries input:active,
+#btn-queries input:focus {
+    border-color: black;
+    border-style: solid;
+    background: #58ADDA;
+}
+
+#btn-queries button:hover,
+#btn-queries input:hover {
+    border-color: black;
+    border-style: solid;
+}
+
+.column-config {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+  font-size: 12px;
+  text-align: left;
+}
+
+#checkbox-container {
+    margin: 10px 5px;
+}
+
+#checkbox-container div {
+    margin-bottom: 5px;
+}
+
+#checkbox-container button {
+    margin-top: 5px;
+}
+
 /* buttons settings */
 .btn-group-horizontal button {
     background-color: #58ADDA;
-    border-radius: 10px;
-    border: 5px solid #2D6EBD;
+    border-radius: 5px;
+    border: 3px solid #2D6EBD;
     color: black;
-    padding: 12px 12px 12px 12px;
+    padding: 8px 10px;
     text-align: center;
     text-decoration: none;
-    font-family: arial;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
     width: 30%;
-    display: block;
-    margin: 4px;
-    float: left;
+    display: inline-block;
+    margin: 3px;
 }
 
 .btn-group-horizontal button:not(:last-child) {
