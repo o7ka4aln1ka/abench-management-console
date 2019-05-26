@@ -1,6 +1,6 @@
 # main script for starting the webui
 
-from flask import Flask, render_template, redirect, request, jsonify, make_response
+from flask import Flask, render_template, redirect, request, jsonify, make_response, send_from_directory
 import subprocess
 from subprocess import Popen, PIPE
 import os
@@ -12,6 +12,8 @@ import csv
 
 app = Flask(__name__)
 
+basepath = os.path.abspath(".")
+
 #  homepage
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -22,10 +24,15 @@ def home():
       'time': timeString
       }
 #  Loads an output file to be shown in text box on homepage
-   text = open('/home/vr/github/a-bench-dashboard/output-homepage.txt', 'r+')
+   text = open(basepath + '/output-homepage.txt', 'r+')
    content = text.read()
    text.close()
    return render_template('homepage-v2.html', content=content, **templateData)
+
+#  @app.route('/favicon.ico')
+# def favicon():
+#     return send_from_directory(os.path.join(app.root_path, 'static'),
+#                                'favicon.ico', mimetype='image/vnd.microsoft.icon)
 
 # 1st column of buttons "Setup"
 @app.route("/installRequirements/", methods=['GET', 'POST'])
@@ -65,7 +72,7 @@ def config():
       'time': timeString
       }
    # value = request.form.getlist('check')
-   return render_template('config.html', **templateData)
+   return render_template('config-v2.html', **templateData)
 
 # config.html
 # choose which queries to run

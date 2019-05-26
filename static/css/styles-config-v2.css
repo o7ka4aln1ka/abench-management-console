@@ -90,40 +90,8 @@ main {
   	padding:0;
 }
 
-/* left section split into 3 colums */
-#leftInnerSection{
-  	background-color:white;
-    border-color: white;
-  	width:29%;
-  	float:left;
-  	height:500px;
-    border-radius: 25px;
-  	margin: 40px 10px 30px 20px;
-  	padding:0;
-}
-
-#centerInnerSection{
-  	background-color:white;
-  	width:29%;
-  	float:left;
-  	height:500px;
-    border-radius: 25px;
-  	margin: 40px 10px 30px 10px;
-  	padding:0;
-}
-
-#rightInnerSection{
-  	background-color:white;
-  	width:29%;
-  	float:left;
-  	height:500px;
-    border-radius: 25px;
-  	margin: 40px 20px 30px 10px;
-  	padding:0;
-}
-
 /* buttons settings */
-.btn-group button {
+.btn-group-horizontal button {
     background-color: #58ADDA;
     border-radius: 10px;
     border: 5px solid #2D6EBD;
@@ -134,31 +102,19 @@ main {
     font-family: arial;
     font-size: 14px;
     cursor: pointer;
-    width: 80%;
-    display: inline-block;
+    width: 30%;
+    display: block;
     margin: 4px;
+    float: left;
 }
 
-.btn-group button:not(:last-child) {
+.btn-group-horizontal button:not(:last-child) {
   border-bottom: none; /* Prevent double borders */
 }
 
 /* Add a background color on hover */
-.btn-group button:hover {
+.btn-group-horizontal button:hover {
   background-color: #17A3ED;
-}
-
-#terminal-textbox{
-  color: #00FF00;
-  font-family: Monospace;
-  font-weight: bold;
-  font-size: 12px;
-  /* background-color: #46494E; */
-  background-color: transparent;
-  /* border-color: transparent; */
-  height: 550px;
-  /* width: 835px; */
-  width: 100%;
 }
 
 /* footer's settings */

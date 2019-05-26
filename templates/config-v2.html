@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-config-v2.css') }}">
+    <!-- auto refresh homepage every 15 seconds -->
+    <meta http-equiv="refresh" content="15">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+    <header>
+        <code>
+        <br>
+        <div id="headerLeft">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Logo-Goethe-University-Frankfurt-am-Main.svg/2362px-Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120">
+        </div>
+        <div id="headerCenter">
+          <h1>Welcome to A-Bench</h1>
+          <h2>Last update: {{ time }}</h2>
+        </div>
+        <div id="headerRight">
+          <img src="http://www.bigdata.uni-frankfurt.de/wp-content/uploads/2013/04/lab-header.png" width="550" height="60">
+        </div>
+    </code>
+    </header>
+
+    <main>
+      <div class="btn-group-horizontal">
+      <button id="config_txt" onclick="self.location.href='http://127.0.0.1:5000/set_env_var_all_queries'; changeColor()">Select all queries</button>
+      <button id="run_a_sample_experiment" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
+      <button id="home" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
+      </div>
+    </main>
+
+
+    <div class="footerWrap">
+        <div class="footer">
+            <div class="footerContent">
+                <strong class="Copy">Copyright © 2019</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="master">Master Thesis Project</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="Name">Vasil Radushev</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="uni">DBIS</strong>
+                <strong class="spacer"> | </strong>
+                <strong class="uni">Goethe University Frankfurt</strong>
+                <br>
+                <small>GitHub: <a href="https://github.com/o7ka4aln1ka/a-bench-dashboard">A-Bench-Dashboard</a>.</small>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
