@@ -120,17 +120,17 @@ def prepare_results():
 
 # loading the data for the charts after running the experiments
 cpu_colnames=['time', 'value']
-cpu_data = pd.read_fwf("~/github/a-bench-dashboard/submodules/a-bench/results/20190519_11_39_26/experiment_results/cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
+cpu_data = pd.read_fwf("~/github/a-bench-dashboard/experiment_results/cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
 cpu_labels = cpu_data.time.tolist()
 cpu_values = cpu_data.value.tolist()
 
 mem_colnames=['time', 'value']
-mem_data = pd.read_fwf("~/github/a-bench-dashboard/submodules/a-bench/results/20190519_11_39_26/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
+mem_data = pd.read_fwf("~/github/a-bench-dashboard/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
 mem_labels = mem_data.time.tolist()
 mem_values = mem_data.value.tolist()
 
 file_colnames=['time', 'value']
-file_data = pd.read_fwf("~/github/a-bench-dashboard/submodules/a-bench/results/20190519_11_39_26/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
+file_data = pd.read_fwf("~/github/a-bench-dashboard/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
 file_labels = file_data.time.tolist()
 file_values = file_data.value.tolist()
 
