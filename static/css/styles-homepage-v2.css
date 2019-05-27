@@ -69,6 +69,9 @@ main {
     text-align: center;
 }
 
+main {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
 #leftSection{
   	background-color:#59bfcc;
   	width:45%;
@@ -79,6 +82,7 @@ main {
     box-sizing: border-box;
     margin: 30px 35px 30px 35px;
     padding:0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 #rightSection{
   	background-color:#11181e;
@@ -88,6 +92,7 @@ main {
     border-radius: 25px;
   	margin: 30px 35px 30px 35px;
   	padding:0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
 /* left section split into 3 colums */
@@ -100,6 +105,7 @@ main {
     border-radius: 25px;
   	margin: 40px 10px 30px 20px;
   	padding:0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
 #centerInnerSection{
@@ -110,6 +116,7 @@ main {
     border-radius: 25px;
   	margin: 40px 10px 30px 10px;
   	padding:0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
 #rightInnerSection{
@@ -120,6 +127,7 @@ main {
     border-radius: 25px;
   	margin: 40px 20px 30px 10px;
   	padding:0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
 /* buttons settings */
@@ -156,9 +164,10 @@ main {
   /* background-color: #46494E; */
   background-color: transparent;
   border-color: transparent;
-  height: 550px;
+  height: 540px;
   /* width: 835px; */
   width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
 /* footer's settings */
@@ -170,6 +179,7 @@ main {
 .footer {
     width: 100%;
     margin: auto;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 .footerContent {
     float: left;
