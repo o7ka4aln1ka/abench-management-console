@@ -120,6 +120,7 @@ aside {
     width: 30%;
     display: inline-block;
     margin: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
 #btn-queries {
@@ -171,6 +172,7 @@ aside {
     width: 30%;
     display: inline-block;
     margin: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
 .button:hover {
