@@ -10,6 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.0"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-charts-v2.css') }}">
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
@@ -121,9 +122,9 @@
       <br>
       <br>
       <code>
-        <button id="memChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage Chart</button>
-        <button id="cpuChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage Chart</button>
-        <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
+        <button id="memChart" class="button" data-balloon="Chart with memory usage from the last experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage Chart</button>
+        <button id="cpuChart" class="button" data-balloon="Chart with CPU usage from the last experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage Chart</button>
+        <button id="home" class="button" data-balloon="Go back to homepage" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
       </code>
     </center>
   </section>

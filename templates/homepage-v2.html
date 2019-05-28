@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-homepage-v2.css') }}">
-    <!-- auto refresh homepage every 15 seconds -->
-    <meta http-equiv="refresh" content="15">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css"> -->
+    <link rel="stylesheet" href="static/css/balloon.min.css">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <!-- auto refresh homepage every 15 seconds -->
+    <!-- <meta http-equiv="refresh" content="15"> -->
 </head>
 
 <body>
@@ -24,7 +26,6 @@
           <h2>Last update: {{ time }}</h2>
         </div>
         <div id="headerRight">
-          <!-- <img src="http://www.bigdata.uni-frankfurt.de/wp-content/uploads/2013/04/lab-header.png" width="550" height="60"> -->
           <img src="/static/big-data-lab-banner.jpg" width="550" height="60">
         </div>
     </code>
@@ -35,29 +36,29 @@
             <div id="leftInnerSection">
                 <h3>Setup</h3>
                 <div class="btn-group">
-                    <button id="activateScripts" onclick="self.location.href='http://127.0.0.1:5000/activateScripts'">Activate scripts</button>
-                    <button id="installRequirements" onclick="self.location.href='http://127.0.0.1:5000/installRequirements'">Install requirements</button>
-                    <button id="checkPreRequirements" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
-                    <button id="setup_environment" onclick="self.location.href='http://127.0.0.1:5000/setupEnvironment'">Setup the environment</button>
-                    <button id="deploy_a_bench_infrastructure" onclick="self.location.href='http://127.0.0.1:5000/deploy_a_bench_infrastructure'">Deploy A-Bench infrastructure</button>
+                    <button id="activateScripts" data-balloon="Makes all necessary scripts executable" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/activateScripts' ">Activate scripts</button>
+                    <!-- <button id="installRequirements" data-balloon="Whats up!" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/installRequirements'">Install requirements</button> -->
+                    <button id="checkPreRequirements" data-balloon="Checks if all necessary tools are installed and available" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
+                    <button id="setup_environment" data-balloon="Setups the environment like starting cat, curl, docker, helm, kubectl, virtualbox, minikube etc. " data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/setupEnvironment'">Setup the environment</button>
+                    <button id="deploy_a_bench_infrastructure" data-balloon="Stars minikube and all other necessary services to run A-Bench" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/deploy_a_bench_infrastructure'">Deploy A-Bench infrastructure</button>
                 </div>
               </div>
 
             <div id="centerInnerSection">
                 <h3>Run</h3>
                 <div class="btn-group">
-                    <button id="foo" onclick="self.location.href='http://127.0.0.1:5000/foo'">testing foo</button>
-                    <button id="config" onclick="self.location.href='http://127.0.0.1:5000/config'">Configuration</button>
-                    <button id="run_a_sample_experiment" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
+                    <button id="foo" data-balloon="testing foo" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/foo'">testing foo</button>
+                    <button id="config" data-balloon="Choose which queries to be run in an experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/config'">Configuration</button>
+                    <button id="run_a_sample_experiment" data-balloon="Start a single run experiment with one query" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
                 </div>
             </div>
             <div id="rightInnerSection">
                 <h3>Analyse</h3>
                 <div class="btn-group">
-                    <button id="prepare_results" onclick="self.location.href='http://127.0.0.1:5000/prepare_results'">Prepare results</button>
-                    <button id="cpuChart" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage</button>
-                    <button id="memChart" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage</button>
-                    <button id="fileChart" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage</button>
+                    <button id="prepare_results" data-balloon="Extracts the data needed for all charts from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/prepare_results'">Prepare results</button>
+                    <button id="cpuChart" data-balloon="Chart with CPU usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage</button>
+                    <button id="memChart" data-balloon="Chart with memory usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage</button>
+                    <button id="fileChart" data-balloon="Chart with filesystem usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage</button>
                 </div>
             </div>
 
