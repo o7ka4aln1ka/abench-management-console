@@ -29,90 +29,88 @@
   </header>
 
   <section>
-  <center>
+    <center>
 
-    <canvas id="memChart" width="240" height="82"></canvas>
-    <script type="text/javascript">
-    var memCanvas = document.getElementById("memChart");
-    steps = 10
-    max = {{max}}
+      <canvas id="memChart" width="240" height="82"></canvas>
+      <script type="text/javascript">
+      var memCanvas = document.getElementById("memChart");
+      steps = 10
+      max = {{max}}
 
-    Chart.defaults.global.defaultFontFamily = "Lato";
-    Chart.defaults.global.defaultFontSize = 12;
+      Chart.defaults.global.defaultFontFamily = "Lato";
+      Chart.defaults.global.defaultFontSize = 12;
 
-    var memData = {
-      labels: [{% for item in labels %}
-       "{{ item }}",
-      {% endfor %}],
-      datasets: [{
-        // fillColor: "rgba(135, 217, 153, 1)",
-        label: "Memory Load",
-        data: [{% for item in values %}
-           "{{ item }}",
-          {% endfor %}],
-        fill: true,
-        borderColor: 'rgba(27, 84, 177, 1)',
-        backgroundColor: 'rgba(113, 159, 234, 1)',
-        pointBorderColor: 'rgba(17, 55, 115, 1)',
-        // pointBackgroundColor: 'rgba(255,150,0,0.5)',
-        pointRadius: 5,
-        pointHoverRadius: 10,
-        pointHitRadius: 20,
-        pointBorderWidth: 2,
-        pointStyle: 'rectRounded'
-      }]
-    };
-
-    var chartOptions = {
-      legend: {
-        display: true,
-        position: 'top',
-        labels: {
-          boxWidth: 20,
-          fontColor: 'black'
-        }
-      },
-      scales: {
-        yAxes: [{
-          scaleLabel: {
-            display: true,
-            labelString: 'Memory Load',
-            fontSize: 20,
-            fontFamily: 'Lato'
-          }
-        }],
-        xAxes: [{
-          scaleLabel: {
-            display: true,
-            labelString: 'Time',
-            fontSize: 20,
-            fontFamily: 'Lato'
-          }
+      var memData = {
+        labels: [{% for item in labels %}
+         "{{ item }}",
+        {% endfor %}],
+        datasets: [{
+          // fillColor: "rgba(135, 217, 153, 1)",
+          label: "Memory Load",
+          data: [{% for item in values %}
+             "{{ item }}",
+            {% endfor %}],
+          fill: true,
+          borderColor: 'rgba(27, 84, 177, 1)',
+          backgroundColor: 'rgba(113, 159, 234, 1)',
+          pointBorderColor: 'rgba(17, 55, 115, 1)',
+          // pointBackgroundColor: 'rgba(255,150,0,0.5)',
+          pointRadius: 5,
+          pointHoverRadius: 10,
+          pointHitRadius: 20,
+          pointBorderWidth: 2,
+          pointStyle: 'rectRounded'
         }]
-        }
-    };
+      };
 
-    var lineChart = new Chart(memCanvas, {
-      type: 'line',
-      data: memData,
-      options: chartOptions
-    });
-    </script>
-    <style>
+      var chartOptions = {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            boxWidth: 20,
+            fontColor: 'black'
+          }
+        },
+        scales: {
+          yAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Memory Load',
+              fontSize: 20,
+              fontFamily: 'Lato'
+            }
+          }],
+          xAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Time',
+              fontSize: 20,
+              fontFamily: 'Lato'
+            }
+          }]
+          }
+      };
+
+      var lineChart = new Chart(memCanvas, {
+        type: 'line',
+        data: memData,
+        options: chartOptions
+      });
+      </script>
+
+      <style>
       memCanvas {backgroundColor: 'rgba(255,0,0,255)'}
       </style>
-  </center>
 
-      <center>
-        <br>
-        <br>
-        <code>
-          <button id="cpuChart" class="button" data-balloon="Chart with CPU usage from the last experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage Chart</button>
-          <button id="fileChart" class="button" data-balloon="Chart with filesystem usage from the last experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage Chart</button>
-          <button id="home" class="button" data-balloon="Go back to homepage" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
-        </code>
-      </center>
-    </section>
+    </center>
+  </section>
+
+  <aside>
+    <button id="cpuChart" class="button" data-balloon="Chart with CPU usage from the last experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage Chart</button>
+    <button id="fileChart" class="button" data-balloon="Chart with filesystem usage from the last experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage Chart</button>
+    <button id="home" class="button" data-balloon="Go back to homepage" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
+  </aside>
 
   <div class="footerWrap">
       <div class="footer">

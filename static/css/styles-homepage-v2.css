@@ -62,7 +62,8 @@ section {
     position: absolute;
     width: 100%;
     top: 170px;
-    bottom: 100px;
+    /* bottom: 130px; */
+    height: 600px;
     background: #A8E7EF;
     border-radius: 25px;
     display: inline-block;
@@ -75,7 +76,7 @@ section {
   	background-color:#59bfcc;
   	width:45%;
   	float:left;
-  	height:600px;
+  	height:550px;
     border-radius: 25px;
   	/* border-right: 1vw solid #F5E5D6; */
     box-sizing: border-box;
@@ -87,7 +88,7 @@ section {
   	background-color:#11181e;
   	width:45%;
   	float:left;
-  	height:600px;
+  	height:550px;
     border-radius: 25px;
   	margin: 30px 35px 30px 35px;
   	padding:0;
@@ -100,7 +101,7 @@ section {
     border-color: white;
   	width:29%;
   	float:left;
-  	height:500px;
+  	height:450px;
     border-radius: 25px;
   	margin: 40px 10px 30px 20px;
   	padding:0;
@@ -111,7 +112,7 @@ section {
   	background-color:#65B4DC;
   	width:29%;
   	float:left;
-  	height:500px;
+  	height:450px;
     border-radius: 25px;
   	margin: 40px 10px 30px 10px;
   	padding:0;
@@ -122,33 +123,32 @@ section {
   	background-color:#65B4DC;
   	width:29%;
   	float:left;
-  	height:500px;
+  	height:450px;
     border-radius: 25px;
   	margin: 40px 20px 30px 10px;
   	padding:0;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
+aside {
+    position: relative;
+    width: 100%;
+    top: 630px;
+    height: 60px;
+    background: #A8E7EF;
+    border-radius: 25px;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+
 /* buttons settings */
 .btn-group button {
-    /* background-color: #379ACC;
-    border-radius: 10px;
-    border: 3px solid #2D6EBD;
-    color: black;
-    padding: 12px 12px 12px 12px;
-    text-align: center;
-    text-decoration: none;
-    font-family: arial;
-    font-size: 14px;
-    cursor: pointer;
-    width: 80%;
-    display: inline-block;
-    margin: 4px; */
     background-color: #379ACC;
     border-radius: 5px;
     border: 1px solid blue;
     color: black;
-    padding: 12px 12px 12px 12px;
+    padding: 12px 14px 12px 14px;
     text-align: center;
     text-decoration: none;
     font-size: 14px;
@@ -177,10 +177,29 @@ section {
   /* background-color: #46494E; */
   background-color: transparent;
   border-color: transparent;
-  height: 540px;
-  /* width: 835px; */
+  height: 480px;
   width: 100%;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+
+.button {
+    background-color: #58ADDA;
+    border-radius: 5px;
+    border: 1px solid blue;
+    color: black;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    width: 30%;
+    display: inline-block;
+    margin: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+
+.button:hover {
+  background-color: #17A3ED;
 }
 
 /* footer's settings */

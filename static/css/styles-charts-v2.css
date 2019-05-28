@@ -70,6 +70,18 @@ section {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
+aside {
+    position: relative;
+    width: 100%;
+    top: 630px;
+    height: 60px;
+    background: #A8E7EF;
+    border-radius: 25px;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+
 .button {
     background-color: #58ADDA;
     border-radius: 5px;
