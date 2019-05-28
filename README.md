@@ -1,10 +1,10 @@
 1. [ Implementig A-Bench. ](#implementing)
 2. [ Getting started. ](#get)
-3. [ Requirements. ](#req)
-4. [ Tech. ](#tech)
-5. [ 1. Step. ](#1st)
-6. [ 2. Step. ](#2nd)
-7. [ 3. Step. ](#3rd)
+  - [ Requirements. ](#req)
+  - [ Tech. ](#tech)
+  - [ 1. Step. ](#1st)
+  - [ 2. Step. ](#2nd)
+  - [ 3. Step. ](#3rd)
 
 <a name="implementing"></a>
 # Implementig A-Bench
