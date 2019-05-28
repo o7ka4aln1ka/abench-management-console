@@ -71,11 +71,27 @@ section {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
+textarea {
+    position: relative;
+    width: 100%;
+    top: 608px;
+    height: 30px;
+    background: #A8E7EF;
+    border-radius: 25px;
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    font-size: 14;
+    font-family: arial;
+    border-color: transparent;
+    font-weight: bold;
+}
+
 aside {
     position: relative;
     width: 100%;
-    top: 630px;
-    height: 60px;
+    top: 620px;
+    height: 55px;
     background: #A8E7EF;
     border-radius: 25px;
     padding: 5px 5px 5px 5px;
@@ -141,7 +157,7 @@ aside {
     cursor: pointer;
     width: 15%;
     display: inline-block;
-    margin: 3px;
+    margin: 2px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 

@@ -79,7 +79,7 @@ def config():
 @app.route("/set_env_var/", methods=['POST'])
 def set_env_var():
    queriesList = []
-   # setuo all checkboxes to Unchecked
+   # setups all checkboxes to Unchecked
    queriesOptions = {'1': "Unchecked", '2': "Unchecked", '3': "Unchecked", '4': "Unchecked", '5': "Unchecked",\
                    '6': "Unchecked", '7': "Unchecked", '8': "Unchecked", '9': "Unchecked", '10': "Unchecked",\
                    '11': "Unchecked", '12': "Unchecked", '13': "Unchecked", '14': "Unchecked", '15': "Unchecked",\
@@ -96,8 +96,15 @@ def set_env_var():
                    varQueries = varQueries + key + " "
                    # set ENV VAR
                    os.environ['TEST_QUERIES'] = varQueries
+                   with open('selectedQueries.txt', 'w') as fo:
+                       fo.write(varQueries)
+   #  Loads an output file to be shown in text box on homepage
+   text = open(basepath + '/selectedQueries.txt', 'r+')
+   content = text.read()
+   text.close()
    # returns a test page to see which queries are chosen
-   return render_template("test.html", test_name=queriesOptions)
+   # return render_template("test.html", test_name=queriesOptions)
+   return render_template("config-v2.html", content=content, test_name=queriesOptions)
 
 # set ENV VAR with all quieries
 @app.route("/set_env_var_all_queries/", methods=['GET', 'POST'])
