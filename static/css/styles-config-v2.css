@@ -85,6 +85,7 @@ textarea {
     font-family: arial;
     border-color: transparent;
     font-weight: bold;
+    overflow: hidden;
 }
 
 aside {

@@ -1,14 +1,19 @@
-# main script for starting the webui
-
 from flask import Flask, render_template, redirect, request, jsonify, make_response, send_from_directory
 import subprocess
 from subprocess import Popen, PIPE
+from werkzeug import secure_filename
 import os
 import datetime
 import time
 import pandas as pd
 import json
 import csv
+
+import tkinter
+from tkinter import filedialog
+
+# set path to upload experiment#01.zip
+UPLOAD_FOLDER = './experiment_results'
 
 app = Flask(__name__)
 
@@ -24,15 +29,10 @@ def home():
       'time': timeString
       }
 #  Loads an output file to be shown in text box on homepage
-   text = open(basepath + '/output-homepage.txt', 'r+')
+   text = open(basepath + '/outputs/output-homepage.txt', 'r+')
    content = text.read()
    text.close()
    return render_template('homepage-v2.html', content=content, **templateData)
-
-#  @app.route('/favicon.ico')
-# def favicon():
-#     return send_from_directory(os.path.join(app.root_path, 'static'),
-#                                'favicon.ico', mimetype='image/vnd.microsoft.icon)
 
 # 1st column of buttons "Setup"
 @app.route("/installRequirements/", methods=['GET', 'POST'])
@@ -78,6 +78,11 @@ def config():
 # choose which queries to run
 @app.route("/set_env_var/", methods=['POST'])
 def set_env_var():
+   now = datetime.datetime.now()
+   timeString = now.strftime("%H:%M %d-%m-%Y")
+   templateData = {
+       'time': timeString
+   }
    queriesList = []
    # setups all checkboxes to Unchecked
    queriesOptions = {'1': "Unchecked", '2': "Unchecked", '3': "Unchecked", '4': "Unchecked", '5': "Unchecked",\
@@ -96,15 +101,15 @@ def set_env_var():
                    varQueries = varQueries + key + " "
                    # set ENV VAR
                    os.environ['TEST_QUERIES'] = varQueries
-                   with open('selectedQueries.txt', 'w') as fo:
+                   with open('outputs/selectedQueries.txt', 'w') as fo:
                        fo.write(varQueries)
    #  Loads an output file to be shown in text box on homepage
-   text = open(basepath + '/selectedQueries.txt', 'r+')
+   text = open(basepath + '/outputs/selectedQueries.txt', 'r+')
    content = text.read()
    text.close()
    # returns a test page to see which queries are chosen
    # return render_template("test.html", test_name=queriesOptions)
-   return render_template("config-v2.html", content=content, test_name=queriesOptions)
+   return render_template("config-v2.html", content=content, test_name=queriesOptions, **templateData)
 
 # set ENV VAR with all quieries
 @app.route("/set_env_var_all_queries/", methods=['GET', 'POST'])
@@ -179,8 +184,32 @@ def fileChart():
 # testing foo
 @app.route("/foo/", methods=['GET', 'POST'])
 def foo():
-    subprocess.call(['./testing_foo/foo.sh'], shell=True)
-    return redirect('http://127.0.0.1:5000/')
+    # subprocess.call(['./testing_foo/foo.sh'], shell=True)
+    return redirect('http://127.0.0.1:5000/upload')
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+# save experiment#01.zip path to a variable
+@app.route('/upload')
+def upload_file():
+    tkinter.Tk().withdraw() # Close the root window
+    in_path = filedialog.askopenfilename()
+    print ('Path to the results of last experiment is ' + in_path)
+    return render_template('test.html')
+
+# @app.route('/upload')
+# def upload_file():
+#     return render_template('test.html')
+
+# find experiment#01.zip and upload it to directory experiment_results
+@app.route('/uploader', methods = ['GET', 'POST'])
+def uploaded_file():
+   if request.method == 'POST':
+      f = request.files['file']
+      filename = secure_filename(f.filename)
+      f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+      return 'file uploaded successfully'
+
 # #######################################################################
 
 

@@ -76,3 +76,8 @@ test if loads up
 ./scripts/run_a_sample_experiment.sh: 5: cd: can't cd to /home/vr/github/a-bench-dashboard/submodules/a-bench/future-app/a-bench/
 ./scripts/run_a_sample_experiment.sh: 5: cd: can't cd to /home/vr/github/a-bench-dashboard/submodules/a-bench/future-app/a-bench/
 ./scripts/run_a_sample_experiment.sh: 5: cd: can't cd to /home/vr/github/a-bench-dashboard/submodules/a-bench/future-app/a-bench/
+
+kor
+Changed zip file to be reachable for all users
+mkdir: cannot create directory ‘experiment_results’: File exists
+Created folder experiment_results

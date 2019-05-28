@@ -1,3 +1,5 @@
 #!/bin/sh
-cd /home/vr/BigBench2-easy-deploy/future-app/a-bench/
+
+(cd ~/github/a-bench-dashboard/submodules/a-bench/future-app/a-bench/ &&
 sudo ./admin.sh auto_install
+) 2>&1 | tee -a ~/github/a-bench-dashboard/outputs/output-homepage.txt
