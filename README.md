@@ -1,29 +1,25 @@
-- [Heading](#heading)
-  * [Sub-heading](#sub-heading)
-    + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](#heading-1)
-  * [Sub-heading](#sub-heading-1)
-    + [Sub-sub-heading](#sub-sub-heading-1)
-- [Heading](#heading-2)
-  * [Sub-heading](#sub-heading-2)
-    + [Sub-sub-heading](#sub-sub-heading-2)
+1. [ Implementig A-Bench. ](#implementing)
+2. [ Getting started. ](#get)
+3. [ Requirements. ](#req)
+4. [ Tech. ](#tech)
+5. [ 1. Step. ](#1st)
+6. [ 2. Step. ](#2nd)
+7. [ 3. Step. ](#3rd)
 
-    1. [ Implementig A-Bench. ](#implementing)
-    2. [ Getting started ](#get)
-
-    <a name="implementing"></a>
-
+<a name="implementing"></a>
 # Implementig A-Bench
 
 This is my master thesis project. The main goal is to make installing, setting up and implementing the Benchmark A-Bench easier and to automate the process as much as possible.
 Using html, python3.6, flask, pandas and some other tools I created a WebUI for easier control over the setup of the infrastructure, running the benchmark and visualizing the results in a few charts which gives information about some metrics like CPU, memory and file system usage.
 
-    <a name="get"></a>
+<a name="get"></a>
 # Getting started
+<a name="req"></a>
 ## Requirements:
 *  Iternet connection
 *  Ubuntu 18.04 LTS (clean install)
 *  Modern web browser like Google Chrome, Mozilla Firefox, Microsoft Edge
+<a name="tech"></a>
 ## Tech
 A-bench-dashboard uses a number of open source projects to work properly:
 * [python3.6] - Python Programming Language version 3.6
@@ -31,6 +27,7 @@ A-bench-dashboard uses a number of open source projects to work properly:
 * [pandas] - pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language
 * [chart.js] - Simple yet flexible JavaScript charting for designers & developers
 
+<a name="1st"></a>
 **1. Step:**
 * Download the repository
 * Run install-pre-requirements.sh in folder scripts to install missing tools if any and download a GitHub repository for creating [A-Bench infrastructure]
@@ -43,11 +40,13 @@ $ sudo python start-dashboard.py
 ```sh
 127.0.0.1:5000
 ```
+<a name="2nd"></a>
 **2. Step:**
 * The homepage shows three columns of buttons and text box with the output from running different commands inside the page
 * First set of buttons under the "Setup" are used to  make all scripts executable, check pre-requirements, setup the environment and deploy A-Bench infrastructure
 * Second set of buttons under "Run" are used to configure which quieries to be run and to run a sample A-Bench experiment
 * Third set of buttons under "Analyze" are used to prepare the results after running a sample experiment and to analyze them
+<a name="3rd"></a>
 **3. Step:**
 * After successfully running an experiment an experiment#01.zip will be saved
 * Once this is done, click on the button "prepare results" so that all charts can be filled with data
