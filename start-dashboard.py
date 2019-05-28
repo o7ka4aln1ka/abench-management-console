@@ -137,21 +137,36 @@ file_values = file_data.value.tolist()
 # CPU, Memory and Filesystem charts
 @app.route('/cpuChart')
 def cpuChart():
+    now = datetime.datetime.now()
+    timeString = now.strftime("%H:%M %d-%m-%Y")
+    templateData = {
+       'time': timeString
+       }
     bar_labels=cpu_labels
     bar_values=cpu_values
-    return render_template('CPU_Density_Plot.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=bar_values)
+    return render_template('CPU_Density_Plot-v2.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
 
 @app.route('/memChart')
 def memChart():
+    now = datetime.datetime.now()
+    timeString = now.strftime("%H:%M %d-%m-%Y")
+    templateData = {
+        'time': timeString
+       }
     bar_labels=mem_labels
     bar_values=mem_values
-    return render_template('Mem_Density_Plot.html', title='RAM Usage', max=2095640174197, labels=bar_labels, values=bar_values)
+    return render_template('Mem_Density_Plot-v2.html', title='RAM Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
 
 @app.route('/fileChart')
 def fileChart():
+    now = datetime.datetime.now()
+    timeString = now.strftime("%H:%M %d-%m-%Y")
+    templateData = {
+       'time': timeString
+       }
     bar_labels=file_labels
     bar_values=file_values
-    return render_template('File_Density_Plot.html', title='Filesystem Usage', max=2095640174197, labels=bar_labels, values=bar_values)
+    return render_template('File_Density_Plot-v2.html', title='Filesystem Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
 
 # #######################################################################
 # testing foo

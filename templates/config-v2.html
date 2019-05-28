@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <title>{{ title }}</title>
     <meta charset="utf-8">
@@ -31,11 +28,10 @@
     </header>
 
     <section>
-
-        <body>
             <form action="/set_env_var/" method="post">
                 <div>
-                    <button id="config_txt" class="button-config">Save Config</button>
+                    <button id="config_txt" class="button">Save Config</button>
+                    <button id="config_all" class="button" onclick="self.location.href='http://127.0.0.1:5000/set_env_var_all_queries'; changeColor()">Select all queries</button>
                     <h2>List with all queries: </h2>
                 </div>
                 <div class="column-config">
@@ -211,16 +207,11 @@
 
                 $button.text(formValues["buttonText"]);
             </script>
-
-        </body>
     </section>
 
     <aside>
-        <div class="btn-group-horizontal">
-            <button id="config_txt" onclick="self.location.href='http://127.0.0.1:5000/set_env_var_all_queries'; changeColor()">Select all queries</button>
-            <button id="run_a_sample_experiment" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
-            <button id="home" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
-        </div>
+        <button id="run_a_sample_experiment" class="button" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
+        <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
     </aside>
 
     <div class="footerWrap">

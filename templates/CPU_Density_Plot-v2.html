@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-charts-v2.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+  <header>
+      <code>
+        <br>
+        <div id="headerLeft">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Logo-Goethe-University-Frankfurt-am-Main.svg/2362px-Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120">
+        </div>
+        <div id="headerCenter">
+          <h1>Welcome to A-Bench</h1>
+          <h2>Last update: {{ time }}</h2>
+        </div>
+        <div id="headerRight">
+          <img src="http://www.bigdata.uni-frankfurt.de/wp-content/uploads/2013/04/lab-header.png" width="550" height="60">
+        </div>
+      </code>
+  </header>
+
+  <section>
+    <center>
+
+      <canvas id="cpuChart" width="240" height="82"></canvas>
+      <script>
+      var cpuCanvas = document.getElementById("cpuChart");
+      steps = 10
+      max = {{max}}
+
+      Chart.defaults.global.defaultFontFamily = "Lato";
+      Chart.defaults.global.defaultFontSize = 12;
+
+      var cpuData = {
+        labels: [{% for item in labels %}
+         "{{ item }}",
+        {% endfor %}],
+        datasets: [{
+          fill: "rgba(135, 217, 153, 1)",
+          label: "CPU Load",
+          data: [{% for item in values %}
+             "{{ item }}",
+            {% endfor %}],
+          fill: true,
+          borderColor: 'rgba(58, 166, 82, 1)',
+          backgroundColor: 'rgba(135, 217, 153, 1)',
+          pointBorderColor: 'rgba(57, 162, 80, 1)',
+          // pointBackgroundColor: 'rgba(255,150,0,0.5)',
+          pointRadius: 5,
+          pointHoverRadius: 10,
+          pointHitRadius: 20,
+          pointBorderWidth: 2,
+          pointStyle: 'rectRounded'
+        }]
+      };
+
+      var chartOptions = {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            boxWidth: 20,
+            fontColor: 'black'
+          }
+        },
+        scales: {
+          yAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'CPU Load',
+              fontSize: 20,
+              fontFamily: 'Lato'
+            }
+          }],
+          xAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Time',
+              fontSize: 20,
+              fontFamily: 'Lato'
+            }
+          }]
+        }
+      };
+
+      var lineChart = new Chart(cpuCanvas, {
+        type: 'line',
+        data: cpuData,
+        options: chartOptions
+      });
+      </script>
+    </center>
+
+    <center>
+      <br>
+      <br>
+      <code>
+        <button id="memChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage Chart</button>
+        <button id="fileChart" class="button" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage Chart</button>
+        <button id="home" class="button" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
+      </code>
+    </center>
+  </section>
+
+  <div class="footerWrap">
+      <div class="footer">
+          <div class="footerContent">
+              <strong class="Copy">Copyright © 2019</strong>
+              <strong class="spacer"> | </strong>
+              <strong class="master">Master Thesis Project</strong>
+              <strong class="spacer"> | </strong>
+              <strong class="Name">Vasil Radushev</strong>
+              <strong class="spacer"> | </strong>
+              <strong class="uni">DBIS</strong>
+              <strong class="spacer"> | </strong>
+              <strong class="uni">Goethe University Frankfurt</strong>
+              <br>
+              <small>GitHub: <a href="https://github.com/o7ka4aln1ka/a-bench-dashboard">A-Bench-Dashboard</a>.</small>
+          </div>
+      </div>
+  </div>
+</body>
+
+
+</html>
