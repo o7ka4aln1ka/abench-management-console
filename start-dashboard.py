@@ -8,7 +8,7 @@ import time
 import pandas as pd
 import json
 import csv
-
+import zipfile
 import tkinter
 from tkinter import filedialog
 
@@ -130,25 +130,14 @@ def prepare_results():
   subprocess.call(['./scripts/prepare_results.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
-# loading the data for the charts after running the experiments
-cpu_colnames=['time', 'value']
-cpu_data = pd.read_fwf("~/github/a-bench-dashboard/experiment_results/cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
-cpu_labels = cpu_data.time.tolist()
-cpu_values = cpu_data.value.tolist()
-
-mem_colnames=['time', 'value']
-mem_data = pd.read_fwf("~/github/a-bench-dashboard/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
-mem_labels = mem_data.time.tolist()
-mem_values = mem_data.value.tolist()
-
-file_colnames=['time', 'value']
-file_data = pd.read_fwf("~/github/a-bench-dashboard/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
-file_labels = file_data.time.tolist()
-file_values = file_data.value.tolist()
-
 # CPU, Memory and Filesystem charts
 @app.route('/cpuChart')
 def cpuChart():
+    cpu_colnames=['time', 'value']
+    testPath = "~/github/a-bench-dashboard/experiment_results/"
+    cpu_data = pd.read_fwf(testPath + "cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
+    cpu_labels = cpu_data.time.tolist()
+    cpu_values = cpu_data.value.tolist()
     now = datetime.datetime.now()
     timeString = now.strftime("%H:%M %d-%m-%Y")
     templateData = {
@@ -160,6 +149,10 @@ def cpuChart():
 
 @app.route('/memChart')
 def memChart():
+    mem_colnames=['time', 'value']
+    mem_data = pd.read_fwf("~/github/a-bench-dashboard/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
+    mem_labels = mem_data.time.tolist()
+    mem_values = mem_data.value.tolist()
     now = datetime.datetime.now()
     timeString = now.strftime("%H:%M %d-%m-%Y")
     templateData = {
@@ -171,6 +164,10 @@ def memChart():
 
 @app.route('/fileChart')
 def fileChart():
+    file_colnames=['time', 'value']
+    file_data = pd.read_fwf("~/github/a-bench-dashboard/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
+    file_labels = file_data.time.tolist()
+    file_values = file_data.value.tolist()
     now = datetime.datetime.now()
     timeString = now.strftime("%H:%M %d-%m-%Y")
     templateData = {
@@ -194,12 +191,23 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def upload_file():
     tkinter.Tk().withdraw() # Close the root window
     in_path = filedialog.askopenfilename()
-    print ('Path to the results of last experiment is ' + in_path)
-    return render_template('test.html')
+    # os.environ['PATH_TO_EXPERIMENTS_ZIP'] = in_path
+    # os.chdir(in_path)
+    # zip_ref = zipfile.ZipFile(in_path, 'r')
+    # zip_ref.extractall("/home/vr/github/a-bench-dashboard/experiment_results")
+    # zip_ref.close()
+    subprocess.call(['chmod', '-R', '777', in_path])
+    with zipfile.ZipFile(in_path, 'r') as zf:
+       for file in zf.namelist():
+            if file.endswith("cpu_usage.txt") or file.endswith("memory_usage.txt") or file.endswith("filesystem_usage.txt"):
+                zf.extract(file, "/home/vr/github/a-bench-dashboard/experiment_results")
+    zf.close()
+    os.chmod("/home/vr/github/a-bench-dashboard/experiment_results", 0o777)
 
-# @app.route('/upload')
-# def upload_file():
-#     return render_template('test.html')
+    print("Successfully loaded experiment data!")
+    # print('Path to experiment#01.zip = ', os.environ['PATH_TO_EXPERIMENTS_ZIP'])
+    # print ('Path to the results of last experiment is ' + in_path)
+    return render_template('test.html')
 
 # find experiment#01.zip and upload it to directory experiment_results
 @app.route('/uploader', methods = ['GET', 'POST'])
