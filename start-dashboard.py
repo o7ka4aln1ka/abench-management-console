@@ -58,7 +58,7 @@ def setupEnvironment():
 
 @app.route("/deploy_a_bench_infrastructure/", methods=['GET', 'POST'])
 def deploy_a_bench_infrastructure():
-  subprocess.call('sudo ./future-app/a-bench/admin.sh senv_a', shell=True)
+  subprocess.call('./future-app/a-bench/admin.sh senv_a', shell=True)
   # subprocess.call(['./scripts/deploy_a_bench_infrastructure.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
@@ -125,10 +125,10 @@ def run_a_sample_experiment():
 
 # 3rd column of buttons "Analyse"
 # unzips experiment#01.zip after running a sample experiment
-@app.route("/prepare_results/", methods=['GET', 'POST'])
-def prepare_results():
-  subprocess.call(['./scripts/prepare_results.sh'], shell=True)
-  return redirect('http://127.0.0.1:5000/')
+# @app.route("/prepare_results/", methods=['GET', 'POST'])
+# def prepare_results():
+#   subprocess.call(['./scripts/prepare_results.sh'], shell=True)
+#   return redirect('http://127.0.0.1:5000/')
 
 # CPU, Memory and Filesystem charts
 @app.route('/cpuChart')
@@ -187,8 +187,11 @@ def foo():
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # save experiment#01.zip path to a variable
-@app.route('/upload')
-def upload_file():
+@app.route("/prepare_results/", methods=['GET', 'POST'])
+def prepare_results():
+# @app.route('/upload')
+# def upload_file():
+    check = False
     tkinter.Tk().withdraw() # Close the root window
     in_path = filedialog.askopenfilename()
     # os.environ['PATH_TO_EXPERIMENTS_ZIP'] = in_path
@@ -200,23 +203,27 @@ def upload_file():
     with zipfile.ZipFile(in_path, 'r') as zf:
        for file in zf.namelist():
             if file.endswith("cpu_usage.txt") or file.endswith("memory_usage.txt") or file.endswith("filesystem_usage.txt"):
-                zf.extract(file, "/home/vr/github/a-bench-dashboard/experiment_results")
+                zf.extract(file, basepath + "/experiment_results")
     zf.close()
-    os.chmod("/home/vr/github/a-bench-dashboard/experiment_results", 0o777)
-
-    print("Successfully loaded experiment data!")
+    os.chmod(basepath + "/experiment_results", 0o777)
+    check = True
+    if check == True:
+        print("Successfully loaded experiment data!")
+    else:
+        print("Something went wrong. Try again!")
     # print('Path to experiment#01.zip = ', os.environ['PATH_TO_EXPERIMENTS_ZIP'])
     # print ('Path to the results of last experiment is ' + in_path)
-    return render_template('test.html')
+    # return render_template('test.html')
+    return redirect('http://127.0.0.1:5000/')
 
 # find experiment#01.zip and upload it to directory experiment_results
-@app.route('/uploader', methods = ['GET', 'POST'])
-def uploaded_file():
-   if request.method == 'POST':
-      f = request.files['file']
-      filename = secure_filename(f.filename)
-      f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-      return 'file uploaded successfully'
+# @app.route('/uploader', methods = ['GET', 'POST'])
+# def uploaded_file():
+#    if request.method == 'POST':
+#       f = request.files['file']
+#       filename = secure_filename(f.filename)
+#       f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+#       return 'file uploaded successfully'
 
 # #######################################################################
 

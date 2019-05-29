@@ -19,9 +19,10 @@ sleep 5
 sudo apt-get install nodejs -y &&
 sleep 5
 sudo npm install chart.js --save -y &&
+echo All tools were installed! &&
 
 #  download FutureApp/a-bench repo for creating the infrastructure
 echo FutureApp repository will be downloaded for future use ...
-cd ~/github/a-bench-dashboard && mkdir -p submodules && cd submodules && git clone https://github.com/FutureApp/a-bench.git
-
+cd ~/github/a-bench-dashboard && mkdir -p submodules && cd submodules && git clone https://github.com/FutureApp/a-bench.git &&
+echo Submodule FutureApp was successfully downloaded!
 ) 2>&1 | tee -a ~/github/a-bench-dashboard/outputs/output-homepage.txt

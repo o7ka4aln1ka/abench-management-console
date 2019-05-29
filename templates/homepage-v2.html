@@ -10,8 +10,8 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css"> -->
     <link rel="stylesheet" href="static/css/balloon.min.css">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <!-- auto refresh homepage every 30 seconds -->
-    <meta http-equiv="refresh" content="30">
+    <!-- auto refresh homepage every 15 seconds -->
+    <meta http-equiv="refresh" content="15">
 </head>
 
 <body>
@@ -81,8 +81,13 @@
                 <textarea id="terminal-textbox">
                     {{ content }}
                 </textarea>
+                <script>
+                  var objDiv = document.getElementById("terminal-textbox");
+                  objDiv.scrollTop = objDiv.scrollHeight;
+                </script>
             </div>
     </section>
+
 
     <aside>
       <button id="info" class="button" data-balloon="Information about BigBench2" data-balloon-pos="up" onclick="parent.open('https://github.com/t-ivanov/BigBenchV2/blob/master/paper/ICDE2017_BigBenchV2.pdf')" target="_blank">Info about BigBench2</button>

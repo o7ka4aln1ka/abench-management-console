@@ -11,3 +11,4 @@ chmod -R 777 experiment_results
 echo Created folder experiment_results
 
 ) 2>&1 | tee -a ~/github/a-bench-dashboard/outputs/output-homepage.txt
+ 

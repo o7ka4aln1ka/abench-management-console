@@ -180,6 +180,10 @@ aside {
   width: 100%;
 }
 
+#textbox {
+  overflow:auto;
+}
+
 .button {
     background-color: #58ADDA;
     border-radius: 5px;
