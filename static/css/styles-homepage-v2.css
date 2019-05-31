@@ -61,13 +61,12 @@ body {
 section {
     position: absolute;
     width: 100%;
-    top: 170px;
+    top: 165px;
     /* bottom: 130px; */
     height: 600px;
     background: #A8E7EF;
     border-radius: 25px;
     display: inline-block;
-    /* padding: 120px 120px 120px 120px; */
     text-align: center;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
@@ -133,11 +132,11 @@ section {
 aside {
     position: relative;
     width: 100%;
-    top: 630px;
-    height: 60px;
+    top: 620px;
+    height: 43px;
     background: #A8E7EF;
     border-radius: 25px;
-    padding: 5px 5px 5px 5px;
+    padding: 2px 2px 2px 2px;
     text-align: center;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
@@ -148,15 +147,15 @@ aside {
     border-radius: 5px;
     border: 1px solid blue;
     color: black;
-    padding: 12px 14px;
+    padding: 10px 10px 10px 10px;
     text-align: center;
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
     width: 80%;
     display: inline-block;
-    margin: 3px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    margin: 6px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.2)!important;
 }
 
 .btn-group button:not(:last-child) {
@@ -180,6 +179,20 @@ aside {
   width: 100%;
 }
 
+#terminal-textbox::-webkit-scrollbar {
+    width: 12px;
+}
+
+#terminal-textbox::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+#terminal-textbox::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 10px rgba(25, 219, 57);
+}
+
 #textbox {
   overflow:auto;
 }
@@ -189,7 +202,7 @@ aside {
     border-radius: 5px;
     border: 1px solid blue;
     color: black;
-    padding: 10px 12px;
+    padding: 5px 5px 5px 5px;
     text-align: center;
     text-decoration: none;
     font-size: 14px;
@@ -207,6 +220,7 @@ aside {
 /* footer's settings */
 .footerWrap {
     width: 100%;
+    /* height: 50%; */
     position: fixed;
     bottom: 0px;
 }
@@ -217,9 +231,10 @@ aside {
 .footerContent {
     float: left;
     width: 100%;
+    height: 50%;
     background-color: #A8E7EF;
     border-radius: 25px;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 /*
