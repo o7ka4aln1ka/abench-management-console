@@ -17,8 +17,8 @@
 
   <!-- testing zoom in and out -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
   <script src="https://npmcdn.com/Chart.Zoom.js@0.3.0/Chart.Zoom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 
 
 </head>
@@ -43,7 +43,12 @@
 <section>
     <center>
 
+      <div class="fileChartDiv">
       <canvas id="fileChart" width="250" height="75"></canvas>
+      <button onclick="resetZoom()">Reset Zoom</button>
+  		<button id="drag-switch" onclick="toggleDragMode()">Disable drag mode</button>
+      </div>
+
       <script>
       var fileCanvas = document.getElementById("fileChart");
       steps = 10
@@ -75,43 +80,81 @@
         }]
       };
 
-      var chartOptions = {
-        legend: {
-          display: true,
-          position: 'top',
-          labels: {
-            boxWidth: 20,
-            fontColor: 'black'
-          }
-        },
-        scales: {
-          yAxes: [{
-            scaleLabel: {
-              display: true,
-              labelString: 'Filesystem Load',
-              fontSize: 20,
-              fontFamily: 'Lato'
-            }
-          }],
-          xAxes: [{
-            scaleLabel: {
-              display: true,
-              labelString: 'Time',
-              fontSize: 20,
-              fontFamily: 'Lato'
-            }
-          }]
-          }
-      };
-
       var lineChart = new Chart(fileCanvas, {
         zoomEnabled: true,
         type: 'line',
         data: fileData,
-        options: chartOptions
-      });
-      </script>
+        // options: chartOptions
+        options: {
+          responsive: true,
+          legend: {
+              display: true,
+              position: 'top',
+              labels: {
+                boxWidth: 20,
+                fontColor: 'black'
+              }
+            },
+            scales: {
+                yAxes: [{
+                  scaleLabel: {
+                      display: true,
+                      labelString: 'Filesystem Load',
+                      fontSize: 20,
+                      fontFamily: 'Lato'
+                    },
 
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }],
+                xAxes: [{
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Time',
+                    fontSize: 20,
+                    fontFamily: 'Lato'
+                  }
+                }]
+            },
+            // Container for pan options
+            pan: {
+                enabled: true,
+                mode: 'xy',
+                speed: 1
+            },
+
+            // Container for zoom options
+            zoom: {
+                // Boolean to enable zooming
+                enabled: true,
+                mode: 'xy',
+                rangeMin: {
+            				// Format of min zoom range depends on scale type
+            				x: 0,
+            				y: 0
+                  },
+                  speed: 0.1
+            }
+        }
+      });
+
+      window.resetZoom = function() {
+			window.myLine.resetZoom();
+  		};
+  		window.toggleDragMode = function() {
+  			var chart = window.myLine;
+  			var zoomOptions = chart.options.plugins.zoom.zoom;
+  			zoomOptions.drag = !zoomOptions.drag;
+  			chart.update();
+  			document.getElementById('drag-switch').innerText = zoomOptions.drag ? 'Disable drag mode' : 'Enable drag mode';
+  		};
+  		window.onload = function() {
+  			var ctx = document.getElementById('fileChart').getContext('2d');
+  			window.myLine = new window.Chart(ctx, lineChart);
+  		};
+
+      </script>
     </center>
   </section>
 

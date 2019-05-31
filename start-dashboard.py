@@ -175,7 +175,7 @@ def fileChart():
        }
     bar_labels=file_labels
     bar_values=file_values
-    return render_template('File_Density_Plot-v2.html', title='Filesystem Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
+    return render_template('File_Density_Plot-v3.html', title='Filesystem Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
 
 # #######################################################################
 # testing foo
