@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{ title }}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
@@ -21,51 +21,51 @@
 </head>
 
 <body>
-<header>
-    <code>
-      <br>
-      <div id="headerLeft">
-        <img src="/static/Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120" onclick="parent.open('http://www.goethe-university-frankfurt.de/en?locale=en')">
-      </div>
-      <div id="headerCenter">
-        <h1>Welcome to A-Bench</h1>
-        <h2>Last update: {{ time }}</h2>
-      </div>
-      <div id="headerRight">
-        <img src="/static/big-data-lab-banner.jpg" width="350" height="60" onclick="parent.open('http://www.bigdata.uni-frankfurt.de/')">
-      </div>
-    </code>
-</header>
+  <header>
+      <code>
+        <br>
+        <div id="headerLeft">
+          <img src="/static/Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120" onclick="parent.open('http://www.goethe-university-frankfurt.de/en?locale=en')">
+        </div>
+        <div id="headerCenter">
+          <h1>Welcome to A-Bench</h1>
+          <h2>Last update: {{ time }}</h2>
+        </div>
+        <div id="headerRight">
+          <img src="/static/big-data-lab-banner.jpg" width="350" height="60" onclick="parent.open('http://www.bigdata.uni-frankfurt.de/')">
+        </div>
+      </code>
+  </header>
 
-<section>
+  <section>
     <center>
 
-      <div class="fileChartDiv">
-      <canvas id="fileChart" width="250" height="75"></canvas>
+      <div class="cpuChartDiv">
+      <canvas id="cpuChart" width="250" height="75"></canvas>
       <button class="button" onClick="window.location.reload();">Reset Zoom</button>
       <!-- <button onclick="resetZoom()">Reset Zoom</button> -->
   		<!-- <button id="drag-switch" onclick="toggleDragMode()">Disable drag mode</button> -->
       </div>
 
-      <script type="text/javascript">
-      var fileCanvas = document.getElementById("fileChart");
+      <script>
+      var cpuCanvas = document.getElementById("cpuChart");
       steps = 10
       max = {{max}}
 
       Chart.defaults.global.defaultFontFamily = "Lato";
       Chart.defaults.global.defaultFontSize = 12;
 
-      var fileData = {
+      var cpuData = {
         labels: [{% for item in labels %}
          "{{ item }}",
         {% endfor %}],
         datasets: [{
-          fillColor: "rgba(135, 217, 153, 1)",
-          label: "Filesystem Load",
+          fill: "rgba(135, 217, 153, 1)",
+          label: "CPU Load",
           data: [{% for item in values %}
              "{{ item }}",
             {% endfor %}],
-          // fill: true;
+          fill: true,
           borderColor: 'rgba(58, 166, 82, 1)',
           backgroundColor: 'rgba(135, 217, 153, 1)',
           pointBorderColor: 'rgba(57, 162, 80, 1)',
@@ -78,10 +78,10 @@
         }]
       };
 
-      var lineChart = new Chart(fileCanvas, {
+      var lineChart = new Chart(cpuCanvas, {
         zoomEnabled: true,
         type: 'line',
-        data: fileData,
+        data: cpuData,
         // options: chartOptions
         options: {
           responsive: true,
@@ -97,13 +97,13 @@
                 yAxes: [{
                   scaleLabel: {
                       display: true,
-                      labelString: 'Filesystem Load',
+                      labelString: 'CPU Load',
                       fontSize: 20,
                       fontFamily: 'Lato'
                     },
 
                     ticks: {
-                        beginAtZero:false
+                        beginAtZero:true
                     }
                 }],
                 xAxes: [{
@@ -118,8 +118,8 @@
             // Container for pan options
             pan: {
                 enabled: true,
-                mode: 'x'
-                // speed: 1
+                mode: 'xy',
+                speed: 1
             },
 
             // Container for zoom options
@@ -132,9 +132,7 @@
             				x: 0,
             				y: 0
                   },
-                  // speed: 10,
-                  sensitivity: 5
-                  // drag: true
+                  speed: 0.1
             }
         }
       });
@@ -150,17 +148,16 @@
   			document.getElementById('drag-switch').innerText = zoomOptions.drag ? 'Disable drag mode' : 'Enable drag mode';
   		};
   		window.onload = function() {
-  			var ctx = document.getElementById('fileChart').getContext('2d');
+  			var ctx = document.getElementById('cpuChart').getContext('2d');
   			window.myLine = new window.Chart(ctx, lineChart);
   		};
-
       </script>
     </center>
   </section>
 
   <aside>
     <button id="memChart" class="button" data-balloon="Chart with memory usage from the last experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage Chart</button>
-    <button id="cpuChart" class="button" data-balloon="Chart with CPU usage from the last experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage Chart</button>
+    <button id="fileChart" class="button" data-balloon="Chart with filesystem usage from the last experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage Chart</button>
     <button id="config" class="button" data-balloon="Choose which queries to be run in an experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/config'">Configuration</button>
     <button id="home" class="button" data-balloon="Go back to homepage" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/'">Homepage</button>
   </aside>
@@ -181,5 +178,6 @@
       </div>
   </div>
 </body>
+
 
 </html>

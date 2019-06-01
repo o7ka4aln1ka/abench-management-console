@@ -19,6 +19,8 @@ sleep 5
 sudo apt-get install nodejs -y &&
 sleep 5
 sudo npm install chart.js --save -y &&
+sleep 5
+sudo npm install chartjs-plugin-zoom --save &&
 echo All tools were installed! &&
 
 #  download FutureApp/a-bench repo for creating the infrastructure

@@ -145,7 +145,7 @@ def cpuChart():
        }
     bar_labels=cpu_labels
     bar_values=cpu_values
-    return render_template('CPU_Density_Plot-v2.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
+    return render_template('CPU_Density_Plot-v3.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
 
 @app.route('/memChart')
 def memChart():
@@ -160,7 +160,7 @@ def memChart():
        }
     bar_labels=mem_labels
     bar_values=mem_values
-    return render_template('Mem_Density_Plot-v2.html', title='RAM Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
+    return render_template('Mem_Density_Plot-v3.html', title='RAM Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
 
 @app.route('/fileChart')
 def fileChart():
