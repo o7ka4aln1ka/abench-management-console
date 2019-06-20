@@ -68,7 +68,6 @@ http://127.0.0.1:5000
 # Additional Information
 * In the folder "experiment_results" will be saved as a csv tables the results from the experiment needed for the charts
 * In the folder "outputs" are two .txt files used for the output from all executed commands and shown on the homepage
-*
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen.)
 
