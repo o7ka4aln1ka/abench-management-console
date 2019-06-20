@@ -5,12 +5,14 @@
   - [ 1. Step. ](#1st)
   - [ 2. Step. ](#2nd)
   - [ 3. Step. ](#3rd)
+  - [ 4. Step. ](#4th)
+3. [ Additional information. ](#add)
 
 <a name="implementing"></a>
 # Implementig A-Bench
 
 This is my master thesis project. The main goal is to make installing, setting up and implementing the Benchmark A-Bench easier and to automate the process as much as possible.
-Using html, python3.6, flask, pandas and some other tools I created a WebUI for easier control over the setup of the infrastructure, running the benchmark and visualizing the results in a few charts which gives information about some metrics like CPU, memory and file system usage.
+Using html, python3.6, flask, pandas and some other tools I created a WebUI for easier control over the setup of the infrastructure, running the benchmark and visualizing the results in a few charts which gives information about some metrics like CPU, memory and file system usage. 
 
 <a name="get"></a>
 # Getting started
@@ -18,7 +20,7 @@ Using html, python3.6, flask, pandas and some other tools I created a WebUI for 
 ## Requirements:
 *  Iternet connection
 *  Ubuntu 18.04 LTS (clean install)
-*  Modern web browser like Google Chrome, Mozilla Firefox, Microsoft Edge
+*  Modern web browser like Google Chrome or Mozilla Firefox
 <a name="tech"></a>
 ## Tech
 A-bench-dashboard uses a number of open source projects to work properly:
@@ -30,11 +32,11 @@ A-bench-dashboard uses a number of open source projects to work properly:
 <a name="1st"></a>
 **1. Step:**
 * Download the repository
-* Run install-pre-requirements.sh in folder scripts to install missing tools if any and download a GitHub repository for creating [A-Bench infrastructure]
-* Run check-pre-requirements.sh in folder scripts to check if all the needed tools are properly installed
-* To start the main WebUI run the python script in terminal:
+* Run install_requirements.sh in folder scripts to install missing tools if any and download a GitHub repository for creating [A-Bench infrastructure]
+* Run check_pre_requirements.sh in folder scripts to check if all the needed tools are properly installed
+* To start the main WebUI run the python script in terminal as root:
 ```sh
-$ sudo python start-dashboard.py
+$ sudo python abench-management-console.py
 ```
 * Verify the deployment by navigating to your server address in your preferred browser.
 ```sh
@@ -42,15 +44,32 @@ $ sudo python start-dashboard.py
 ```
 <a name="2nd"></a>
 **2. Step:**
-* The homepage shows three columns of buttons and text box with the output from running different commands inside the page
+* On the homepage there are three columns of buttons to the left and text box with the output from running different commands inside the page to the right
 * First set of buttons under the "Setup" are used to  make all scripts executable, check pre-requirements, setup the environment and deploy A-Bench infrastructure
-* Second set of buttons under "Run" are used to configure which quieries to be run and to run a sample A-Bench experiment
-* Third set of buttons under "Analyze" are used to prepare the results after running a sample experiment and to analyze them
+* Second set of buttons under "Run" are used to configure which queries to be run and to run a sample ABench experiment
+* Third set of buttons under "Analyze" are used to prepare the results after running a sample experiment and to analyze them using charts
 
 <a name="3rd"></a>
 **3. Step:**
-* After successfully running an experiment an experiment#01.zip will be saved
-* Once this is done, click on the button "prepare results" so that all charts can be filled with data
+* When you click the button "Configuration" under "Run" you will be forwarded to a new page
+* There are shown all 30 queries with explanation that can be run as an experiment as a check boxes
+* After selecting the desired one click "Save config" and under the field with all queries the chosen one would be shown
+* A environment variable would be created and after clicking "Run a sample experiment" this variable would be used
+
+<a name="4th"></a>
+**4. Step:**
+* After successfully running an experiment the results will be saved in:
+```sh
+/submodules/a-bench/results/
+```
+* On the homepage under "Analyze" after clicking the button "Prepare results" a file manager of the computer will open. Navigate to this path and choose the desired experiment results to be shown as a charts
+* If you want to load new results from different experiment repeat the previous step
+
+<a name="add"></a>
+# Additional Information
+* In the folder "experiment_results" will be saved as a csv tables the results from the experiment needed for the charts
+* In the folder "outputs" are two .txt files used for the output from all executed commands and shown on the homepage
+*
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen.)
 

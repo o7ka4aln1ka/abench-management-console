@@ -21,7 +21,7 @@
           <img src="/static/Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120" onclick="parent.open('http://www.goethe-university-frankfurt.de/en?locale=en')">
         </div>
         <div id="headerCenter">
-          <h1>Welcome to A-Bench</h1>
+          <h1>ABench Management Console</h1>
           <h2>Last update: {{ time }}</h2>
         </div>
         <div id="headerRight">
@@ -40,125 +40,125 @@
                 <div class="column-config">
                     <div>
                         <label for="option1">Query 1</label>
-                        <input type="checkbox" id="option1" name="1"> &nbsp; Find products that are sold together frequently in given stores.
+                        <input type="checkbox" id="option1" name="q1"> &nbsp; Find products that are sold together frequently in given stores.
                     </div>
                     <div>
                         <label for="option2">Query 2</label>
-                        <input type="checkbox" id="option2" name="2"> &nbsp; Set the database
+                        <input type="checkbox" id="option2" name="q2"> &nbsp; Set the database
                     </div>
                     <div>
                         <label for="option3">Query 3</label>
-                        <input type="checkbox" id="option3" name="3"> &nbsp; Find the last 5 products that are mostly viewed before a given product was purchased online. Only products in certain categories and viewed within 30(10) days before the purchase date are considered.
+                        <input type="checkbox" id="option3" name="q3"> &nbsp; Find the last 5 products that are mostly viewed before a given product was purchased online. Only products in certain categories and viewed within 30(10) days before the purchase date are considered.
                     </div>
                     <div>
                         <label for="option4">Query 4</label>
-                        <input type="checkbox" id="option4" name="4"> &nbsp; Shopping cart abandonment analysis: For users who added products in their shopping carts but did not check out in the online store, find the average number of pages they visited during their sessions.
+                        <input type="checkbox" id="option4" name="q4"> &nbsp; Shopping cart abandonment analysis: For users who added products in their shopping carts but did not check out in the online store, find the average number of pages they visited during their sessions.
                     </div>
                     <div>
                         <label for="option5">Query 5</label>
-                        <input type="checkbox" id="option5" name="5"> &nbsp; Find the 10 most browsed products.
+                        <input type="checkbox" id="option5" name="q5"> &nbsp; Find the 10 most browsed products.
                     </div>
                     <div>
                         <label for="option6">Query 6</label>
-                        <input type="checkbox" id="option6" name="6"> &nbsp; Find the 5 most browsed products that are not purchased.
+                        <input type="checkbox" id="option6" name="q6"> &nbsp; Find the 5 most browsed products that are not purchased.
                     </div>
                     <div>
                         <label for="option7">Query 7</label>
-                        <input type="checkbox" id="option7" name="7"> &nbsp; List users with more than 10 sessions. A session is defined as a 10-minute window of clicks by a user.
+                        <input type="checkbox" id="option7" name="q7"> &nbsp; List users with more than 10 sessions. A session is defined as a 10-minute window of clicks by a user.
                     </div>
                     <div>
                         <label for="option8">Query 8</label>
-                        <input type="checkbox" id="option8" name="8"> &nbsp; For online sales, compare the total sales in which customers checked online reviews before making the purchase and that of sales in which customers did not read reviews. Consider only online sales for a specific category in a given year.
+                        <input type="checkbox" id="option8" name="q8"> &nbsp; For online sales, compare the total sales in which customers checked online reviews before making the purchase and that of sales in which customers did not read reviews. Consider only online sales for a specific category in a given year.
                     </div>
                     <div>
                         <label for="option9">Query 9</label>
-                        <input type="checkbox" id="option9" name="9"> &nbsp; Find the average number of sessions per registered user per month. Display the top ten users.
+                        <input type="checkbox" id="option9" name="q9"> &nbsp; Find the average number of sessions per registered user per month. Display the top ten users.
                     </div>
                     <div>
                         <label for="option10">Query 10</label>
-                        <input type="checkbox" id="option10" name="10"> &nbsp; For all products, extract sentences from its product reviews that contain Positive or Negative sentiment.
+                        <input type="checkbox" id="option10" name="q10"> &nbsp; For all products, extract sentences from its product reviews that contain Positive or Negative sentiment.
                     </div>
                     <div>
                         <label for="option11">Query 11</label>
-                        <input type="checkbox" id="option11" name="11"> &nbsp; For a given product, measure the correlation of sentiments, including the number of reviews and average review ratings, on product monthly revenues.
+                        <input type="checkbox" id="option11" name="q11"> &nbsp; For a given product, measure the correlation of sentiments, including the number of reviews and average review ratings, on product monthly revenues.
                     </div>
                     <div>
                         <label for="option12">Query 12</label>
-                        <input type="checkbox" id="option12" name="12"> &nbsp; Find all customers who viewed items of a given category on the web in a given month and year that was followed by an in-store purchase of an item from the same category in the three consecutive months.
+                        <input type="checkbox" id="option12" name="q12"> &nbsp; Find all customers who viewed items of a given category on the web in a given month and year that was followed by an in-store purchase of an item from the same category in the three consecutive months.
                     </div>
                     <div>
                         <label for="option13">Query 13</label>
-                        <input type="checkbox" id="option13" name="13"> &nbsp; Find the average amount of time a user spends on the website.
+                        <input type="checkbox" id="option13" name="q13"> &nbsp; Find the average amount of time a user spends on the website.
                     </div>
                     <div>
                         <label for="option14">Query 14</label>
-                        <input type="checkbox" id="option14" name="14"> &nbsp; Compare the average number of products purchased by users from one year to the next.
+                        <input type="checkbox" id="option14" name="q14"> &nbsp; Compare the average number of products purchased by users from one year to the next.
                     </div>
                     <div>
                         <label for="option15">Query 15</label>
-                        <input type="checkbox" id="option15" name="15"> &nbsp; Find the categories with flat or declining sales for in store purchases during a given year for a given store.
+                        <input type="checkbox" id="option15" name="q15"> &nbsp; Find the categories with flat or declining sales for in store purchases during a given year for a given store.
                     </div>
                 </div>
                 <div class="column-config">
                     <div>
                         <label for="option16">Query 16</label>
-                        <input type="checkbox" id="option16" name="16"> &nbsp; Find the top ten pages visited.
+                        <input type="checkbox" id="option16" name="q16"> &nbsp; Find the top ten pages visited.
                     </div>
                     <div>
                         <label for="option17">Query 17</label>
-                        <input type="checkbox" id="option17" name="17"> &nbsp; Find the top ten pages visited on a certain day (such as Valentine’s Day).
+                        <input type="checkbox" id="option17" name="q17"> &nbsp; Find the top ten pages visited on a certain day (such as Valentine’s Day).
                     </div>
                     <div>
                         <label for="option18">Query 18</label>
-                        <input type="checkbox" id="option18" name="18"> &nbsp; Identify the stores with flat or declining sales in 3 consecutive months, check if there are any negative reviews regarding these stores available online.
+                        <input type="checkbox" id="option18" name="q18"> &nbsp; Identify the stores with flat or declining sales in 3 consecutive months, check if there are any negative reviews regarding these stores available online.
                     </div>
                     <div>
                         <label for="option19">Query 19</label>
-                        <input type="checkbox" id="option19" name="19"> &nbsp; Find out the days with the highest page views.
+                        <input type="checkbox" id="option19" name="q19"> &nbsp; Find out the days with the highest page views.
                     </div>
                     <div>
                         <label for="option20">Query 20</label>
-                        <input type="checkbox" id="option20" name="20"> &nbsp; Do a user segmentation based on their preferred shopping method (online vs. in-store).
+                        <input type="checkbox" id="option20" name="q20"> &nbsp; Do a user segmentation based on their preferred shopping method (online vs. in-store).
                     </div>
                     <div>
                         <label for="option21">Query 21</label>
-                        <input type="checkbox" id="option21" name="21"> &nbsp; Find the most popular web page paths that lead to a purchase.
+                        <input type="checkbox" id="option21" name="q21"> &nbsp; Find the most popular web page paths that lead to a purchase.
                     </div>
                     <div>
                         <label for="option22">Query 22</label>
-                        <input type="checkbox" id="option22" name="22"> &nbsp; Show the number of unique visitors per day.
+                        <input type="checkbox" id="option22" name="q22"> &nbsp; Show the number of unique visitors per day.
                     </div>
                     <div>
                         <label for="option23">Query 23</label>
-                        <input type="checkbox" id="option23" name="23"> &nbsp; Show the users with the most visits.
+                        <input type="checkbox" id="option23" name="q23"> &nbsp; Show the users with the most visits.
                     </div>
                     <div>
                         <label for="option24">Query 24</label>
-                        <input type="checkbox" id="option24" name="24"> &nbsp; For a given product, measure the effect of competitor's prices on products' in-store and online sales. (Compute the cross-price elasticity of demand for a given product)
+                        <input type="checkbox" id="option24" name="q24"> &nbsp; For a given product, measure the effect of competitor's prices on products' in-store and online sales. (Compute the cross-price elasticity of demand for a given product)
                     </div>
                     <div>
                         <label for="option25">Query 25</label>
-                        <input type="checkbox" id="option25" name="25"> &nbsp; Customer segmentation analysis: Customers are separated along the following key shopping dimensions: recency of last visit, frequency of visits and monetary amount. Use the store and online purchase data during a given year to compute.
+                        <input type="checkbox" id="option25" name="q25"> &nbsp; Customer segmentation analysis: Customers are separated along the following key shopping dimensions: recency of last visit, frequency of visits and monetary amount. Use the store and online purchase data during a given year to compute.
                     </div>
                     <div>
                         <label for="option26">Query 26</label>
-                        <input type="checkbox" id="option26" name="26"> &nbsp; Cluster customers into book buddies/club groups based on their in store book purchasing histories.
+                        <input type="checkbox" id="option26" name="q26"> &nbsp; Cluster customers into book buddies/club groups based on their in store book purchasing histories.
                     </div>
                     <div>
                         <label for="option27">Query 27</label>
-                        <input type="checkbox" id="option27" name="27"> &nbsp; Extract competitor product names and model names (if any) from online product reviews for a given product.
+                        <input type="checkbox" id="option27" name="q27"> &nbsp; Extract competitor product names and model names (if any) from online product reviews for a given product.
                     </div>
                     <div>
                         <label for="option28">Query 28</label>
-                        <input type="checkbox" id="option28" name="28"> &nbsp; Build text classifier for online review sentiment classification (Positive, Negative, Neutral), using 60% of available reviews for training and the remaining 40% for testing. Display classifier accuracy on testing data.
+                        <input type="checkbox" id="option28" name="q28"> &nbsp; Build text classifier for online review sentiment classification (Positive, Negative, Neutral), using 60% of available reviews for training and the remaining 40% for testing. Display classifier accuracy on testing data.
                     </div>
                     <div>
                         <label for="option29">Query 29</label>
-                        <input type="checkbox" id="option29" name="29"> &nbsp; Perform category affinity analysis for products purchased online together.
+                        <input type="checkbox" id="option29" name="q29"> &nbsp; Perform category affinity analysis for products purchased online together.
                     </div>
                     <div>
                         <label for="option30">Query 30</label>
-                        <input type="checkbox" id="option30" name="30"> &nbsp; Perform category affinity analysis for products viewed together.
+                        <input type="checkbox" id="option30" name="q30"> &nbsp; Perform category affinity analysis for products viewed together.
                     </div>
                 </div>
             </form>

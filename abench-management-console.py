@@ -25,14 +25,13 @@ def home():
    now = datetime.datetime.now()
    timeString = now.strftime("%H:%M %d-%m-%Y")
    templateData = {
-      'title' : 'A-Bench',
       'time': timeString
       }
 #  Loads an output file to be shown in text box on homepage
    text = open(basepath + '/outputs/output-homepage.txt', 'r+')
    content = text.read()
    text.close()
-   return render_template('homepage-v2.html', content=content, **templateData)
+   return render_template('homepage.html', content=content, **templateData)
 
 # 1st column of buttons "Setup"
 @app.route("/installRequirements/", methods=['GET', 'POST'])
@@ -58,8 +57,8 @@ def setupEnvironment():
 
 @app.route("/deploy_a_bench_infrastructure/", methods=['GET', 'POST'])
 def deploy_a_bench_infrastructure():
-  subprocess.call('./future-app/a-bench/admin.sh senv_a', shell=True)
-  # subprocess.call(['./scripts/deploy_a_bench_infrastructure.sh'], shell=True)
+  # subprocess.call('./future-app/a-bench/admin.sh senv_a', shell=True)
+  subprocess.call(['./scripts/deploy_a_bench_infrastructure.sh'], shell=True)
   return redirect('http://127.0.0.1:5000/')
 
 # 2nd column of buttons "Run"
@@ -68,11 +67,10 @@ def config():
    now = datetime.datetime.now()
    timeString = now.strftime("%H:%M %d-%m-%Y")
    templateData = {
-      'title' : 'A-Bench',
       'time': timeString
       }
    # value = request.form.getlist('check')
-   return render_template('config-v2.html', **templateData)
+   return render_template('config.html', **templateData)
 
 # config.html
 # choose which queries to run
@@ -85,12 +83,12 @@ def set_env_var():
    }
    queriesList = []
    # setups all checkboxes to Unchecked
-   queriesOptions = {'1': "Unchecked", '2': "Unchecked", '3': "Unchecked", '4': "Unchecked", '5': "Unchecked",\
-                   '6': "Unchecked", '7': "Unchecked", '8': "Unchecked", '9': "Unchecked", '10': "Unchecked",\
-                   '11': "Unchecked", '12': "Unchecked", '13': "Unchecked", '14': "Unchecked", '15': "Unchecked",\
-                   '16': "Unchecked", '17': "Unchecked", '18': "Unchecked", '19': "Unchecked", '20': "Unchecked",\
-                   '21': "Unchecked", '22': "Unchecked", '23': "Unchecked", '24': "Unchecked", '25': "Unchecked",\
-                   '26': "Unchecked", '27': "Unchecked", '28': "Unchecked", '29': "Unchecked", '30': "Unchecked"}
+   queriesOptions = {'q1': "Unchecked", 'q2': "Unchecked", 'q3': "Unchecked", 'q4': "Unchecked", 'q5': "Unchecked",\
+                   'q6': "Unchecked", 'q7': "Unchecked", 'q8': "Unchecked", 'q9': "Unchecked", 'q10': "Unchecked",\
+                   'q11': "Unchecked", 'q12': "Unchecked", 'q13': "Unchecked", 'q14': "Unchecked", 'q15': "Unchecked",\
+                   'q16': "Unchecked", 'q17': "Unchecked", 'q18': "Unchecked", 'q19': "Unchecked", 'q20': "Unchecked",\
+                   'q21': "Unchecked", 'q22': "Unchecked", 'q23': "Unchecked", 'q24': "Unchecked", 'q25': "Unchecked",\
+                   'q26': "Unchecked", 'q27': "Unchecked", 'q28': "Unchecked", 'q29': "Unchecked", 'q30': "Unchecked"}
    for key in queriesOptions.keys():
        # change to Checked if a query is selected
        if request.form.get(key):
@@ -107,9 +105,10 @@ def set_env_var():
    text = open(basepath + '/outputs/selectedQueries.txt', 'r+')
    content = text.read()
    text.close()
+   print("The following queries will be executed: " + varQueries)
    # returns a test page to see which queries are chosen
    # return render_template("test.html", test_name=queriesOptions)
-   return render_template("config-v2.html", content=content, test_name=queriesOptions, **templateData)
+   return render_template("config.html", content=content, test_name=queriesOptions, **templateData)
 
 # set ENV VAR with all quieries
 @app.route("/set_env_var_all_queries/", methods=['GET', 'POST'])
