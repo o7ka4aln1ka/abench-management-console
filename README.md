@@ -12,7 +12,7 @@
 # Implementig A-Bench
 
 This is my master thesis project. The main goal is to make installing, setting up and implementing the Benchmark A-Bench easier and to automate the process as much as possible.
-Using html, python3.6, flask, pandas and some other tools I created a WebUI for easier control over the setup of the infrastructure, running the benchmark and visualizing the results in a few charts which gives information about some metrics like CPU, memory and file system usage. 
+Using html, python3.6, flask, pandas and some other tools I created a WebUI for easier control over the setup of the infrastructure, running the benchmark and visualizing the results in a few charts which gives information about some metrics like CPU, memory and file system usage.
 
 <a name="get"></a>
 # Getting started
@@ -33,14 +33,13 @@ A-bench-dashboard uses a number of open source projects to work properly:
 **1. Step:**
 * Download the repository
 * Run install_requirements.sh in folder scripts to install missing tools if any and download a GitHub repository for creating [A-Bench infrastructure]
-* Run check_pre_requirements.sh in folder scripts to check if all the needed tools are properly installed
 * To start the main WebUI run the python script in terminal as root:
 ```sh
 $ sudo python abench-management-console.py
 ```
 * Verify the deployment by navigating to your server address in your preferred browser.
 ```sh
-127.0.0.1:5000
+http://127.0.0.1:5000
 ```
 <a name="2nd"></a>
 **2. Step:**
