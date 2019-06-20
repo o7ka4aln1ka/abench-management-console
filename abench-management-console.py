@@ -144,7 +144,17 @@ def cpuChart():
        }
     bar_labels=cpu_labels
     bar_values=cpu_values
-    return render_template('CPU_Density_Plot-v3.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
+    myInt = 100000
+    new_bar=[x / myInt for x in bar_values]
+
+    # start = bar_labels[0]
+    # end = bar_labels[-1]
+    # duration = end - start
+    #
+    # print(start)
+    # print(end)
+    # print(duration)
+    return render_template('CPU_Density_Plot-v3.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=new_bar, **templateData)
 
 @app.route('/memChart')
 def memChart():
