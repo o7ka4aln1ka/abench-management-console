@@ -133,7 +133,7 @@ def run_a_sample_experiment():
 @app.route('/cpuChart')
 def cpuChart():
     cpu_colnames=['time', 'value']
-    testPath = "~/github/a-bench-dashboard/experiment_results/"
+    testPath = "~/github/abench-management-console/experiment_results/"
     cpu_data = pd.read_fwf(testPath + "cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
     cpu_labels = cpu_data.time.tolist()
     cpu_values = cpu_data.value.tolist()
@@ -149,7 +149,7 @@ def cpuChart():
 @app.route('/memChart')
 def memChart():
     mem_colnames=['time', 'value']
-    mem_data = pd.read_fwf("~/github/a-bench-dashboard/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
+    mem_data = pd.read_fwf("~/github/abench-management-console/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
     mem_labels = mem_data.time.tolist()
     mem_values = mem_data.value.tolist()
     now = datetime.datetime.now()
@@ -164,7 +164,7 @@ def memChart():
 @app.route('/fileChart')
 def fileChart():
     file_colnames=['time', 'value']
-    file_data = pd.read_fwf("~/github/a-bench-dashboard/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
+    file_data = pd.read_fwf("~/github/abench-management-console/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
     file_labels = file_data.time.tolist()
     file_values = file_data.value.tolist()
     now = datetime.datetime.now()
@@ -196,7 +196,7 @@ def prepare_results():
     # os.environ['PATH_TO_EXPERIMENTS_ZIP'] = in_path
     # os.chdir(in_path)
     # zip_ref = zipfile.ZipFile(in_path, 'r')
-    # zip_ref.extractall("/home/vr/github/a-bench-dashboard/experiment_results")
+    # zip_ref.extractall("/home/vr/github/abench-management-console/experiment_results")
     # zip_ref.close()
     subprocess.call(['chmod', '-R', '777', in_path])
     with zipfile.ZipFile(in_path, 'r') as zf:
