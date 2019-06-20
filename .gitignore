@@ -1,4 +1,4 @@
 # Don't track content of these folders
-submodules-older/
-submodules-oldest/
-testing_foo/
+/submodules-older/
+/submodules-oldest/
+/testing_foo/
