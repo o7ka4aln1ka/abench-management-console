@@ -106,6 +106,7 @@ def set_env_var():
    content = text.read()
    text.close()
    print("The following queries will be executed: " + varQueries)
+   print('TEST_QUERIES = ', os.environ['TEST_QUERIES'])
    # returns a test page to see which queries are chosen
    # return render_template("test.html", test_name=queriesOptions)
    return render_template("config.html", content=content, test_name=queriesOptions, **templateData)
@@ -139,22 +140,39 @@ def cpuChart():
     cpu_values = cpu_data.value.tolist()
     now = datetime.datetime.now()
     timeString = now.strftime("%H:%M %d-%m-%Y")
-    templateData = {
-       'time': timeString
-       }
     bar_labels=cpu_labels
     bar_values=cpu_values
-    myInt = 100000
+
+    # divide CPU Load y achse
+    myInt = 100000000
     new_bar=[x / myInt for x in bar_values]
 
-    # start = bar_labels[0]
-    # end = bar_labels[-1]
+    # convert date to strings
+    # start = int(''.join(c for c in cpu_labels[0] if c.isdigit()))
+    # end = int(''.join(c for c in cpu_labels[-1] if c.isdigit()))
     # duration = end - start
-    #
-    # print(start)
-    # print(end)
     # print(duration)
-    return render_template('CPU_Density_Plot-v3.html', title='CPU Usage', max=2095640174197, labels=bar_labels, values=new_bar, **templateData)
+
+    # calculate the duration
+    date_time_str_start = bar_labels[0]
+    date_time_obj_start = datetime.datetime.strptime(date_time_str_start, '%Y-%m-%dT%H:%M:%SZ')
+    date_time_str_end = bar_labels[-1]
+    date_time_obj_end = datetime.datetime.strptime(date_time_str_end, '%Y-%m-%dT%H:%M:%SZ')
+    cpu_duration = date_time_obj_end - date_time_obj_start
+    # print("CPU Duration: ", cpu_duration)
+    # start and end time and show hours and minutes
+    # print(date_time_obj_end)
+    # print(date_time_obj_start)
+    # hour = date_time_obj_end.hour - date_time_obj_start.hour
+    # minutes = date_time_obj_end.minute - date_time_obj_start.minute
+    # print('Hour difference : ', hour)
+    # print('Minutes difference : ', minutes)
+    max_value = max(cpu_values) + 1000
+    templateData = {
+        'time': timeString,
+        'duration': cpu_duration
+    }
+    return render_template('CPU_Density_Plot-v3.html', title='CPU Usage', max=max_value, labels=bar_labels, values=new_bar, **templateData)
 
 @app.route('/memChart')
 def memChart():
@@ -164,12 +182,27 @@ def memChart():
     mem_values = mem_data.value.tolist()
     now = datetime.datetime.now()
     timeString = now.strftime("%H:%M %d-%m-%Y")
-    templateData = {
-        'time': timeString
-       }
+
     bar_labels=mem_labels
     bar_values=mem_values
-    return render_template('Mem_Density_Plot-v3.html', title='RAM Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
+
+    # divide Memory Load y achse
+    myInt = 100000000
+    new_bar=[x / myInt for x in bar_values]
+
+    # calculate the duration
+    date_time_str_start = bar_labels[0]
+    date_time_obj_start = datetime.datetime.strptime(date_time_str_start, '%Y-%m-%dT%H:%M:%SZ')
+    date_time_str_end = bar_labels[-1]
+    date_time_obj_end = datetime.datetime.strptime(date_time_str_end, '%Y-%m-%dT%H:%M:%SZ')
+    mem_duration = date_time_obj_end - date_time_obj_start
+    # print("Memory Duration: ", mem_duration)
+    max_value = max(mem_values) + 1000
+    templateData = {
+        'time': timeString,
+        'duration': mem_duration
+    }
+    return render_template('Mem_Density_Plot-v3.html', title='RAM Usage', max=max_value, labels=bar_labels, values=new_bar, **templateData)
 
 @app.route('/fileChart')
 def fileChart():
@@ -179,12 +212,27 @@ def fileChart():
     file_values = file_data.value.tolist()
     now = datetime.datetime.now()
     timeString = now.strftime("%H:%M %d-%m-%Y")
-    templateData = {
-       'time': timeString
-       }
+
     bar_labels=file_labels
     bar_values=file_values
-    return render_template('File_Density_Plot-v3.html', title='Filesystem Usage', max=2095640174197, labels=bar_labels, values=bar_values, **templateData)
+
+    # divide CPU Load y achse
+    myInt = 100000000
+    new_bar=[x / myInt for x in bar_values]
+
+    # calculate the duration
+    date_time_str_start = bar_labels[0]
+    date_time_obj_start = datetime.datetime.strptime(date_time_str_start, '%Y-%m-%dT%H:%M:%SZ')
+    date_time_str_end = bar_labels[-1]
+    date_time_obj_end = datetime.datetime.strptime(date_time_str_end, '%Y-%m-%dT%H:%M:%SZ')
+    file_duration = date_time_obj_end - date_time_obj_start
+    # print("Filesystem Duration: ", file_duration)
+    max_value = max(file_values) + 1000
+    templateData = {
+        'time': timeString,
+        'duration': file_duration
+    }
+    return render_template('File_Density_Plot-v3.html', title='Filesystem Usage', max=max_value, labels=bar_labels, values=new_bar, **templateData)
 
 # #######################################################################
 # testing foo

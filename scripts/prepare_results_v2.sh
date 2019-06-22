@@ -10,4 +10,4 @@ unzip 'experiment#01.zip' -d ~/github/a-bench-dashboard/experiment_results_v2 &&
 chmod -R 777 experiment_results
 echo Created folder experiment_results
 
-) 2>&1 | tee -a ~/github/a-bench-dashboard/outputs/output-homepage.txt
+) 2>&1 | tee -a ~/github/abench-management-console/outputs/output-homepage.txt
