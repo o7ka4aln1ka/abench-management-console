@@ -62,14 +62,14 @@
          "{{ item }}",
         {% endfor %}],
         datasets: [{
-          fillColor: "rgba(135, 217, 153, 1)",
+          fillColor: "rgba(240, 60, 12, 1)",
           label: "Filesystem Load",
           data: [{% for item in values %}
              "{{ item }}",
             {% endfor %}],
           // fill: true;
-          borderColor: 'rgba(58, 166, 82, 1)',
-          backgroundColor: 'rgba(135, 217, 153, 1)',
+          borderColor: 'rgba(44, 124, 110, 1)',
+          backgroundColor: 'rgba(81, 243, 216, 1)',
           pointBorderColor: 'rgba(57, 162, 80, 1)',
           // pointBackgroundColor: 'rgba(255,150,0,0.5)',
           pointRadius: 5,
@@ -81,7 +81,7 @@
       };
 
       var lineChart = new Chart(fileCanvas, {
-        zoomEnabled: true,
+        // zoomEnabled: true,
         type: 'line',
         data: fileData,
         // options: chartOptions
@@ -116,28 +116,28 @@
                     fontFamily: 'Lato'
                   }
                 }]
-            },
-            // Container for pan options
-            pan: {
-                enabled: true,
-                mode: 'x'
-                // speed: 1
-            },
-
-            // Container for zoom options
-            zoom: {
-                // Boolean to enable zooming
-                enabled: true,
-                mode: 'xy',
-                rangeMin: {
-            				// Format of min zoom range depends on scale type
-            				x: 0,
-            				y: 0
-                  },
-                  // speed: 10,
-                  sensitivity: 5
-                  // drag: true
             }
+            // Container for pan options
+            // pan: {
+            //     enabled: true,
+            //     mode: 'x'
+            //     // speed: 1
+            // },
+            //
+            // // Container for zoom options
+            // zoom: {
+            //     // Boolean to enable zooming
+            //     enabled: true,
+            //     mode: 'xy',
+            //     rangeMin: {
+            // 				// Format of min zoom range depends on scale type
+            // 				x: 0,
+            // 				y: 0
+            //       },
+            //       // speed: 10,
+            //       sensitivity: 5
+            //       // drag: true
+            // }
         }
       });
 

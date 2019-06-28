@@ -1,1144 +1,0 @@
-All .sh scripts were made executable
-All .py scripts were made executable
-Current path:
-/home/vr/github/a-bench-dashboard/scripts
-Systems will check the enviroment first, then it will install itself if all
-requirements are full-filled.
-Checking if all required tools are available:
- [x] [kubectl] is installed.
- [x] [minikube] is installed.
- [x] [cat] is installed.
- [x] [curl] is installed.
- [x] [python] is installed.
- [x] [flask] is installed.
- [x] [npm] is installed.
-Hit:1 http://linux.teamviewer.com/deb stable InRelease
-Hit:2 http://uk-mirrors.evowise.com/ubuntu bionic InRelease
-Get:3 http://uk-mirrors.evowise.com/ubuntu bionic-updates InRelease [88,7 kB]
-Get:4 http://de.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
-Hit:5 http://ppa.launchpad.net/alessandro-strada/ppa/ubuntu bionic InRelease
-Get:6 http://uk-mirrors.evowise.com/ubuntu bionic-security InRelease [88,7 kB]
-Hit:7 http://ppa.launchpad.net/fixnix/netspeed/ubuntu bionic InRelease
-Hit:8 https://deb.nodesource.com/node_10.x bionic InRelease
-Get:9 https://download.docker.com/linux/ubuntu bionic InRelease [64,4 kB]
-Get:10 http://uk-mirrors.evowise.com/ubuntu bionic-backports InRelease [74,6 kB]
-Get:12 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
-Hit:13 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu bionic InRelease
-Hit:14 http://ppa.launchpad.net/kasra-mp/ubuntu-indicator-weather/ubuntu bionic InRelease
-Hit:15 http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu bionic InRelease
-Hit:11 https://packages.cloud.google.com/apt kubernetes-xenial InRelease
-Get:16 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease [15,4 kB]
-Get:17 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main i386 Packages [544 kB]
-Get:18 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 Packages [658 kB]
-Get:19 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [278 kB]
-Get:20 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main DEP-11 48x48 Icons [66,7 kB]
-Get:21 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main DEP-11 64x64 Icons [127 kB]
-Get:22 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe amd64 Packages [958 kB]
-Get:23 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe i386 Packages [943 kB]
-Get:24 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe Translation-en [283 kB]
-Get:25 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [245 kB]
-Get:26 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe DEP-11 48x48 Icons [202 kB]
-Get:27 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe DEP-11 64x64 Icons [416 kB]
-Get:28 http://uk-mirrors.evowise.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2.464 B]
-Get:29 http://uk-mirrors.evowise.com/ubuntu bionic-security/main amd64 DEP-11 Metadata [17,9 kB]
-Get:30 http://uk-mirrors.evowise.com/ubuntu bionic-security/main DEP-11 64x64 Icons [25,6 kB]
-Get:31 http://uk-mirrors.evowise.com/ubuntu bionic-security/universe amd64 DEP-11 Metadata [36,1 kB]
-Get:32 http://uk-mirrors.evowise.com/ubuntu bionic-security/universe DEP-11 48x48 Icons [16,4 kB]
-Get:33 http://uk-mirrors.evowise.com/ubuntu bionic-security/universe DEP-11 64x64 Icons [99,2 kB]
-Get:34 http://uk-mirrors.evowise.com/ubuntu bionic-security/multiverse amd64 DEP-11 Metadata [2.464 B]
-Get:35 http://uk-mirrors.evowise.com/ubuntu bionic-backports/universe amd64 Packages [3.736 B]
-Get:36 http://uk-mirrors.evowise.com/ubuntu bionic-backports/universe i386 Packages [3.740 B]
-Get:37 http://uk-mirrors.evowise.com/ubuntu bionic-backports/universe amd64 DEP-11 Metadata [7.224 B]
-Reading package lists...
-W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-E: Repository 'http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease' changed its 'Label' value from 'Oracle Java (JDK) 8 Installer PPA' to 'Oracle Java (JDK) 8 Installer PPA (DISCONTINUED)'
-W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-Reading package lists...
-Building dependency tree...
-Reading state information...
-Calculating upgrade...
-The following packages have been kept back:
-  kubeadm kubectl kubelet kubernetes-cni
-The following packages will be upgraded:
-  libnss-myhostname libnss-systemd libpam-systemd libsystemd0 libudev1 systemd
-  systemd-sysv udev
-8 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Need to get 4.521 kB of archives.
-After this operation, 0 B of additional disk space will be used.
-Get:1 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 libnss-systemd amd64 237-3ubuntu10.23 [106 kB]
-Get:2 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 libsystemd0 amd64 237-3ubuntu10.23 [204 kB]
-Get:3 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 libnss-myhostname amd64 237-3ubuntu10.23 [33,8 kB]
-Get:4 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 libpam-systemd amd64 237-3ubuntu10.23 [108 kB]
-Get:5 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 systemd amd64 237-3ubuntu10.23 [2.903 kB]
-Get:6 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 udev amd64 237-3ubuntu10.23 [1.102 kB]
-Get:7 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 libudev1 amd64 237-3ubuntu10.23 [53,6 kB]
-Get:8 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 systemd-sysv amd64 237-3ubuntu10.23 [11,4 kB]
-Fetched 4.521 kB in 2s (2.483 kB/s)
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 201786 files and directories currently installed.)
-Preparing to unpack .../libnss-systemd_237-3ubuntu10.23_amd64.deb ...
-Unpacking libnss-systemd:amd64 (237-3ubuntu10.23) over (237-3ubuntu10.22) ...
-Preparing to unpack .../libsystemd0_237-3ubuntu10.23_amd64.deb ...
-Unpacking libsystemd0:amd64 (237-3ubuntu10.23) over (237-3ubuntu10.22) ...
-Setting up libsystemd0:amd64 (237-3ubuntu10.23) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 201786 files and directories currently installed.)
-Preparing to unpack .../libnss-myhostname_237-3ubuntu10.23_amd64.deb ...
-Unpacking libnss-myhostname:amd64 (237-3ubuntu10.23) over (237-3ubuntu10.22) ...
-Preparing to unpack .../libpam-systemd_237-3ubuntu10.23_amd64.deb ...
-Unpacking libpam-systemd:amd64 (237-3ubuntu10.23) over (237-3ubuntu10.22) ...
-Preparing to unpack .../systemd_237-3ubuntu10.23_amd64.deb ...
-Unpacking systemd (237-3ubuntu10.23) over (237-3ubuntu10.22) ...
-Preparing to unpack .../udev_237-3ubuntu10.23_amd64.deb ...
-Unpacking udev (237-3ubuntu10.23) over (237-3ubuntu10.22) ...
-Preparing to unpack .../libudev1_237-3ubuntu10.23_amd64.deb ...
-Unpacking libudev1:amd64 (237-3ubuntu10.23) over (237-3ubuntu10.22) ...
-Setting up libudev1:amd64 (237-3ubuntu10.23) ...
-Setting up systemd (237-3ubuntu10.23) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 201786 files and directories currently installed.)
-Preparing to unpack .../systemd-sysv_237-3ubuntu10.23_amd64.deb ...
-Unpacking systemd-sysv (237-3ubuntu10.23) over (237-3ubuntu10.22) ...
-Setting up libnss-systemd:amd64 (237-3ubuntu10.23) ...
-Processing triggers for ureadahead (0.100.0-21) ...
-ureadahead will be reprofiled on next reboot
-Setting up libnss-myhostname:amd64 (237-3ubuntu10.23) ...
-Setting up systemd-sysv (237-3ubuntu10.23) ...
-Processing triggers for libc-bin (2.27-3ubuntu1) ...
-Setting up udev (237-3ubuntu10.23) ...
-update-initramfs: deferring update (trigger activated)
-Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
-Processing triggers for dbus (1.12.2-1ubuntu1.1) ...
-Setting up libpam-systemd:amd64 (237-3ubuntu10.23) ...
-Processing triggers for initramfs-tools (0.130ubuntu3.8) ...
-update-initramfs: Generating /boot/initrd.img-4.15.0-52-generic
-Reading package lists...
-Building dependency tree...
-Reading state information...
-python-pip is already the newest version (9.0.1-2.3~ubuntu1.18.04.1).
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-
-Usage:   
-  pip install [options] <requirement specifier> [package-index-options] ...
-  pip install [options] -r <requirements file> [package-index-options] ...
-  pip install [options] [-e] <vcs project url> ...
-  pip install [options] [-e] <local project path> ...
-  pip install [options] <archive url/path> ...
-
-no such option: -y
-Reading package lists...
-Building dependency tree...
-Reading state information...
-coreutils is already the newest version (8.28-1ubuntu1).
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-curl is already the newest version (7.58.0-2ubuntu3.7).
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-python3.6 is already the newest version (3.6.8-1~18.04.1).
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-nodejs is already the newest version (10.16.0-1nodesource1).
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-npm WARN saveError ENOENT: no such file or directory, open '/home/vr/package.json'
-npm WARN enoent ENOENT: no such file or directory, open '/home/vr/package.json'
-npm WARN vr No description
-npm WARN vr No repository field.
-npm WARN vr No README data
-npm WARN vr No license field.
-
-+ chart.js@2.8.0
-updated 1 package and audited 18 packages in 0.601s
-found 0 vulnerabilities
-
-npm WARN saveError ENOENT: no such file or directory, open '/home/vr/package.json'
-npm WARN enoent ENOENT: no such file or directory, open '/home/vr/package.json'
-npm WARN vr No description
-npm WARN vr No repository field.
-npm WARN vr No README data
-npm WARN vr No license field.
-
-+ chartjs-plugin-zoom@0.7.0
-updated 1 package and audited 18 packages in 1.353s
-found 0 vulnerabilities
-
-All tools were installed!
-FutureApp repository will be downloaded for future use ...
-Cloning into 'a-bench'...
-Submodule FutureApp was successfully downloaded!
-[1;34m[A-Bench][0m Try to install all missing components...
-[1;34m[A-Bench][0m 8/8 programs are already installed. 0 new installed programs.
-[1;34m[A-Bench][0m Please restart your computer to complete the process.
-[1;34m[A-Bench][0m Preflight in progress...
-[x] git  detected.
-[x] docker  detected.
-[x] virtualbox  detected.
-[x] minikube  detected.
-[x] kubectl  detected.
-[x] helm  detected.
-[x] curl  detected.
-[x] cat  detected.
-
-
-
-
-Number of missing components: 0
-
-All components are available and the system should be ready for use.
-Deleting local Kubernetes cluster...
-Machine deleted.
-Starting local Kubernetes v1.10.0 cluster...
-Starting VM...
-Getting VM IP address...
-E0622 11:11:45.431748    1884 start.go:210] Error parsing version semver:  Version string empty
-Moving files into cluster...
-Setting up certs...
-Connecting to cluster...
-Setting up kubeconfig...
-Stopping extra container runtimes...
-Starting cluster components...
-Verifying kubelet health ...
-Verifying apiserver health ...Kubectl is now configured to use the cluster.
-Loading cached images from config file.
-
-
-Everything looks great. Please enjoy minikube!
-Unable to find image 'alpine:latest' locally
-latest: Pulling from library/alpine
-
-[1A[1K[K921b31ab772b: Pulling fs layer [1B[1A[1K[K921b31ab772b: Downloading [>                                                  ]  28.74kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=======================>                           ]  1.293MB/2.79MB[1B[1A[1K[K921b31ab772b: Verifying Checksum [1B[1A[1K[K921b31ab772b: Download complete [1B[1A[1K[K921b31ab772b: Extracting [>                                                  ]  32.77kB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [========>                                          ]  491.5kB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [========================>                          ]  1.343MB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [=============================================>     ]  2.556MB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [==================================================>]   2.79MB/2.79MB[1B[1A[1K[K921b31ab772b: Pull complete [1BDigest: sha256:ca1c944a4f8486a153024d9965aafbe24f5723c1d5c02f4964c045a16d19dc54
-Status: Downloaded newer image for alpine:latest
-Sat Jun 22 09:13:00 UTC 2019
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-addon-manager was successfully enabled
-default-storageclass was successfully enabled
-dashboard was successfully enabled
-storage-provisioner was successfully enabled
-heapster was successfully enabled
-$HELM_HOME has been configured at /home/vr/.helm.
-
-Tiller (the Helm server-side component) has been installed into your Kubernetes Cluster.
-
-Please note: by default, Tiller is deployed with an insecure 'allow unauthenticated users' policy.
-To prevent this, run `helm init` with the --tiller-tls-verify flag.
-For more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation
-Happy Helming!
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-deployment.apps/influxdb-client created
-service/influxdb-client created
-  4 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (0/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (1/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (2/40)
-  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (3/40)
-  10 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (4/40)
- All expected Pods are running. Seems that the system is in a good mode and ready to proceed further
-[1;34m[A-Bench][0m Startup procedure was successfully.
-[1;34m[A-Bench][0m If you like to interact with docker in minikube then remember to link your docker with the one in minikube.
-[1;34m[A-Bench][0m To do so, use the follwing command: 
-                eval $(minikube docker-env)
-                
-                
-Cloning into 'bigbenchv2'...
-Opening http://127.0.0.1:33263/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/ in your default browser...
-[9236:9236:0622/111538.310798:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-[9220:9220:0622/111538.313641:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: iceweasel: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: seamonkey: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: mozilla: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: iceweasel: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: seamonkey: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: epiphany: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: mozilla: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: epiphany: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: konqueror: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: konqueror: not found
-mkdir: cannot create directory '/run/user/0': Permission denied
-mkdir: cannot create directory '/run/user/0': Permission denied
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libdconfsettings.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libgiognomeproxy.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libgiognutls.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libgiolibproxy.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-Black/cursor.theme': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-Black/cursors': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-Black/index.theme': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/128x128': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/16x16': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/192x192': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/22x22': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/24x24': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/256x256': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/32x32': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/36x36': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/48x48': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/512x512': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/64x64': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/72x72': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/96x96': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/index.theme': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/scalable': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/hicolor/symbolic': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-am-et.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-broadway.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-cedilla.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-cyrillic-translit.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-fcitx.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ibus.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-inuktitut.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ipa.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-multipress.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-thai.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ti-er.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ti-et.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-viqr.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-wayland.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-xim.so': File exists
-Already up to date.
-finish
-ENV-Looper-Experiment is starting now.
-Running q29
-Experiment TAG: #experiment_tag_sample
-[1;34m[A-Bench][0m Running defined experiment... 
-Query-Mapper has recognized a query for execution: q29
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_deploy [0m
-[9311:9311:0622/111606.601682:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-[9312:9312:0622/111606.602114:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-[10179:10179:0622/111606.742913:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: google-chrome: not found
-[10178:10178:0622/111606.766161:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: google-chrome: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: www-browser: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links2: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: elinks: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: www-browser: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links2: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: lynx: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: elinks: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: w3m: not found
-xdg-open: no method available for opening 'http://127.0.0.1:33263/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/'
-failed to open browser: exit status 3/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: lynx: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: w3m: not found
-xdg-open: no method available for opening 'http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s'
-Error: release: "sql-mysql" not found
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]
-NAME:   sql-mysql
-LAST DEPLOYED: Sat Jun 22 11:16:40 2019
-NAMESPACE: default
-STATUS: DEPLOYED
-
-RESOURCES:
-==> v1/Pod(related)
-NAME                        READY  STATUS    RESTARTS  AGE
-sql-mysql-5b6ff9b9c4-spjcl  0/1    Init:0/1  0         8s
-
-==> v1/Secret
-NAME       TYPE    DATA  AGE
-sql-mysql  Opaque  2     9s
-
-==> v1/ConfigMap
-NAME            DATA  AGE
-sql-mysql-test  1     9s
-
-==> v1/PersistentVolumeClaim
-NAME       STATUS  VOLUME                                    CAPACITY  ACCESS MODES  STORAGECLASS  AGE
-sql-mysql  Bound   pvc-73c47fff-94ce-11e9-a262-08002795a8b7  8Gi       RWO           standard      9s
-
-==> v1/Service
-NAME       TYPE       CLUSTER-IP      EXTERNAL-IP  PORT(S)   AGE
-sql-mysql  ClusterIP  10.101.198.235  <none>       3306/TCP  9s
-
-==> v1beta1/Deployment
-NAME       DESIRED  CURRENT  UP-TO-DATE  AVAILABLE  AGE
-sql-mysql  1        1        1           0          8s
-
-
-NOTES:
-MySQL can be accessed via port 3306 on the following DNS name from within your cluster:
-sql-mysql.default.svc.cluster.local
-
-To get your root password run:
-
-    MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace default sql-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo)
-
-To connect to your database:
-
-1. Run an Ubuntu pod that you can use as a client:
-
-    kubectl run -i --tty ubuntu --image=ubuntu:16.04 --restart=Never -- bash -il
-
-2. Install the mysql client:
-
-    $ apt-get update && apt-get install mysql-client -y
-
-3. Connect using the mysql cli, then provide your password:
-    $ mysql -h sql-mysql -p
-
-To connect to your database directly from outside the K8s cluster:
-    MYSQL_HOST=127.0.0.1
-    MYSQL_PORT=3306
-
-    # Execute the following command to route the connection:
-    kubectl port-forward svc/sql-mysql 3306
-
-    mysql -h ${MYSQL_HOST} -P${MYSQL_PORT} -u root -p${MYSQL_ROOT_PASSWORD}
-    
-
-Error: release: "thadoop" not found
-NAME:   thadoop
-LAST DEPLOYED: Sat Jun 22 11:16:52 2019
-NAMESPACE: default
-STATUS: DEPLOYED
-
-RESOURCES:
-==> v1beta1/PodDisruptionBudget
-NAME                    MIN AVAILABLE  MAX UNAVAILABLE  ALLOWED DISRUPTIONS  AGE
-thadoop-hadoop-hdfs-dn  1              N/A              0                    3m31s
-thadoop-hadoop-hdfs-nn  1              N/A              0                    3m31s
-thadoop-hadoop-yarn-nm  1              N/A              1                    3m31s
-thadoop-hadoop-yarn-rm  1              N/A              0                    3m31s
-
-==> v1/ConfigMap
-NAME            DATA  AGE
-thadoop-hadoop  8     3m31s
-
-==> v1/Service
-NAME                         TYPE       CLUSTER-IP     EXTERNAL-IP  PORT(S)                     AGE
-thadoop-hadoop-hdfs-dn       ClusterIP  None           <none>       9000/TCP,50075/TCP          3m31s
-thadoop-hadoop-hdfs-nn       ClusterIP  None           <none>       9000/TCP,50070/TCP          3m31s
-thadoop-hadoop-bench-driver  ClusterIP  10.104.66.190  <none>       9083/TCP,10000/TCP          3m31s
-thadoop-hadoop-yarn-nm       ClusterIP  None           <none>       8088/TCP,8082/TCP,8042/TCP  3m31s
-thadoop-hadoop-yarn-rm       ClusterIP  None           <none>       8088/TCP                    3m31s
-thadoop-hadoop-yarn-ui       NodePort   10.101.203.82  <none>       8088:30153/TCP              3m30s
-
-==> v1beta1/StatefulSet
-NAME                         DESIRED  CURRENT  AGE
-thadoop-hadoop-hdfs-dn       1        1        3m30s
-thadoop-hadoop-hdfs-nn       1        1        3m30s
-thadoop-hadoop-bench-driver  1        1        3m30s
-thadoop-hadoop-yarn-nm       2        2        3m30s
-thadoop-hadoop-yarn-rm       1        1        3m29s
-
-==> v1/Pod(related)
-NAME                           READY  STATUS   RESTARTS  AGE
-thadoop-hadoop-hdfs-dn-0       1/1    Running  0         3m29s
-thadoop-hadoop-hdfs-nn-0       1/1    Running  0         3m29s
-thadoop-hadoop-bench-driver-0  1/1    Running  0         3m29s
-thadoop-hadoop-yarn-nm-0       1/1    Running  1         3m28s
-thadoop-hadoop-yarn-nm-1       1/1    Running  0         32s
-thadoop-hadoop-yarn-rm-0       1/1    Running  0         3m27s
-
-
-NOTES:
-1. You can check the status of HDFS by running this command:
-   kubectl exec -n default -it thadoop-hadoop-hdfs-nn-0 -- /usr/local/hadoop/bin/hdfs dfsadmin -report
-
-2. You can list the yarn nodes by running this command:
-   kubectl exec -n default -it thadoop-hadoop-yarn-rm-0 -- /usr/local/hadoop/bin/yarn node -list
-
-3. Create a port-forward to the yarn resource manager UI:
-   kubectl port-forward -n default thadoop-hadoop-yarn-rm-0 8088:8088 
-
-   Then open the ui in your browser:
-   
-   open http://localhost:8088
-
-4. You can run included hadoop tests like this:
-   kubectl exec -n default -it thadoop-hadoop-yarn-nm-0 -- /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.3-tests.jar TestDFSIO -write -nrFiles 5 -fileSize 128MB -resFile /tmp/TestDFSIOwrite.txt
-
-5. You can list the mapreduce jobs like this:
-   kubectl exec -n default -it thadoop-hadoop-yarn-rm-0 -- /usr/local/hadoop/bin/mapred job -list
-
-6. This chart can also be used with the zeppelin chart
-    helm install --namespace default --set hadoop.useConfigMap=true,hadoop.configMapName=thadoop-hadoop stable/zeppelin
-
-7. You can scale the number of yarn nodes like this:
-   helm upgrade thadoop --set yarn.nodeManager.replicas=4 stable/hadoop
-
-   Make sure to update the values.yaml if you want to make this permanent.
-
-[1;34m[A-Bench][0m hadoop cluster started and named as < thadoop > ...
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-Execution will pause for 60 seconds.
-\    | 59 [s]|    | 59 [s]/    | 59 [s]-    | 59 [s]\    | 59 [s]|    | 59 [s]/    | 59 [s]-    | 59 [s]\    | 59 [s]|    | 59 [s]/    | 58 [s]-    | 58 [s]\    | 58 [s]|    | 58 [s]/    | 58 [s]-    | 58 [s]\    | 58 [s]|    | 58 [s]/    | 58 [s]-    | 58 [s]\    | 57 [s]|    | 57 [s]/    | 57 [s]-    | 57 [s]\    | 57 [s]|    | 57 [s]/    | 57 [s]-    | 57 [s]\    | 57 [s]|    | 57 [s]/    | 56 [s]-    | 56 [s]\    | 56 [s]|    | 56 [s]/    | 56 [s]-    | 56 [s]\    | 56 [s]|    | 56 [s]/    | 56 [s]-    | 56 [s]\    | 55 [s]|    | 55 [s]/    | 55 [s]-    | 55 [s]\    | 55 [s]|    | 55 [s]/    | 55 [s]-    | 55 [s]\    | 55 [s]|    | 55 [s]/    | 54 [s]-    | 54 [s]\    | 54 [s]|    | 54 [s]/    | 54 [s]-    | 54 [s]\    | 54 [s]|    | 54 [s]/    | 54 [s]-    | 54 [s]\    | 53 [s]|    | 53 [s]/    | 53 [s]-    | 53 [s]\    | 53 [s]|    | 53 [s]/    | 53 [s]-    | 53 [s]\    | 53 [s]|    | 53 [s]/    | 52 [s]-    | 52 [s]\    | 52 [s]|    | 52 [s]/    | 52 [s]-    | 52 [s]\    | 52 [s]|    | 52 [s]/    | 52 [s]-    | 52 [s]\    | 51 [s]|    | 51 [s]/    | 51 [s]-    | 51 [s]\    | 51 [s]|    | 51 [s]/    | 51 [s]-    | 51 [s]\    | 51 [s]|    | 51 [s]/    | 50 [s]-    | 50 [s]\    | 50 [s]|    | 50 [s]/    | 50 [s]-    | 50 [s]\    | 50 [s]|    | 50 [s]/    | 50 [s]-    | 50 [s]\    | 49 [s]|    | 49 [s]/    | 49 [s]-    | 49 [s]\    | 49 [s]|    | 49 [s]/    | 49 [s]-    | 49 [s]\    | 49 [s]|    | 49 [s]/    | 48 [s]-    | 48 [s]\    | 48 [s]|    | 48 [s]/    | 48 [s]-    | 48 [s]\    | 48 [s]|    | 48 [s]/    | 48 [s]-    | 48 [s]\    | 47 [s]|    | 47 [s]/    | 47 [s]-    | 47 [s]\    | 47 [s]|    | 47 [s]/    | 47 [s]-    | 47 [s]\    | 47 [s]|    | 47 [s]/    | 46 [s]-    | 46 [s]\    | 46 [s]|    | 46 [s]/    | 46 [s]-    | 46 [s]\    | 46 [s]|    | 46 [s]/    | 46 [s]-    | 46 [s]\    | 45 [s]|    | 45 [s]/    | 45 [s]-    | 45 [s]\    | 45 [s]|    | 45 [s]/    | 45 [s]-    | 45 [s]\    | 45 [s]|    | 45 [s]/    | 44 [s]-    | 44 [s]\    | 44 [s]|    | 44 [s]/    | 44 [s]-    | 44 [s]\    | 44 [s]|    | 44 [s]/    | 44 [s]-    | 44 [s]\    | 43 [s]|    | 43 [s]/    | 43 [s]-    | 43 [s]\    | 43 [s]|    | 43 [s]/    | 43 [s]-    | 43 [s]\    | 43 [s]|    | 43 [s]/    | 42 [s]-    | 42 [s]\    | 42 [s]|    | 42 [s]/    | 42 [s]-    | 42 [s]\    | 42 [s]|    | 42 [s]/    | 42 [s]-    | 42 [s]\    | 41 [s]|    | 41 [s]/    | 41 [s]-    | 41 [s]\    | 41 [s]|    | 41 [s]/    | 41 [s]-    | 41 [s]\    | 41 [s]|    | 41 [s]/    | 40 [s]-    | 40 [s]\    | 40 [s]|    | 40 [s]/    | 40 [s]-    | 40 [s]\    | 40 [s]|    | 40 [s]/    | 40 [s]-    | 40 [s]\    | 39 [s]|    | 39 [s]/    | 39 [s]-    | 39 [s]\    | 39 [s]|    | 39 [s]/    | 39 [s]-    | 39 [s]\    | 39 [s]|    | 39 [s]/    | 38 [s]-    | 38 [s]\    | 38 [s]|    | 38 [s]/    | 38 [s]-    | 38 [s]\    | 38 [s]|    | 38 [s]/    | 38 [s]-    | 38 [s]\    | 37 [s]|    | 37 [s]/    | 37 [s]-    | 37 [s]\    | 37 [s]|    | 37 [s]/    | 37 [s]-    | 37 [s]\    | 37 [s]|    | 37 [s]/    | 36 [s]-    | 36 [s]\    | 36 [s]|    | 36 [s]/    | 36 [s]-    | 36 [s]\    | 36 [s]|    | 36 [s]/    | 36 [s]-    | 36 [s]\    | 35 [s]|    | 35 [s]/    | 35 [s]-    | 35 [s]\    | 35 [s]|    | 35 [s]/    | 35 [s]-    | 35 [s]\    | 35 [s]|    | 35 [s]/    | 34 [s]-    | 34 [s]\    | 34 [s]|    | 34 [s]/    | 34 [s]-    | 34 [s]\    | 34 [s]|    | 34 [s]/    | 34 [s]-    | 34 [s]\    | 33 [s]|    | 33 [s]/    | 33 [s]-    | 33 [s]\    | 33 [s]|    | 33 [s]/    | 33 [s]-    | 33 [s]\    | 33 [s]|    | 33 [s]/    | 32 [s]-    | 32 [s]\    | 32 [s]|    | 32 [s]/    | 32 [s]-    | 32 [s]\    | 32 [s]|    | 32 [s]/    | 32 [s]-    | 32 [s]\    | 31 [s]|    | 31 [s]/    | 31 [s]-    | 31 [s]\    | 31 [s]|    | 31 [s]/    | 31 [s]-    | 31 [s]\    | 31 [s]|    | 31 [s]/    | 30 [s]-    | 30 [s]\    | 30 [s]|    | 30 [s]/    | 30 [s]-    | 30 [s]\    | 30 [s]|    | 30 [s]/    | 30 [s]-    | 30 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]
-[1;34m[A-Bench][0m Preparing the infrastructure for the workloads.     | [1;31m cus_prepare [0m
-tar: Removing leading `/' from member names
-Copying benchmark-data to HDFS
-Copying benchmark-data was successfull
-Starting to initialize db-schema
-Metastore connection URL:	 jdbc:mysql://sql-mysql:3306/metastore_db?createDatabaseIfNotExist=true&useSSL=false
-Metastore Connection Driver :	 com.mysql.jdbc.Driver
-Metastore connection User:	 hive
-Starting metastore schema initialization to 0.13.0
-Initialization script hive-schema-0.13.0.mysql.sql
-Initialization script completed
-schemaTool completed
-Creating BigBenchV2-DB
-
-Logging initialized using configuration in jar:file:/usr/local/hadoop/hive/lib/hive-common-0.13.1-cdh5.3.2.jar!/hive-log4j.properties
-OK
-Time taken: 1.829 seconds
-OK
-Time taken: 0.031 seconds
-Create temporary table: customers_temporary
-OK
-Time taken: 0.088 seconds
-OK
-Time taken: 0.463 seconds
-Load text data into TEXTFILE table: customers
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561195125164_0001, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561195125164_0001/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561195125164_0001
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-22 09:24:19,433 Stage-1 map = 0%,  reduce = 0%
-2019-06-22 09:24:34,211 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.81 sec
-MapReduce Total cumulative CPU time: 1 seconds 810 msec
-Ended Job = job_1561195125164_0001
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-22_09-23-58_586_1725920168659786715-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/customers
-Table bigbenchv2.customers stats: [numFiles=1, numRows=0, totalSize=250490, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.81 sec   HDFS Read: 261618 HDFS Write: 250573 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 810 msec
-OK
-Time taken: 39.059 seconds
-Drop temporary table: customers_temporary
-OK
-Time taken: 1.112 seconds
-Create temporary table: items_temporary
-OK
-Time taken: 0.033 seconds
-OK
-Time taken: 0.292 seconds
-Load text data into TEXTFILE table: items
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561195125164_0002, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561195125164_0002/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561195125164_0002
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-22 09:24:56,232 Stage-1 map = 0%,  reduce = 0%
-2019-06-22 09:25:07,424 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.67 sec
-MapReduce Total cumulative CPU time: 1 seconds 670 msec
-Ended Job = job_1561195125164_0002
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-22_09-24-39_346_7188467965925949832-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/items
-Table bigbenchv2.items stats: [numFiles=1, numRows=0, totalSize=37690, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.67 sec   HDFS Read: 39160 HDFS Write: 37767 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 670 msec
-OK
-Time taken: 31.107 seconds
-Drop temporary table: items_temporary
-OK
-Time taken: 0.839 seconds
-Create temporary table: reviews_temporary
-OK
-Time taken: 0.036 seconds
-OK
-Time taken: 0.663 seconds
-Load text data into TEXTFILE table: reviews
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561195125164_0003, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561195125164_0003/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561195125164_0003
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-22 09:25:27,762 Stage-1 map = 0%,  reduce = 0%
-2019-06-22 09:25:39,859 Stage-1 map = 100%,  reduce = 0%
-Ended Job = job_1561195125164_0003
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-22_09-25-12_128_3724606149662951164-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/reviews
-Table bigbenchv2.reviews stats: [numFiles=1, numRows=0, totalSize=7132784, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 2.59 sec   HDFS Read: 7173600 HDFS Write: 7132866 SUCCESS
-Total MapReduce CPU Time Spent: 2 seconds 590 msec
-OK
-Time taken: 32.633 seconds
-Drop temporary table: reviews_temporary
-OK
-Time taken: 0.514 seconds
-Create temporary table: web_pages_temporary
-OK
-Time taken: 0.046 seconds
-OK
-Time taken: 0.15 seconds
-Load text data into TEXTFILE table: web_pages
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561195125164_0004, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561195125164_0004/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561195125164_0004
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-22 09:26:00,344 Stage-1 map = 0%,  reduce = 0%
-2019-06-22 09:26:10,184 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.41 sec
-MapReduce Total cumulative CPU time: 1 seconds 410 msec
-Ended Job = job_1561195125164_0004
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-22_09-25-45_612_5833254253605492777-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/web_pages
-Table bigbenchv2.web_pages stats: [numFiles=1, numRows=0, totalSize=687, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.41 sec   HDFS Read: 941 HDFS Write: 764 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 410 msec
-OK
-Time taken: 27.373 seconds
-Drop temporary table: web_pages_temporary
-OK
-Time taken: 0.665 seconds
-Create temporary table: web_sales_temporary
-OK
-Time taken: 0.04 seconds
-OK
-Time taken: 0.12 seconds
-Load text data into TEXTFILE table: web_sales
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561195125164_0005, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561195125164_0005/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561195125164_0005
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-22 09:26:31,161 Stage-1 map = 0%,  reduce = 0%
-2019-06-22 09:26:43,356 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.07 sec
-MapReduce Total cumulative CPU time: 3 seconds 70 msec
-Ended Job = job_1561195125164_0005
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-22_09-26-13_926_9160482235733557455-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/web_sales
-Table bigbenchv2.web_sales stats: [numFiles=1, numRows=0, totalSize=9828355, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 3.07 sec   HDFS Read: 10083907 HDFS Write: 9828440 SUCCESS
-Total MapReduce CPU Time Spent: 3 seconds 70 msec
-OK
-Time taken: 32.45 seconds
-Drop temporary table: web_sales_temporary
-OK
-Time taken: 0.271 seconds
-Create temporary table: store_sales_temporary
-OK
-Time taken: 0.027 seconds
-OK
-Time taken: 0.199 seconds
-Load text data into TEXTFILE table: store_sales
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561195125164_0006, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561195125164_0006/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561195125164_0006
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-22 09:27:05,354 Stage-1 map = 0%,  reduce = 0%
-2019-06-22 09:27:18,550 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.71 sec
-MapReduce Total cumulative CPU time: 3 seconds 710 msec
-Ended Job = job_1561195125164_0006
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-22_09-26-46_959_3608907706032044570-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/store_sales
-Table bigbenchv2.store_sales stats: [numFiles=1, numRows=0, totalSize=10234574, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 3.71 sec   HDFS Read: 10473660 HDFS Write: 10234661 SUCCESS
-Total MapReduce CPU Time Spent: 3 seconds 710 msec
-OK
-Time taken: 33.479 seconds
-Drop temporary table: store_sales_temporary
-OK
-Time taken: 0.544 seconds
-Create temporary table: stores_temporary
-OK
-Time taken: 0.014 seconds
-OK
-Time taken: 0.113 seconds
-Load text data into TEXTFILE table: stores
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561195125164_0007, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561195125164_0007/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561195125164_0007
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-22 09:27:38,669 Stage-1 map = 0%,  reduce = 0%
-2019-06-22 09:27:49,702 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.69 sec
-MapReduce Total cumulative CPU time: 1 seconds 690 msec
-Ended Job = job_1561195125164_0007
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-22_09-27-21_177_8060977664925292909-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/stores
-Table bigbenchv2.stores stats: [numFiles=1, numRows=0, totalSize=6290, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.69 sec   HDFS Read: 6912 HDFS Write: 6366 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 690 msec
-OK
-Time taken: 32.183 seconds
-Drop temporary table: stores_temporary
-OK
-Time taken: 0.452 seconds
-Create external table: web_logs
-OK
-Time taken: 0.144 seconds
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-[1;34m[A-Bench][0m Executing the workload of the experiment.           | [1;31m cus_workload [0m
-[1;34m[A-Bench][0m Running  query queries/q29.hql.                                            
-
-Logging initialized using configuration in jar:file:/usr/local/hadoop/hive/lib/hive-common-0.13.1-cdh5.3.2.jar!/hive-log4j.properties
-Added resource: /bigbenchv2/resources/q29_reducer.py
-OK
-Time taken: 1.689 seconds
-OK
-Time taken: 0.38 seconds
-OK
-Time taken: 1.184 seconds
-WARNING: Comparing a bigint and a string may result in a loss of precision.
-Total jobs = 3
-Execution log at: /tmp/root/root_20190622092828_99163bcc-674a-47ae-9dd2-dc7a8df3b9a8.log
-2019-06-22 09:28:36	Starting to launch local task to process map join;	maximum memory = 477626368
-2019-06-22 09:28:38	Dump the side-table into file: file:/tmp/root/hive_2019-06-22_09-28-25_537_2111443604780915745-1/-local-10007/HashTable-Stage-3/MapJoin-mapfile11--.hashtable
-2019-06-22 09:28:39	Uploaded 1 File to: file:/tmp/root/hive_2019-06-22_09-28-25_537_2111443604780915745-1/-local-10007/HashTable-Stage-3/MapJoin-mapfile11--.hashtable (783 bytes)
-2019-06-22 09:28:39	Dump the side-table into file: file:/tmp/root/hive_2019-06-22_09-28-25_537_2111443604780915745-1/-local-10007/HashTable-Stage-3/MapJoin-mapfile01--.hashtable
-2019-06-22 09:28:39	Uploaded 1 File to: file:/tmp/root/hive_2019-06-22_09-28-25_537_2111443604780915745-1/-local-10007/HashTable-Stage-3/MapJoin-mapfile01--.hashtable (37054 bytes)
-2019-06-22 09:28:39	End of local task; Time Taken: 2.891 sec.
-Execution completed successfully
-MapredLocal task succeeded
-Launching Job 1 out of 3
-Number of reduce tasks not specified. Estimated from input data size: 1
-In order to change the average load for a reducer (in bytes):
-  set hive.exec.reducers.bytes.per.reducer=<number>
-In order to limit the maximum number of reducers:
-  set hive.exec.reducers.max=<number>
-In order to set a constant number of reducers:
-  set mapreduce.job.reduces=<number>
-Starting Job = job_1561195125164_0008, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561195125164_0008/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561195125164_0008
-Hadoop job information for Stage-3: number of mappers: 1; number of reducers: 1
-2019-06-22 09:28:59,515 Stage-3 map = 0%,  reduce = 0%
-2019-06-22 09:29:10,685 Stage-3 map = 100%,  reduce = 0%, Cumulative CPU 2.89 sec
-2019-06-22 09:29:23,001 Stage-3 map = 100%,  reduce = 100%, Cumulative CPU 5.9 sec
-MapReduce Total cumulative CPU time: 5 seconds 900 msec
-Ended Job = job_1561195125164_0008
-Launching Job 2 out of 3
-Number of reduce tasks not specified. Estimated from input data size: 1
-In order to change the average load for a reducer (in bytes):
-  set hive.exec.reducers.bytes.per.reducer=<number>
-In order to limit the maximum number of reducers:
-  set hive.exec.reducers.max=<number>
-In order to set a constant number of reducers:
-  set mapreduce.job.reduces=<number>
-Starting Job = job_1561195125164_0009, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561195125164_0009/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561195125164_0009
-Hadoop job information for Stage-4: number of mappers: 1; number of reducers: 1
-2019-06-22 09:29:43,658 Stage-4 map = 0%,  reduce = 0%
-2019-06-22 09:29:53,770 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 1.07 sec
-2019-06-22 09:30:03,604 Stage-4 map = 100%,  reduce = 100%, Cumulative CPU 2.84 sec
-MapReduce Total cumulative CPU time: 2 seconds 840 msec
-Ended Job = job_1561195125164_0009
-Launching Job 3 out of 3
-Number of reduce tasks determined at compile time: 1
-In order to change the average load for a reducer (in bytes):
-  set hive.exec.reducers.bytes.per.reducer=<number>
-In order to limit the maximum number of reducers:
-  set hive.exec.reducers.max=<number>
-In order to set a constant number of reducers:
-  set mapreduce.job.reduces=<number>
-Starting Job = job_1561195125164_0010, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561195125164_0010/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561195125164_0010
-Hadoop job information for Stage-5: number of mappers: 1; number of reducers: 1
-2019-06-22 09:30:25,662 Stage-5 map = 0%,  reduce = 0%
-2019-06-22 09:30:34,856 Stage-5 map = 100%,  reduce = 0%, Cumulative CPU 1.05 sec
-2019-06-22 09:30:44,767 Stage-5 map = 100%,  reduce = 100%, Cumulative CPU 2.08 sec
-MapReduce Total cumulative CPU time: 2 seconds 80 msec
-Ended Job = job_1561195125164_0010
-MapReduce Jobs Launched: 
-Stage-Stage-3: Map: 1  Reduce: 1   Cumulative CPU: 5.9 sec   HDFS Read: 10298 HDFS Write: 96 SUCCESS
-Stage-Stage-4: Map: 1  Reduce: 1   Cumulative CPU: 2.84 sec   HDFS Read: 472 HDFS Write: 96 SUCCESS
-Stage-Stage-5: Map: 1  Reduce: 1   Cumulative CPU: 2.08 sec   HDFS Read: 472 HDFS Write: 0 SUCCESS
-Total MapReduce CPU Time Spent: 10 seconds 820 msec
-OK
-Time taken: 140.518 seconds
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-stop
-1561195684604798559 1561195876642639314 /home/vr/github/abench-management-console/submodules/a-bench/results/20190622_11_31_26_experiment_tag_sample_q29/experiment_tag_sample_q29.zip
-calling url <http://192.168.99.100:32234/csv-zip?host=monitoring-influxdb&port=8086&dbname=k8s&filename=experi01&fromT=1561195684604798559&toT=1561195876642639314>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100  891k  100  891k    0     0   570k      0  0:00:01  0:00:01 --:--:--  570k
-Datacollection finished. Export located at </home/vr/github/abench-management-console/submodules/a-bench/results/20190622_11_31_26_experiment_tag_sample_q29/experiment_tag_sample_q29.zip>
-[1;34m[A-Bench][0m Downloading the results of the experiment.          | [1;31m cus_collect [0m
-Hadoop export successfull.
-tar: Removing leading `/' from member names
-[1;34m[A-Bench][0m Download complete. Your data are located under <[1;34m/home/vr/github/abench-management-console/submodules/a-bench/results/20190622_11_31_26_experiment_tag_sample_q29[0m>
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-[1;34m[A-Bench][0m Cleaning the infrastructure.                        | [1;31m cus_clean [0m
-[1;34m[A-Bench][0m Experiment finished.                                | [1;31m cus_finish [0m
-The infrastructure was deployed successfully! Check the experiment results in submodules/a-bench/results
-Starting Experiment:
-[1;34m[A-Bench][0m Preflight in progress...
-[x] git  detected.
-[x] docker  detected.
-[x] virtualbox  detected.
-[x] minikube  detected.
-[x] kubectl  detected.
-[x] helm  detected.
-[x] curl  detected.
-[x] cat  detected.
-
-
-
-
-Number of missing components: 0
-
-All components are available and the system should be ready for use.
-Deleting local Kubernetes cluster...
-Machine deleted.
-Starting local Kubernetes v1.10.0 cluster...
-Starting VM...
-Getting VM IP address...
-E0622 11:39:06.882333   24624 start.go:210] Error parsing version semver:  Version string empty
-Moving files into cluster...
-Setting up certs...
-Connecting to cluster...
-Setting up kubeconfig...
-Stopping extra container runtimes...
-Starting cluster components...
-Verifying kubelet health ...
-Verifying apiserver health ...Kubectl is now configured to use the cluster.
-Loading cached images from config file.
-
-
-Everything looks great. Please enjoy minikube!
-Unable to find image 'alpine:latest' locally
-latest: Pulling from library/alpine
-
-[1A[1K[K921b31ab772b: Pulling fs layer [1B[1A[1K[K921b31ab772b: Downloading [>                                                  ]  28.75kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [========================>                          ]  1.359MB/2.79MB[1B[1A[1K[K921b31ab772b: Verifying Checksum [1B[1A[1K[K921b31ab772b: Download complete [1B[1A[1K[K921b31ab772b: Extracting [>                                                  ]  32.77kB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [===========>                                       ]  655.4kB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [===========================>                       ]   1.54MB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [===============================================>   ]  2.654MB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [==================================================>]   2.79MB/2.79MB[1B[1A[1K[K921b31ab772b: Pull complete [1BDigest: sha256:ca1c944a4f8486a153024d9965aafbe24f5723c1d5c02f4964c045a16d19dc54
-Status: Downloaded newer image for alpine:latest
-Sat Jun 22 09:40:00 UTC 2019
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-addon-manager was successfully enabled
-default-storageclass was successfully enabled
-dashboard was successfully enabled
-storage-provisioner was successfully enabled
-heapster was successfully enabled
-$HELM_HOME has been configured at /home/vr/.helm.
-
-Tiller (the Helm server-side component) has been installed into your Kubernetes Cluster.
-
-Please note: by default, Tiller is deployed with an insecure 'allow unauthenticated users' policy.
-To prevent this, run `helm init` with the --tiller-tls-verify flag.
-For more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation
-Happy Helming!
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]
-deployment.apps/influxdb-client created
-service/influxdb-client created
-  2 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (0/40)
-  4 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (1/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (2/40)
-  10 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (3/40)
- All expected Pods are running. Seems that the system is in a good mode and ready to proceed further
-[1;34m[A-Bench][0m Startup procedure was successfully.
-[1;34m[A-Bench][0m If you like to interact with docker in minikube then remember to link your docker with the one in minikube.
-[1;34m[A-Bench][0m To do so, use the follwing command: 
-                eval $(minikube docker-env)
-                
-                
-fatal: destination path 'bigbenchv2' already exists and is not an empty directory.
-Opening http://127.0.0.1:39315/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/ in your default browser...
-Already up to date.
-finish
-ENV-Looper-Experiment is starting now.
-Running q29
-Experiment TAG: #experiment_tag_sample
-[1;34m[A-Bench][0m Running defined experiment... 
-Query-Mapper has recognized a query for execution: q29
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
-[28214:28214:0622/114218.557948:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-[28204:28204:0622/114218.593893:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: iceweasel: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: seamonkey: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: mozilla: not found
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: epiphany: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: iceweasel: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: konqueror: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: seamonkey: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: mozilla: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: epiphany: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: konqueror: not found
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]mkdir: cannot create directory '/run/user/0': Permission denied
-mkdir: cannot create directory '/run/user/0': Permission denied
-|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-am-et.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-broadway.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-cedilla.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-cyrillic-translit.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-fcitx.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ibus.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-inuktitut.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ipa.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-multipress.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-thai.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ti-er.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ti-et.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-viqr.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-wayland.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-xim.so': File exists
-/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s][28291:28291:0622/114221.640526:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-[28300:28300:0622/114221.641788:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
--    | 8 [s][28696:28696:0622/114221.773026:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-[28693:28693:0622/114221.773743:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: google-chrome: not found
-\    | 7 [s]/usr/bin/xdg-open: 851: /usr/bin/xdg-open: www-browser: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links2: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: google-chrome: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: www-browser: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: elinks: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links2: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: elinks: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: lynx: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: w3m: not found
-xdg-open: no method available for opening 'http://127.0.0.1:39315/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/'
-failed to open browser: exit status 3/usr/bin/xdg-open: 851: /usr/bin/xdg-open: lynx: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: w3m: not found
-xdg-open: no method available for opening 'http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s'
-|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_deploy [0m
-Error: release: "sql-mysql" not found
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]
-NAME:   sql-mysql
-LAST DEPLOYED: Sat Jun 22 11:43:01 2019
-NAMESPACE: default
-STATUS: DEPLOYED
-
-RESOURCES:
-==> v1/Secret
-NAME       TYPE    DATA  AGE
-sql-mysql  Opaque  2     6s
-
-==> v1/ConfigMap
-NAME            DATA  AGE
-sql-mysql-test  1     6s
-
-==> v1/PersistentVolumeClaim
-NAME       STATUS  VOLUME                                    CAPACITY  ACCESS MODES  STORAGECLASS  AGE
-sql-mysql  Bound   pvc-21e68722-94d2-11e9-8cc6-080027ba2995  8Gi       RWO           standard      6s
-
-==> v1/Service
-NAME       TYPE       CLUSTER-IP      EXTERNAL-IP  PORT(S)   AGE
-sql-mysql  ClusterIP  10.103.192.245  <none>       3306/TCP  6s
-
-==> v1beta1/Deployment
-NAME       DESIRED  CURRENT  UP-TO-DATE  AVAILABLE  AGE
-sql-mysql  1        1        1           0          6s
-
-==> v1/Pod(related)
-NAME                        READY  STATUS   RESTARTS  AGE
-sql-mysql-5b6ff9b9c4-brx45  0/1    Pending  0         5s
-
-
-NOTES:
-MySQL can be accessed via port 3306 on the following DNS name from within your cluster:
-sql-mysql.default.svc.cluster.local
-
-To get your root password run:
-
-    MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace default sql-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo)
-
-To connect to your database:
-
-1. Run an Ubuntu pod that you can use as a client:
-
-    kubectl run -i --tty ubuntu --image=ubuntu:16.04 --restart=Never -- bash -il
-
-2. Install the mysql client:
-
-    $ apt-get update && apt-get install mysql-client -y
-
-3. Connect using the mysql cli, then provide your password:
-    $ mysql -h sql-mysql -p
-
-To connect to your database directly from outside the K8s cluster:
-    MYSQL_HOST=127.0.0.1
-    MYSQL_PORT=3306
-
-    # Execute the following command to route the connection:
-    kubectl port-forward svc/sql-mysql 3306
-
-    mysql -h ${MYSQL_HOST} -P${MYSQL_PORT} -u root -p${MYSQL_ROOT_PASSWORD}
-    
-
-Error: release: "thadoop" not found
-NAME:   thadoop
-LAST DEPLOYED: Sat Jun 22 11:43:11 2019
-NAMESPACE: default
-STATUS: DEPLOYED
-
-RESOURCES:
-==> v1beta1/PodDisruptionBudget
-NAME                    MIN AVAILABLE  MAX UNAVAILABLE  ALLOWED DISRUPTIONS  AGE
-thadoop-hadoop-hdfs-dn  1              N/A              0                    4m4s
-thadoop-hadoop-hdfs-nn  1              N/A              0                    4m4s
-thadoop-hadoop-yarn-nm  1              N/A              1                    4m4s
-thadoop-hadoop-yarn-rm  1              N/A              0                    4m4s
-
-==> v1/ConfigMap
-NAME            DATA  AGE
-thadoop-hadoop  8     4m3s
-
-==> v1/Service
-NAME                         TYPE       CLUSTER-IP     EXTERNAL-IP  PORT(S)                     AGE
-thadoop-hadoop-hdfs-dn       ClusterIP  None           <none>       9000/TCP,50075/TCP          4m3s
-thadoop-hadoop-hdfs-nn       ClusterIP  None           <none>       9000/TCP,50070/TCP          4m3s
-thadoop-hadoop-bench-driver  ClusterIP  10.110.171.77  <none>       9083/TCP,10000/TCP          4m3s
-thadoop-hadoop-yarn-nm       ClusterIP  None           <none>       8088/TCP,8082/TCP,8042/TCP  4m3s
-thadoop-hadoop-yarn-rm       ClusterIP  None           <none>       8088/TCP                    4m3s
-thadoop-hadoop-yarn-ui       NodePort   10.103.84.253  <none>       8088:32163/TCP              4m3s
-
-==> v1beta1/StatefulSet
-NAME                         DESIRED  CURRENT  AGE
-thadoop-hadoop-hdfs-dn       1        1        4m3s
-thadoop-hadoop-hdfs-nn       1        1        4m3s
-thadoop-hadoop-bench-driver  1        1        4m3s
-thadoop-hadoop-yarn-nm       2        2        4m3s
-thadoop-hadoop-yarn-rm       1        1        4m2s
-
-==> v1/Pod(related)
-NAME                           READY  STATUS   RESTARTS  AGE
-thadoop-hadoop-hdfs-dn-0       1/1    Running  0         4m2s
-thadoop-hadoop-hdfs-nn-0       1/1    Running  0         3m42s
-thadoop-hadoop-bench-driver-0  1/1    Running  0         3m54s
-thadoop-hadoop-yarn-nm-0       1/1    Running  1         3m42s
-thadoop-hadoop-yarn-nm-1       1/1    Running  0         32s
-thadoop-hadoop-yarn-rm-0       1/1    Running  0         3m42s
-
-
-NOTES:
-1. You can check the status of HDFS by running this command:
-   kubectl exec -n default -it thadoop-hadoop-hdfs-nn-0 -- /usr/local/hadoop/bin/hdfs dfsadmin -report
-
-2. You can list the yarn nodes by running this command:
-   kubectl exec -n default -it thadoop-hadoop-yarn-rm-0 -- /usr/local/hadoop/bin/yarn node -list
-
-3. Create a port-forward to the yarn resource manager UI:
-   kubectl port-forward -n default thadoop-hadoop-yarn-rm-0 8088:8088 
-
-   Then open the ui in your browser:
-   
-   open http://localhost:8088
-
-4. You can run included hadoop tests like this:
-   kubectl exec -n default -it thadoop-hadoop-yarn-nm-0 -- /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.3-tests.jar TestDFSIO -write -nrFiles 5 -fileSize 128MB -resFile /tmp/TestDFSIOwrite.txt
-
-5. You can list the mapreduce jobs like this:
-   kubectl exec -n default -it thadoop-hadoop-yarn-rm-0 -- /usr/local/hadoop/bin/mapred job -list
-
-6. This chart can also be used with the zeppelin chart
-    helm install --namespace default --set hadoop.useConfigMap=true,hadoop.configMapName=thadoop-hadoop stable/zeppelin
-
-7. You can scale the number of yarn nodes like this:
-   helm upgrade thadoop --set yarn.nodeManager.replicas=4 stable/hadoop
-
-   Make sure to update the values.yaml if you want to make this permanent.
-
-[1;34m[A-Bench][0m hadoop cluster started and named as < thadoop > ...
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]Starting Experiment:
-[1;34m[A-Bench][0m Preflight in progress...
-[x] git  detected.
-[x] docker  detected.
-[x] virtualbox  detected.
-[x] minikube  detected.
-[x] kubectl  detected.
-[x] helm  detected.
-[x] curl  detected.
-[x] cat  detected.
-
-
-
-
-Number of missing components: 0
-
-All components are available and the system should be ready for use.
-Deleting local Kubernetes cluster...
-Machine deleted.
-Starting local Kubernetes v1.10.0 cluster...
-Starting VM...
-Starting Experiment:
-[1;34m[A-Bench][0m Preflight in progress...
-[x] git  detected.
-[x] docker  detected.
-[x] virtualbox  detected.
-[x] minikube  detected.
-[x] kubectl  detected.
-[x] helm  detected.
-[x] curl  detected.
-[x] cat  detected.
-
-
-
-
-Number of missing components: 0
-
-All components are available and the system should be ready for use.
-Deleting local Kubernetes cluster...
-Machine deleted.
-Starting local Kubernetes v1.10.0 cluster...
-Starting VM...

@@ -82,7 +82,6 @@
       };
 
       var lineChart = new Chart(memCanvas, {
-        zoomEnabled: true,
         type: 'line',
         data: memData,
         // options: chartOptions
@@ -117,25 +116,6 @@
                     fontFamily: 'Lato'
                   }
                 }]
-            },
-            // Container for pan options
-            pan: {
-                enabled: true,
-                mode: 'xy',
-                speed: 1
-            },
-
-            // Container for zoom options
-            zoom: {
-                // Boolean to enable zooming
-                enabled: true,
-                mode: 'xy',
-                rangeMin: {
-            				// Format of min zoom range depends on scale type
-            				x: 0,
-            				y: 0
-                  },
-                  speed: 0.1
             }
         }
       });

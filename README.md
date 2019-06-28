@@ -1,12 +1,12 @@
-1. [ Implementig A-Bench. ](#implementing)
-2. [ Getting started. ](#get)
-  - [ Requirements. ](#req)
-  - [ Tech. ](#tech)
-  - [ 1. Step. ](#1st)
-  - [ 2. Step. ](#2nd)
-  - [ 3. Step. ](#3rd)
-  - [ 4. Step. ](#4th)
-3. [ Additional information. ](#add)
+1. [ Implementig A-Bench ](#implementing)
+  - [ Requirements ](#req)
+  - [ Tech ](#tech)
+2. [ Getting started ](#get)
+  - [ 1. Step ](#1st)
+  - [ 2. Step ](#2nd)
+  - [ 3. Step ](#3rd)
+  - [ 4. Step ](#4th)
+3. [ Additional information ](#add)
 
 <a name="implementing"></a>
 # Implementig A-Bench
@@ -20,10 +20,10 @@ Using html, python3.6, flask, pandas and some other tools I created a WebUI for 
 ## Requirements:
 *  Iternet connection
 *  Ubuntu 18.04 LTS (clean install)
-*  Modern web browser like Google Chrome or Mozilla Firefox
+*  Modern web browser like Chromium or Mozilla Firefox
 <a name="tech"></a>
 ## Tech
-A-bench-dashboard uses a number of open source projects to work properly:
+The ABench management console uses a number of open source projects to work properly:
 * [python3.6] - Python Programming Language version 3.6
 * [Flask] - Flask is a microframework for Python based on Werkzeug, Jinja 2 and good intentions
 * [pandas] - pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language
@@ -32,7 +32,7 @@ A-bench-dashboard uses a number of open source projects to work properly:
 <a name="1st"></a>
 **1. Step:**
 * Download the repository
-* Run install_requirements.sh in folder scripts to install missing tools if any and download a GitHub repository for creating [A-Bench infrastructure]
+* Run install_requirements.sh in folder "scripts" to install missing tools if any and download a GitHub repository for creating [A-Bench infrastructure]
 * To start the main WebUI run the python script in terminal as root:
 ```sh
 $ sudo python abench-management-console.py
