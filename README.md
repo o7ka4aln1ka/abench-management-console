@@ -14,8 +14,6 @@
 This is my master thesis project. The main goal is to make installing, setting up and implementing the Benchmark A-Bench easier and to automate the process as much as possible.
 Using html, python3.6, flask, pandas and some other tools I created a WebUI for easier control over the setup of the infrastructure, running the benchmark and visualizing the results in a few charts which gives information about some metrics like CPU, memory and file system usage.
 
-<a name="get"></a>
-# Getting started
 <a name="req"></a>
 ## Requirements:
 *  Iternet connection
@@ -29,6 +27,8 @@ The ABench management console uses a number of open source projects to work prop
 * [pandas] - pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language
 * [chart.js] - Simple yet flexible JavaScript charting for designers & developers
 
+<a name="get"></a>
+# Getting started
 <a name="1st"></a>
 **1. Step:**
 * Download the repository
