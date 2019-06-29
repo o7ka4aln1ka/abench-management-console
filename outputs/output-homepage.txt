@@ -1,572 +1,0 @@
-Reading package lists...
-E: Could not get lock /var/lib/apt/lists/lock - open (11: Resource temporarily unavailable)
-E: Unable to lock directory /var/lib/apt/lists/
-W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
-E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
-E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
-E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
-
-Usage:   
-  pip install [options] <requirement specifier> [package-index-options] ...
-  pip install [options] -r <requirements file> [package-index-options] ...
-  pip install [options] [-e] <vcs project url> ...
-  pip install [options] [-e] <local project path> ...
-  pip install [options] <archive url/path> ...
-
-no such option: -y
-E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
-E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
-E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
-E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
-E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
-E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
-E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource temporarily unavailable)
-E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
-npm WARN saveError ENOENT: no such file or directory, open '/home/vr/package.json'
-npm WARN enoent ENOENT: no such file or directory, open '/home/vr/package.json'
-npm WARN vr No description
-npm WARN vr No repository field.
-npm WARN vr No README data
-npm WARN vr No license field.
-
-+ chart.js@2.8.0
-updated 1 package and audited 18 packages in 1.044s
-found 0 vulnerabilities
-
-npm WARN saveError ENOENT: no such file or directory, open '/home/vr/package.json'
-npm WARN enoent ENOENT: no such file or directory, open '/home/vr/package.json'
-npm WARN vr No description
-npm WARN vr No repository field.
-npm WARN vr No README data
-npm WARN vr No license field.
-
-+ chartjs-plugin-zoom@0.7.0
-updated 1 package and audited 18 packages in 1.196s
-found 0 vulnerabilities
-
-All tools were installed!
-FutureApp repository will be downloaded for future use ...
-Cloning into 'a-bench'...
-Submodule FutureApp was successfully downloaded!
-Systems will check the enviroment first, then it will install itself if all
-requirements are full-filled.
-Checking if all required tools are available:
- [x] [kubectl] is installed.
- [x] [minikube] is installed.
- [x] [cat] is installed.
- [x] [curl] is installed.
- [x] [python] is installed.
- [x] [flask] is installed.
- [x] [npm] is installed.
-[1;34m[A-Bench][0m Try to install all missing components...
-[1;34m[A-Bench][0m 8/8 programs are already installed. 0 new installed programs.
-[1;34m[A-Bench][0m Please restart your computer to complete the process.
-[1;34m[A-Bench][0m Preflight in progress...
-[x] git  detected.
-[x] docker  detected.
-[x] virtualbox  detected.
-[x] minikube  detected.
-[x] kubectl  detected.
-[x] helm  detected.
-[x] curl  detected.
-[x] cat  detected.
-
-
-
-
-Number of missing components: 0
-
-All components are available and the system should be ready for use.
-There is a newer version of minikube available (v1.2.0).  Download it here:
-https://github.com/kubernetes/minikube/releases/tag/v1.2.0
-
-To disable this notification, run the following:
-minikube config set WantUpdateNotification false
-Deleting local Kubernetes cluster...
-Machine deleted.
-Starting local Kubernetes v1.10.0 cluster...
-Starting VM...
-Getting VM IP address...
-E0628 14:18:17.925627     574 start.go:210] Error parsing version semver:  Version string empty
-Moving files into cluster...
-Setting up certs...
-Connecting to cluster...
-Setting up kubeconfig...
-Stopping extra container runtimes...
-Starting cluster components...
-Verifying kubelet health ...
-Verifying apiserver health ...Kubectl is now configured to use the cluster.
-Loading cached images from config file.
-
-
-Everything looks great. Please enjoy minikube!
-Unable to find image 'alpine:latest' locally
-latest: Pulling from library/alpine
-
-[1A[1K[K921b31ab772b: Pulling fs layer [1B[1A[1K[K921b31ab772b: Waiting [1B[1A[1K[K921b31ab772b: Downloading [>                                                  ]  28.75kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=>                                                 ]  90.91kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=====>                                             ]  322.3kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [======>                                            ]  387.8kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===========>                                       ]  617.2kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [============>                                      ]  723.7kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [==============>                                    ]  785.1kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===============>                                   ]  883.4kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=================>                                 ]    949kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [==================>                                ]  1.015MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===================>                               ]  1.113MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=====================>                             ]  1.211MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [======================>                            ]  1.277MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=========================>                         ]   1.44MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [==========================>                        ]  1.506MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [============================>                      ]  1.572MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [============================>                      ]  1.613MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=================================>                 ]  1.875MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [==================================>                ]   1.94MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===================================>               ]  2.006MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=====================================>             ]  2.071MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [======================================>            ]  2.137MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=======================================>           ]  2.202MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [========================================>          ]  2.276MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [==========================================>        ]  2.374MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [============================================>      ]  2.505MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=============================================>     ]  2.538MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [==============================================>    ]  2.571MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===============================================>   ]  2.637MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [================================================>  ]  2.702MB/2.79MB[1B[1A[1K[K921b31ab772b: Verifying Checksum [1B[1A[1K[K921b31ab772b: Download complete [1B[1A[1K[K921b31ab772b: Extracting [>                                                  ]  32.77kB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [============>                                      ]  720.9kB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [================================>                  ]  1.802MB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [==================================================>]   2.79MB/2.79MB[1B[1A[1K[K921b31ab772b: Pull complete [1BDigest: sha256:ca1c944a4f8486a153024d9965aafbe24f5723c1d5c02f4964c045a16d19dc54
-Status: Downloaded newer image for alpine:latest
-Fri Jun 28 12:28:00 UTC 2019
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-addon-manager was successfully enabled
-default-storageclass was successfully enabled
-dashboard was successfully enabled
-storage-provisioner was successfully enabled
-heapster was successfully enabled
-$HELM_HOME has been configured at /home/vr/.helm.
-
-Tiller (the Helm server-side component) has been installed into your Kubernetes Cluster.
-
-Please note: by default, Tiller is deployed with an insecure 'allow unauthenticated users' policy.
-To prevent this, run `helm init` with the --tiller-tls-verify flag.
-For more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation
-Happy Helming!
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-deployment.apps/influxdb-client created
-service/influxdb-client created
-  2 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (0/40)
-  4 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (1/40)
-  4 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (2/40)
-  4 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (3/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (4/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (5/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (6/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (7/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (8/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (9/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (10/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (11/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (12/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (13/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (14/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (15/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (16/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (17/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (18/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (19/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (20/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (21/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (22/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (23/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (24/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (25/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (26/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (27/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (28/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (29/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (30/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (31/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (32/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (33/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (34/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (35/40)
-  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (36/40)
-  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (37/40)
-  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (38/40)
-  10 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (39/40)
-[1;34m[A-Bench][0m Startup procedure was successfully.
-[1;34m[A-Bench][0m If you like to interact with docker in minikube then remember to link your docker with the one in minikube.
-[1;34m[A-Bench][0m To do so, use the follwing command: 
-                eval $(minikube docker-env)
-                
-                
-Cloning into 'bigbenchv2'...
-[28079:28079:0628/143612.101025:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-Opening http://127.0.0.1:38363/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/ in your default browser...
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: iceweasel: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: seamonkey: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: mozilla: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: epiphany: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: konqueror: not found
-[28207:28207:0628/143612.463077:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: iceweasel: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: seamonkey: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: mozilla: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: epiphany: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: konqueror: not found
-mkdir: mkdir: cannot create directory '/run/user/0': Permission denied
-cannot create directory '/run/user/0': Permission denied
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libdconfsettings.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libgiognomeproxy.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libgiognutls.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libgiolibproxy.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-Black/cursor.theme': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-Black/cursors': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-Black/index.theme': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-White/cursor.theme': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-White/cursors': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-White/index.theme': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/Suru/index.theme': File exists
-[28242:28242:0628/143615.970731:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-[28127:28127:0628/143615.970764:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-[28630:28630:0628/143616.035269:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: google-chrome: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: www-browser: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links2: not found
-[28635:28635:0628/143616.044711:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: google-chrome: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: www-browser: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: elinks: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links2: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: elinks: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: lynx: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: lynx: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: w3m: not found
-xdg-open: no method available for opening 'http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s'
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: w3m: not found
-xdg-open: no method available for opening 'http://127.0.0.1:38363/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/'
-failed to open browser: exit status 3Already up to date.
-finish
-ENV-Looper-Experiment is starting now.
-Running q29
-Experiment TAG: #experiment_tag_sample
-[1;34m[A-Bench][0m Running defined experiment... 
-Query-Mapper has recognized a query for execution: q29
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_deploy [0m
-Error: could not find a ready tiller pod
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]
-NAME:   sql-mysql
-LAST DEPLOYED: Fri Jun 28 14:37:15 2019
-NAMESPACE: default
-STATUS: DEPLOYED
-
-RESOURCES:
-==> v1/Secret
-NAME       TYPE    DATA  AGE
-sql-mysql  Opaque  2     2s
-
-==> v1/ConfigMap
-NAME            DATA  AGE
-sql-mysql-test  1     2s
-
-==> v1/PersistentVolumeClaim
-NAME       STATUS  VOLUME                                    CAPACITY  ACCESS MODES  STORAGECLASS  AGE
-sql-mysql  Bound   pvc-76cddf3c-99a1-11e9-a815-080027a7e9a8  8Gi       RWO           standard      2s
-
-==> v1/Service
-NAME       TYPE       CLUSTER-IP     EXTERNAL-IP  PORT(S)   AGE
-sql-mysql  ClusterIP  10.107.236.69  <none>       3306/TCP  2s
-
-==> v1beta1/Deployment
-NAME       DESIRED  CURRENT  UP-TO-DATE  AVAILABLE  AGE
-sql-mysql  1        1        1           0          2s
-
-==> v1/Pod(related)
-NAME                        READY  STATUS    RESTARTS  AGE
-sql-mysql-5b6ff9b9c4-c9mrq  0/1    Init:0/1  0         2s
-
-
-NOTES:
-MySQL can be accessed via port 3306 on the following DNS name from within your cluster:
-sql-mysql.default.svc.cluster.local
-
-To get your root password run:
-
-    MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace default sql-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo)
-
-To connect to your database:
-
-1. Run an Ubuntu pod that you can use as a client:
-
-    kubectl run -i --tty ubuntu --image=ubuntu:16.04 --restart=Never -- bash -il
-
-2. Install the mysql client:
-
-    $ apt-get update && apt-get install mysql-client -y
-
-3. Connect using the mysql cli, then provide your password:
-    $ mysql -h sql-mysql -p
-
-To connect to your database directly from outside the K8s cluster:
-    MYSQL_HOST=127.0.0.1
-    MYSQL_PORT=3306
-
-    # Execute the following command to route the connection:
-    kubectl port-forward svc/sql-mysql 3306
-
-    mysql -h ${MYSQL_HOST} -P${MYSQL_PORT} -u root -p${MYSQL_ROOT_PASSWORD}
-    
-
-Error: release: "thadoop" not found
-Error: release thadoop failed: timed out waiting for the condition
-[1;34m[A-Bench][0m hadoop cluster started and named as < thadoop > ...
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-Execution will pause for 60 seconds.
-\    | 59 [s]|    | 59 [s]/    | 59 [s]-    | 59 [s]\    | 59 [s]|    | 59 [s]/    | 59 [s]-    | 59 [s]\    | 59 [s]|    | 59 [s]/    | 58 [s]-    | 58 [s]\    | 58 [s]|    | 58 [s]/    | 58 [s]-    | 58 [s]\    | 58 [s]|    | 58 [s]/    | 58 [s]-    | 58 [s]\    | 57 [s]|    | 57 [s]/    | 57 [s]-    | 57 [s]\    | 57 [s]|    | 57 [s]/    | 57 [s]-    | 57 [s]\    | 57 [s]|    | 57 [s]/    | 56 [s]-    | 56 [s]\    | 56 [s]|    | 56 [s]/    | 56 [s]-    | 56 [s]\    | 56 [s]|    | 56 [s]/    | 56 [s]-    | 56 [s]\    | 55 [s]|    | 55 [s]/    | 55 [s]-    | 55 [s]\    | 55 [s]|    | 55 [s]/    | 55 [s]-    | 55 [s]\    | 55 [s]|    | 55 [s]/    | 54 [s]-    | 54 [s]\    | 54 [s]|    | 54 [s]/    | 54 [s]-    | 54 [s]\    | 54 [s]|    | 54 [s]/    | 54 [s]-    | 54 [s]\    | 53 [s]|    | 53 [s]/    | 53 [s]-    | 53 [s]\    | 53 [s]|    | 53 [s]/    | 53 [s]-    | 53 [s]\    | 53 [s]|    | 53 [s]/    | 52 [s]-    | 52 [s]\    | 52 [s]|    | 52 [s]/    | 52 [s]-    | 52 [s]\    | 52 [s]|    | 52 [s]/    | 52 [s]-    | 52 [s]\    | 51 [s]|    | 51 [s]/    | 51 [s]-    | 51 [s]\    | 51 [s]|    | 51 [s]/    | 51 [s]-    | 51 [s]\    | 51 [s]|    | 51 [s]/    | 50 [s]-    | 50 [s]\    | 50 [s]|    | 50 [s]/    | 50 [s]-    | 50 [s]\    | 50 [s]|    | 50 [s]/    | 50 [s]-    | 50 [s]\    | 49 [s]|    | 49 [s]/    | 49 [s]-    | 49 [s]\    | 49 [s]|    | 49 [s]/    | 49 [s]-    | 49 [s]\    | 49 [s]|    | 49 [s]/    | 48 [s]-    | 48 [s]\    | 48 [s]|    | 48 [s]/    | 48 [s]-    | 48 [s]\    | 48 [s]|    | 48 [s]/    | 48 [s]-    | 48 [s]\    | 47 [s]|    | 47 [s]/    | 47 [s]-    | 47 [s]\    | 47 [s]|    | 47 [s]/    | 47 [s]-    | 47 [s]\    | 47 [s]|    | 47 [s]/    | 46 [s]-    | 46 [s]\    | 46 [s]|    | 46 [s]/    | 46 [s]-    | 46 [s]\    | 46 [s]|    | 46 [s]/    | 46 [s]-    | 46 [s]\    | 45 [s]|    | 45 [s]/    | 45 [s]-    | 45 [s]\    | 45 [s]|    | 45 [s]/    | 45 [s]-    | 45 [s]\    | 45 [s]|    | 45 [s]/    | 44 [s]-    | 44 [s]\    | 44 [s]|    | 44 [s]/    | 44 [s]-    | 44 [s]\    | 44 [s]|    | 44 [s]/    | 44 [s]-    | 44 [s]\    | 43 [s]|    | 43 [s]/    | 43 [s]-    | 43 [s]\    | 43 [s]|    | 43 [s]/    | 43 [s]-    | 43 [s]\    | 43 [s]|    | 43 [s]/    | 42 [s]-    | 42 [s]\    | 42 [s]|    | 42 [s]/    | 42 [s]-    | 42 [s]\    | 42 [s]|    | 42 [s]/    | 42 [s]-    | 42 [s]\    | 41 [s]|    | 41 [s]/    | 41 [s]-    | 41 [s]\    | 41 [s]|    | 41 [s]/    | 41 [s]-    | 41 [s]\    | 41 [s]|    | 41 [s]/    | 40 [s]-    | 40 [s]\    | 40 [s]|    | 40 [s]/    | 40 [s]-    | 40 [s]\    | 40 [s]|    | 40 [s]/    | 40 [s]-    | 40 [s]\    | 39 [s]|    | 39 [s]/    | 39 [s]-    | 39 [s]\    | 39 [s]|    | 39 [s]/    | 39 [s]-    | 39 [s]\    | 39 [s]|    | 39 [s]/    | 38 [s]-    | 38 [s]\    | 38 [s]|    | 38 [s]/    | 38 [s]-    | 38 [s]\    | 38 [s]|    | 38 [s]/    | 38 [s]-    | 38 [s]\    | 37 [s]|    | 37 [s]/    | 37 [s]-    | 37 [s]\    | 37 [s]|    | 37 [s]/    | 37 [s]-    | 37 [s]\    | 37 [s]|    | 37 [s]/    | 36 [s]-    | 36 [s]\    | 36 [s]|    | 36 [s]/    | 36 [s]-    | 36 [s]\    | 36 [s]|    | 36 [s]/    | 36 [s]-    | 36 [s]\    | 35 [s]|    | 35 [s]/    | 35 [s]-    | 35 [s]\    | 35 [s]|    | 35 [s]/    | 35 [s]-    | 35 [s]\    | 35 [s]|    | 35 [s]/    | 34 [s]-    | 34 [s]\    | 34 [s]|    | 34 [s]/    | 34 [s]-    | 34 [s]\    | 34 [s]|    | 34 [s]/    | 34 [s]-    | 34 [s]\    | 33 [s]|    | 33 [s]/    | 33 [s]-    | 33 [s]\    | 33 [s]|    | 33 [s]/    | 33 [s]-    | 33 [s]\    | 33 [s]|    | 33 [s]/    | 32 [s]-    | 32 [s]\    | 32 [s]|    | 32 [s]/    | 32 [s]-    | 32 [s]\    | 32 [s]|    | 32 [s]/    | 32 [s]-    | 32 [s]\    | 31 [s]|    | 31 [s]/    | 31 [s]-    | 31 [s]\    | 31 [s]|    | 31 [s]/    | 31 [s]-    | 31 [s]\    | 31 [s]|    | 31 [s]/    | 30 [s]-    | 30 [s]\    | 30 [s]|    | 30 [s]/    | 30 [s]-    | 30 [s]\    | 30 [s]|    | 30 [s]/    | 30 [s]-    | 30 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]
-[1;34m[A-Bench][0m Preparing the infrastructure for the workloads.     | [1;31m cus_prepare [0m
-error: unable to upgrade connection: container not found ("bench-driver")
-error: unable to upgrade connection: container not found ("bench-driver")
-error: unable to upgrade connection: container not found ("bench-driver")
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-[1;34m[A-Bench][0m Executing the workload of the experiment.           | [1;31m cus_workload [0m
-[1;34m[A-Bench][0m Running  query queries/q29.hql.                                            
-error: unable to upgrade connection: container not found ("bench-driver")
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-stop
-1561726144887738612 1561726175095495815 /home/vr/github/abench-management-console/submodules/a-bench/results/20190628_14_49_45_experiment_tag_sample_q29/experiment_tag_sample_q29.zip
-calling url <http://192.168.99.100:30358/csv-zip?host=monitoring-influxdb&port=8086&dbname=k8s&filename=experi01&fromT=1561726144887738612&toT=1561726175095495815>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:18 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:19 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:20 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:21 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:22 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:23 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:24 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:25 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:26 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:27 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:28 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:29 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:30 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:31 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:32 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:33 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:34 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:35 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:36 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:37 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:38 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:39 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:40 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:41 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:42 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:43 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:44 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:45 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:46 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:47 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:48 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:49 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:50 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:51 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:52 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:53 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:54 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:55 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:56 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:57 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:58 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:59 --:--:--     0100   290  100   290    0     0      4      0  0:01:12  0:01:00  0:00:12    59
-Datacollection finished. Export located at </home/vr/github/abench-management-console/submodules/a-bench/results/20190628_14_49_45_experiment_tag_sample_q29/experiment_tag_sample_q29.zip>
-[1;34m[A-Bench][0m Downloading the results of the experiment.          | [1;31m cus_collect [0m
-error: unable to upgrade connection: container not found ("bench-driver")
-error: bigbenchv2/results no such file or directory
-[1;34m[A-Bench][0m Download complete. Your data are located under <[1;34m/home/vr/github/abench-management-console/submodules/a-bench/results/20190628_14_49_45_experiment_tag_sample_q29[0m>
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-[1;34m[A-Bench][0m Cleaning the infrastructure.                        | [1;31m cus_clean [0m
-[1;34m[A-Bench][0m Experiment finished.                                | [1;31m cus_finish [0m
-The infrastructure was deployed successfully! Check the experiment results in submodules/a-bench/results
-[1;34m[A-Bench][0m Try to install all missing components...
-[1;34m[A-Bench][0m 8/8 programs are already installed. 0 new installed programs.
-[1;34m[A-Bench][0m Please restart your computer to complete the process.
-[1;34m[A-Bench][0m Preflight in progress...
-[x] git  detected.
-[x] docker  detected.
-[x] virtualbox  detected.
-[x] minikube  detected.
-[x] kubectl  detected.
-[x] helm  detected.
-[x] curl  detected.
-[x] cat  detected.
-
-
-
-
-Number of missing components: 0
-
-All components are available and the system should be ready for use.
-Deleting local Kubernetes cluster...
-Machine deleted.
-Starting local Kubernetes v1.10.0 cluster...
-Starting VM...
-Getting VM IP address...
-E0629 11:31:54.751077    7678 start.go:210] Error parsing version semver:  Version string empty
-Moving files into cluster...
-Setting up certs...
-Connecting to cluster...
-Setting up kubeconfig...
-Stopping extra container runtimes...
-Starting cluster components...
-Verifying kubelet health ...
-Verifying apiserver health ...Kubectl is now configured to use the cluster.
-Loading cached images from config file.
-
-
-Everything looks great. Please enjoy minikube!
-Unable to find image 'alpine:latest' locally
-latest: Pulling from library/alpine
-
-[1A[1K[K921b31ab772b: Pulling fs layer [1B[1A[1K[K921b31ab772b: Downloading [>                                                  ]  29.23kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=>                                                 ]  90.03kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [==>                                                ]  118.6kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=====>                                             ]    310kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=======>                                           ]  412.4kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [==========>                                        ]    564kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===========>                                       ]  654.1kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [============>                                      ]  682.7kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===============>                                   ]  883.4kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=================>                                 ]  981.7kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===================>                               ]   1.08MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=====================>                             ]  1.178MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [========================>                          ]  1.342MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===========================>                       ]  1.539MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=============================>                     ]  1.637MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=============================>                     ]   1.67MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [================================>                  ]  1.834MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===================================>               ]  1.969MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=====================================>             ]  2.067MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=====================================>             ]    2.1MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [========================================>          ]  2.268MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===========================================>       ]  2.407MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [============================================>      ]  2.505MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [================================================>  ]  2.702MB/2.79MB[1B[1A[1K[K921b31ab772b: Verifying Checksum [1B[1A[1K[K921b31ab772b: Download complete [1B[1A[1K[K921b31ab772b: Extracting [>                                                  ]  32.77kB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [============>                                      ]  720.9kB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [===================================>               ]  1.999MB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [================================================>  ]   2.72MB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [==================================================>]   2.79MB/2.79MB[1B[1A[1K[K921b31ab772b: Pull complete [1BDigest: sha256:ca1c944a4f8486a153024d9965aafbe24f5723c1d5c02f4964c045a16d19dc54
-Status: Downloaded newer image for alpine:latest
-Sat Jun 29 09:36:00 UTC 2019
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-addon-manager was successfully enabled
-default-storageclass was successfully enabled
-dashboard was successfully enabled
-storage-provisioner was successfully enabled
-heapster was successfully enabled
-$HELM_HOME has been configured at /home/vr/.helm.
-
-Tiller (the Helm server-side component) has been installed into your Kubernetes Cluster.
-
-Please note: by default, Tiller is deployed with an insecure 'allow unauthenticated users' policy.
-To prevent this, run `helm init` with the --tiller-tls-verify flag.
-For more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation
-Happy Helming!
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-deployment.apps/influxdb-client created
-service/influxdb-client created
-  2 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (0/40)
-  3 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (1/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (2/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (3/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (4/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (5/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (6/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (7/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (8/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (9/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (10/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (11/40)
-  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (12/40)
-  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (13/40)
-  10 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (14/40)
-  10 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (15/40)
-  10 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (16/40)
- All expected Pods are running. Seems that the system is in a good mode and ready to proceed further
-[1;34m[A-Bench][0m Startup procedure was successfully.
-[1;34m[A-Bench][0m If you like to interact with docker in minikube then remember to link your docker with the one in minikube.
-[1;34m[A-Bench][0m To do so, use the follwing command:
-                eval $(minikube docker-env)
-
-                
-fatal: destination path 'bigbenchv2' already exists and is not an empty directory.
-[14328:14328:0629/114009.666560:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-Opening http://127.0.0.1:40105/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/ in your default browser...
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: iceweasel: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: seamonkey: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: mozilla: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: epiphany: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: konqueror: not found
-[14460:14460:0629/114010.098603:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-Running Firefox as root in a regular user's session is not supported.  ($HOME is /home/vr which is owned by vr.)
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: iceweasel: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: seamonkey: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: mozilla: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: epiphany: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: konqueror: not found
-Already up to date.
-finish
-ENV-Looper-Experiment is starting now.
-Running q29
-Experiment TAG: #experiment_tag_sample
-[1;34m[A-Bench][0m Running defined experiment... 
-Query-Mapper has recognized a query for execution: q29
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
-mkdir: cannot create directory '/run/user/0': Permission denied
-mkdir: cannot create directory '/run/user/0': Permission denied
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libdconfsettings.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libgiognomeproxy.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libgiognutls.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/gio-modules/libgiolibproxy.so': File exists
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-Black/cursor.theme': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-Black/cursors': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/DMZ-Black/index.theme': File exists
--    | 9 [s]ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/Suru/index.theme': File exists
-ln: failed to create symbolic link '/root/snap/chromium/762/.local/share/icons/communitheme/index.theme': File exists
-\    | 9 [s]ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-am-et.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-broadway.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-cedilla.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-cyrillic-translit.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-fcitx.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ibus.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-inuktitut.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ipa.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-multipress.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-thai.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ti-er.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-ti-et.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-viqr.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-wayland.so': File exists
-ln: failed to create symbolic link '/root/snap/chromium/common/.cache/immodules/im-xim.so': File exists
-|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s][14495:14495:0629/114013.644631:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-[14389:14389:0629/114013.644625:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-|    | 7 [s][14983:14983:0629/114013.747095:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-[14986:14986:0629/114013.752909:ERROR:zygote_host_impl_linux.cc(89)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: google-chrome: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: www-browser: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: google-chrome: not found
-/    | 7 [s]/usr/bin/xdg-open: 851: /usr/bin/xdg-open: www-browser: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links2: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links2: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: elinks: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: elinks: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: lynx: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: w3m: not found
-xdg-open: no method available for opening 'http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s'
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: links: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: lynx: not found
-/usr/bin/xdg-open: 851: /usr/bin/xdg-open: w3m: not found
-xdg-open: no method available for opening 'http://127.0.0.1:40105/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/'
-failed to open browser: exit status 3-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_deploy [0m
-Error: release: "sql-mysql" not found
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]
-NAME:   sql-mysql
-LAST DEPLOYED: Sat Jun 29 11:40:53 2019
-NAMESPACE: default
-STATUS: DEPLOYED
-
-RESOURCES:
-==> v1/PersistentVolumeClaim
-NAME       STATUS  VOLUME                                    CAPACITY  ACCESS MODES  STORAGECLASS  AGE
-sql-mysql  Bound   pvc-fd860670-9a51-11e9-bd7c-080027fcec7f  8Gi       RWO           standard      3s
-
-==> v1/Service
-NAME       TYPE       CLUSTER-IP      EXTERNAL-IP  PORT(S)   AGE
-sql-mysql  ClusterIP  10.100.233.221  <none>       3306/TCP  3s
-
-==> v1beta1/Deployment
-NAME       DESIRED  CURRENT  UP-TO-DATE  AVAILABLE  AGE
-sql-mysql  1        1        1           0          3s
-
-==> v1/Pod(related)
-NAME                        READY  STATUS    RESTARTS  AGE
-sql-mysql-5b6ff9b9c4-4rk6r  0/1    Init:0/1  0         2s
-
-==> v1/Secret
-NAME       TYPE    DATA  AGE
-sql-mysql  Opaque  2     3s
-
-==> v1/ConfigMap
-NAME            DATA  AGE
-sql-mysql-test  1     3s
-
-
-NOTES:
-MySQL can be accessed via port 3306 on the following DNS name from within your cluster:
-sql-mysql.default.svc.cluster.local
-
-To get your root password run:
-
-    MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace default sql-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo)
-
-To connect to your database:
-
-1. Run an Ubuntu pod that you can use as a client:
-
-    kubectl run -i --tty ubuntu --image=ubuntu:16.04 --restart=Never -- bash -il
-
-2. Install the mysql client:
-
-    $ apt-get update && apt-get install mysql-client -y
-
-3. Connect using the mysql cli, then provide your password:
-    $ mysql -h sql-mysql -p
-
-To connect to your database directly from outside the K8s cluster:
-    MYSQL_HOST=127.0.0.1
-    MYSQL_PORT=3306
-
-    # Execute the following command to route the connection:
-    kubectl port-forward svc/sql-mysql 3306
-
-    mysql -h ${MYSQL_HOST} -P${MYSQL_PORT} -u root -p${MYSQL_ROOT_PASSWORD}
-    
-
-Error: release: "thadoop" not found

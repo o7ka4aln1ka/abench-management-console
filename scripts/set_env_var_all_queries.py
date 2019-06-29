@@ -1,11 +1,5 @@
 import os
 
-# os.environ['TEST_QUERIES'] = '1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 27 29 30'
-os.environ['TEST_QUERIES'] = '1'
+os.environ['TEST_QUERIES'] = 'q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 q13 q14 q15 q16 q17 q18 q19 q20 q21 q22 q23 q24 q25 q26 q27 q28 q29 q30'
 
-print('TEST_QUERIES = ', os.environ['TEST_QUERIES'])
-
-# print("----------------------------")
-
-# current environment variables
-# print(os.environ)
+print('All queries were selected and exported as ENV variable TEST_QUERIES = ', os.environ['TEST_QUERIES'])

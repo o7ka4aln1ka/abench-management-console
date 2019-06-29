@@ -39,11 +39,6 @@ def installRequirements():
    subprocess.call(['./scripts/install_requirements.sh'], shell=True)
    return redirect('http://127.0.0.1:5000/')
 
-@app.route("/activateScripts/", methods=['GET', 'POST'])
-def activateScripts():
-   subprocess.call(['./scripts/activate_scripts.sh'], shell=True)
-   return redirect('http://127.0.0.1:5000/')
-
 @app.route("/checkPreRequirements/", methods=['GET', 'POST'])
 def checkPreRequirements():
    subprocess.call(['./scripts/check_pre_requirements.sh'], shell=True)

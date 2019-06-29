@@ -27,4 +27,10 @@ echo All tools were installed! &&
 echo FutureApp repository will be downloaded for future use ...
 cd ~/github/abench-management-console && mkdir -p submodules && cd submodules && git clone https://github.com/FutureApp/a-bench.git &&
 echo Submodule FutureApp was successfully downloaded!
+
+cd ~/github/abench-management-console/scripts -type f -iname "*.sh" -exec chmod +x {}
+echo All .sh scripts were made executable
+cd ~/github/abench-management-console/scripts -type f -iname "*.py" -exec chmod +x {}
+echo All .py scripts were made executable
+
 ) 2>&1 | tee -a ~/github/abench-management-console/outputs/output-homepage.txt
