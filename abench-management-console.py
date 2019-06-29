@@ -143,15 +143,9 @@ def cpuChart():
     bar_labels=cpu_labels
     bar_values=cpu_values
 
-    # divide CPU Load y achse
-    myInt = 100000000
-    new_bar=[x / myInt for x in bar_values]
-
-    # convert date to strings
-    # start = int(''.join(c for c in cpu_labels[0] if c.isdigit()))
-    # end = int(''.join(c for c in cpu_labels[-1] if c.isdigit()))
-    # duration = end - start
-    # print(duration)
+    # CPU Load in percentage
+    maxCPUValue = max(cpu_values)
+    new_bar=[(x / maxCPUValue)*100 for x in bar_values]
 
     # calculate the duration
     date_time_str_start = bar_labels[0]
@@ -159,20 +153,13 @@ def cpuChart():
     date_time_str_end = bar_labels[-1]
     date_time_obj_end = datetime.datetime.strptime(date_time_str_end, '%Y-%m-%dT%H:%M:%SZ')
     cpu_duration = date_time_obj_end - date_time_obj_start
-    # print("CPU Duration: ", cpu_duration)
-    # start and end time and show hours and minutes
-    # print(date_time_obj_end)
-    # print(date_time_obj_start)
-    # hour = date_time_obj_end.hour - date_time_obj_start.hour
-    # minutes = date_time_obj_end.minute - date_time_obj_start.minute
-    # print('Hour difference : ', hour)
-    # print('Minutes difference : ', minutes)
     max_value = max(cpu_values) + 1000
+    print(max(cpu_values))
     templateData = {
         'time': timeString,
         'duration': cpu_duration
     }
-    return render_template('CPU_Density_Plot-v3.html', title='CPU Usage', max=max_value, labels=bar_labels, values=new_bar, **templateData)
+    return render_template('CPU_Density_Plot.html', title='CPU Usage', max=max_value, labels=bar_labels, values=new_bar, **templateData)
 
 @app.route('/memChart')
 def memChart():
@@ -186,9 +173,9 @@ def memChart():
     bar_labels=mem_labels
     bar_values=mem_values
 
-    # divide Memory Load y achse
-    myInt = 100000000
-    new_bar=[x / myInt for x in bar_values]
+    # Memory Load in percentage
+    maxMemValue = max(mem_values)
+    new_bar=[(x / maxMemValue)*100 for x in bar_values]
 
     # calculate the duration
     date_time_str_start = bar_labels[0]
@@ -202,7 +189,7 @@ def memChart():
         'time': timeString,
         'duration': mem_duration
     }
-    return render_template('Mem_Density_Plot-v3.html', title='RAM Usage', max=max_value, labels=bar_labels, values=new_bar, **templateData)
+    return render_template('Mem_Density_Plot.html', title='RAM Usage', max=max_value, labels=bar_labels, values=new_bar, **templateData)
 
 @app.route('/fileChart')
 def fileChart():
@@ -216,9 +203,9 @@ def fileChart():
     bar_labels=file_labels
     bar_values=file_values
 
-    # divide CPU Load y achse
-    myInt = 100000000
-    new_bar=[x / myInt for x in bar_values]
+    # Filesystem Load in percentage
+    maxFileValue = max(file_values)
+    new_bar=[(x / maxFileValue)*100 for x in bar_values]
 
     # calculate the duration
     date_time_str_start = bar_labels[0]
@@ -232,7 +219,7 @@ def fileChart():
         'time': timeString,
         'duration': file_duration
     }
-    return render_template('File_Density_Plot-v3.html', title='Filesystem Usage', max=max_value, labels=bar_labels, values=new_bar, **templateData)
+    return render_template('File_Density_Plot.html', title='Filesystem Usage', max=max_value, labels=bar_labels, values=new_bar, **templateData)
 
 # #######################################################################
 # testing foo
@@ -272,6 +259,32 @@ def prepare_results():
     # print ('Path to the results of last experiment is ' + in_path)
     # return render_template('test.html')
     return redirect('http://127.0.0.1:5000/')
+
+# -------------------------------------
+# def allowed_file(filename):
+#     return '.' in filename and \
+#            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+#
+# @app.route('/prepare_results/', methods=['GET', 'POST'])
+# def upload_file():
+#     if request.method == 'POST':
+#         # check if the post request has the file part
+#         if 'file' not in request.files:
+#             flash('No file part')
+#             return redirect(request.url)
+#         file = request.files['file']
+#         # if user does not select file, browser also
+#         # submit a empty part without filename
+#         if file.filename == '':
+#             flash('No selected file')
+#             return redirect(request.url)
+#         if file and allowed_file(file.filename):
+#             filename = secure_filename(file.filename)
+#             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+#             return redirect(url_for('uploaded_file',
+#                                     filename=filename))
+#     return redirect('http://127.0.0.1:5000/')
+
 
 # find experiment#01.zip and upload it to directory experiment_results
 # @app.route('/uploader', methods = ['GET', 'POST'])

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }}</title>
+  <title>Memory Usage</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
@@ -43,10 +43,6 @@
       <div class="memChartDiv">
         <canvas id="memChart" width="250" height="75"></canvas>
         <h2>Duration: {{ duration }} minutes</h2>
-
-        <!-- <button class="button" onClick="window.location.reload();">Reset Zoom</button> -->
-        <!-- <button onclick="resetZoom()">Reset Zoom</button> -->
-    		<!-- <button id="drag-switch" onclick="toggleDragMode()">Disable drag mode</button> -->
       </div>
 
       <script type="text/javascript">

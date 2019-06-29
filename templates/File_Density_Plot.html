@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{ title }}</title>
+  <title>Filesystem Usage</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
@@ -43,10 +43,6 @@
       <div class="fileChartDiv">
       <canvas id="fileChart" width="250" height="75"></canvas>
       <h2>Duration: {{ duration }} minutes</h2>
-
-      <!-- <button class="button" onClick="window.location.reload();">Reset Zoom</button> -->
-      <!-- <button onclick="resetZoom()">Reset Zoom</button> -->
-  		<!-- <button id="drag-switch" onclick="toggleDragMode()">Disable drag mode</button> -->
       </div>
 
       <script type="text/javascript">
@@ -81,7 +77,6 @@
       };
 
       var lineChart = new Chart(fileCanvas, {
-        // zoomEnabled: true,
         type: 'line',
         data: fileData,
         // options: chartOptions
@@ -117,27 +112,6 @@
                   }
                 }]
             }
-            // Container for pan options
-            // pan: {
-            //     enabled: true,
-            //     mode: 'x'
-            //     // speed: 1
-            // },
-            //
-            // // Container for zoom options
-            // zoom: {
-            //     // Boolean to enable zooming
-            //     enabled: true,
-            //     mode: 'xy',
-            //     rangeMin: {
-            // 				// Format of min zoom range depends on scale type
-            // 				x: 0,
-            // 				y: 0
-            //       },
-            //       // speed: 10,
-            //       sensitivity: 5
-            //       // drag: true
-            // }
         }
       });
 

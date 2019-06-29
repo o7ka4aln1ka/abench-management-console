@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>{{ title }}</title>
+    <title>ABench Management Console</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -19,12 +19,6 @@
         <code>
         <br>
         <div id="headerLeft">
-          <!-- <div class="hvrbox">
-          	<img src="/static/Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120" onclick="parent.open('http://www.goethe-university-frankfurt.de/en?locale=en')" alt="Mountains" class="hvrbox-layer_bottom">
-          	<div class="hvrbox-layer_top">
-          		<div class="hvrbox-text">Visit Goethe University's Webpage</div>
-          	</div>
-          </div> -->
           <img src="/static/Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120" onclick="parent.open('http://www.goethe-university-frankfurt.de/en?locale=en')">
         </div>
         <div id="headerCenter">
@@ -32,12 +26,6 @@
           <h2>Last update: {{ time }}</h2>
         </div>
         <div id="headerRight">
-          <!-- <div class="hvrbox">
-            <img src="/static/big-data-lab-banner.jpg" width="350" height="60" alt="Mountains" class="hvrbox-layer_bottom" onclick="parent.open('http://www.bigdata.uni-frankfurt.de/')">
-            <div class="hvrbox-layer_top">
-              <div class="hvrbox-text">Visit Big Data Labs' Webpage</div>
-            </div>
-          </div> -->
           <img src="/static/big-data-lab-banner.jpg" width="350" height="60" onclick="parent.open('http://www.bigdata.uni-frankfurt.de/')">
         </div>
     </code>
@@ -67,7 +55,7 @@
             <div id="rightInnerSection">
                 <h3>Analyse</h3>
                 <div class="btn-group">
-                    <button id="prepare_results" data-balloon="Extracts the data needed for all charts from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/prepare_results'">Prepare results</button>
+                    <button id="prepare_results" data-balloon="Extracts the data needed for all charts from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/prepare_results'">Load results</button>
                     <button id="cpuChart" data-balloon="Chart with CPU usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage</button>
                     <button id="memChart" data-balloon="Chart with memory usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage</button>
                     <button id="fileChart" data-balloon="Chart with filesystem usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage</button>
