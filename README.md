@@ -14,6 +14,9 @@
 This is my master thesis project. The main goal is to make installing, setting up and implementing the Big Data Benchmark A-Bench easier and to automate the process as much as possible.
 Using html, python3.6, flask, pandas and some other tools I created a WebUI management console for easier control over the setup of the infrastructure, running the benchmark and visualizing the results in a few charts which gives information about some metrics like CPU, memory and file system usage.
 
+![alt text](https://github.com/o7ka4aln1ka/abench-management-console/blob/master/ABench-Management-Console%20Homepage.png)
+
+
 <a name="req"></a>
 ## Requirements:
 *  Iternet connection
