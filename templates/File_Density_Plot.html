@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Filesystem Usage</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filesystem Usage</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-charts-v2.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-charts.css') }}">
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-
-  <!-- testing zoom in and out -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.0"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://npmcdn.com/Chart.Zoom.js@0.3.0/Chart.Zoom.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-
 </head>
 
 <body>
 <header>
-    <code>
-      <br>
-      <div id="headerLeft">
-        <img src="/static/Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120" onclick="parent.open('http://www.goethe-university-frankfurt.de/en?locale=en')">
-      </div>
-      <div id="headerCenter">
-        <h1>ABench Management Console</h1>
-        <h2>Last update: {{ time }}</h2>
-      </div>
-      <div id="headerRight">
-        <img src="/static/big-data-lab-banner.jpg" width="350" height="60" onclick="parent.open('http://www.bigdata.uni-frankfurt.de/')">
-      </div>
-    </code>
+  <code>
+    <br>
+    <div id="headerLeft">
+      <img src="/static/Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120" onclick="parent.open('http://www.goethe-university-frankfurt.de/en?locale=en')">
+    </div>
+    <div id="headerCenter">
+      <h1>ABench Management Console</h1>
+      <h2>Last update: {{ time }}</h2>
+    </div>
+    <div id="headerRight">
+      <img src="/static/big-data-lab-banner.jpg" width="350" height="60" onclick="parent.open('http://www.bigdata.uni-frankfurt.de/')">
+    </div>
+  </code>
 </header>
 
 <section>
@@ -94,7 +85,7 @@
                 yAxes: [{
                   scaleLabel: {
                       display: true,
-                      labelString: 'Filesystem Load',
+                      labelString: 'Filesystem Load in %',
                       fontSize: 20,
                       fontFamily: 'Lato'
                     },
@@ -157,5 +148,4 @@
       </div>
   </div>
 </body>
-
 </html>

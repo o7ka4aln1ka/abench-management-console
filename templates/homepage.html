@@ -6,8 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-homepage-v2.css') }}">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-homepage.css') }}">
     <link rel="stylesheet" href="static/css/balloon.min.css">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <!-- auto refresh homepage every 15 seconds -->
@@ -16,7 +15,7 @@
 
 <body>
     <header>
-        <code>
+      <code>
         <br>
         <div id="headerLeft">
           <img src="/static/Logo-Goethe-University-Frankfurt-am-Main.svg.png" width="200" height="120" onclick="parent.open('http://www.goethe-university-frankfurt.de/en?locale=en')">
@@ -28,7 +27,7 @@
         <div id="headerRight">
           <img src="/static/big-data-lab-banner.jpg" width="350" height="60" onclick="parent.open('http://www.bigdata.uni-frankfurt.de/')">
         </div>
-    </code>
+      </code>
     </header>
 
     <section>
@@ -45,18 +44,30 @@
             <div id="centerInnerSection">
                 <h3>Run</h3>
                 <div class="btn-group">
-                    <button id="foo" data-balloon="testing foo" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/foo'">testing foo</button>
                     <button id="config" data-balloon="Choose which queries to be run in an experiment" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/config'">Configuration</button>
                     <button id="run_a_sample_experiment" data-balloon="Start a single run experiment with one query" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
                 </div>
-            </div>
+              </div>
             <div id="rightInnerSection">
                 <h3>Analyse</h3>
                 <div class="btn-group">
-                    <button id="prepare_results" data-balloon="Extracts the data needed for all charts from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/prepare_results'">Load results</button>
+
+                  <label class="custom-file-upload" data-balloon="Navigate to /abench-management-console/submodules/a-bench/results and choose which experiment results to analyse" data-balloon-pos="up" >
+                    <form action="http://127.0.0.1:5000/prepare_results/" method="post" enctype="multipart/form-data">
+                      <div >Load results</div>
+                      <input id="prepare_results" type="file" onchange="this.form.submit()" name='myFile'/>
+                    </form>
+                  </label>
+
+                  <script>
+                  $('.btn-group').bind("click" , function () {
+                      $('#prepare_results').click();
+                  });
+                  </script>
                     <button id="cpuChart" data-balloon="Chart with CPU usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage</button>
                     <button id="memChart" data-balloon="Chart with memory usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage</button>
                     <button id="fileChart" data-balloon="Chart with filesystem usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage</button>
+
                 </div>
             </div>
 
@@ -72,6 +83,7 @@
                   objDiv.scrollTop = objDiv.scrollHeight;
                 </script>
             </div>
+        </div>
     </section>
 
 
@@ -96,5 +108,4 @@
         </div>
     </div>
 </body>
-
 </html>

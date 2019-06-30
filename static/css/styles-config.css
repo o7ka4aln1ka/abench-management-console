@@ -31,22 +31,23 @@ h1 {
   font-family: arial;
   color: black;
   font-size: 40px;
-  /* display: inline; */
 }
 
 h2 {
+  font-family: arial;
   color: black;
   font-size: 15px;
-  /* display: inline; */
 }
 
 h3 {
+  font-family: arial;
   align: center;
   color: black;
   font-size: 20px;
 }
 
 h4 {
+  font-family: arial;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -106,7 +107,6 @@ aside {
   	float:left;
   	height:600px;
     border-radius: 25px;
-  	/* border-right: 1vw solid #F5E5D6; */
     box-sizing: border-box;
     margin: 30px 35px 30px 35px;
     padding:0;
