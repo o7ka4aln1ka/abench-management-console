@@ -13,7 +13,11 @@ import shutil
 from tkinter import *
 from tkinter import filedialog
 
-# set path to upload experiment#01.zip
+# import sys
+# reload(sys)
+# sys.setdefaultencoding('utf-8')
+
+# set path to upload experiment_tag_sample_qXX.zip
 UPLOAD_FOLDER = './experiment_results'
 basepath = os.path.abspath(".")
 
