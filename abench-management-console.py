@@ -13,10 +13,10 @@ import shutil
 from tkinter import *
 from tkinter import filedialog
 
-# set the encoding to utf-8
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+# set the encoding to utf-8 (uncomment if there is an error with the encoding shown on browser)
+# import sys
+# reload(sys)
+# sys.setdefaultencoding('utf-8')
 
 # set path to upload experiment_tag_sample_qXX.zip
 UPLOAD_FOLDER = './experiment_results'
