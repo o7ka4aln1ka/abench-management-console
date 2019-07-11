@@ -104,16 +104,6 @@
         }
       });
 
-      window.resetZoom = function() {
-			window.myLine.resetZoom();
-  		};
-  		window.toggleDragMode = function() {
-  			var chart = window.myLine;
-  			var zoomOptions = chart.options.plugins.zoom.zoom;
-  			zoomOptions.drag = !zoomOptions.drag;
-  			chart.update();
-  			document.getElementById('drag-switch').innerText = zoomOptions.drag ? 'Disable drag mode' : 'Enable drag mode';
-  		};
   		window.onload = function() {
   			var ctx = document.getElementById('cpuChart').getContext('2d');
   			window.myLine = new window.Chart(ctx, lineChart);
