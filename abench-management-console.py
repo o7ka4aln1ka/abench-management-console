@@ -128,6 +128,11 @@ def run_a_sample_experiment():
     subprocess.call(['./scripts/run_a_sample_experiment.sh'], shell=True)
     return redirect('http://127.0.0.1:5000/')
 
+@app.route("/run_a_specific_experiment/", methods=['GET', 'POST'])
+def run_a_specific_experiment():
+    subprocess.call(['./scripts/run_a_specific_experiment.sh'], shell=True)
+    return redirect('http://127.0.0.1:5000/')
+
 # CPU, Memory and Filesystem charts
 @app.route('/cpuChart')
 def cpuChart():

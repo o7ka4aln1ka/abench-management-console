@@ -2,7 +2,7 @@
 
 # run an experiment with selected queries
 (
-. ~/github/abench-management-console/scripts/env_q29.txt
+. ~/github/abench-management-console/scripts/env.txt
 echo Selected queires were setted up as ENV VAR &&
 cd ~/github/abench-management-console/submodules/a-bench/ &&
 echo Starting Experiment: &&
