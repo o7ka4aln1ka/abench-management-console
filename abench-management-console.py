@@ -226,17 +226,21 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route("/prepare_results/", methods=['GET', 'POST'])
 def prepare_results():
     file = request.files['myFile']
+    print("File: " + file)
+
     subprocess.call(["mkdir", "tmp"])
     filePath = os.path.join("./tmp", file.filename)
+    print("Filepath " + filePath)
+
     file.save(filePath)
-    subprocess.call(['chmod', '-R', '777', filePath])
+    subprocess.call(['chmod', '777', '.', filePath])
     with zipfile.ZipFile(filePath, 'r') as zf:
        for file in zf.namelist():
             if file.endswith("cpu_usage.txt") or file.endswith("memory_usage.txt") or file.endswith("filesystem_usage.txt"):
                 zf.extract(file, basepath + "/experiment_results")
     zf.close()
     os.chmod(basepath + "/experiment_results", 0o777)
-    shutil.rmtree("./tmp")
+    # shutil.rmtree("./tmp")
     print("Successfully loaded experiment data!")
     return redirect('http://127.0.0.1:5000/')
 

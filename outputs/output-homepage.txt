@@ -1,321 +1,6 @@
-Hit:1 http://linux.teamviewer.com/deb stable InRelease
-Hit:2 http://ppa.launchpad.net/alessandro-strada/ppa/ubuntu bionic InRelease
-Hit:3 http://uk-mirrors.evowise.com/ubuntu bionic InRelease
-Get:4 http://de.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
-Get:5 http://uk-mirrors.evowise.com/ubuntu bionic-updates InRelease [88,7 kB]
-Get:7 http://uk-mirrors.evowise.com/ubuntu bionic-security InRelease [88,7 kB]
-Get:8 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
-Hit:9 https://deb.nodesource.com/node_10.x bionic InRelease
-Get:10 https://download.docker.com/linux/ubuntu bionic InRelease [64,4 kB]
-Get:11 http://uk-mirrors.evowise.com/ubuntu bionic-backports InRelease [74,6 kB]
-Get:12 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 Packages [676 kB]
-Get:13 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main i386 Packages [555 kB]
-Hit:14 http://ppa.launchpad.net/fixnix/netspeed/ubuntu bionic InRelease
-Hit:15 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu bionic InRelease
-Get:16 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 DEP-11 Metadata [283 kB]
-Hit:17 http://ppa.launchpad.net/kasra-mp/ubuntu-indicator-weather/ubuntu bionic InRelease
-Hit:18 http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu bionic InRelease
-Get:19 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main DEP-11 48x48 Icons [66,7 kB]
-Get:20 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main DEP-11 64x64 Icons [134 kB]
-Get:22 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe amd64 Packages [964 kB]
-Get:21 http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease [15,4 kB]
-Get:23 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe i386 Packages [948 kB]
-Get:24 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe amd64 DEP-11 Metadata [250 kB]
-Get:25 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe DEP-11 48x48 Icons [206 kB]
-Get:26 http://uk-mirrors.evowise.com/ubuntu bionic-updates/universe DEP-11 64x64 Icons [414 kB]
-Get:27 http://uk-mirrors.evowise.com/ubuntu bionic-updates/multiverse amd64 DEP-11 Metadata [2.468 B]
-Get:28 http://uk-mirrors.evowise.com/ubuntu bionic-security/main amd64 DEP-11 Metadata [24,1 kB]
-Get:29 http://uk-mirrors.evowise.com/ubuntu bionic-security/main DEP-11 48x48 Icons [10,4 kB]
-Get:30 http://uk-mirrors.evowise.com/ubuntu bionic-security/main DEP-11 64x64 Icons [31,7 kB]
-Get:31 http://uk-mirrors.evowise.com/ubuntu bionic-security/universe amd64 DEP-11 Metadata [41,3 kB]
-Get:32 http://uk-mirrors.evowise.com/ubuntu bionic-security/universe DEP-11 48x48 Icons [16,4 kB]
-Get:33 http://uk-mirrors.evowise.com/ubuntu bionic-security/universe DEP-11 64x64 Icons [105 kB]
-Get:34 http://uk-mirrors.evowise.com/ubuntu bionic-security/multiverse amd64 DEP-11 Metadata [2.464 B]
-Get:35 http://uk-mirrors.evowise.com/ubuntu bionic-backports/universe amd64 DEP-11 Metadata [7.224 B]
-Hit:6 https://packages.cloud.google.com/apt kubernetes-xenial InRelease
-Reading package lists...
-E: Repository 'http://ppa.launchpad.net/webupd8team/java/ubuntu bionic InRelease' changed its 'Label' value from 'Oracle Java (JDK) 8 Installer PPA' to 'Oracle Java (JDK) 8 Installer PPA (DISCONTINUED)'
-W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:55 and /etc/apt/sources.list.d/kubernetes.list:1
-Reading package lists...
-Building dependency tree...
-Reading state information...
-Calculating upgrade...
-The following packages have been kept back:
-  kubeadm kubectl kubelet kubernetes-cni
-The following packages will be upgraded:
-  dkms gir1.2-gst-plugins-base-1.0 gir1.2-gstreamer-1.0 gstreamer1.0-alsa
-  gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-plugins-base
-  gstreamer1.0-plugins-base-apps gstreamer1.0-plugins-good
-  gstreamer1.0-pulseaudio gstreamer1.0-tools gstreamer1.0-x
-  libgstreamer-gl1.0-0 libgstreamer-plugins-base1.0-0
-  libgstreamer-plugins-good1.0-0 libgstreamer1.0-0
-16 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Need to get 4.691 kB of archives.
-After this operation, 76,8 kB of additional disk space will be used.
-Get:1 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 dkms all 2.3-3ubuntu9.3 [68,1 kB]
-Get:2 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 libgstreamer1.0-0 amd64 1.14.4-1~ubuntu18.04.1 [862 kB]
-Get:3 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gir1.2-gstreamer-1.0 amd64 1.14.4-1~ubuntu18.04.1 [71,6 kB]
-Get:4 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 libgstreamer-plugins-base1.0-0 amd64 1.14.4-1ubuntu1.1~ubuntu18.04.1 [684 kB]
-Get:5 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 libgstreamer-gl1.0-0 amd64 1.14.4-1ubuntu1.1~ubuntu18.04.1 [147 kB]
-Get:6 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gir1.2-gst-plugins-base-1.0 amd64 1.14.4-1ubuntu1.1~ubuntu18.04.1 [82,7 kB]
-Get:7 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gstreamer1.0-alsa amd64 1.14.4-1ubuntu1.1~ubuntu18.04.1 [35,5 kB]
-Get:8 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gstreamer1.0-gl amd64 1.14.4-1ubuntu1.1~ubuntu18.04.1 [83,9 kB]
-Get:9 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gstreamer1.0-gtk3 amd64 1.14.4-1ubuntu1~ubuntu18.04.1 [59,5 kB]
-Get:10 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gstreamer1.0-plugins-base amd64 1.14.4-1ubuntu1.1~ubuntu18.04.1 [585 kB]
-Get:11 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gstreamer1.0-tools amd64 1.14.4-1~ubuntu18.04.1 [40,7 kB]
-Get:12 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gstreamer1.0-plugins-base-apps amd64 1.14.4-1ubuntu1.1~ubuntu18.04.1 [67,5 kB]
-Get:13 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gstreamer1.0-plugins-good amd64 1.14.4-1ubuntu1~ubuntu18.04.1 [1.686 kB]
-Get:14 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 libgstreamer-plugins-good1.0-0 amd64 1.14.4-1ubuntu1~ubuntu18.04.1 [59,6 kB]
-Get:15 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gstreamer1.0-pulseaudio amd64 1.14.4-1ubuntu1~ubuntu18.04.1 [83,4 kB]
-Get:16 http://uk-mirrors.evowise.com/ubuntu bionic-updates/main amd64 gstreamer1.0-x amd64 1.14.4-1ubuntu1.1~ubuntu18.04.1 [74,2 kB]
-Fetched 4.691 kB in 15s (306 kB/s)
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 201787 files and directories currently installed.)
-Preparing to unpack .../00-dkms_2.3-3ubuntu9.3_all.deb ...
-Unpacking dkms (2.3-3ubuntu9.3) over (2.3-3ubuntu9.2) ...
-Preparing to unpack .../01-libgstreamer1.0-0_1.14.4-1~ubuntu18.04.1_amd64.deb ...
-Unpacking libgstreamer1.0-0:amd64 (1.14.4-1~ubuntu18.04.1) over (1.14.1-1~ubuntu18.04.2) ...
-Preparing to unpack .../02-gir1.2-gstreamer-1.0_1.14.4-1~ubuntu18.04.1_amd64.deb ...
-Unpacking gir1.2-gstreamer-1.0:amd64 (1.14.4-1~ubuntu18.04.1) over (1.14.1-1~ubuntu18.04.2) ...
-Preparing to unpack .../03-libgstreamer-plugins-base1.0-0_1.14.4-1ubuntu1.1~ubuntu18.04.1_amd64.deb ...
-Unpacking libgstreamer-plugins-base1.0-0:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.2) ...
-Preparing to unpack .../04-libgstreamer-gl1.0-0_1.14.4-1ubuntu1.1~ubuntu18.04.1_amd64.deb ...
-Unpacking libgstreamer-gl1.0-0:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.2) ...
-Preparing to unpack .../05-gir1.2-gst-plugins-base-1.0_1.14.4-1ubuntu1.1~ubuntu18.04.1_amd64.deb ...
-Unpacking gir1.2-gst-plugins-base-1.0:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.2) ...
-Preparing to unpack .../06-gstreamer1.0-alsa_1.14.4-1ubuntu1.1~ubuntu18.04.1_amd64.deb ...
-Unpacking gstreamer1.0-alsa:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.2) ...
-Preparing to unpack .../07-gstreamer1.0-gl_1.14.4-1ubuntu1.1~ubuntu18.04.1_amd64.deb ...
-Unpacking gstreamer1.0-gl:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.2) ...
-Preparing to unpack .../08-gstreamer1.0-gtk3_1.14.4-1ubuntu1~ubuntu18.04.1_amd64.deb ...
-Unpacking gstreamer1.0-gtk3:amd64 (1.14.4-1ubuntu1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.1) ...
-Preparing to unpack .../09-gstreamer1.0-plugins-base_1.14.4-1ubuntu1.1~ubuntu18.04.1_amd64.deb ...
-Unpacking gstreamer1.0-plugins-base:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.2) ...
-Preparing to unpack .../10-gstreamer1.0-tools_1.14.4-1~ubuntu18.04.1_amd64.deb ...
-Unpacking gstreamer1.0-tools (1.14.4-1~ubuntu18.04.1) over (1.14.1-1~ubuntu18.04.2) ...
-Preparing to unpack .../11-gstreamer1.0-plugins-base-apps_1.14.4-1ubuntu1.1~ubuntu18.04.1_amd64.deb ...
-Unpacking gstreamer1.0-plugins-base-apps (1.14.4-1ubuntu1.1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.2) ...
-Preparing to unpack .../12-gstreamer1.0-plugins-good_1.14.4-1ubuntu1~ubuntu18.04.1_amd64.deb ...
-Unpacking gstreamer1.0-plugins-good:amd64 (1.14.4-1ubuntu1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.1) ...
-Preparing to unpack .../13-libgstreamer-plugins-good1.0-0_1.14.4-1ubuntu1~ubuntu18.04.1_amd64.deb ...
-Unpacking libgstreamer-plugins-good1.0-0:amd64 (1.14.4-1ubuntu1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.1) ...
-Preparing to unpack .../14-gstreamer1.0-pulseaudio_1.14.4-1ubuntu1~ubuntu18.04.1_amd64.deb ...
-Unpacking gstreamer1.0-pulseaudio:amd64 (1.14.4-1ubuntu1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.1) ...
-Preparing to unpack .../15-gstreamer1.0-x_1.14.4-1ubuntu1.1~ubuntu18.04.1_amd64.deb ...
-Unpacking gstreamer1.0-x:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) over (1.14.1-1ubuntu1~ubuntu18.04.2) ...
-Setting up libgstreamer1.0-0:amd64 (1.14.4-1~ubuntu18.04.1) ...
-Setcap worked! gst-ptp-helper is not suid!
-Setting up gstreamer1.0-tools (1.14.4-1~ubuntu18.04.1) ...
-Setting up dkms (2.3-3ubuntu9.3) ...
-Installing new version of config file /etc/kernel/header_postinst.d/dkms ...
-Installing new version of config file /etc/kernel/postinst.d/dkms ...
-Processing triggers for libc-bin (2.27-3ubuntu1) ...
-Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
-Setting up gir1.2-gstreamer-1.0:amd64 (1.14.4-1~ubuntu18.04.1) ...
-Setting up libgstreamer-plugins-base1.0-0:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) ...
-Setting up gstreamer1.0-plugins-base:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) ...
-Setting up gstreamer1.0-pulseaudio:amd64 (1.14.4-1ubuntu1~ubuntu18.04.1) ...
-Setting up libgstreamer-gl1.0-0:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) ...
-Setting up gstreamer1.0-gl:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) ...
-Setting up gir1.2-gst-plugins-base-1.0:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) ...
-Setting up gstreamer1.0-plugins-base-apps (1.14.4-1ubuntu1.1~ubuntu18.04.1) ...
-Setting up gstreamer1.0-x:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) ...
-Setting up libgstreamer-plugins-good1.0-0:amd64 (1.14.4-1ubuntu1~ubuntu18.04.1) ...
-Setting up gstreamer1.0-alsa:amd64 (1.14.4-1ubuntu1.1~ubuntu18.04.1) ...
-Setting up gstreamer1.0-gtk3:amd64 (1.14.4-1ubuntu1~ubuntu18.04.1) ...
-Setting up gstreamer1.0-plugins-good:amd64 (1.14.4-1ubuntu1~ubuntu18.04.1) ...
-Processing triggers for libc-bin (2.27-3ubuntu1) ...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following additional packages will be installed:
-  conntrack kubernetes-cni
-The following NEW packages will be installed:
-  conntrack
-The following held packages will be changed:
-  kubeadm kubectl kubelet
-The following packages will be upgraded:
-  kubeadm kubectl kubelet kubernetes-cni
-4 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
-E: Held packages were changed and -y was used without --allow-change-held-packages.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-virtualbox is already the newest version (5.2.18-dfsg-2~ubuntu18.04.5).
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following packages were automatically installed and are no longer required:
-  bridge-utils ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-The following additional packages will be installed:
-  containerd.io docker-ce-cli
-The following packages will be REMOVED:
-  containerd docker.io runc
-The following NEW packages will be installed:
-  containerd.io docker-ce docker-ce-cli
-0 upgraded, 3 newly installed, 3 to remove and 4 not upgraded.
-Need to get 53,2 MB of archives.
-After this operation, 3.909 kB disk space will be freed.
-Get:1 https://download.docker.com/linux/ubuntu bionic/stable amd64 containerd.io amd64 1.2.6-3 [22,6 MB]
-Get:2 https://download.docker.com/linux/ubuntu bionic/stable amd64 docker-ce-cli amd64 5:18.09.7~3-0~ubuntu-bionic [13,2 MB]
-Get:3 https://download.docker.com/linux/ubuntu bionic/stable amd64 docker-ce amd64 5:18.09.7~3-0~ubuntu-bionic [17,4 MB]
-Fetched 53,2 MB in 54s (988 kB/s)
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 201786 files and directories currently installed.)
-Removing docker.io (18.09.5-0ubuntu1~18.04.2) ...
-'/usr/share/docker.io/contrib/nuke-graph-directory.sh' -> '/var/lib/docker/nuke-graph-directory.sh'
-Removing containerd (1.2.6-0ubuntu1~18.04.1) ...
-Removing runc (1.0.0~rc7+git20190403.029124da-0ubuntu1~18.04.1) ...
-Selecting previously unselected package containerd.io.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 201543 files and directories currently installed.)
-Preparing to unpack .../containerd.io_1.2.6-3_amd64.deb ...
-Unpacking containerd.io (1.2.6-3) ...
-Selecting previously unselected package docker-ce-cli.
-Preparing to unpack .../docker-ce-cli_5%3a18.09.7~3-0~ubuntu-bionic_amd64.deb ...
-Unpacking docker-ce-cli (5:18.09.7~3-0~ubuntu-bionic) ...
-Selecting previously unselected package docker-ce.
-Preparing to unpack .../docker-ce_5%3a18.09.7~3-0~ubuntu-bionic_amd64.deb ...
-Unpacking docker-ce (5:18.09.7~3-0~ubuntu-bionic) ...
-Setting up containerd.io (1.2.6-3) ...
-Processing triggers for ureadahead (0.100.0-21) ...
-ureadahead will be reprofiled on next reboot
-Processing triggers for systemd (237-3ubuntu10.23) ...
-Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
-Setting up docker-ce-cli (5:18.09.7~3-0~ubuntu-bionic) ...
-Setting up docker-ce (5:18.09.7~3-0~ubuntu-bionic) ...
-Installing new version of config file /etc/init.d/docker ...
-Installing new version of config file /etc/init/docker.conf ...
-update-alternatives: using /usr/bin/dockerd-ce to provide /usr/bin/dockerd (dockerd) in auto mode
-Job for docker.service failed because the control process exited with error code.
-See "systemctl status docker.service" and "journalctl -xe" for details.
-invoke-rc.d: initscript docker, action "start" failed.
-● docker.service - Docker Application Container Engine
-   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
-   Active: activating (auto-restart) (Result: exit-code) since Sun 2019-06-30 19:27:27 CEST; 24ms ago
-     Docs: https://docs.docker.com
-  Process: 25503 ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock [0;1;31m(code=exited, status=1/FAILURE)[0m
- Main PID: 25503 (code=exited, status=1/FAILURE)
-dpkg: error processing package docker-ce (--configure):
- installed docker-ce package post-installation script subprocess returned error exit status 1
-Processing triggers for systemd (237-3ubuntu10.23) ...
-Processing triggers for ureadahead (0.100.0-21) ...
-Errors were encountered while processing:
- docker-ce
-E: Sub-process /usr/bin/dpkg returned an error code (1)
-Reading package lists...
-Building dependency tree...
-Reading state information...
-python-pip is already the newest version (9.0.1-2.3~ubuntu1.18.04.1).
-The following packages were automatically installed and are no longer required:
-  bridge-utils ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-1 not fully installed or removed.
-After this operation, 0 B of additional disk space will be used.
-Setting up docker-ce (5:18.09.7~3-0~ubuntu-bionic) ...
-update-alternatives: warning: forcing reinstallation of alternative /usr/bin/dockerd-ce because link group dockerd is broken
-W: APT had planned for dpkg to do more than it reported back (0 vs 4).
-   Affected packages: docker-ce:amd64
-Reading package lists...
-Building dependency tree...
-Reading state information...
-python3-pip is already the newest version (9.0.1-2.3~ubuntu1.18.04.1).
-The following packages were automatically installed and are no longer required:
-  bridge-utils ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-oracle-java8-set-default is already the newest version (8u201-1~webupd8~1).
-The following packages were automatically installed and are no longer required:
-  bridge-utils ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-
-Usage:   
-  pip install [options] <requirement specifier> [package-index-options] ...
-  pip install [options] -r <requirements file> [package-index-options] ...
-  pip install [options] [-e] <vcs project url> ...
-  pip install [options] [-e] <local project path> ...
-  pip install [options] <archive url/path> ...
-
-no such option: -y
-Reading package lists...
-Building dependency tree...
-Reading state information...
-coreutils is already the newest version (8.28-1ubuntu1).
-The following packages were automatically installed and are no longer required:
-  bridge-utils ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-curl is already the newest version (7.58.0-2ubuntu3.7).
-The following packages were automatically installed and are no longer required:
-  bridge-utils ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-python3.6 is already the newest version (3.6.8-1~18.04.1).
-The following packages were automatically installed and are no longer required:
-  bridge-utils ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Reading package lists...
-Building dependency tree...
-Reading state information...
-nodejs is already the newest version (10.16.0-1nodesource1).
-The following packages were automatically installed and are no longer required:
-  bridge-utils ubuntu-fan
-Use 'sudo apt autoremove' to remove them.
-0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-npm WARN saveError ENOENT: no such file or directory, open '/home/vr/package.json'
-npm WARN enoent ENOENT: no such file or directory, open '/home/vr/package.json'
-npm WARN vr No description
-npm WARN vr No repository field.
-npm WARN vr No README data
-npm WARN vr No license field.
-
-+ chart.js@2.8.0
-updated 1 package and audited 18 packages in 1.036s
-found 0 vulnerabilities
-
-usage: sudo -h | -K | -k | -V
-usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
-usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
-            [command]
-usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
-            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
-usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
-            prompt] [-T timeout] [-u user] file ...
-fatal: destination path 'a-bench' already exists and is not an empty directory.
-All .sh scripts were made executable
-All .py scripts were made executable
+[1;34m[A-Bench][0m Try to install all missing components...
+[1;34m[A-Bench][0m 8/8 programs are already installed. 0 new installed programs.
+[1;34m[A-Bench][0m Please restart your computer to complete the process.
 Start deploying the infrastructure!
 [1;34m[A-Bench][0m Preflight in progress...
 [x] git  detected.
@@ -338,7 +23,7 @@ Machine deleted.
 Starting local Kubernetes v1.10.0 cluster...
 Starting VM...
 Getting VM IP address...
-E0630 20:29:21.692522   24293 start.go:210] Error parsing version semver:  Version string empty
+E1019 11:27:47.186198    7759 start.go:210] Error parsing version semver:  Version string empty
 Moving files into cluster...
 Setting up certs...
 Connecting to cluster...
@@ -354,9 +39,9 @@ Everything looks great. Please enjoy minikube!
 Unable to find image 'alpine:latest' locally
 latest: Pulling from library/alpine
 
-[1A[1K[K921b31ab772b: Pulling fs layer [1B[1A[1K[K921b31ab772b: Downloading [>                                                  ]  29.23kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===>                                               ]  204.2kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=====>                                             ]  310.4kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [======>                                            ]  375.5kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [============>                                      ]  678.6kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=================>                                 ]    949kB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===================>                               ]  1.113MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [======================>                            ]  1.244MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=========================>                         ]  1.408MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [============================>                      ]  1.596MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===============================>                   ]   1.76MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [==================================>                ]  1.924MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=====================================>             ]  2.088MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=======================================>           ]  2.219MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [==========================================>        ]   2.35MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=============================================>     ]  2.514MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [===============================================>   ]  2.677MB/2.79MB[1B[1A[1K[K921b31ab772b: Downloading [=================================================> ]  2.776MB/2.79MB[1B[1A[1K[K921b31ab772b: Verifying Checksum [1B[1A[1K[K921b31ab772b: Download complete [1B[1A[1K[K921b31ab772b: Extracting [>                                                  ]  32.77kB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [=======>                                           ]    426kB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [=======================>                           ]  1.311MB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [=========================================>         ]  2.327MB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [=================================================> ]  2.785MB/2.79MB[1B[1A[1K[K921b31ab772b: Extracting [==================================================>]   2.79MB/2.79MB[1B[1A[1K[K921b31ab772b: Pull complete [1BDigest: sha256:ca1c944a4f8486a153024d9965aafbe24f5723c1d5c02f4964c045a16d19dc54
+[1A[1K[K9d48c3bd43c5: Pulling fs layer [1B[1A[1K[K9d48c3bd43c5: Downloading [>                                                  ]  29.23kB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Downloading [==>                                                ]  147.1kB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Downloading [========>                                          ]  474.3kB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Downloading [=========>                                         ]  539.8kB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Downloading [===================>                               ]  1.113MB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Downloading [========================>                          ]  1.375MB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Downloading [===========================>                       ]  1.539MB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Downloading [=================================>                 ]  1.866MB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Downloading [======================================>            ]   2.17MB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Downloading [============================================>      ]  2.497MB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Downloading [=================================================> ]  2.776MB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Verifying Checksum [1B[1A[1K[K9d48c3bd43c5: Download complete [1B[1A[1K[K9d48c3bd43c5: Extracting [>                                                  ]  32.77kB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Extracting [==>                                                ]  131.1kB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Extracting [============>                                      ]  720.9kB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Extracting [=========================>                         ]  1.409MB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Extracting [==========================================>        ]  2.359MB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Extracting [==================================================>]   2.79MB/2.79MB[1B[1A[1K[K9d48c3bd43c5: Pull complete [1BDigest: sha256:72c42ed48c3a2db31b7dafe17d275b634664a708d901ec9fd57b1529280f01fb
 Status: Downloaded newer image for alpine:latest
-Sun Jun 30 18:31:00 UTC 2019
+Sat Oct 19 09:29:00 UTC 2019
 Execution will pause for 10 seconds.
 \    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
 addon-manager was successfully enabled
@@ -373,49 +58,18 @@ To prevent this, run `helm init` with the --tiller-tls-verify flag.
 For more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation
 Happy Helming!
 Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
+\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
 deployment.apps/influxdb-client created
 service/influxdb-client created
   4 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (0/40)
   4 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (1/40)
   5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (2/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (3/40)
-  5 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (4/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (5/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (6/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (7/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (8/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (9/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (10/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (11/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (12/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (13/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (14/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (15/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (16/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (17/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (18/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (19/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (20/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (21/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (22/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (23/40)
-  6 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (24/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (25/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (26/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (27/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (28/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (29/40)
-  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (30/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (31/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (32/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (33/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (34/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (35/40)
-  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (36/40)
-  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (37/40)
-  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (38/40)
-  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (39/40)
+  7 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (3/40)
+  8 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (4/40)
+  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (5/40)
+  9 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (6/40)
+  10 of 11 expected pods are available. Waiting 10 s for up-rising.     		Before timeout (7/40)
+ All expected Pods are running. Seems that the system is in a good mode and ready to proceed further
 [1;34m[A-Bench][0m Startup procedure was successfully.
 [1;34m[A-Bench][0m If you like to interact with docker in minikube then remember to link your docker with the one in minikube.
 [1;34m[A-Bench][0m To do so, use the follwing command:
@@ -424,13 +78,27 @@ service/influxdb-client created
                 
 The infrastructure was deployed successfully!
 fatal: destination path 'bigbenchv2' already exists and is not an empty directory.
-From https://github.com/FutureApp/bigbenchv2
-   135e123..e0a5dfc  master     -> origin/master
 error: Your local changes to the following files would be overwritten by merge:
+	README.md
+	a-bench_connector/charts/hadoop/templates/_helpers.yaml
+	a-bench_connector/charts/hadoop/templates/hadoop-configmap.yaml
+	a-bench_connector/charts/hadoop/templates/hdfs-dn-svc.yaml
+	a-bench_connector/charts/hadoop/templates/hdfs-nn-svc.yaml
+	a-bench_connector/charts/hadoop/templates/xhdfs-nn-statefulset.1.yaml
+	a-bench_connector/charts/hadoop/templates/xhdfs-nn-svc.1.yaml
+	a-bench_connector/charts/hadoop/values.yaml
 	a-bench_connector/images/hive/Dockerfile
+	a-bench_connector/images/hive/content/Dockerfile
+	a-bench_connector/images/hive/content/hive-site.xml
+	data/clicks.json
+	data/reviews.tbl
+	queries/q27.hql
+	queries/text
+	schema/CopyData2HDFS.sh
+	schema/HiveCreateSchema.sql
 Please commit your changes or stash them before you merge.
 Aborting
-Updating 135e123..e0a5dfc
+Updating 135e123..d207cde
 finish
 The BigBenchV2 submodule was successfully downloaded!
 Selected queires were setted up as ENV VAR
@@ -442,25 +110,17 @@ Experiment TAG: #experiment_tag_sample
 Query-Mapper has recognized a query for execution: q1
 [1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
 Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
+\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
 [1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_deploy [0m
 Error: release: "sql-mysql" not found
 Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]
+\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]
 NAME:   sql-mysql
-LAST DEPLOYED: Sun Jun 30 20:52:34 2019
+LAST DEPLOYED: Sat Oct 19 11:50:47 2019
 NAMESPACE: default
 STATUS: DEPLOYED
 
 RESOURCES:
-==> v1beta1/Deployment
-NAME       DESIRED  CURRENT  UP-TO-DATE  AVAILABLE  AGE
-sql-mysql  1        1        1           0          2s
-
-==> v1/Pod(related)
-NAME                        READY  STATUS    RESTARTS  AGE
-sql-mysql-5b6ff9b9c4-45twp  0/1    Init:0/1  0         2s
-
 ==> v1/Secret
 NAME       TYPE    DATA  AGE
 sql-mysql  Opaque  2     2s
@@ -471,11 +131,19 @@ sql-mysql-test  1     2s
 
 ==> v1/PersistentVolumeClaim
 NAME       STATUS  VOLUME                                    CAPACITY  ACCESS MODES  STORAGECLASS  AGE
-sql-mysql  Bound   pvc-3a0c83e2-9b68-11e9-b7c6-08002796b856  8Gi       RWO           standard      2s
+sql-mysql  Bound   pvc-ed3a8378-f255-11e9-9475-080027402384  8Gi       RWO           standard      2s
 
 ==> v1/Service
-NAME       TYPE       CLUSTER-IP      EXTERNAL-IP  PORT(S)   AGE
-sql-mysql  ClusterIP  10.107.240.102  <none>       3306/TCP  2s
+NAME       TYPE       CLUSTER-IP     EXTERNAL-IP  PORT(S)   AGE
+sql-mysql  ClusterIP  10.111.30.246  <none>       3306/TCP  2s
+
+==> v1beta1/Deployment
+NAME       DESIRED  CURRENT  UP-TO-DATE  AVAILABLE  AGE
+sql-mysql  1        1        1           0          2s
+
+==> v1/Pod(related)
+NAME                        READY  STATUS    RESTARTS  AGE
+sql-mysql-5b6ff9b9c4-m97kk  0/1    Init:0/1  0         2s
 
 
 NOTES:
@@ -510,458 +178,48 @@ To connect to your database directly from outside the K8s cluster:
     
 
 Error: release: "thadoop" not found
-Error: release thadoop failed: timed out waiting for the condition
-[1;34m[A-Bench][0m hadoop cluster started and named as < thadoop > ...
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]
-Execution will pause for 60 seconds.
-\    | 59 [s]|    | 59 [s]/    | 59 [s]-    | 59 [s]\    | 59 [s]|    | 59 [s]/    | 59 [s]-    | 59 [s]\    | 59 [s]|    | 59 [s]/    | 58 [s]-    | 58 [s]\    | 58 [s]|    | 58 [s]/    | 58 [s]-    | 58 [s]\    | 58 [s]|    | 58 [s]/    | 58 [s]-    | 58 [s]\    | 57 [s]|    | 57 [s]/    | 57 [s]-    | 57 [s]\    | 57 [s]|    | 57 [s]/    | 57 [s]-    | 57 [s]\    | 57 [s]|    | 57 [s]/    | 56 [s]-    | 56 [s]\    | 56 [s]|    | 56 [s]/    | 56 [s]-    | 56 [s]\    | 56 [s]|    | 56 [s]/    | 56 [s]-    | 56 [s]\    | 55 [s]|    | 55 [s]/    | 55 [s]-    | 55 [s]\    | 55 [s]|    | 55 [s]/    | 55 [s]-    | 55 [s]\    | 55 [s]|    | 55 [s]/    | 54 [s]-    | 54 [s]\    | 54 [s]|    | 54 [s]/    | 54 [s]-    | 54 [s]\    | 54 [s]|    | 54 [s]/    | 54 [s]-    | 54 [s]\    | 53 [s]|    | 53 [s]/    | 53 [s]-    | 53 [s]\    | 53 [s]|    | 53 [s]/    | 53 [s]-    | 53 [s]\    | 53 [s]|    | 53 [s]/    | 52 [s]-    | 52 [s]\    | 52 [s]|    | 52 [s]/    | 52 [s]-    | 52 [s]\    | 52 [s]|    | 52 [s]/    | 52 [s]-    | 52 [s]\    | 51 [s]|    | 51 [s]/    | 51 [s]-    | 51 [s]\    | 51 [s]|    | 51 [s]/    | 51 [s]-    | 51 [s]\    | 51 [s]|    | 51 [s]/    | 50 [s]-    | 50 [s]\    | 50 [s]|    | 50 [s]/    | 50 [s]-    | 50 [s]\    | 50 [s]|    | 50 [s]/    | 50 [s]-    | 50 [s]\    | 49 [s]|    | 49 [s]/    | 49 [s]-    | 49 [s]\    | 49 [s]|    | 49 [s]/    | 49 [s]-    | 49 [s]\    | 49 [s]|    | 49 [s]/    | 48 [s]-    | 48 [s]\    | 48 [s]|    | 48 [s]/    | 48 [s]-    | 48 [s]\    | 48 [s]|    | 48 [s]/    | 48 [s]-    | 48 [s]\    | 47 [s]|    | 47 [s]/    | 47 [s]-    | 47 [s]\    | 47 [s]|    | 47 [s]/    | 47 [s]-    | 47 [s]\    | 47 [s]|    | 47 [s]/    | 46 [s]-    | 46 [s]\    | 46 [s]|    | 46 [s]/    | 46 [s]-    | 46 [s]\    | 46 [s]|    | 46 [s]/    | 46 [s]-    | 46 [s]\    | 45 [s]|    | 45 [s]/    | 45 [s]-    | 45 [s]\    | 45 [s]|    | 45 [s]/    | 45 [s]-    | 45 [s]\    | 45 [s]|    | 45 [s]/    | 44 [s]-    | 44 [s]\    | 44 [s]|    | 44 [s]/    | 44 [s]-    | 44 [s]\    | 44 [s]|    | 44 [s]/    | 44 [s]-    | 44 [s]\    | 43 [s]|    | 43 [s]/    | 43 [s]-    | 43 [s]\    | 43 [s]|    | 43 [s]/    | 43 [s]-    | 43 [s]\    | 43 [s]|    | 43 [s]/    | 42 [s]-    | 42 [s]\    | 42 [s]|    | 42 [s]/    | 42 [s]-    | 42 [s]\    | 42 [s]|    | 42 [s]/    | 42 [s]-    | 42 [s]\    | 41 [s]|    | 41 [s]/    | 41 [s]-    | 41 [s]\    | 41 [s]|    | 41 [s]/    | 41 [s]-    | 41 [s]\    | 41 [s]|    | 41 [s]/    | 40 [s]-    | 40 [s]\    | 40 [s]|    | 40 [s]/    | 40 [s]-    | 40 [s]\    | 40 [s]|    | 40 [s]/    | 40 [s]-    | 40 [s]\    | 39 [s]|    | 39 [s]/    | 39 [s]-    | 39 [s]\    | 39 [s]|    | 39 [s]/    | 39 [s]-    | 39 [s]\    | 39 [s]|    | 39 [s]/    | 38 [s]-    | 38 [s]\    | 38 [s]|    | 38 [s]/    | 38 [s]-    | 38 [s]\    | 38 [s]|    | 38 [s]/    | 38 [s]-    | 38 [s]\    | 37 [s]|    | 37 [s]/    | 37 [s]-    | 37 [s]\    | 37 [s]|    | 37 [s]/    | 37 [s]-    | 37 [s]\    | 37 [s]|    | 37 [s]/    | 36 [s]-    | 36 [s]\    | 36 [s]|    | 36 [s]/    | 36 [s]-    | 36 [s]\    | 36 [s]|    | 36 [s]/    | 36 [s]-    | 36 [s]\    | 35 [s]|    | 35 [s]/    | 35 [s]-    | 35 [s]\    | 35 [s]|    | 35 [s]/    | 35 [s]-    | 35 [s]\    | 35 [s]|    | 35 [s]/    | 34 [s]-    | 34 [s]\    | 34 [s]|    | 34 [s]/    | 34 [s]-    | 34 [s]\    | 34 [s]|    | 34 [s]/    | 34 [s]-    | 34 [s]\    | 33 [s]|    | 33 [s]/    | 33 [s]-    | 33 [s]\    | 33 [s]|    | 33 [s]/    | 33 [s]-    | 33 [s]\    | 33 [s]|    | 33 [s]/    | 32 [s]-    | 32 [s]\    | 32 [s]|    | 32 [s]/    | 32 [s]-    | 32 [s]\    | 32 [s]|    | 32 [s]/    | 32 [s]-    | 32 [s]\    | 31 [s]|    | 31 [s]/    | 31 [s]-    | 31 [s]\    | 31 [s]|    | 31 [s]/    | 31 [s]-    | 31 [s]\    | 31 [s]|    | 31 [s]/    | 30 [s]-    | 30 [s]\    | 30 [s]|    | 30 [s]/    | 30 [s]-    | 30 [s]\    | 30 [s]|    | 30 [s]/    | 30 [s]-    | 30 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]
-[1;34m[A-Bench][0m Preparing the infrastructure for the workloads.     | [1;31m cus_prepare [0m
-tar: Removing leading `/' from member names
-Copying benchmark-data to HDFS
-Copying benchmark-data was successfull
-Starting to initialize db-schema
-Metastore connection URL:	 jdbc:mysql://sql-mysql:3306/metastore_db?createDatabaseIfNotExist=true&useSSL=false
-Metastore Connection Driver :	 com.mysql.jdbc.Driver
-Metastore connection User:	 hive
-Starting metastore schema initialization to 0.13.0
-Initialization script hive-schema-0.13.0.mysql.sql
-Initialization script completed
-schemaTool completed
-Creating BigBenchV2-DB
-
-Logging initialized using configuration in jar:file:/usr/local/hadoop/hive/lib/hive-common-0.13.1-cdh5.3.2.jar!/hive-log4j.properties
-OK
-Time taken: 1.911 seconds
-OK
-Time taken: 0.022 seconds
-Create temporary table: customers_temporary
-OK
-Time taken: 0.084 seconds
-OK
-Time taken: 0.383 seconds
-Load text data into TEXTFILE table: customers
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561921350199_0001, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561921350199_0001/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561921350199_0001
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:06:51,381 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:07:06,145 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.8 sec
-MapReduce Total cumulative CPU time: 1 seconds 800 msec
-Ended Job = job_1561921350199_0001
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-06-29_404_6796738428492312717-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/customers
-Table bigbenchv2.customers stats: [numFiles=1, numRows=0, totalSize=250490, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.8 sec   HDFS Read: 261618 HDFS Write: 250573 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 800 msec
-OK
-Time taken: 39.946 seconds
-Drop temporary table: customers_temporary
-OK
-Time taken: 1.036 seconds
-Create temporary table: items_temporary
-OK
-Time taken: 0.039 seconds
-OK
-Time taken: 0.201 seconds
-Load text data into TEXTFILE table: items
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561921350199_0002, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561921350199_0002/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561921350199_0002
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:07:29,242 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:07:43,505 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.9 sec
-MapReduce Total cumulative CPU time: 1 seconds 900 msec
-Ended Job = job_1561921350199_0002
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-07-10_698_215673052779745127-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/items
-Table bigbenchv2.items stats: [numFiles=1, numRows=0, totalSize=37690, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.9 sec   HDFS Read: 39160 HDFS Write: 37767 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 900 msec
-OK
-Time taken: 35.78 seconds
-Drop temporary table: items_temporary
-OK
-Time taken: 0.447 seconds
-Create temporary table: reviews_temporary
-OK
-Time taken: 0.041 seconds
-OK
-Time taken: 0.17 seconds
-Load text data into TEXTFILE table: reviews
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561921350199_0003, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561921350199_0003/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561921350199_0003
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:08:04,497 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:08:15,774 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 2.81 sec
-MapReduce Total cumulative CPU time: 2 seconds 810 msec
-Ended Job = job_1561921350199_0003
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-07-47_200_398000870889054416-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/reviews
-Table bigbenchv2.reviews stats: [numFiles=1, numRows=0, totalSize=7132784, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 2.81 sec   HDFS Read: 7173600 HDFS Write: 7132866 SUCCESS
-Total MapReduce CPU Time Spent: 2 seconds 810 msec
-OK
-Time taken: 31.353 seconds
-Drop temporary table: reviews_temporary
-OK
-Time taken: 0.382 seconds
-Create temporary table: web_pages_temporary
-OK
-Time taken: 0.054 seconds
-OK
-Time taken: 0.215 seconds
-Load text data into TEXTFILE table: web_pages
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561921350199_0004, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561921350199_0004/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561921350199_0004
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:08:36,993 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:08:48,105 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.35 sec
-MapReduce Total cumulative CPU time: 1 seconds 350 msec
-Ended Job = job_1561921350199_0004
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-08-19_281_6712673578385111607-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/web_pages
-Table bigbenchv2.web_pages stats: [numFiles=1, numRows=0, totalSize=687, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.35 sec   HDFS Read: 941 HDFS Write: 764 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 350 msec
-OK
-Time taken: 31.684 seconds
-Drop temporary table: web_pages_temporary
-OK
-Time taken: 0.362 seconds
-Create temporary table: web_sales_temporary
-OK
-Time taken: 0.039 seconds
-OK
-Time taken: 0.077 seconds
-Load text data into TEXTFILE table: web_sales
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561921350199_0005, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561921350199_0005/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561921350199_0005
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:09:09,509 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:09:24,325 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 4.6 sec
-MapReduce Total cumulative CPU time: 4 seconds 600 msec
-Ended Job = job_1561921350199_0005
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-08-51_513_7855556784714090216-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/web_sales
-Table bigbenchv2.web_sales stats: [numFiles=1, numRows=0, totalSize=9828355, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 4.6 sec   HDFS Read: 10083907 HDFS Write: 9828440 SUCCESS
-Total MapReduce CPU Time Spent: 4 seconds 600 msec
-OK
-Time taken: 35.469 seconds
-Drop temporary table: web_sales_temporary
-OK
-Time taken: 0.295 seconds
-Create temporary table: store_sales_temporary
-OK
-Time taken: 0.039 seconds
-OK
-Time taken: 0.235 seconds
-Load text data into TEXTFILE table: store_sales
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561921350199_0006, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561921350199_0006/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561921350199_0006
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:09:45,185 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:09:58,712 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.33 sec
-MapReduce Total cumulative CPU time: 3 seconds 330 msec
-Ended Job = job_1561921350199_0006
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-09-27_636_5656770800654524281-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/store_sales
-Table bigbenchv2.store_sales stats: [numFiles=1, numRows=0, totalSize=10234574, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 3.33 sec   HDFS Read: 10473660 HDFS Write: 10234661 SUCCESS
-Total MapReduce CPU Time Spent: 3 seconds 330 msec
-OK
-Time taken: 34.115 seconds
-Drop temporary table: store_sales_temporary
-OK
-Time taken: 0.321 seconds
-Create temporary table: stores_temporary
-OK
-Time taken: 0.06 seconds
-OK
-Time taken: 0.065 seconds
-Load text data into TEXTFILE table: stores
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561921350199_0007, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561921350199_0007/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561921350199_0007
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:10:19,499 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:10:30,899 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.41 sec
-MapReduce Total cumulative CPU time: 1 seconds 410 msec
-Ended Job = job_1561921350199_0007
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-10-02_253_1875474453445395989-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/stores
-Table bigbenchv2.stores stats: [numFiles=1, numRows=0, totalSize=6290, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.41 sec   HDFS Read: 6912 HDFS Write: 6366 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 410 msec
-OK
-Time taken: 30.385 seconds
-Drop temporary table: stores_temporary
-OK
-Time taken: 0.359 seconds
-Create external table: web_logs
-OK
-Time taken: 0.361 seconds
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-[1;34m[A-Bench][0m Executing the workload of the experiment.           | [1;31m cus_workload [0m
-[1;34m[A-Bench][0m Running  query queries/q1.hql.                                            
-
-Logging initialized using configuration in jar:file:/usr/local/hadoop/hive/lib/hive-common-0.13.1-cdh5.3.2.jar!/hive-log4j.properties
-Added resource: /bigbenchv2/resources/bigbenchqueriesmr.jar
-OK
-Time taken: 1.313 seconds
-hive.exec.compress.output=false
-OK
-Time taken: 0.488 seconds
-OK
-Time taken: 0.777 seconds
-Total jobs = 3
-Execution log at: /tmp/root/root_20190630191111_8bc0a80b-6a79-401b-aac2-ff0906205464.log
-2019-06-30 07:11:13	Starting to launch local task to process map join;	maximum memory = 477626368
-2019-06-30 07:11:16	Dump the side-table into file: file:/tmp/root/hive_2019-06-30_19-11-03_073_8170587538002511086-1/-local-10005/HashTable-Stage-2/MapJoin-mapfile01--.hashtable
-2019-06-30 07:11:16	Uploaded 1 File to: file:/tmp/root/hive_2019-06-30_19-11-03_073_8170587538002511086-1/-local-10005/HashTable-Stage-2/MapJoin-mapfile01--.hashtable (3178 bytes)
-2019-06-30 07:11:16	End of local task; Time Taken: 2.876 sec.
-Execution completed successfully
-MapredLocal task succeeded
-Launching Job 1 out of 3
-Number of reduce tasks not specified. Estimated from input data size: 1
-In order to change the average load for a reducer (in bytes):
-  set hive.exec.reducers.bytes.per.reducer=<number>
-In order to limit the maximum number of reducers:
-  set hive.exec.reducers.max=<number>
-In order to set a constant number of reducers:
-  set mapreduce.job.reduces=<number>
-Starting Job = job_1561921350199_0008, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561921350199_0008/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561921350199_0008
-Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
-2019-06-30 19:11:39,102 Stage-2 map = 0%,  reduce = 0%
-2019-06-30 19:11:52,814 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 3.69 sec
-2019-06-30 19:12:04,927 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 6.47 sec
-MapReduce Total cumulative CPU time: 6 seconds 470 msec
-Ended Job = job_1561921350199_0008
-Launching Job 2 out of 3
-Number of reduce tasks not specified. Estimated from input data size: 1
-In order to change the average load for a reducer (in bytes):
-  set hive.exec.reducers.bytes.per.reducer=<number>
-In order to limit the maximum number of reducers:
-  set hive.exec.reducers.max=<number>
-In order to set a constant number of reducers:
-  set mapreduce.job.reduces=<number>
-Starting Job = job_1561921350199_0009, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561921350199_0009/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561921350199_0009
-Hadoop job information for Stage-3: number of mappers: 1; number of reducers: 1
-2019-06-30 19:12:26,613 Stage-3 map = 0%,  reduce = 0%
-2019-06-30 19:12:37,309 Stage-3 map = 100%,  reduce = 0%, Cumulative CPU 1.31 sec
-2019-06-30 19:12:51,717 Stage-3 map = 100%,  reduce = 100%, Cumulative CPU 4.81 sec
-MapReduce Total cumulative CPU time: 4 seconds 810 msec
-Ended Job = job_1561921350199_0009
-Launching Job 3 out of 3
-Number of reduce tasks determined at compile time: 1
-In order to change the average load for a reducer (in bytes):
-  set hive.exec.reducers.bytes.per.reducer=<number>
-In order to limit the maximum number of reducers:
-  set hive.exec.reducers.max=<number>
-In order to set a constant number of reducers:
-  set mapreduce.job.reduces=<number>
-Starting Job = job_1561921350199_0010, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561921350199_0010/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561921350199_0010
-Hadoop job information for Stage-4: number of mappers: 1; number of reducers: 1
-2019-06-30 19:13:12,083 Stage-4 map = 0%,  reduce = 0%
-2019-06-30 19:13:22,526 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 1.18 sec
-2019-06-30 19:13:35,596 Stage-4 map = 100%,  reduce = 100%, Cumulative CPU 4.25 sec
-MapReduce Total cumulative CPU time: 4 seconds 250 msec
-Ended Job = job_1561921350199_0010
-Loading data to table bigbenchv2.q01_results
-Table bigbenchv2.q01_results stats: [numFiles=1, numRows=0, totalSize=0, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 6.47 sec   HDFS Read: 10234817 HDFS Write: 9108 SUCCESS
-Stage-Stage-3: Map: 1  Reduce: 1   Cumulative CPU: 4.81 sec   HDFS Read: 9484 HDFS Write: 96 SUCCESS
-Stage-Stage-4: Map: 1  Reduce: 1   Cumulative CPU: 4.25 sec   HDFS Read: 472 HDFS Write: 48 SUCCESS
-Total MapReduce CPU Time Spent: 15 seconds 530 msec
-OK
-Time taken: 154.401 seconds
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-stop
-1561921844110501527 1561922047943858807 /home/vr/github/abench-management-console/submodules/a-bench/results/20190630_21_14_18_experiment_tag_sample_q1/experiment_tag_sample_q1.zip
-calling url <http://192.168.99.100:31773/csv-zip?host=monitoring-influxdb&port=8086&dbname=k8s&filename=experi01&fromT=1561921844110501527&toT=1561922047943858807>
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100 1185k  100 1185k    0     0   705k      0  0:00:01  0:00:01 --:--:--  705k
-Datacollection finished. Export located at </home/vr/github/abench-management-console/submodules/a-bench/results/20190630_21_14_18_experiment_tag_sample_q1/experiment_tag_sample_q1.zip>
-[1;34m[A-Bench][0m Downloading the results of the experiment.          | [1;31m cus_collect [0m
-Hadoop export successfull.
-tar: Removing leading `/' from member names
-[1;34m[A-Bench][0m Download complete. Your data are located under <[1;34m/home/vr/github/abench-management-console/submodules/a-bench/results/20190630_21_14_18_experiment_tag_sample_q1[0m>
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-[1;34m[A-Bench][0m Cleaning the infrastructure.                        | [1;31m cus_clean [0m
-[1;34m[A-Bench][0m Experiment finished.                                | [1;31m cus_finish [0m
-Running q16
-./admin.sh: line 163: cd: submodules/bigbenchv2/a-bench_connector/experiments/env-run-experiment/: No such file or directory
-Experiment TAG: #experiment_tag_sample
-[1;34m[A-Bench][0m Running defined experiment... 
-Query-Mapper has recognized a query for execution: q16
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_deploy [0m
-release "sql-mysql" deleted
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]
-NAME:   sql-mysql
-LAST DEPLOYED: Sun Jun 30 21:15:22 2019
-NAMESPACE: default
-STATUS: DEPLOYED
-
-RESOURCES:
-==> v1/PersistentVolumeClaim
-NAME       STATUS  VOLUME                                    CAPACITY  ACCESS MODES  STORAGECLASS  AGE
-sql-mysql  Bound   pvc-6867e6d6-9b6b-11e9-b7c6-08002796b856  8Gi       RWO           standard      3s
-
-==> v1/Service
-NAME       TYPE       CLUSTER-IP     EXTERNAL-IP  PORT(S)   AGE
-sql-mysql  ClusterIP  10.109.253.78  <none>       3306/TCP  3s
-
-==> v1beta1/Deployment
-NAME       DESIRED  CURRENT  UP-TO-DATE  AVAILABLE  AGE
-sql-mysql  1        1        1           0          3s
-
-==> v1/Pod(related)
-NAME                        READY  STATUS       RESTARTS  AGE
-sql-mysql-5b6ff9b9c4-45twp  0/1    Terminating  0         22m
-sql-mysql-5b6ff9b9c4-pzk7l  0/1    Init:0/1     0         2s
-
-==> v1/Secret
-NAME       TYPE    DATA  AGE
-sql-mysql  Opaque  2     3s
-
-==> v1/ConfigMap
-NAME            DATA  AGE
-sql-mysql-test  1     3s
-
-
-NOTES:
-MySQL can be accessed via port 3306 on the following DNS name from within your cluster:
-sql-mysql.default.svc.cluster.local
-
-To get your root password run:
-
-    MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace default sql-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo)
-
-To connect to your database:
-
-1. Run an Ubuntu pod that you can use as a client:
-
-    kubectl run -i --tty ubuntu --image=ubuntu:16.04 --restart=Never -- bash -il
-
-2. Install the mysql client:
-
-    $ apt-get update && apt-get install mysql-client -y
-
-3. Connect using the mysql cli, then provide your password:
-    $ mysql -h sql-mysql -p
-
-To connect to your database directly from outside the K8s cluster:
-    MYSQL_HOST=127.0.0.1
-    MYSQL_PORT=3306
-
-    # Execute the following command to route the connection:
-    kubectl port-forward svc/sql-mysql 3306
-
-    mysql -h ${MYSQL_HOST} -P${MYSQL_PORT} -u root -p${MYSQL_ROOT_PASSWORD}
-    
-
-release "thadoop" deleted
 NAME:   thadoop
-LAST DEPLOYED: Sun Jun 30 21:15:31 2019
+LAST DEPLOYED: Sat Oct 19 11:50:50 2019
 NAMESPACE: default
 STATUS: DEPLOYED
 
 RESOURCES:
 ==> v1beta1/PodDisruptionBudget
 NAME                    MIN AVAILABLE  MAX UNAVAILABLE  ALLOWED DISRUPTIONS  AGE
-thadoop-hadoop-hdfs-dn  1              N/A              0                    79s
-thadoop-hadoop-hdfs-nn  1              N/A              0                    79s
-thadoop-hadoop-yarn-nm  1              N/A              1                    78s
-thadoop-hadoop-yarn-rm  1              N/A              0                    78s
+thadoop-hadoop-hdfs-dn  1              N/A              0                    7m31s
+thadoop-hadoop-hdfs-nn  1              N/A              0                    7m31s
+thadoop-hadoop-yarn-nm  1              N/A              1                    7m31s
+thadoop-hadoop-yarn-rm  1              N/A              0                    7m31s
 
 ==> v1/ConfigMap
 NAME            DATA  AGE
-thadoop-hadoop  8     78s
+thadoop-hadoop  8     7m31s
 
 ==> v1/Service
-NAME                         TYPE       CLUSTER-IP    EXTERNAL-IP  PORT(S)                     AGE
-thadoop-hadoop-hdfs-dn       ClusterIP  None          <none>       9000/TCP,50075/TCP          78s
-thadoop-hadoop-hdfs-nn       ClusterIP  None          <none>       9000/TCP,50070/TCP          78s
-thadoop-hadoop-bench-driver  ClusterIP  10.103.126.3  <none>       9083/TCP,10000/TCP          78s
-thadoop-hadoop-yarn-nm       ClusterIP  None          <none>       8088/TCP,8082/TCP,8042/TCP  78s
-thadoop-hadoop-yarn-rm       ClusterIP  None          <none>       8088/TCP                    78s
-thadoop-hadoop-yarn-ui       NodePort   10.111.0.159  <none>       8088:31371/TCP              78s
+NAME                         TYPE       CLUSTER-IP      EXTERNAL-IP  PORT(S)                     AGE
+thadoop-hadoop-hdfs-dn       ClusterIP  None            <none>       9000/TCP,50075/TCP          7m31s
+thadoop-hadoop-hdfs-nn       ClusterIP  None            <none>       9000/TCP,50070/TCP          7m31s
+thadoop-hadoop-bench-driver  ClusterIP  10.111.140.225  <none>       9083/TCP,10000/TCP          7m31s
+thadoop-hadoop-yarn-nm       ClusterIP  None            <none>       8088/TCP,8082/TCP,8042/TCP  7m31s
+thadoop-hadoop-yarn-rm       ClusterIP  None            <none>       8088/TCP                    7m31s
+thadoop-hadoop-yarn-ui       NodePort   10.102.135.32   <none>       8088:32408/TCP              7m31s
 
 ==> v1beta1/StatefulSet
 NAME                         DESIRED  CURRENT  AGE
-thadoop-hadoop-hdfs-dn       1        1        78s
-thadoop-hadoop-hdfs-nn       1        1        78s
-thadoop-hadoop-bench-driver  1        1        77s
-thadoop-hadoop-yarn-nm       2        2        77s
-thadoop-hadoop-yarn-rm       1        1        77s
+thadoop-hadoop-hdfs-dn       1        1        7m31s
+thadoop-hadoop-hdfs-nn       1        1        7m31s
+thadoop-hadoop-bench-driver  1        1        7m31s
+thadoop-hadoop-yarn-nm       2        2        7m31s
+thadoop-hadoop-yarn-rm       1        1        7m31s
 
 ==> v1/Pod(related)
 NAME                           READY  STATUS   RESTARTS  AGE
-thadoop-hadoop-hdfs-dn-0       1/1    Running  0         77s
-thadoop-hadoop-hdfs-nn-0       1/1    Running  0         77s
-thadoop-hadoop-bench-driver-0  1/1    Running  0         77s
-thadoop-hadoop-yarn-nm-0       1/1    Running  0         77s
-thadoop-hadoop-yarn-nm-1       1/1    Running  0         31s
-thadoop-hadoop-yarn-rm-0       1/1    Running  0         77s
+thadoop-hadoop-hdfs-dn-0       1/1    Running  0         7m31s
+thadoop-hadoop-hdfs-nn-0       1/1    Running  0         7m31s
+thadoop-hadoop-bench-driver-0  1/1    Running  0         7m31s
+thadoop-hadoop-yarn-nm-0       1/1    Running  0         7m31s
+thadoop-hadoop-yarn-nm-1       1/1    Running  0         17s
+thadoop-hadoop-yarn-rm-0       1/1    Running  0         7m31s
 
 
 NOTES:
@@ -994,434 +252,172 @@ NOTES:
 
 [1;34m[A-Bench][0m hadoop cluster started and named as < thadoop > ...
 Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]
+\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]
 Execution will pause for 60 seconds.
-\    | 59 [s]|    | 59 [s]/    | 59 [s]-    | 59 [s]\    | 59 [s]|    | 59 [s]/    | 59 [s]-    | 59 [s]\    | 59 [s]|    | 59 [s]/    | 58 [s]-    | 58 [s]\    | 58 [s]|    | 58 [s]/    | 58 [s]-    | 58 [s]\    | 58 [s]|    | 58 [s]/    | 58 [s]-    | 58 [s]\    | 57 [s]|    | 57 [s]/    | 57 [s]-    | 57 [s]\    | 57 [s]|    | 57 [s]/    | 57 [s]-    | 57 [s]\    | 57 [s]|    | 57 [s]/    | 56 [s]-    | 56 [s]\    | 56 [s]|    | 56 [s]/    | 56 [s]-    | 56 [s]\    | 56 [s]|    | 56 [s]/    | 56 [s]-    | 56 [s]\    | 55 [s]|    | 55 [s]/    | 55 [s]-    | 55 [s]\    | 55 [s]|    | 55 [s]/    | 55 [s]-    | 55 [s]\    | 55 [s]|    | 55 [s]/    | 54 [s]-    | 54 [s]\    | 54 [s]|    | 54 [s]/    | 54 [s]-    | 54 [s]\    | 54 [s]|    | 54 [s]/    | 54 [s]-    | 54 [s]\    | 53 [s]|    | 53 [s]/    | 53 [s]-    | 53 [s]\    | 53 [s]|    | 53 [s]/    | 53 [s]-    | 53 [s]\    | 53 [s]|    | 53 [s]/    | 52 [s]-    | 52 [s]\    | 52 [s]|    | 52 [s]/    | 52 [s]-    | 52 [s]\    | 52 [s]|    | 52 [s]/    | 52 [s]-    | 52 [s]\    | 51 [s]|    | 51 [s]/    | 51 [s]-    | 51 [s]\    | 51 [s]|    | 51 [s]/    | 51 [s]-    | 51 [s]\    | 51 [s]|    | 51 [s]/    | 50 [s]-    | 50 [s]\    | 50 [s]|    | 50 [s]/    | 50 [s]-    | 50 [s]\    | 50 [s]|    | 50 [s]/    | 50 [s]-    | 50 [s]\    | 49 [s]|    | 49 [s]/    | 49 [s]-    | 49 [s]\    | 49 [s]|    | 49 [s]/    | 49 [s]-    | 49 [s]\    | 49 [s]|    | 49 [s]/    | 48 [s]-    | 48 [s]\    | 48 [s]|    | 48 [s]/    | 48 [s]-    | 48 [s]\    | 48 [s]|    | 48 [s]/    | 48 [s]-    | 48 [s]\    | 47 [s]|    | 47 [s]/    | 47 [s]-    | 47 [s]\    | 47 [s]|    | 47 [s]/    | 47 [s]-    | 47 [s]\    | 47 [s]|    | 47 [s]/    | 46 [s]-    | 46 [s]\    | 46 [s]|    | 46 [s]/    | 46 [s]-    | 46 [s]\    | 46 [s]|    | 46 [s]/    | 46 [s]-    | 46 [s]\    | 45 [s]|    | 45 [s]/    | 45 [s]-    | 45 [s]\    | 45 [s]|    | 45 [s]/    | 45 [s]-    | 45 [s]\    | 45 [s]|    | 45 [s]/    | 44 [s]-    | 44 [s]\    | 44 [s]|    | 44 [s]/    | 44 [s]-    | 44 [s]\    | 44 [s]|    | 44 [s]/    | 44 [s]-    | 44 [s]\    | 43 [s]|    | 43 [s]/    | 43 [s]-    | 43 [s]\    | 43 [s]|    | 43 [s]/    | 43 [s]-    | 43 [s]\    | 43 [s]|    | 43 [s]/    | 42 [s]-    | 42 [s]\    | 42 [s]|    | 42 [s]/    | 42 [s]-    | 42 [s]\    | 42 [s]|    | 42 [s]/    | 42 [s]-    | 42 [s]\    | 41 [s]|    | 41 [s]/    | 41 [s]-    | 41 [s]\    | 41 [s]|    | 41 [s]/    | 41 [s]-    | 41 [s]\    | 41 [s]|    | 41 [s]/    | 40 [s]-    | 40 [s]\    | 40 [s]|    | 40 [s]/    | 40 [s]-    | 40 [s]\    | 40 [s]|    | 40 [s]/    | 40 [s]-    | 40 [s]\    | 39 [s]|    | 39 [s]/    | 39 [s]-    | 39 [s]\    | 39 [s]|    | 39 [s]/    | 39 [s]-    | 39 [s]\    | 39 [s]|    | 39 [s]/    | 38 [s]-    | 38 [s]\    | 38 [s]|    | 38 [s]/    | 38 [s]-    | 38 [s]\    | 38 [s]|    | 38 [s]/    | 38 [s]-    | 38 [s]\    | 37 [s]|    | 37 [s]/    | 37 [s]-    | 37 [s]\    | 37 [s]|    | 37 [s]/    | 37 [s]-    | 37 [s]\    | 37 [s]|    | 37 [s]/    | 36 [s]-    | 36 [s]\    | 36 [s]|    | 36 [s]/    | 36 [s]-    | 36 [s]\    | 36 [s]|    | 36 [s]/    | 36 [s]-    | 36 [s]\    | 35 [s]|    | 35 [s]/    | 35 [s]-    | 35 [s]\    | 35 [s]|    | 35 [s]/    | 35 [s]-    | 35 [s]\    | 35 [s]|    | 35 [s]/    | 34 [s]-    | 34 [s]\    | 34 [s]|    | 34 [s]/    | 34 [s]-    | 34 [s]\    | 34 [s]|    | 34 [s]/    | 34 [s]-    | 34 [s]\    | 33 [s]|    | 33 [s]/    | 33 [s]-    | 33 [s]\    | 33 [s]|    | 33 [s]/    | 33 [s]-    | 33 [s]\    | 33 [s]|    | 33 [s]/    | 32 [s]-    | 32 [s]\    | 32 [s]|    | 32 [s]/    | 32 [s]-    | 32 [s]\    | 32 [s]|    | 32 [s]/    | 32 [s]-    | 32 [s]\    | 31 [s]|    | 31 [s]/    | 31 [s]-    | 31 [s]\    | 31 [s]|    | 31 [s]/    | 31 [s]-    | 31 [s]\    | 31 [s]|    | 31 [s]/    | 30 [s]-    | 30 [s]\    | 30 [s]|    | 30 [s]/    | 30 [s]-    | 30 [s]\    | 30 [s]|    | 30 [s]/    | 30 [s]-    | 30 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]
+\    | 59 [s]|    | 59 [s]/    | 59 [s]-    | 59 [s]\    | 59 [s]|    | 59 [s]/    | 59 [s]-    | 59 [s]\    | 59 [s]|    | 59 [s]/    | 58 [s]-    | 58 [s]\    | 58 [s]|    | 58 [s]/    | 58 [s]-    | 58 [s]\    | 58 [s]|    | 58 [s]/    | 58 [s]-    | 58 [s]\    | 57 [s]|    | 57 [s]/    | 57 [s]-    | 57 [s]\    | 57 [s]|    | 57 [s]/    | 57 [s]-    | 57 [s]\    | 57 [s]|    | 57 [s]/    | 56 [s]-    | 56 [s]\    | 56 [s]|    | 56 [s]/    | 56 [s]-    | 56 [s]\    | 56 [s]|    | 56 [s]/    | 56 [s]-    | 56 [s]\    | 55 [s]|    | 55 [s]/    | 55 [s]-    | 55 [s]\    | 55 [s]|    | 55 [s]/    | 55 [s]-    | 55 [s]\    | 55 [s]|    | 55 [s]/    | 54 [s]-    | 54 [s]\    | 54 [s]|    | 54 [s]/    | 54 [s]-    | 54 [s]\    | 54 [s]|    | 54 [s]/    | 54 [s]-    | 54 [s]\    | 53 [s]|    | 53 [s]/    | 53 [s]-    | 53 [s]\    | 53 [s]|    | 53 [s]/    | 53 [s]-    | 53 [s]\    | 53 [s]|    | 53 [s]/    | 52 [s]-    | 52 [s]\    | 52 [s]|    | 52 [s]/    | 52 [s]-    | 52 [s]\    | 52 [s]|    | 52 [s]/    | 52 [s]-    | 52 [s]\    | 51 [s]|    | 51 [s]/    | 51 [s]-    | 51 [s]\    | 51 [s]|    | 51 [s]/    | 51 [s]-    | 51 [s]\    | 51 [s]|    | 51 [s]/    | 50 [s]-    | 50 [s]\    | 50 [s]|    | 50 [s]/    | 50 [s]-    | 50 [s]\    | 50 [s]|    | 50 [s]/    | 50 [s]-    | 50 [s]\    | 49 [s]|    | 49 [s]/    | 49 [s]-    | 49 [s]\    | 49 [s]|    | 49 [s]/    | 49 [s]-    | 49 [s]\    | 49 [s]|    | 49 [s]/    | 48 [s]-    | 48 [s]\    | 48 [s]|    | 48 [s]/    | 48 [s]-    | 48 [s]\    | 48 [s]|    | 48 [s]/    | 48 [s]-    | 48 [s]\    | 47 [s]|    | 47 [s]/    | 47 [s]-    | 47 [s]\    | 47 [s]|    | 47 [s]/    | 47 [s]-    | 47 [s]\    | 47 [s]|    | 47 [s]/    | 46 [s]-    | 46 [s]\    | 46 [s]|    | 46 [s]/    | 46 [s]-    | 46 [s]\    | 46 [s]|    | 46 [s]/    | 46 [s]-    | 46 [s]\    | 45 [s]|    | 45 [s]/    | 45 [s]-    | 45 [s]\    | 45 [s]|    | 45 [s]/    | 45 [s]-    | 45 [s]\    | 45 [s]|    | 45 [s]/    | 44 [s]-    | 44 [s]\    | 44 [s]|    | 44 [s]/    | 44 [s]-    | 44 [s]\    | 44 [s]|    | 44 [s]/    | 44 [s]-    | 44 [s]\    | 43 [s]|    | 43 [s]/    | 43 [s]-    | 43 [s]\    | 43 [s]|    | 43 [s]/    | 43 [s]-    | 43 [s]\    | 43 [s]|    | 43 [s]/    | 42 [s]-    | 42 [s]\    | 42 [s]|    | 42 [s]/    | 42 [s]-    | 42 [s]\    | 42 [s]|    | 42 [s]/    | 42 [s]-    | 42 [s]\    | 41 [s]|    | 41 [s]/    | 41 [s]-    | 41 [s]\    | 41 [s]|    | 41 [s]/    | 41 [s]-    | 41 [s]\    | 41 [s]|    | 41 [s]/    | 40 [s]-    | 40 [s]\    | 40 [s]|    | 40 [s]/    | 40 [s]-    | 40 [s]\    | 40 [s]|    | 40 [s]/    | 40 [s]-    | 40 [s]\    | 39 [s]|    | 39 [s]/    | 39 [s]-    | 39 [s]\    | 39 [s]|    | 39 [s]/    | 39 [s]-    | 39 [s]\    | 39 [s]|    | 39 [s]/    | 38 [s]-    | 38 [s]\    | 38 [s]|    | 38 [s]/    | 38 [s]-    | 38 [s]\    | 38 [s]|    | 38 [s]/    | 38 [s]-    | 38 [s]\    | 37 [s]|    | 37 [s]/    | 37 [s]-    | 37 [s]\    | 37 [s]|    | 37 [s]/    | 37 [s]-    | 37 [s]\    | 37 [s]|    | 37 [s]/    | 36 [s]-    | 36 [s]\    | 36 [s]|    | 36 [s]/    | 36 [s]-    | 36 [s]\    | 36 [s]|    | 36 [s]/    | 36 [s]-    | 36 [s]\    | 35 [s]|    | 35 [s]/    | 35 [s]-    | 35 [s]\    | 35 [s]|    | 35 [s]/    | 35 [s]-    | 35 [s]\    | 35 [s]|    | 35 [s]/    | 34 [s]-    | 34 [s]\    | 34 [s]|    | 34 [s]/    | 34 [s]-    | 34 [s]\    | 34 [s]|    | 34 [s]/    | 34 [s]-    | 34 [s]\    | 33 [s]|    | 33 [s]/    | 33 [s]-    | 33 [s]\    | 33 [s]|    | 33 [s]/    | 33 [s]-    | 33 [s]\    | 33 [s]|    | 33 [s]/    | 32 [s]-    | 32 [s]\    | 32 [s]|    | 32 [s]/    | 32 [s]-    | 32 [s]\    | 32 [s]|    | 32 [s]/    | 32 [s]-    | 32 [s]\    | 31 [s]|    | 31 [s]/    | 31 [s]-    | 31 [s]\    | 31 [s]|    | 31 [s]/    | 31 [s]-    | 31 [s]\    | 31 [s]|    | 31 [s]/    | 30 [s]-    | 30 [s]\    | 30 [s]|    | 30 [s]/    | 30 [s]-    | 30 [s]\    | 30 [s]|    | 30 [s]/    | 30 [s]-    | 30 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]
 [1;34m[A-Bench][0m Preparing the infrastructure for the workloads.     | [1;31m cus_prepare [0m
 tar: Removing leading `/' from member names
 Copying benchmark-data to HDFS
 Copying benchmark-data was successfull
 Starting to initialize db-schema
+ls: cannot access /opt/spark/lib/spark-assembly-*.jar: No such file or directory
 Metastore connection URL:	 jdbc:mysql://sql-mysql:3306/metastore_db?createDatabaseIfNotExist=true&useSSL=false
 Metastore Connection Driver :	 com.mysql.jdbc.Driver
 Metastore connection User:	 hive
-Starting metastore schema initialization to 0.13.0
-Initialization script hive-schema-0.13.0.mysql.sql
+Starting metastore schema initialization to 1.2.0
+Initialization script hive-schema-1.2.0.mysql.sql
 Initialization script completed
 schemaTool completed
 Creating BigBenchV2-DB
+ls: cannot access /opt/spark/lib/spark-assembly-*.jar: No such file or directory
 
-Logging initialized using configuration in jar:file:/usr/local/hadoop/hive/lib/hive-common-0.13.1-cdh5.3.2.jar!/hive-log4j.properties
-OK
-Time taken: 1.778 seconds
-OK
-Time taken: 0.029 seconds
-Create temporary table: customers_temporary
-OK
-Time taken: 0.106 seconds
-OK
-Time taken: 0.352 seconds
-Load text data into TEXTFILE table: customers
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561922143975_0001, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561922143975_0001/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561922143975_0001
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:20:50,700 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:21:06,520 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 2.35 sec
-MapReduce Total cumulative CPU time: 2 seconds 350 msec
-Ended Job = job_1561922143975_0001
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-20-28_294_1154508598985206402-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/customers
-Table bigbenchv2.customers stats: [numFiles=1, numRows=0, totalSize=250490, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 2.35 sec   HDFS Read: 261618 HDFS Write: 250573 SUCCESS
-Total MapReduce CPU Time Spent: 2 seconds 350 msec
-OK
-Time taken: 40.852 seconds
-Drop temporary table: customers_temporary
-OK
-Time taken: 1.088 seconds
-Create temporary table: items_temporary
-OK
-Time taken: 0.042 seconds
-OK
-Time taken: 0.164 seconds
-Load text data into TEXTFILE table: items
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561922143975_0002, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561922143975_0002/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561922143975_0002
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:21:27,919 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:21:40,608 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.66 sec
-MapReduce Total cumulative CPU time: 1 seconds 660 msec
-Ended Job = job_1561922143975_0002
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-21-10_509_8132477837205009729-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/items
-Table bigbenchv2.items stats: [numFiles=1, numRows=0, totalSize=37690, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.66 sec   HDFS Read: 39160 HDFS Write: 37767 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 660 msec
-OK
-Time taken: 33.022 seconds
-Drop temporary table: items_temporary
-OK
-Time taken: 0.393 seconds
-Create temporary table: reviews_temporary
-OK
-Time taken: 0.027 seconds
-OK
-Time taken: 0.188 seconds
-Load text data into TEXTFILE table: reviews
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561922143975_0003, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561922143975_0003/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561922143975_0003
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:22:00,701 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:22:14,122 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 2.76 sec
-MapReduce Total cumulative CPU time: 2 seconds 760 msec
-Ended Job = job_1561922143975_0003
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-21-44_218_1017613221813433213-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/reviews
-Table bigbenchv2.reviews stats: [numFiles=1, numRows=0, totalSize=7132784, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 2.76 sec   HDFS Read: 7173600 HDFS Write: 7132866 SUCCESS
-Total MapReduce CPU Time Spent: 2 seconds 760 msec
-OK
-Time taken: 32.7 seconds
-Drop temporary table: reviews_temporary
-OK
-Time taken: 0.265 seconds
-Create temporary table: web_pages_temporary
-OK
-Time taken: 0.049 seconds
-OK
-Time taken: 0.134 seconds
-Load text data into TEXTFILE table: web_pages
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561922143975_0004, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561922143975_0004/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561922143975_0004
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:22:34,319 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:22:46,807 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.63 sec
-MapReduce Total cumulative CPU time: 1 seconds 630 msec
-Ended Job = job_1561922143975_0004
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-22-17_453_8772085935969583946-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/web_pages
-Table bigbenchv2.web_pages stats: [numFiles=1, numRows=0, totalSize=687, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.63 sec   HDFS Read: 941 HDFS Write: 764 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 630 msec
-OK
-Time taken: 31.224 seconds
-Drop temporary table: web_pages_temporary
-OK
-Time taken: 0.56 seconds
-Create temporary table: web_sales_temporary
-OK
-Time taken: 0.042 seconds
-OK
-Time taken: 0.106 seconds
-Load text data into TEXTFILE table: web_sales
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561922143975_0005, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561922143975_0005/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561922143975_0005
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:23:06,710 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:23:20,715 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.38 sec
-MapReduce Total cumulative CPU time: 3 seconds 380 msec
-Ended Job = job_1561922143975_0005
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-22-49_502_7646016158765102166-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/web_sales
-Table bigbenchv2.web_sales stats: [numFiles=1, numRows=0, totalSize=9828355, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 3.38 sec   HDFS Read: 10083907 HDFS Write: 9828440 SUCCESS
-Total MapReduce CPU Time Spent: 3 seconds 380 msec
-OK
-Time taken: 33.848 seconds
-Drop temporary table: web_sales_temporary
-OK
-Time taken: 0.258 seconds
-Create temporary table: store_sales_temporary
-OK
-Time taken: 0.054 seconds
-OK
-Time taken: 0.409 seconds
-Load text data into TEXTFILE table: store_sales
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561922143975_0006, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561922143975_0006/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561922143975_0006
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:23:41,601 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:23:53,745 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 3.31 sec
-MapReduce Total cumulative CPU time: 3 seconds 310 msec
-Ended Job = job_1561922143975_0006
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-23-24_134_2230919524142215774-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/store_sales
-Table bigbenchv2.store_sales stats: [numFiles=1, numRows=0, totalSize=10234574, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 3.31 sec   HDFS Read: 10473660 HDFS Write: 10234661 SUCCESS
-Total MapReduce CPU Time Spent: 3 seconds 310 msec
-OK
-Time taken: 32.402 seconds
-Drop temporary table: store_sales_temporary
-OK
-Time taken: 0.364 seconds
-Create temporary table: stores_temporary
-OK
-Time taken: 0.021 seconds
-OK
-Time taken: 0.095 seconds
-Load text data into TEXTFILE table: stores
-Total jobs = 3
-Launching Job 1 out of 3
-Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1561922143975_0007, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561922143975_0007/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561922143975_0007
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2019-06-30 19:24:14,103 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:24:27,304 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.65 sec
-MapReduce Total cumulative CPU time: 1 seconds 650 msec
-Ended Job = job_1561922143975_0007
-Stage-4 is selected by condition resolver.
-Stage-3 is filtered out by condition resolver.
-Stage-5 is filtered out by condition resolver.
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/.hive-staging_hive_2019-06-30_19-23-57_149_3074766686906683513-1/-ext-10001
-Moving data to: hdfs://thadoop-hadoop-hdfs-nn:9000/user/hive/warehouse/bigbenchv2.db/stores
-Table bigbenchv2.stores stats: [numFiles=1, numRows=0, totalSize=6290, rawDataSize=0]
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 1.65 sec   HDFS Read: 6912 HDFS Write: 6366 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 650 msec
-OK
-Time taken: 32.68 seconds
-Drop temporary table: stores_temporary
-OK
-Time taken: 0.321 seconds
-Create external table: web_logs
-OK
-Time taken: 0.143 seconds
+Logging initialized using configuration in jar:file:/usr/local/hadoop/hive/lib/hive-common-1.2.1.jar!/hive-log4j.properties
+Exception in thread "main" java.lang.RuntimeException: java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+	at org.apache.hadoop.hive.ql.session.SessionState.start(SessionState.java:522)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:677)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:621)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:226)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:141)
+Caused by: java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1523)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:86)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:132)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.ql.metadata.Hive.createMetaStoreClient(Hive.java:3005)
+	at org.apache.hadoop.hive.ql.metadata.Hive.getMSC(Hive.java:3024)
+	at org.apache.hadoop.hive.ql.session.SessionState.start(SessionState.java:503)
+	... 8 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1521)
+	... 14 more
+Caused by: MetaException(message:Could not connect to meta store using any of the URIs provided. Most recent failure: org.apache.thrift.transport.TTransportException: java.net.UnknownHostException: thadoop-hadoop-thrift-server
+	at org.apache.thrift.transport.TSocket.open(TSocket.java:187)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:420)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:236)
+	at org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient.<init>(SessionHiveMetaStoreClient.java:74)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1521)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:86)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:132)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.ql.metadata.Hive.createMetaStoreClient(Hive.java:3005)
+	at org.apache.hadoop.hive.ql.metadata.Hive.getMSC(Hive.java:3024)
+	at org.apache.hadoop.hive.ql.session.SessionState.start(SessionState.java:503)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:677)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:621)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:226)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:141)
+Caused by: java.net.UnknownHostException: thadoop-hadoop-thrift-server
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.thrift.transport.TSocket.open(TSocket.java:182)
+	... 22 more
+)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:466)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:236)
+	at org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient.<init>(SessionHiveMetaStoreClient.java:74)
+	... 19 more
+command terminated with exit code 1
 Execution will pause for 10 seconds.
 \    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
 [1;34m[A-Bench][0m Executing the workload of the experiment.           | [1;31m cus_workload [0m
-[1;34m[A-Bench][0m Running  query queries/q16.hql.                                            
+[1;34m[A-Bench][0m Running  query queries/q1.hql.                                            
+ls: cannot access /opt/spark/lib/spark-assembly-*.jar: No such file or directory
 
-Logging initialized using configuration in jar:file:/usr/local/hadoop/hive/lib/hive-common-0.13.1-cdh5.3.2.jar!/hive-log4j.properties
-OK
-Time taken: 1.771 seconds
-Total jobs = 2
-Launching Job 1 out of 2
-Number of reduce tasks not specified. Estimated from input data size: 1
-In order to change the average load for a reducer (in bytes):
-  set hive.exec.reducers.bytes.per.reducer=<number>
-In order to limit the maximum number of reducers:
-  set hive.exec.reducers.max=<number>
-In order to set a constant number of reducers:
-  set mapreduce.job.reduces=<number>
-Starting Job = job_1561922143975_0008, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561922143975_0008/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561922143975_0008
-Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-2019-06-30 19:25:21,525 Stage-1 map = 0%,  reduce = 0%
-2019-06-30 19:25:33,980 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 2.99 sec
-2019-06-30 19:25:46,540 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 6.02 sec
-MapReduce Total cumulative CPU time: 6 seconds 20 msec
-Ended Job = job_1561922143975_0008
-Launching Job 2 out of 2
-Number of reduce tasks determined at compile time: 1
-In order to change the average load for a reducer (in bytes):
-  set hive.exec.reducers.bytes.per.reducer=<number>
-In order to limit the maximum number of reducers:
-  set hive.exec.reducers.max=<number>
-In order to set a constant number of reducers:
-  set mapreduce.job.reduces=<number>
-Starting Job = job_1561922143975_0009, Tracking URL = http://thadoop-hadoop-yarn-rm:8088/proxy/application_1561922143975_0009/
-Kill Command = /usr/local/hadoop/bin/hadoop job  -kill job_1561922143975_0009
-Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
-2019-06-30 19:26:08,602 Stage-2 map = 0%,  reduce = 0%
-2019-06-30 19:26:19,492 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 1.29 sec
-2019-06-30 19:26:30,510 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 3.16 sec
-MapReduce Total cumulative CPU time: 3 seconds 160 msec
-Ended Job = job_1561922143975_0009
-MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 6.02 sec   HDFS Read: 10298 HDFS Write: 357 SUCCESS
-Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 3.16 sec   HDFS Read: 733 HDFS Write: 117 SUCCESS
-Total MapReduce CPU Time Spent: 9 seconds 180 msec
-OK
-webpage#13	2
-webpage#20	1
-webpage#19	1
-webpage#18	1
-webpage#17	1
-webpage#16	1
-webpage#15	1
-webpage#11	1
-webpage#00	1
-Time taken: 91.657 seconds, Fetched: 9 row(s)
+Logging initialized using configuration in jar:file:/usr/local/hadoop/hive/lib/hive-common-1.2.1.jar!/hive-log4j.properties
+Exception in thread "main" java.lang.RuntimeException: java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+	at org.apache.hadoop.hive.ql.session.SessionState.start(SessionState.java:522)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:677)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:621)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:226)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:141)
+Caused by: java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1523)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:86)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:132)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.ql.metadata.Hive.createMetaStoreClient(Hive.java:3005)
+	at org.apache.hadoop.hive.ql.metadata.Hive.getMSC(Hive.java:3024)
+	at org.apache.hadoop.hive.ql.session.SessionState.start(SessionState.java:503)
+	... 8 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1521)
+	... 14 more
+Caused by: MetaException(message:Could not connect to meta store using any of the URIs provided. Most recent failure: org.apache.thrift.transport.TTransportException: java.net.UnknownHostException: thadoop-hadoop-thrift-server
+	at org.apache.thrift.transport.TSocket.open(TSocket.java:187)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:420)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:236)
+	at org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient.<init>(SessionHiveMetaStoreClient.java:74)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hive.metastore.MetaStoreUtils.newInstance(MetaStoreUtils.java:1521)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.<init>(RetryingMetaStoreClient.java:86)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:132)
+	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.getProxy(RetryingMetaStoreClient.java:104)
+	at org.apache.hadoop.hive.ql.metadata.Hive.createMetaStoreClient(Hive.java:3005)
+	at org.apache.hadoop.hive.ql.metadata.Hive.getMSC(Hive.java:3024)
+	at org.apache.hadoop.hive.ql.session.SessionState.start(SessionState.java:503)
+	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:677)
+	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:621)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:226)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:141)
+Caused by: java.net.UnknownHostException: thadoop-hadoop-thrift-server
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.thrift.transport.TSocket.open(TSocket.java:182)
+	... 22 more
+)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.open(HiveMetaStoreClient.java:466)
+	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.<init>(HiveMetaStoreClient.java:236)
+	at org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient.<init>(SessionHiveMetaStoreClient.java:74)
+	... 19 more
+command terminated with exit code 1
 Execution will pause for 10 seconds.
 \    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
 stop
-1561922680800152696 1561922822339525144 /home/vr/github/abench-management-console/submodules/a-bench/results/20190630_21_27_12_experiment_tag_sample_q16/experiment_tag_sample_q16.zip
-calling url <http://192.168.99.100:31773/csv-zip?host=monitoring-influxdb&port=8086&dbname=k8s&filename=experi01&fromT=1561922680800152696&toT=1561922822339525144>
+1571479309853639841 1571479352463231093 /home/vr/github/abench-management-console/submodules/a-bench/results/20191019_12_02_42_experiment_tag_sample_q1/experiment_tag_sample_q1.zip
+calling url <http://192.168.99.100:31416/csv-zip?host=monitoring-influxdb&port=8086&dbname=k8s&filename=experi01&fromT=1571479309853639841&toT=1571479352463231093>
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100  891k  100  891k    0     0   676k      0  0:00:01  0:00:01 --:--:--  677k
-Datacollection finished. Export located at </home/vr/github/abench-management-console/submodules/a-bench/results/20190630_21_27_12_experiment_tag_sample_q16/experiment_tag_sample_q16.zip>
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100  304k  100  304k    0     0   265k      0  0:00:01  0:00:01 --:--:--  264k
+Datacollection finished. Export located at </home/vr/github/abench-management-console/submodules/a-bench/results/20191019_12_02_42_experiment_tag_sample_q1/experiment_tag_sample_q1.zip>
 [1;34m[A-Bench][0m Downloading the results of the experiment.          | [1;31m cus_collect [0m
 Hadoop export successfull.
 tar: Removing leading `/' from member names
-[1;34m[A-Bench][0m Download complete. Your data are located under <[1;34m/home/vr/github/abench-management-console/submodules/a-bench/results/20190630_21_27_12_experiment_tag_sample_q16[0m>
+[1;34m[A-Bench][0m Download complete. Your data are located under <[1;34m/home/vr/github/abench-management-console/submodules/a-bench/results/20191019_12_02_42_experiment_tag_sample_q1[0m>
 Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
+\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
 [1;34m[A-Bench][0m Cleaning the infrastructure.                        | [1;31m cus_clean [0m
 [1;34m[A-Bench][0m Experiment finished.                                | [1;31m cus_finish [0m
 The experiment was successfully executed! Find results under /submodules/a-bench/results/
-Selected queires were setted up as ENV VAR
-Starting Experiment:
-ENV-Looper-Experiment is starting now.
-Running q1
-Experiment TAG: #experiment_tag_sample
-[1;34m[A-Bench][0m Running defined experiment... 
-Query-Mapper has recognized a query for execution: q1
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]Selected queires were setted up as ENV VAR
-Starting Experiment:
-ENV-Looper-Experiment is starting now.
-Running q1
-Experiment TAG: #experiment_tag_sample
-[1;34m[A-Bench][0m Running defined experiment... 
-Query-Mapper has recognized a query for execution: q1
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]Selected queires were setted up as ENV VAR
-Starting Experiment:
-ENV-Looper-Experiment is starting now.
-Running q1
-Experiment TAG: #experiment_tag_sample
-[1;34m[A-Bench][0m Running defined experiment... 
-Query-Mapper has recognized a query for execution: q1
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_deploy [0m
-Error: release: "sql-mysql" not found
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 20 [s]|    | 20 [s]/    | 20 [s]-    | 20 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 19 [s]-    | 19 [s]\    | 19 [s]|    | 19 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 18 [s]|    | 18 [s]/    | 18 [s]-    | 18 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 17 [s]-    | 17 [s]\    | 17 [s]|    | 17 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 16 [s]|    | 16 [s]/    | 16 [s]-    | 16 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 15 [s]-    | 15 [s]\    | 15 [s]|    | 15 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 14 [s]|    | 14 [s]/    | 14 [s]-    | 14 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 13 [s]-    | 13 [s]\    | 13 [s]|    | 13 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 12 [s]|    | 12 [s]/    | 12 [s]-    | 12 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 11 [s]-    | 11 [s]\    | 11 [s]|    | 11 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 10 [s]|    | 10 [s]/    | 10 [s]-    | 10 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-Selected queires were setted up as ENV VAR
-Starting Experiment:
-ENV-Looper-Experiment is starting now.
-Running q29
-Experiment TAG: #experiment_tag_sample
-[1;34m[A-Bench][0m Running defined experiment... 
-Query-Mapper has recognized a query for execution: q29
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
-NAME:   sql-mysql
-Execution will pause for 10 seconds.
-\    | 9 [s]LAST DEPLOYED: Sun Jul 14 18:06:17 2019
-NAMESPACE: default
-STATUS: DEPLOYED
-
-RESOURCES:
-==> v1/PersistentVolumeClaim
-NAME       STATUS  VOLUME                                    CAPACITY  ACCESS MODES  STORAGECLASS  AGE
-sql-mysql  Bound   pvc-51d53afd-a651-11e9-af99-080027a00264  8Gi       RWO           standard      3s
-
-==> v1/Service
-NAME       TYPE       CLUSTER-IP     EXTERNAL-IP  PORT(S)   AGE
-sql-mysql  ClusterIP  10.106.84.217  <none>       3306/TCP  3s
-
-==> v1beta1/Deployment
-NAME       DESIRED  CURRENT  UP-TO-DATE  AVAILABLE  AGE
-sql-mysql  1        1        1           0          3s
-
-==> v1/Pod(related)
-NAME                        READY  STATUS    RESTARTS  AGE
-sql-mysql-5b6ff9b9c4-s59ml  0/1    Init:0/1  0         2s
-
-==> v1/Secret
-NAME       TYPE    DATA  AGE
-sql-mysql  Opaque  2     3s
-
-==> v1/ConfigMap
-NAME            DATA  AGE
-sql-mysql-test  1     3s
-
-
-NOTES:
-MySQL can be accessed via port 3306 on the following DNS name from within your cluster:
-sql-mysql.default.svc.cluster.local
-
-To get your root password run:
-
-    MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace default sql-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode; echo)
-
-To connect to your database:
-
-1. Run an Ubuntu pod that you can use as a client:
-
-    kubectl run -i --tty ubuntu --image=ubuntu:16.04 --restart=Never -- bash -il
-
-2. Install the mysql client:
-
-    $ apt-get update && apt-get install mysql-client -y
-
-3. Connect using the mysql cli, then provide your password:
-    $ mysql -h sql-mysql -p
-
-To connect to your database directly from outside the K8s cluster:
-    MYSQL_HOST=127.0.0.1
-    MYSQL_PORT=3306
-
-    # Execute the following command to route the connection:
-    kubectl port-forward svc/sql-mysql 3306
-
-    mysql -h ${MYSQL_HOST} -P${MYSQL_PORT} -u root -p${MYSQL_ROOT_PASSWORD}
-    
-
-|    | 9 [s]/    | 9 [s]-    | 9 [s]Error: release: "thadoop" not found
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_deploy [0m
-release "sql-mysql" deleted
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]Selected queires were setted up as ENV VAR
-Starting Experiment:
-ENV-Looper-Experiment is starting now.
-Running q29
-Experiment TAG: #experiment_tag_sample
-[1;34m[A-Bench][0m Running defined experiment... 
-Query-Mapper has recognized a query for execution: q29
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_build [0m
-Execution will pause for 10 seconds.
-\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 9 [s]-    | 9 [s]\    | 9 [s]|    | 9 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 8 [s]|    | 8 [s]/    | 8 [s]-    | 8 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 7 [s]-    | 7 [s]\    | 7 [s]|    | 7 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 6 [s]|    | 6 [s]/    | 6 [s]-    | 6 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 5 [s]-    | 5 [s]\    | 5 [s]|    | 5 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 4 [s]|    | 4 [s]/    | 4 [s]-    | 4 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 3 [s]-    | 3 [s]\    | 3 [s]|    | 3 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 2 [s]|    | 2 [s]/    | 2 [s]-    | 2 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 1 [s]-    | 1 [s]\    | 1 [s]|    | 1 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]|    | 0 [s]/    | 0 [s]-    | 0 [s]\    | 0 [s]
-[1;34m[A-Bench][0m Deploying the infrastructure of the experiment.     | [1;31m cus_deploy [0m
-Error: release: "sql-mysql" not found
-Execution will pause for 30 seconds.
-\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 29 [s]-    | 29 [s]\    | 29 [s]|    | 29 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 28 [s]|    | 28 [s]/    | 28 [s]-    | 28 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 27 [s]-    | 27 [s]\    | 27 [s]|    | 27 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 26 [s]|    | 26 [s]/    | 26 [s]-    | 26 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 25 [s]-    | 25 [s]\    | 25 [s]|    | 25 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 24 [s]|    | 24 [s]/    | 24 [s]-    | 24 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 23 [s]-    | 23 [s]\    | 23 [s]|    | 23 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 22 [s]|    | 22 [s]/    | 22 [s]-    | 22 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]|    | 21 [s]/    | 21 [s]-    | 21 [s]\    | 21 [s]

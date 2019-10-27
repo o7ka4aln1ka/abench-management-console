@@ -4,7 +4,7 @@
 (function checkIfProgrammsExists() {
     echo "Checking if all required tools are available:"
 
-    declare -a tools=("oracle-java8-set-default" "kubectl" "kubelet" "kubeadm" "minikube" "cat" "curl" "python3" "flask" "npm" "docker-ce" "nodejs" "python3-pip" "virtualbox")
+    declare -a tools=("python3.6" "kubectl" "kubelet" "kubeadm" "minikube" "cat" "curl" "python3-pip" "Flask" "npm" "docker-ce" "nodejs" "python3-pip" "virtualbox")
     error_counter=0
 
     for tool in "${tools[@]}"
