@@ -38,15 +38,22 @@
                     <button id="checkPreRequirements" data-balloon="Checks if all necessary tools are installed and available" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
                     <!-- <button id="setup_environment" data-balloon="Setups the environment like starting cat, curl, docker, helm, kubectl, virtualbox, minikube etc. " data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/setupEnvironment'">Setup the environment</button> -->
                     <button id="deploy_a_bench_infrastructure" data-balloon="Stars minikube and all other necessary services to run A-Bench" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/deploy_a_bench_infrastructure'">Deploy A-Bench infrastructure</button>
+
+                    <button id="show_grafana_das" data-balloon="Shows live monitoring of the running pods in Grafana (active after deploying the infrastructure)" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/show_grafana_das'">Grafana dashboards</button>
+                    <button id="show_kuber_das" data-balloon="Shows live monitoring of the Kubernetes cluster (active after deploying the infrastructure)" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:43511/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/'">Kubernetes dashboards</button>
+
+                    <!-- <button id="show_kuber_das" data-balloon="Shows live monitoring of the Kubernetes cluster (active after deploying the infrastructure)" data-balloon-pos="right" onclick="parent.open('http://127.0.0.1:34019/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/')">Kubernetes dashboards</button> -->
+                    <!-- <button id="show_grafana_das" data-balloon="Shows live monitoring of the running pods in Grafana (active after deploying the infrastructure)" data-balloon-pos="right" onclick="parent.open('http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s')">Grafana dashboards</button> -->
+
                 </div>
               </div>
-
             <div id="centerInnerSection">
                 <h3>Run</h3>
                 <div class="btn-group">
-                    <button id="config" data-balloon="Choose which queries to be run in an experiment" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/config'">Configuration</button>
-                    <button id="run_a_sample_experiment" data-balloon="Start a single run experiment with one query" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
-                    <label class="custom-file-upload" data-balloon="Navigate to ~/wd/abench/a-bench/results and choose which experiment results to analyse" data-balloon-pos="up" >
+                    <button id="config" data-balloon="Choose which queries to be run in an experiment" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/config'">Configuration</button>
+                    <button id="run_sample_sre_bbv" data-balloon="Start a sample single BigBench2 Hive experiment with one query" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/run_sample_sre_bbv'">Run a sample SRE with HIVE</button>
+                    <button id="run_sample_sre_spark" data-balloon="Start a sample single BigBench2 Spark experiment with one query" data-balloon-pos="up" onclick="self.location.href='http://127.0.0.1:5000/run_sample_sre_spark'">Run a sample SRE with SPARK</button>
+                    <label class="custom-file-upload" data-balloon="Navigate to ~/wd/abench/a-bench/results and choose which experiment results to analyse them" data-balloon-pos="up" >
                       <form action="http://127.0.0.1:5000/prepare_results/" method="post" enctype="multipart/form-data">
                         <div >Load results</div>
                         <input id="prepare_results" type="file" onchange="this.form.submit()" name='myFile'/>
@@ -63,12 +70,9 @@
             <div id="rightInnerSection">
                 <h3>Analyse</h3>
                 <div class="btn-group">
-
-
-                    <button id="cpuChart" data-balloon="Chart with CPU usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage</button>
-                    <button id="memChart" data-balloon="Chart with memory usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage</button>
-                    <button id="fileChart" data-balloon="Chart with filesystem usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage</button>
-
+                    <button id="cpuChart" data-balloon="Chart with CPU usage from the selected experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage</button>
+                    <button id="memChart" data-balloon="Chart with memory usage from the selected experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage</button>
+                    <button id="fileChart" data-balloon="Chart with filesystem usage from the selected experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage</button>
                 </div>
             </div>
 

@@ -1,11 +1,10 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-# run an experiment with selected queries
+# -- Executes the SRE_experiment_demoSPARK.sh experiment in [BBV2]
 (
-# . ~/github/abench-management-console/scripts/env_q29.txt
 echo A sample single BigBenchV2 experiment will be executed: &&
 cd ~/wd/abench/a-bench/ &&
 echo Starting Experiment: &&
-./admin.sh run_sample_sre_bbv
+./admin.sh run_sample_sre_spark
 echo The experiment was successfully executed! Find results under ~/wd/abench/a-bench/results/
 ) 2>&1 | tee -a ~/github/abench-management-console/outputs/output-homepage.txt

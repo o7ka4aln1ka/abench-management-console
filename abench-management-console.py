@@ -1,4 +1,4 @@
-from Flask import Flask, render_template, redirect, request, jsonify, make_response, send_from_directory
+from flask import *
 import subprocess
 from subprocess import Popen, PIPE
 from werkzeug import secure_filename
@@ -10,13 +10,14 @@ import json
 import csv
 import zipfile
 import shutil
-from Tkinter import *
+from tkinter import *
+import webbrowser
 # from tkinter import filedialog
 
 # set the encoding to utf-8 (uncomment if there is an error with the encoding shown on browser)
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+# import sys
+# reload(sys)
+# sys.setdefaultencoding('utf-8')
 
 # set path to upload experiment_tag_sample_qXX.zip
 UPLOAD_FOLDER = './experiment_results'
@@ -123,14 +124,24 @@ def set_env_var_all_queries():
     text.close()
     return render_template("config.html", content=content, **templateData)
 
-@app.route("/run_a_sample_experiment/", methods=['GET', 'POST'])
-def run_a_sample_experiment():
-    subprocess.call(['./scripts/run_a_sample_experiment.sh'], shell=True)
+@app.route("/run_sample_sre_bbv/", methods=['GET', 'POST'])
+def run_sample_sre_bbv():
+    subprocess.call(['./scripts/run_sample_sre_bbv.sh'], shell=True)
     return redirect('http://127.0.0.1:5000/')
 
-@app.route("/run_a_specific_experiment/", methods=['GET', 'POST'])
-def run_a_specific_experiment():
-    subprocess.call(['./scripts/run_a_specific_experiment.sh'], shell=True)
+@app.route("/run_sample_sre_spark/", methods=['GET', 'POST'])
+def run_sample_sre_spark():
+    subprocess.call(['./scripts/run_sample_sre_spark.sh'], shell=True)
+    return redirect('http://127.0.0.1:5000/')
+
+@app.route("/run_by_env_bbv_hive/", methods=['GET', 'POST'])
+def run_by_env_bbv_hive():
+    subprocess.call(['./scripts/run_by_env_bbv_hive.sh'], shell=True)
+    return redirect('http://127.0.0.1:5000/')
+
+@app.route("/run_by_env_bbv_spark/", methods=['GET', 'POST'])
+def run_by_env_bbv_spark():
+    subprocess.call(['./scripts/run_by_env_bbv_spark.sh'], shell=True)
     return redirect('http://127.0.0.1:5000/')
 
 # CPU, Memory and Filesystem charts
@@ -226,11 +237,11 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route("/prepare_results/", methods=['GET', 'POST'])
 def prepare_results():
     file = request.files['myFile']
-    print("File: " + file)
+    # print("File: " + file)
 
     subprocess.call(["mkdir", "tmp"])
     filePath = os.path.join("./tmp", file.filename)
-    print("Filepath " + filePath)
+    # print("Filepath " + filePath)
 
     file.save(filePath)
     subprocess.call(['chmod', '-R', '777', '.', filePath])
@@ -243,6 +254,18 @@ def prepare_results():
     # shutil.rmtree("./tmp")
     print("Successfully loaded experiment data!")
     return redirect('http://127.0.0.1:5000/')
+
+@app.route("/show_grafana_das/", methods=['GET', 'POST'])
+def show_grafana_das():
+    subprocess.call(['./scripts/show_grafana_das.sh'], shell=True)
+    return redirect('http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s')
+    # return webbrowser.open_new_tab('http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s')
+
+# TODO add the proper way to ridirect to the link from the script
+@app.route("/show_kuber_das/", methods=['GET', 'POST'])
+def show_kuber_das():
+    subprocess.call(['./scripts/show_kuber_das.sh'], shell=True)
+    return redirect('')
 
 #  start the app with debugging enabled
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Checks if a list of given programs are existing.
 (function checkIfProgrammsExists() {
