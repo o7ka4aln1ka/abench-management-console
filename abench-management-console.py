@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, jsonify, make_response, send_from_directory
+from Flask import Flask, render_template, redirect, request, jsonify, make_response, send_from_directory
 import subprocess
 from subprocess import Popen, PIPE
 from werkzeug import secure_filename
@@ -10,13 +10,13 @@ import json
 import csv
 import zipfile
 import shutil
-from tkinter import *
-from tkinter import filedialog
+from Tkinter import *
+# from tkinter import filedialog
 
 # set the encoding to utf-8 (uncomment if there is an error with the encoding shown on browser)
-# import sys
-# reload(sys)
-# sys.setdefaultencoding('utf-8')
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 # set path to upload experiment_tag_sample_qXX.zip
 UPLOAD_FOLDER = './experiment_results'
@@ -45,10 +45,10 @@ def checkPreRequirements():
     return redirect('http://127.0.0.1:5000/')
 
 # Setup the infrastructure
-@app.route("/setupEnvironment/", methods=['GET', 'POST'])
-def setupEnvironment():
-    subprocess.call(['./scripts/setup_environment.sh'], shell=True)
-    return redirect('http://127.0.0.1:5000/')
+# @app.route("/setupEnvironment/", methods=['GET', 'POST'])
+# def setupEnvironment():
+#     subprocess.call(['./scripts/setup_environment.sh'], shell=True)
+#     return redirect('http://127.0.0.1:5000/')
 
 @app.route("/deploy_a_bench_infrastructure/", methods=['GET', 'POST'])
 def deploy_a_bench_infrastructure():
@@ -233,7 +233,7 @@ def prepare_results():
     print("Filepath " + filePath)
 
     file.save(filePath)
-    subprocess.call(['chmod', '777', '.', filePath])
+    subprocess.call(['chmod', '-R', '777', '.', filePath])
     with zipfile.ZipFile(filePath, 'r') as zf:
        for file in zf.namelist():
             if file.endswith("cpu_usage.txt") or file.endswith("memory_usage.txt") or file.endswith("filesystem_usage.txt"):

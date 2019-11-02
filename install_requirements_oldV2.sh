@@ -94,16 +94,26 @@ sleep 5
 # EOF
 
 sleep 5
+sudo apt-get install -y python-pip -y &&
+sleep 5
 sudo apt-get install python3.6 -y &&
+sleep 5
+sudo pip install Flask -y &&
+sleep 5
+sudo pip install pandas &&
+sleep 5
+sudo apt-get install python3.6-tk -y &&
 sleep 5
 sudo apt-get install -y python3-pip python3-dev nginx &&
 sleep 5
 sudo add-apt-repository ppa:webupd8team/java &&
 sudo apt update &&
 sudo apt install -y oracle-java8-installer &&
+# press enter to continue ??????
+yes "" | command &&
 sudo apt-get install oracle-java8-set-default -y &&
 sleep 5
-sudo pip install Flask &&
+sudo pip install lask &&
 sleep 5
 sudo apt-get install -y coreutils &&
 sleep 5
@@ -114,7 +124,7 @@ sudo apt-get install cat &&
 sleep 5
 sudo apt-get install nodejs -y &&
 sleep 5
-sudo apt install npm &&
+sudo apt install npm -y &&
 sleep 5
 sudo npm install chart.js --save &&
 sleep 5
@@ -123,9 +133,11 @@ echo All tools were installed! &&
 sudo apt autoremove &&
 
 #  download FutureApp/a-bench repo for creating the infrastructure
-echo FutureApp/a-bench repository will be downloaded for future use ...
-cd ~/github/abench-management-console && mkdir -p submodules && cd submodules && git clone https://github.com/FutureApp/a-bench.git &&
-echo Submodule FutureApp was successfully downloaded!
+# echo FutureApp/a-bench repository will be downloaded for future use ...
+# cd ~/github/abench-management-console && mkdir -p submodules && cd submodules && git clone https://github.com/FutureApp/a-bench.git &&
+# echo Submodule FutureApp was successfully downloaded!
+
+cd ~/github/abench-management-console && mkdir -p submodules && sudo chmod -R 777 submodules/
 
 # make all .py and .sh scripts executable
 cd ~/github/abench-management-console/scripts -type f -iname "*.sh" -exec chmod +x {}

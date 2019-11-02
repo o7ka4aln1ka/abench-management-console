@@ -36,7 +36,7 @@
                 <h3>Setup</h3>
                 <div class="btn-group">
                     <button id="checkPreRequirements" data-balloon="Checks if all necessary tools are installed and available" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
-                    <button id="setup_environment" data-balloon="Setups the environment like starting cat, curl, docker, helm, kubectl, virtualbox, minikube etc. " data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/setupEnvironment'">Setup the environment</button>
+                    <!-- <button id="setup_environment" data-balloon="Setups the environment like starting cat, curl, docker, helm, kubectl, virtualbox, minikube etc. " data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/setupEnvironment'">Setup the environment</button> -->
                     <button id="deploy_a_bench_infrastructure" data-balloon="Stars minikube and all other necessary services to run A-Bench" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/deploy_a_bench_infrastructure'">Deploy A-Bench infrastructure</button>
                 </div>
               </div>
@@ -46,24 +46,25 @@
                 <div class="btn-group">
                     <button id="config" data-balloon="Choose which queries to be run in an experiment" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/config'">Configuration</button>
                     <button id="run_a_sample_experiment" data-balloon="Start a single run experiment with one query" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/run_a_sample_experiment'">Run a sample experiment</button>
+                    <label class="custom-file-upload" data-balloon="Navigate to ~/wd/abench/a-bench/results and choose which experiment results to analyse" data-balloon-pos="up" >
+                      <form action="http://127.0.0.1:5000/prepare_results/" method="post" enctype="multipart/form-data">
+                        <div >Load results</div>
+                        <input id="prepare_results" type="file" onchange="this.form.submit()" name='myFile'/>
+                      </form>
+                    </label>
+
+                    <script>
+                    $('.btn-group').bind("click" , function () {
+                        $('#prepare_results').click();
+                    });
+                    </script>
                 </div>
               </div>
             <div id="rightInnerSection">
                 <h3>Analyse</h3>
                 <div class="btn-group">
 
-                  <label class="custom-file-upload" data-balloon="Navigate to /abench-management-console/submodules/a-bench/results and choose which experiment results to analyse" data-balloon-pos="up" >
-                    <form action="http://127.0.0.1:5000/prepare_results/" method="post" enctype="multipart/form-data">
-                      <div >Load results</div>
-                      <input id="prepare_results" type="file" onchange="this.form.submit()" name='myFile'/>
-                    </form>
-                  </label>
 
-                  <script>
-                  $('.btn-group').bind("click" , function () {
-                      $('#prepare_results').click();
-                  });
-                  </script>
                     <button id="cpuChart" data-balloon="Chart with CPU usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/cpuChart'">CPU Usage</button>
                     <button id="memChart" data-balloon="Chart with memory usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/memChart'">Memory Usage</button>
                     <button id="fileChart" data-balloon="Chart with filesystem usage from the last experiment" data-balloon-pos="left" onclick="self.location.href='http://127.0.0.1:5000/fileChart'">Filesystem Usage</button>
