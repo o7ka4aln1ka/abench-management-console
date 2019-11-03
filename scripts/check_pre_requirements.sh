@@ -4,7 +4,7 @@
 (function checkIfProgrammsExists() {
     echo "Checking if all required tools are available:"
 
-    declare -a tools=("python3.6" "cat" "curl" "flask" "npm" "nodejs" "java" "git")
+    declare -a tools=("python3" "cat" "curl" "flask" "npm" "nodejs" "java" "git")
     error_counter=0
 
     for tool in "${tools[@]}"

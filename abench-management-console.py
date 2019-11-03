@@ -148,7 +148,7 @@ def run_by_env_bbv_spark():
 @app.route('/cpuChart')
 def cpuChart():
     cpu_colnames=['time', 'value']
-    testPath = "~/github/abench-management-console/experiment_results/"
+    testPath = "~/abench-management-console/experiment_results/"
     cpu_data = pd.read_fwf(testPath + "cpu_usage.txt", header=0, usecols=cpu_colnames, engine='python')
     cpu_labels = cpu_data.time.tolist()
     cpu_values = cpu_data.value.tolist()
@@ -181,7 +181,7 @@ def cpuChart():
 @app.route('/memChart')
 def memChart():
     mem_colnames=['time', 'value']
-    mem_data = pd.read_fwf("~/github/abench-management-console/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
+    mem_data = pd.read_fwf("~/abench-management-console/experiment_results/memory_usage.txt", header=0, usecols=mem_colnames, engine='python')
     mem_labels = mem_data.time.tolist()
     mem_values = mem_data.value.tolist()
     now = datetime.datetime.now()
@@ -214,7 +214,7 @@ def memChart():
 @app.route('/fileChart')
 def fileChart():
     file_colnames=['time', 'value']
-    file_data = pd.read_fwf("~/github/abench-management-console/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
+    file_data = pd.read_fwf("~/abench-management-console/experiment_results/filesystem_usage.txt", header=0, usecols=file_colnames, engine='python')
     file_labels = file_data.time.tolist()
     file_values = file_data.value.tolist()
     now = datetime.datetime.now()
@@ -251,7 +251,7 @@ def prepare_results():
     file = request.files['myFile']
     subprocess.call(["rm", '-rf', "tmp"])
     subprocess.call(["mkdir", "tmp"])
-    # subprocess.run("cp -R -u -p ~/wd/abench/a-bench/results/ ~/github/abench-management-console/all_executed_exp/", shell=True)
+    # subprocess.run("cp -R -u -p ~/wd/abench/a-bench/results/ ~/abench-management-console/all_executed_exp/", shell=True)
     filePath = os.path.join("./tmp", file.filename)
     file.save(filePath)
     subprocess.call(['chmod', '-R', '777', '.', filePath])
