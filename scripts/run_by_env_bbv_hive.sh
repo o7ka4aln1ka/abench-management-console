@@ -2,11 +2,10 @@
 
 # run an experiment with selected queries (script from FutureApp/a-bench by M.Czaja)
 (
-. ~/github/abench-management-console/scripts/env.txt
+. ~/abench-management-console/scripts/env.txt
 echo Selected queires were setted up as ENV VAR &&
-# cd ~/github/abench-management-console/submodules/a-bench/ &&
 cd ~/wd/abench/a-bench/ &&
-sudo ./admin.sh start_bbv_hive && 
+sudo ./admin.sh start_bbv_hive &&
 echo Starting Hive Experiment:
 TEST_QUERIES_TO_CALL=($TEST_QUERIES)
     if [ -z "$TEST_QUERIES_TO_CALL" ] ; then
@@ -19,5 +18,8 @@ TEST_QUERIES_TO_CALL=($TEST_QUERIES)
             bash ENV_experiment_demoHIVE.sh run_ex  $test_query
         done
     fi
-echo The Hive experiment was successfully executed! Find results under ~/wd/abench/a-bench/results/
-) 2>&1 | tee -a ~/github/abench-management-console/outputs/output-homepage.txt
+echo The Hive experiment was successfully executed! Find results under ~/wd/abench/a-bench/results/ &&
+sudo chmod -R 777 ~/wd &&
+cp -R -u -p ~/wd/abench/a-bench/results/ ~/abench-management-console/all_executed_exp/ &&
+echo A backup of the results can be found under ~/abench-management-console/all_executed_exp
+) 2>&1 | tee -a ~/abench-management-console/outputs/output-homepage.txt

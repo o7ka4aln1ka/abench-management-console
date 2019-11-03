@@ -35,4 +35,4 @@ echo "Systems will check the enviroment first, then it will install itself if al
 requirements are full-filled."
 
 checkIfProgrammsExists
-) 2>&1 | tee -a ~/github/abench-management-console/outputs/output-homepage.txt
+) 2>&1 | tee -a ~/abench-management-console/outputs/output-homepage.txt

@@ -2,11 +2,10 @@
 
 # run an experiment with selected queries (-- Uses the ENV- Experiments in [BBV2] for SPARk)
 (
-. ~/github/abench-management-console/scripts/env.txt
+. ~/abench-management-console/scripts/env.txt
 echo Selected queires were setted up as ENV VAR &&
-# cd ~/github/abench-management-console/submodules/a-bench/ &&
 cd ~/wd/abench/a-bench/ &&
-sudo ./admin.sh start_bbv_spark && 
+sudo ./admin.sh start_bbv_spark &&
 echo Starting Spark Experiment:
 TEST_QUERIES_TO_CALL=($TEST_QUERIES)
     if [ -z "$TEST_QUERIES_TO_CALL" ] ; then
@@ -19,5 +18,6 @@ TEST_QUERIES_TO_CALL=($TEST_QUERIES)
             bash ENV_experiment_demoSPARK.sh run_ex  $test_query
         done
     fi
-echo The Spark experiment was successfully executed! Find results under ~/wd/abench/a-bench/results/
-) 2>&1 | tee -a ~/github/abench-management-console/outputs/output-homepage.txt
+echo The Spark experiment was successfully executed! Find results under ~/wd/abench/a-bench/results/ &&
+sudo chmod -R 777 ~/wd
+) 2>&1 | tee -a ~/abench-management-console/outputs/output-homepage.txt

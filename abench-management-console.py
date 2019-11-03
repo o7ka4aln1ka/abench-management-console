@@ -167,6 +167,10 @@ def cpuChart():
     date_time_str_end = bar_labels[-1]
     date_time_obj_end = datetime.datetime.strptime(date_time_str_end, '%Y-%m-%dT%H:%M:%SZ')
     cpu_duration = date_time_obj_end - date_time_obj_start
+    if  date_time_obj_end == date_time_obj_start:
+        cpu_duration = '00:01:00'
+    else:
+        cpu_duration = date_time_obj_end - date_time_obj_start
     max_value = max(cpu_values) + 1000
     templateData = {
         'time': timeString,
@@ -196,6 +200,10 @@ def memChart():
     date_time_str_end = bar_labels[-1]
     date_time_obj_end = datetime.datetime.strptime(date_time_str_end, '%Y-%m-%dT%H:%M:%SZ')
     mem_duration = date_time_obj_end - date_time_obj_start
+    if  date_time_obj_end == date_time_obj_start:
+        mem_duration = '00:01:00'
+    else:
+        mem_duration = date_time_obj_end - date_time_obj_start
     max_value = max(mem_values) + 1000
     templateData = {
         'time': timeString,
@@ -225,6 +233,10 @@ def fileChart():
     date_time_str_end = bar_labels[-1]
     date_time_obj_end = datetime.datetime.strptime(date_time_str_end, '%Y-%m-%dT%H:%M:%SZ')
     file_duration = date_time_obj_end - date_time_obj_start
+    if  date_time_obj_end == date_time_obj_start:
+        file_duration = '00:01:00'
+    else:
+        file_duration = date_time_obj_end - date_time_obj_start
     max_value = max(file_values) + 1000
     templateData = {
         'time': timeString,
@@ -237,12 +249,10 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 @app.route("/prepare_results/", methods=['GET', 'POST'])
 def prepare_results():
     file = request.files['myFile']
-    # print("File: " + file)
-
+    subprocess.call(["rm", '-rf', "tmp"])
     subprocess.call(["mkdir", "tmp"])
+    # subprocess.run("cp -R -u -p ~/wd/abench/a-bench/results/ ~/github/abench-management-console/all_executed_exp/", shell=True)
     filePath = os.path.join("./tmp", file.filename)
-    # print("Filepath " + filePath)
-
     file.save(filePath)
     subprocess.call(['chmod', '-R', '777', '.', filePath])
     with zipfile.ZipFile(filePath, 'r') as zf:
@@ -251,7 +261,7 @@ def prepare_results():
                 zf.extract(file, basepath + "/experiment_results")
     zf.close()
     os.chmod(basepath + "/experiment_results", 0o777)
-    # shutil.rmtree("./tmp")
+    shutil.rmtree("./tmp")
     print("Successfully loaded experiment data!")
     return redirect('http://127.0.0.1:5000/')
 
@@ -259,9 +269,7 @@ def prepare_results():
 def show_grafana_das():
     subprocess.call(['./scripts/show_grafana_das.sh'], shell=True)
     return redirect('http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s')
-    # return webbrowser.open_new_tab('http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s')
 
-# TODO add the proper way to ridirect to the link from the script
 @app.route("/show_kuber_das/", methods=['GET', 'POST'])
 def show_kuber_das():
     subprocess.call(['./scripts/show_kuber_das.sh'], shell=True)
