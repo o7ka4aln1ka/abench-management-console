@@ -45,7 +45,7 @@ def checkPreRequirements():
     subprocess.call(['./scripts/check_pre_requirements.sh'], shell=True)
     return redirect('http://127.0.0.1:5000/')
 
-# Setup the infrastructure
+# Setup the infrastructure [in an older version]
 # @app.route("/setupEnvironment/", methods=['GET', 'POST'])
 # def setupEnvironment():
 #     subprocess.call(['./scripts/setup_environment.sh'], shell=True)

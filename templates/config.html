@@ -218,7 +218,7 @@
         <button id="run_by_env_bbv_hive" class="button" data-balloon="Start a single BigBench2 Hive experiment with the above selected queries" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/run_by_env_bbv_hive'">Run SRE with HIVE</button>
         <button id="run_by_env_bbv_spark" class="button" data-balloon="Start a single BigBench2 Spark experiment with the above selected queries" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/run_by_env_bbv_spark'">Run SRE with SPARK</button>
 
-        <label class="custom-file-upload" data-balloon="Navigate to /abench-management-console/submodules/a-bench/results and choose which experiment results to analyse" data-balloon-pos="up" >
+        <label class="custom-file-upload" data-balloon="Navigate to ~/wd/abench/a-bench/results and choose which experiment results to analyse" data-balloon-pos="up" >
           <form action="http://127.0.0.1:5000/prepare_results/" method="post" enctype="multipart/form-data">
             <div >Load results</div>
             <input id="prepare_results" type="file" onchange="this.form.submit()" name='myFile'/>

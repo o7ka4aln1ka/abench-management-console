@@ -73,12 +73,13 @@ $ ~/wd/abench/a-bench/results/
 
 <a name="add"></a>
 # Additional Information
+* In the folder "all_executed_exp" will be stored all results of all executed experiments
 * In the folder "experiment_results" will be saved as a .csv tables the results from the experiment needed for the charts
 * In the folder "outputs" are two .txt files used for the output from all executed commands to be shown on the homepage
 * In the folder "scripts" are all necessary scripts for deploying and running the infrastructure
 * In the folder "templates" are all html pages
 * In the folder "static" are located all .css files for the styling of the pages
-* In folder "submodules" will be downloaded everything necessary for the infrastructure from GitHub repository https://github.com/FutureApp/a-bench from Michael Czaja
+* In folder "~/wd" will be downloaded everything necessary for the infrastructure from GitHub repository https://github.com/FutureApp/a-bench from Michael Czaja
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen.)
 
