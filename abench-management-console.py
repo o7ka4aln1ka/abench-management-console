@@ -265,7 +265,7 @@ def show_grafana_das():
 @app.route("/show_kuber_das/", methods=['GET', 'POST'])
 def show_kuber_das():
     subprocess.call(['./scripts/show_kuber_das.sh'], shell=True)
-    return redirect('')
+    return redirect('http://127.0.0.1:5000/')
 
 #  start the app with debugging enabled
 if __name__ == "__main__":

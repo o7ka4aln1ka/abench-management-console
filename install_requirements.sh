@@ -23,7 +23,7 @@ sudo apt-get install oracle-java8-set-default -y &&
 sleep 5
 sudo apt-get install -y coreutils &&
 sleep 5
-sudo apt-get install curl &&
+sudo apt-get install curl -y &&
 sleep 5
 sudo apt-get update && \
 sudo apt-get install cat &&
