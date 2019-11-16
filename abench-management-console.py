@@ -45,15 +45,20 @@ def checkPreRequirements():
     subprocess.call(['./scripts/check_pre_requirements.sh'], shell=True)
     return redirect('http://127.0.0.1:5000/')
 
-# Setup the infrastructure [in an older version]
-# @app.route("/setupEnvironment/", methods=['GET', 'POST'])
-# def setupEnvironment():
-#     subprocess.call(['./scripts/setup_environment.sh'], shell=True)
-#     return redirect('http://127.0.0.1:5000/')
-
 @app.route("/deploy_a_bench_infrastructure/", methods=['GET', 'POST'])
 def deploy_a_bench_infrastructure():
     subprocess.call(['./scripts/deploy_a_bench_infrastructure.sh'], shell=True)
+    return redirect('http://127.0.0.1:5000/')
+
+# Grafana and Kubernetes dashboards
+@app.route("/show_grafana_das/", methods=['GET', 'POST'])
+def show_grafana_das():
+    subprocess.call(['./scripts/show_grafana_das.sh'], shell=True)
+    return redirect('http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s')
+
+@app.route("/show_kuber_das/", methods=['GET', 'POST'])
+def show_kuber_das():
+    subprocess.call(['./scripts/show_kuber_das.sh'], shell=True)
     return redirect('http://127.0.0.1:5000/')
 
 # 2nd column of buttons "Run"
@@ -143,6 +148,27 @@ def run_by_env_bbv_hive():
 def run_by_env_bbv_spark():
     subprocess.call(['./scripts/run_by_env_bbv_spark.sh'], shell=True)
     return redirect('http://127.0.0.1:5000/')
+
+# extracts selected zip file with results into experiment_results
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+@app.route("/prepare_results/", methods=['GET', 'POST'])
+def prepare_results():
+    file = request.files['myFile']
+    subprocess.call(["rm", '-rf', "tmp"])
+    subprocess.call(["mkdir", "tmp"])
+    # subprocess.run("cp -R -u -p ~/wd/abench/a-bench/results/ ~/abench-management-console/all_executed_exp/", shell=True)
+    filePath = os.path.join("./tmp", file.filename)
+    file.save(filePath)
+    subprocess.call(['chmod', '-R', '777', '.', filePath])
+    with zipfile.ZipFile(filePath, 'r') as zf:
+        for file in zf.namelist():
+            if file.endswith("cpu_usage.txt") or file.endswith("memory_usage.txt") or file.endswith("filesystem_usage.txt"):
+                zf.extract(file, basepath + "/experiment_results")
+                zf.close()
+                os.chmod(basepath + "/experiment_results", 0o777)
+                shutil.rmtree("./tmp")
+                print("Successfully loaded experiment data!")
+                return redirect('http://127.0.0.1:5000/')
 
 # CPU, Memory and Filesystem charts
 @app.route('/cpuChart')
@@ -243,37 +269,6 @@ def fileChart():
         'duration': file_duration
     }
     return render_template('File_Density_Plot.html', title='Filesystem Usage', max=max_value, labels=bar_labels, values=new_bar, **templateData)
-
-# extracts selected zip file with results into experiment_results
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-@app.route("/prepare_results/", methods=['GET', 'POST'])
-def prepare_results():
-    file = request.files['myFile']
-    subprocess.call(["rm", '-rf', "tmp"])
-    subprocess.call(["mkdir", "tmp"])
-    # subprocess.run("cp -R -u -p ~/wd/abench/a-bench/results/ ~/abench-management-console/all_executed_exp/", shell=True)
-    filePath = os.path.join("./tmp", file.filename)
-    file.save(filePath)
-    subprocess.call(['chmod', '-R', '777', '.', filePath])
-    with zipfile.ZipFile(filePath, 'r') as zf:
-       for file in zf.namelist():
-            if file.endswith("cpu_usage.txt") or file.endswith("memory_usage.txt") or file.endswith("filesystem_usage.txt"):
-                zf.extract(file, basepath + "/experiment_results")
-    zf.close()
-    os.chmod(basepath + "/experiment_results", 0o777)
-    shutil.rmtree("./tmp")
-    print("Successfully loaded experiment data!")
-    return redirect('http://127.0.0.1:5000/')
-
-@app.route("/show_grafana_das/", methods=['GET', 'POST'])
-def show_grafana_das():
-    subprocess.call(['./scripts/show_grafana_das.sh'], shell=True)
-    return redirect('http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s')
-
-@app.route("/show_kuber_das/", methods=['GET', 'POST'])
-def show_kuber_das():
-    subprocess.call(['./scripts/show_kuber_das.sh'], shell=True)
-    return redirect('http://127.0.0.1:5000/')
 
 #  start the app with debugging enabled
 if __name__ == "__main__":

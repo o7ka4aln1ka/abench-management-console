@@ -37,14 +37,13 @@
                 <div class="btn-group">
                     <button id="checkPreRequirements" data-balloon="Checks if all necessary tools are installed and available" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/checkPreRequirements'">Check requirements</button>
                     <!-- in an older version -->
-                    <!-- <button id="setup_environment" data-balloon="Setups the environment like starting cat, curl, docker, helm, kubectl, virtualbox, minikube etc. " data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/setupEnvironment'">Setup the environment</button> -->
+                    <!-- <button id="setup_environment" data-balloon="Setups the environment like starting cat, curl, docker, helm, kubectl, virtualbox, minikube etc. " data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/setupEnvironment'">Setup the environment</button> -->                    
+                    <!-- <button id="show_kuber_das" data-balloon="Shows live monitoring of the Kubernetes cluster (active after deploying the infrastructure)" data-balloon-pos="right" onclick="parent.open('http://127.0.0.1:34019/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/')">Kubernetes dashboards</button> -->
+                    <!-- <button id="show_grafana_das" data-balloon="Shows live monitoring of the running pods in Grafana (active after deploying the infrastructure)" data-balloon-pos="right" onclick="parent.open('http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s')">Grafana dashboards</button> -->
                     <button id="deploy_a_bench_infrastructure" data-balloon="Stars minikube and all other necessary services to run A-Bench" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/deploy_a_bench_infrastructure'">Deploy A-Bench infrastructure</button>
 
                     <button id="show_grafana_das" data-balloon="Shows live monitoring of the running pods in Grafana (active after deploying the infrastructure)" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/show_grafana_das'">Grafana dashboards</button>
                     <button id="show_kuber_das" data-balloon="Shows live monitoring of the Kubernetes cluster (active after deploying the infrastructure)" data-balloon-pos="right" onclick="self.location.href='http://127.0.0.1:5000/show_kuber_das'">Kubernetes dashboards</button>
-
-                    <!-- <button id="show_kuber_das" data-balloon="Shows live monitoring of the Kubernetes cluster (active after deploying the infrastructure)" data-balloon-pos="right" onclick="parent.open('http://127.0.0.1:34019/api/v1/namespaces/kube-system/services/http:kubernetes-dashboard:/proxy/')">Kubernetes dashboards</button> -->
-                    <!-- <button id="show_grafana_das" data-balloon="Shows live monitoring of the running pods in Grafana (active after deploying the infrastructure)" data-balloon-pos="right" onclick="parent.open('http://192.168.99.100:30002/dashboard/db/pods?orgId=1&var-namespace=kube-system&var-podname=etcd-minikube&from=now-15m&to=now&refresh=10s')">Grafana dashboards</button> -->
 
                 </div>
               </div>
